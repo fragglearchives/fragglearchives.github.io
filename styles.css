@@ -248,15 +248,17 @@ footer {
         padding: 25px;
         margin: 30px 0;
     }
-}
 
-.collection-card img {
+   .collection-card img {
     max-width: 85%;
     max-height: 400px;
     width: auto;
     height: auto;
     margin: 20px auto;
 }
+}
+
+
 
 
 .steve-image {
