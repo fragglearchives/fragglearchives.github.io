@@ -26,9 +26,10 @@ body {
 
 .header-banner {
     width: 100%;
-    height: auto;
+    height: 220px;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* ========================================
@@ -135,7 +136,7 @@ footer {
 @media (max-width: 600px) {
 
     .header-banner {
-        height: 300px;
+        height: 180px;
     }
 
     .site-nav {
