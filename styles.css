@@ -334,6 +334,7 @@ footer {
     max-width: 100%;
     box-sizing: border-box;
     text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .paypal-link {
