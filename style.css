@@ -26,10 +26,9 @@ body {
 
 .header-banner {
     width: 100%;
-    height: 300px;
+    height: auto;
     display: block;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
 }
 
 /* ========================================
