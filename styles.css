@@ -20,7 +20,8 @@ body {
 
 .site-header {
     width: 100%;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
     border-bottom: 3px solid #3a3a3a;
 }
 
