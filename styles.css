@@ -200,6 +200,14 @@ footer {
     margin: 0 auto;
 }
 
+.collection-card img {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+}
+
 /* ========================================
    MOBILE
    ======================================== */
