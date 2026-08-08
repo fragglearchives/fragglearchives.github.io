@@ -262,9 +262,10 @@ footer {
     margin: 20px auto;
 }
 
-   .paypal-link {
-    margin-bottom: 40px;
+.paypal-link {
+    padding-bottom: 40px !important;
 }
+   
 }
 
 
