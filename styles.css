@@ -261,6 +261,14 @@ footer {
     margin-top: 0;
 }
 
+.support-card {
+    background: #fbf8f2;
+    border: 1px solid #c9bba9;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 
 /* ========================================
    MOBILE
