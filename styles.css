@@ -310,6 +310,11 @@ footer {
     margin: 20px auto;
 }
 
+   .contact-options {
+    flex-direction: column;
+    gap: 40px;
+}
+
 .paypal-link {
     padding-bottom: 40px !important;
 }
