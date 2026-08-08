@@ -158,6 +158,23 @@ footer {
     margin: 0 auto;
 }
 
+.collection-card {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    border: 1px solid #d8cbb8;
+    background: #faf7f0;
+}
+
+.collection-card h2 {
+    margin-bottom: 15px;
+}
+
+.collection-card p {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
 /* ========================================
    MOBILE
    ======================================== */
