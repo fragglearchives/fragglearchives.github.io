@@ -55,6 +55,11 @@ body {
     text-decoration: underline;
 }
 
+.nav-heart {
+    color: #f7f1e8;
+    margin: 0 8px;
+}
+
 /* ========================================
    MAIN CONTENT
    ======================================== */
