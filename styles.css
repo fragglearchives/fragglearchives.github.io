@@ -129,6 +129,35 @@ footer {
     color: #666;
 }
 
+
+/* RESIDENTS */
+
+.resident-card {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #fffaf3;
+    border: 1px solid #d8cbb9;
+    text-align: center;
+}
+
+.resident-card img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.resident-card h2 {
+    margin-bottom: 10px;
+}
+
+.resident-card p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
 /* ========================================
    MOBILE
    ======================================== */
