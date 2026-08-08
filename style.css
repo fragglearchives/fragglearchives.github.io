@@ -1,0 +1,169 @@
+/* ========================================
+   THE FRAGGLE ARCHIVES
+   Main Site Stylesheet
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f1e8;
+    color: #333;
+    font-family: Georgia, serif;
+}
+
+/* ========================================
+   HEADER & BANNER
+   ======================================== */
+
+.site-header {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 3px solid #3a3a3a;
+}
+
+.header-banner {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.site-nav {
+    background: #3a3028;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+.site-nav a {
+    color: #f7f1e8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 10px;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    line-height: 1.8;
+    font-size: 1.15rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+/* ========================================
+   BOOK CARDS
+   ======================================== */
+
+.book-card {
+    background: #fbf8f2;
+    border: 1px solid #c9bba9;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.book-card h2 {
+    margin-top: 0;
+}
+
+.book-subtitle {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.button {
+    display: inline-block;
+    background: #3a3028;
+    color: #f7f1e8;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid #8b7a68;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #51443a;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .header-banner {
+        height: 300px;
+    }
+
+    .site-nav {
+        padding: 14px 8px;
+    }
+
+    .site-nav a {
+        display: inline-block;
+        margin: 5px 6px;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 45px 25px;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .book-card {
+        padding: 25px;
+        margin: 30px 0;
+    }
+}
