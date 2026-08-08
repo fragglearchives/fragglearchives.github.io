@@ -208,13 +208,6 @@ footer {
     margin: 25px auto;
 }
 
-.steve-image {
-    display: block;
-    width: 500px;
-    max-width: 80%;
-    height: auto;
-    margin: 25px auto;
-}
 
 /* ========================================
    MOBILE
@@ -254,4 +247,13 @@ footer {
         padding: 25px;
         margin: 30px 0;
     }
+}
+
+
+.steve-image {
+    display: block;
+    width: 500px !important;
+    max-width: 80%;
+    height: auto;
+    margin: 25px auto;
 }
