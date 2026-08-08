@@ -208,6 +208,14 @@ footer {
     margin: 25px auto;
 }
 
+.steve-image {
+    display: block;
+    width: 500px;
+    max-width: 80%;
+    height: auto;
+    margin: 25px auto;
+}
+
 /* ========================================
    MOBILE
    ======================================== */
