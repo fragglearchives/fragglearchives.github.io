@@ -328,7 +328,7 @@ footer {
     gap: 40px;
 }
 
-   .contact-option .button {
+.contact-option a {
     display: block;
     width: 100%;
     max-width: 100%;
