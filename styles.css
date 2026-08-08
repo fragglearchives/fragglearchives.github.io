@@ -55,6 +55,16 @@ body {
     text-decoration: underline;
 }
 
+main a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
 .nav-heart {
     color: #f7f1e8;
     margin: 0 8px;
