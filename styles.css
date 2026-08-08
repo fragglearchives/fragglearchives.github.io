@@ -245,6 +245,22 @@ footer {
     margin-top: 60px;
 }
 
+.support-options {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.support-option,
+.paypal-support {
+    flex: 1;
+}
+
+.support-option h2,
+.paypal-support h2 {
+    margin-top: 0;
+}
+
 
 /* ========================================
    MOBILE
@@ -296,6 +312,11 @@ footer {
 
 .paypal-link {
     padding-bottom: 40px !important;
+}
+
+   .support-options {
+    flex-direction: column;
+    gap: 40px;
 }
    
 }
