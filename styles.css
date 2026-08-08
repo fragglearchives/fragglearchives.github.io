@@ -203,9 +203,8 @@ footer {
 .collection-card img {
     display: block;
     width: 700px;
-    height: 500px;
     max-width: 85%;
-    object-fit: contain;
+    height: auto;
     margin: 25px auto;
 }
 
