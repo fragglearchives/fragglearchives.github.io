@@ -328,6 +328,14 @@ footer {
     gap: 40px;
 }
 
+   .contact-option .button {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .paypal-link {
     padding-bottom: 40px !important;
 }
