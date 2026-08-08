@@ -250,6 +250,14 @@ footer {
     }
 }
 
+.collection-card img {
+    max-width: 85%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+}
+
 
 .steve-image {
     display: block;
