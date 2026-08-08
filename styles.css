@@ -218,6 +218,20 @@ footer {
     margin-top: 50px;
 }
 
+.contact-options {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.contact-option {
+    flex: 1;
+}
+
+.contact-option h2 {
+    margin-top: 0;
+}
+
 
 /* ========================================
    MOBILE
