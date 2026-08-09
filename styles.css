@@ -278,9 +278,6 @@ footer {
     text-align: center;
 }
 
-.wishlist-support {
-    margin-top: 0;
-}
 
 /* ========================================
    MOBILE
@@ -345,7 +342,7 @@ footer {
 }
 
 .paypal-link {
-    padding-bottom: 40px !important;
+    padding-bottom: 0 !important;
 }
 
    .support-options {
