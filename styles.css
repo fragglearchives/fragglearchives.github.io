@@ -345,6 +345,10 @@ footer {
     padding-bottom: 0 !important;
 }
 
+   .wishlist-link {
+    padding-bottom: 40px;
+}
+
    .support-options {
     flex-direction: column;
     gap: 40px;
