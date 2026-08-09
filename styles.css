@@ -279,6 +279,11 @@ footer {
 }
 
 
+   .wishlist-link {
+    padding-bottom: 50px;
+}
+
+
 /* ========================================
    MOBILE
    ======================================== */
@@ -343,10 +348,6 @@ footer {
 
 .paypal-link {
     padding-bottom: 0 !important;
-}
-
-   .wishlist-link {
-    padding-bottom: 40px;
 }
 
    .support-options {
