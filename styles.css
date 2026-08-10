@@ -3,14 +3,30 @@
    Main Site Stylesheet
    ======================================== */
 
+:root {
+    /* Archive colour palette */
+    --archive-cream: #f7f1e8;
+    --archive-card: #fbf8f2;
+    --archive-light-card: #fffaf3;
+    --archive-collection: #faf7f0;
+    --archive-brown: #3a3028;
+    --archive-brown-hover: #51443a;
+    --archive-border: #c9bba9;
+    --archive-border-light: #d8cbb9;
+    --archive-button-border: #8b7a68;
+    --archive-text: #333;
+    --archive-muted: #666;
+    --archive-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background: #f7f1e8;
-    color: #333;
+    background: var(--archive-cream);
+    color: var(--archive-text);
     font-family: Georgia, serif;
 }
 
@@ -38,36 +54,33 @@ body {
    ======================================== */
 
 .site-nav {
-    background: #3a3028;
-    text-align: center;
     padding: 18px 10px;
-    color: #f7f1e8;
+    background: var(--archive-brown);
+    color: var(--archive-cream);
+    text-align: center;
 }
 
 .site-nav a {
-    color: #f7f1e8;
-    text-decoration: none;
-    font-size: 1.1rem;
     margin: 0 10px;
-}
-
-.site-nav a:hover {
-    text-decoration: underline;
-}
-
-main a {
-    color: #333;
+    color: var(--archive-cream);
+    font-size: 1.1rem;
     text-decoration: none;
-    font-weight: bold;
 }
 
+.site-nav a:hover,
 main a:hover {
     text-decoration: underline;
 }
 
+main a {
+    color: var(--archive-text);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .nav-heart {
-    color: #f7f1e8;
     margin: 0 8px;
+    color: var(--archive-cream);
 }
 
 /* ========================================
@@ -78,14 +91,14 @@ main {
     max-width: 900px;
     margin: 0 auto;
     padding: 60px 30px;
-    line-height: 1.8;
     font-size: 1.15rem;
+    line-height: 1.8;
 }
 
 h1 {
+    margin-top: 0;
     font-size: 3rem;
     text-align: center;
-    margin-top: 0;
 }
 
 h2 {
@@ -97,32 +110,39 @@ h3 {
 }
 
 /* ========================================
-   BOOK CARDS
+   SHARED CARDS
    ======================================== */
 
+.book-card,
+.contact-card,
+.support-card {
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
 .book-card {
-    background: #fbf8f2;
-    border: 1px solid #c9bba9;
-    padding: 40px;
     margin: 40px 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
 }
 
 .book-card h2 {
     margin-top: 0;
 }
 
-.contact-card {
-    background: #fbf8f2;
-    border: 1px solid #c9bba9;
-    padding: 10px 40px 40px;
+.contact-card,
+.support-card {
     margin: 40px 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 10px 40px 40px;
 }
 
+/* ========================================
+   BOOKS
+   ======================================== */
+
 .book-subtitle {
-    font-style: italic;
     font-size: 1.25rem;
+    font-style: italic;
 }
 
 .book-cover {
@@ -143,17 +163,17 @@ h3 {
 
 .button {
     display: inline-block;
-    background: #3a3028;
-    color: #f7f1e8;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border: 1px solid #8b7a68;
     margin-top: 20px;
+    padding: 14px 28px;
+    background: var(--archive-brown);
+    border: 1px solid var(--archive-button-border);
+    color: var(--archive-cream);
+    font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .button:hover {
-    background: #51443a;
+    background: var(--archive-brown-hover);
 }
 
 .paypal-button {
@@ -162,24 +182,15 @@ h3 {
 }
 
 /* ========================================
-   FOOTER
+   RESIDENTS
    ======================================== */
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-}
-
-
-/* RESIDENTS */
 
 .resident-card {
     max-width: 800px;
     margin: 50px auto;
     padding: 25px;
-    background: #fffaf3;
-    border: 1px solid #d8cbb9;
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border-light);
     text-align: center;
 }
 
@@ -200,17 +211,20 @@ footer {
     margin: 0 auto;
 }
 
+/* ========================================
+   COLLECTION
+   ======================================== */
+
 .collection-card {
     max-width: 900px;
     margin: 0 auto 50px;
     padding: 15px 30px 30px;
-    border: 1px solid #d8cbb8;
-    background: #faf7f0;
+    background: var(--archive-collection);
+    border: 1px solid var(--archive-border-light);
 }
 
 .collection-card h2 {
     margin: 0 0 15px;
-    margin-bottom: 15px;
 }
 
 .collection-card p {
@@ -223,10 +237,13 @@ footer {
     width: auto;
     height: 500px;
     max-width: 85%;
-    object-fit: contain;
     margin: 25px auto;
+    object-fit: contain;
 }
 
+/* ========================================
+   CONTACT
+   ======================================== */
 
 .facebook-intro {
     margin-top: 50px;
@@ -244,12 +261,16 @@ footer {
 
 .contact-option h2 {
     margin-top: 0;
-   font-size: 1.9rem;
+    font-size: 1.9rem;
 }
 
 .local-pickup {
     margin-top: 60px;
 }
+
+/* ========================================
+   SUPPORT
+   ======================================== */
 
 .support-options {
     display: flex;
@@ -267,23 +288,32 @@ footer {
     margin-top: 0;
 }
 
-.support-card {
-    background: #fbf8f2;
-    border: 1px solid #c9bba9;
-    padding: 10px 40px 40px;
-    margin: 40px 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
 .wishlist-link {
+    padding-bottom: 50px;
     text-align: center;
 }
 
+/* ========================================
+   FOOTER
+   ======================================== */
 
-   .wishlist-link {
-    padding-bottom: 50px;
+footer {
+    padding: 40px;
+    color: var(--archive-muted);
+    text-align: center;
 }
 
+/* ========================================
+   STEVE
+   ======================================== */
+
+.steve-image {
+    display: block;
+    width: 500px !important;
+    max-width: 80%;
+    height: auto;
+    margin: 25px auto;
+}
 
 /* ========================================
    MOBILE
@@ -291,10 +321,10 @@ footer {
 
 @media (max-width: 600px) {
 
-.header-banner {
-    width: 100%;
-    height: auto;
-}
+    .header-banner {
+        width: 100%;
+        height: auto;
+    }
 
     .site-nav {
         padding: 14px 8px;
@@ -320,51 +350,34 @@ footer {
     }
 
     .book-card {
-        padding: 25px;
         margin: 30px 0;
+        padding: 25px;
     }
 
-.collection-card img {
-    display: block;
-    max-width: 85%;
-    max-height: 400px;
-    width: auto;
-    height: auto;
-    margin: 20px auto;
-}
+    .collection-card img {
+        width: auto;
+        max-width: 85%;
+        max-height: 400px;
+        height: auto;
+        margin: 20px auto;
+    }
 
-   .contact-options {
-    flex-direction: column;
-    gap: 40px;
-}
+    .contact-options,
+    .support-options {
+        flex-direction: column;
+        gap: 40px;
+    }
 
-.contact-option a {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    overflow-wrap: anywhere;
-}
+    .contact-option a {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
 
-.paypal-link {
-    padding-bottom: 0 !important;
-}
-
-   .support-options {
-    flex-direction: column;
-    gap: 40px;
-}
-   
-}
-
-
-
-
-.steve-image {
-    display: block;
-    width: 500px !important;
-    max-width: 80%;
-    height: auto;
-    margin: 25px auto;
+    .paypal-link {
+        padding-bottom: 0 !important;
+    }
 }
