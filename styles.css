@@ -114,7 +114,6 @@ h3 {
    ======================================== */
 
 .book-card,
-.contact-card,
 .support-card {
     background: var(--archive-card);
     border: 1px solid var(--archive-border);
@@ -130,11 +129,27 @@ h3 {
     margin-top: 0;
 }
 
-.contact-card,
 .support-card {
     margin: 40px 0;
     padding: 10px 40px 40px;
 }
+
+/* ========================================
+   CONTACT CARD
+   ======================================== */
+
+.contact-card {
+    margin: 40px 0;
+    padding: 30px 40px 40px;
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.contact-card > h2 {
+    margin-top: 0;
+}
+
 
 /* ========================================
    BOOKS
