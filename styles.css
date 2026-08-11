@@ -413,7 +413,7 @@ footer {
     }
 
 
-   .collection-card {
+   .collection-card:has(> img:last-child) {
     padding-bottom: 20px;
 }
 
