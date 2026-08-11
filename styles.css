@@ -412,6 +412,10 @@ footer {
         margin: 20px auto 20px;
     }
 
+   .collection-card img:last-child {
+    margin-bottom: 0;
+}
+
     .contact-options,
     .support-options {
         flex-direction: column;
