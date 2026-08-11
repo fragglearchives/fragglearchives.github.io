@@ -252,7 +252,7 @@ h3 {
     width: auto;
     height: 500px;
     max-width: 85%;
-    margin: 25px auto;
+    margin: 25px auto 0;
     object-fit: contain;
 }
 
