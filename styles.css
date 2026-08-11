@@ -283,6 +283,7 @@ hr {
 }
 
        .giftshop-card img {
+        display: block;
         width: auto;
         max-width: 85%;
         max-height: 400px;
@@ -431,6 +432,7 @@ footer {
     }
 
        .giftshop-card img {
+        display: block;
         width: auto;
         max-width: 85%;
         max-height: 400px;
