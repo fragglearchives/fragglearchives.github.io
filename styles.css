@@ -257,9 +257,21 @@ hr {
     height: auto;
     max-width: 85%;
     max-height: 500px;
-    margin: 25px auto 25px;
+    margin: 25px auto 0;
     object-fit: contain;
 }
+
+/* ========================================
+   GIFT SHOP
+   ======================================== */
+
+       .giftshop-card img {
+        width: auto;
+        max-width: 85%;
+        max-height: 400px;
+        height: auto;
+        margin: 20px auto 25px;
+    }
 
 /* ========================================
    CONTACT
@@ -379,7 +391,7 @@ footer {
         max-width: 85%;
         max-height: 400px;
         height: auto;
-        margin: 20px auto 25px;
+        margin: 20px auto 0;
     }
 
     .contact-options,
@@ -399,5 +411,13 @@ footer {
 
     .paypal-link {
         padding-bottom: 0 !important;
+    }
+
+       .giftshop-card img {
+        width: auto;
+        max-width: 85%;
+        max-height: 400px;
+        height: auto;
+        margin: 20px auto 25px;
     }
 }
