@@ -379,7 +379,7 @@ footer {
         max-width: 85%;
         max-height: 400px;
         height: auto;
-        margin: 20px auto 0;
+        margin: 20px auto 25px;
     }
 
     .contact-options,
