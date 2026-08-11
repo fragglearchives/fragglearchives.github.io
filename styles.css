@@ -257,7 +257,7 @@ hr {
     height: auto;
     max-width: 85%;
     max-height: 500px;
-    margin: 25px auto 0;
+    margin: 25px auto 25px;
     object-fit: contain;
 }
 
