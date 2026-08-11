@@ -257,7 +257,7 @@ hr {
     height: auto;
     max-width: 85%;
     max-height: 500px;
-    margin: 25px auto 15px;
+    margin: 25px auto 25px;
     object-fit: contain;
 }
 
@@ -409,7 +409,7 @@ footer {
         max-width: 85%;
         max-height: 400px;
         height: auto;
-        margin: 20px auto 15px;
+        margin: 20px auto 25px;
     }
 
     .contact-options,
