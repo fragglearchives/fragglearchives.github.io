@@ -265,6 +265,23 @@ hr {
    GIFT SHOP
    ======================================== */
 
+     .giftshop-card {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 15px 30px 30px;
+    background: var(--archive-collection);
+    border: 1px solid var(--archive-border-light);
+}
+
+.giftshop-card h2 {
+    margin: 0 0 15px;
+}
+
+.giftshop-card p {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
        .giftshop-card img {
         width: auto;
         max-width: 85%;
