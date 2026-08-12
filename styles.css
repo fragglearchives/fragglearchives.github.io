@@ -291,6 +291,11 @@ hr {
         margin: 20px auto 25px;
     }
 
+.giftshop-card paypal-add-to-cart-button {
+   display: block;
+   margin-bottom: -10px;
+}
+
 /* ========================================
    CONTACT
    ======================================== */
