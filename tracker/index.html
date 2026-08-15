@@ -452,7 +452,10 @@ if (visitor.message) {
     card.appendChild(message.cloneNode(true));
 }
 
-visitorList.appendChild(card);
+if (visitorList.children.length > 0) {
+  visitorList.prepend(document.createElement('hr'));
+}
+visitorList.prepend(card);
     
       popup.appendChild(name);
       popup.appendChild(location);
