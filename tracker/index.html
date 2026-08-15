@@ -406,18 +406,45 @@ const TRACKER_API =
     */
 
 
-    document
-        .getElementById('checkin-form')
-        .addEventListener('submit', function(event) {
+document
+  .getElementById('check-in-form')
+  .addEventListener('submit', async function(event) {
 
-            event.preventDefault();
+    event.preventDefault();
 
-            alert(
-                "The Tracker is ready! " +
-                "We're just connecting the Archives database."
-            );
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-        });
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await fetch(TRACKER_API, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(data)
+      });
+
+      alert(
+        "You're on the map! 🐾\n\n" +
+        "Your check-in has been sent to the Fraggle Archives."
+      );
+
+      form.reset();
+
+    } catch (error) {
+
+      console.error(error);
+
+      alert(
+        "The Archives couldn't record your check-in right now. " +
+        "Please try again."
+      );
+    }
+
+  });
 
 </script>
 
