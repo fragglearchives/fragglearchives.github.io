@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Museum | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <img src="Banner.PNG"
+         alt="The Fraggle Archives"
+         class="header-banner">
+
+
+  <div id="site-nav"></div>
+
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
+    
+</header>
+
+
+
+<main>
+
+  <h1>Odin Relics</h1>
+
+<p class="intro">
+    Some of the smallest objects carry the deepest memories. These pieces belonged to Odin's life, and remain part of his story.
+</p>
+
+
+  <div class="collection-card">
+
+    <h2>The Nose Print</h2>
+
+    <img src="images/museum/odinnoseprint.png"
+         alt="The Sacred Yellow Plate, an important artifact preserved by The Fraggle Archives">
+
+    <p>
+        An artifact of considerable importance and questionable explanation.
+        Its history is carefully preserved within the Archives.
+    </p>
+
+</div>
+
+    <div class="collection-card">
+
+    <h2>The Fur Clipping</h2>
+
+    <img src="images/museum/FraggleFur.jpeg"
+         alt="Fur clipping from one very loved little grey cat">
+
+    <p>
+    A small clipping of Fraggle's fur, preserved as a physical reminder of the little grey cat at the heart of the Archives.
+    </p>
+
+</div>
+
+<div class="collection-card">
+
+    <h2>Sacred Ashes</h2>
+
+    <img src="images/museum/SacredAshes.png"
+         alt="Sacred Ashes, a memorial artifact preserved with care and reverence">
+
+    <p>
+        A memorial artifact preserved with care and reverence.
+    </p>
+
+    <p>
+        Some things are kept because they are historically important.
+        Others are kept because someone mattered.
+    </p>
+
+</div>
+
+
+  <div class="collection-card">
+
+    <h2>The Sacred Yellow Plate</h2>
+
+    <img src="images/museum/YellowPlate.png"
+         alt="The Sacred Yellow Plate, an important artifact preserved by The Fraggle Archives">
+
+    <p>
+        An artifact of considerable importance and questionable explanation.
+        Its history is carefully preserved within the Archives.
+    </p>
+
+</div>
+
+
+</main>
+
+    <footer>
+
+    © The Fraggle Archives
+
+</footer>
+
+</body>
+
+</html>
