@@ -366,13 +366,7 @@ fetch('/nav.html')
 
         <h2>The Village Has Visitors</h2>
 
-        <div class="visitor-placeholder">
-
-            <p>
-                The first hellos from around the world will appear here.
-            </p>
-
-        </div>
+<div id="visitor-list" class="visitor-placeholder"></div>
 
     </section>
 
@@ -409,7 +403,11 @@ function loadVisitors() {
       return;
     }
 
-    data.visitors.forEach(function(visitor) {
+const visitorList = document.getElementById('visitor-list');
+
+visitorList.innerHTML = '';
+
+data.visitors.forEach(function(visitor) {
 
       const marker = L.marker([
         Number(visitor.latitude),
@@ -428,15 +426,34 @@ function loadVisitors() {
           .join(', ');
 
       const date = document.createElement('div');
-      date.textContent =
-        visitor.readDate
-          ? 'Read Fraggle’s Village: ' + visitor.readDate
-          : '';
+     date.textContent =
+    visitor.readDate
+    ? 'Read Fraggle’s Village: ' +
+      new Date(visitor.readDate).toLocaleDateString('en-CA', {
+          year: 'numeric',
+          month: 'long'
+      })
+    : '';
 
       const message = document.createElement('div');
       message.textContent =
         visitor.message || '';
 
+const card = document.createElement('div');
+
+card.style.marginBottom = '25px';
+
+card.appendChild(name.cloneNode(true));
+card.appendChild(location.cloneNode(true));
+card.appendChild(date.cloneNode(true));
+
+if (visitor.message) {
+    card.appendChild(document.createElement('br'));
+    card.appendChild(message.cloneNode(true));
+}
+
+visitorList.appendChild(card);
+    
       popup.appendChild(name);
       popup.appendChild(location);
       popup.appendChild(date);
