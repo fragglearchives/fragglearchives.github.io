@@ -398,12 +398,77 @@ const TRACKER_API =
     ).addTo(map);
 
 
-    /*
-       The map is intentionally empty for now.
+function loadVisitors() {
 
-       Once we connect the check-in system,
-       real visitor locations will appear here.
-    */
+  const callbackName =
+    'fraggleTrackerCallback_' + Date.now();
+
+  window[callbackName] = function(data) {
+
+    if (!data || !data.visitors) {
+      delete window[callbackName];
+      return;
+    }
+
+    data.visitors.forEach(function(visitor) {
+
+      const marker = L.marker([
+        Number(visitor.latitude),
+        Number(visitor.longitude)
+      ]).addTo(map);
+
+      const popup = document.createElement('div');
+
+      const name = document.createElement('strong');
+      name.textContent = visitor.name || 'A Fraggle Friend';
+
+      const location = document.createElement('div');
+      location.textContent =
+        [visitor.city, visitor.province, visitor.country]
+          .filter(Boolean)
+          .join(', ');
+
+      const date = document.createElement('div');
+      date.textContent =
+        visitor.readDate
+          ? 'Read Fraggle’s Village: ' + visitor.readDate
+          : '';
+
+      const message = document.createElement('div');
+      message.textContent =
+        visitor.message || '';
+
+      popup.appendChild(name);
+      popup.appendChild(location);
+      popup.appendChild(date);
+
+      if (visitor.message) {
+        popup.appendChild(document.createElement('br'));
+        popup.appendChild(message);
+      }
+
+      marker.bindPopup(popup);
+    });
+
+    delete window[callbackName];
+  };
+
+  const script = document.createElement('script');
+
+  script.src =
+    TRACKER_API +
+    '?callback=' +
+    encodeURIComponent(callbackName);
+
+  script.onerror = function() {
+    delete window[callbackName];
+    console.error('The Archives could not load visitor locations.');
+  };
+
+  document.body.appendChild(script);
+}
+
+loadVisitors();
 
 
 document
