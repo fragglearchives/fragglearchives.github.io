@@ -11,6 +11,197 @@
 
     <link rel="stylesheet" href="/styles.css">
 
+    <style>
+
+    /* ========================================
+       WHERE IS FRAGGLE? — TRACKER
+       ======================================== */
+
+    .tracker-intro {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .tracker-intro h1 {
+        margin-bottom: 12px;
+    }
+
+    .tracker-intro p {
+        max-width: 650px;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+
+
+    /* MAP */
+
+    .tracker-map-card {
+        background: var(--archive-card);
+        border: 1px solid var(--archive-border);
+        box-shadow: var(--archive-shadow);
+        padding: 18px;
+        margin: 40px 0 55px;
+    }
+
+    #tracker-map {
+        width: 100%;
+        height: 500px;
+        border: 1px solid var(--archive-border);
+    }
+
+    .map-note {
+        margin: 12px 5px 0;
+        font-size: 0.9rem;
+        color: var(--archive-muted);
+        text-align: center;
+    }
+
+
+    /* CHECK-IN */
+
+    .checkin-card {
+        max-width: 760px;
+        margin: 0 auto 65px;
+        padding: 45px;
+        background: var(--archive-light-card);
+        border: 1px solid var(--archive-border);
+        box-shadow: var(--archive-shadow);
+    }
+
+    .checkin-card h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .checkin-intro {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 35px;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--archive-border);
+        background: white;
+        color: var(--archive-text);
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        border-radius: 3px;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+        resize: vertical;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .optional {
+        font-weight: normal;
+    }
+
+    .privacy-note {
+        margin: 25px 0;
+        padding: 16px 18px;
+        background: var(--archive-cream);
+        border-left: 4px solid var(--archive-border);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .checkin-button {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        padding: 15px 25px;
+        border: 1px solid var(--archive-button-border);
+        background: var(--archive-brown);
+        color: var(--archive-cream);
+        font-family: Georgia, serif;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .checkin-button:hover {
+        background: var(--archive-brown-hover);
+    }
+
+
+    /* VISITOR LIST */
+
+    .visitor-section {
+        margin-top: 20px;
+    }
+
+    .visitor-section h2 {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .visitor-placeholder {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 35px;
+        text-align: center;
+        background: var(--archive-card);
+        border: 1px solid var(--archive-border);
+    }
+
+    .visitor-placeholder p {
+        margin-bottom: 0;
+        font-style: italic;
+        color: var(--archive-muted);
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+        .tracker-intro h1 {
+            font-size: 2.4rem;
+        }
+
+        .tracker-intro p {
+            font-size: 1.1rem;
+        }
+
+        #tracker-map {
+            height: 380px;
+        }
+
+        .checkin-card {
+            padding: 28px 20px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+    }
+
+</style>
+
 </head>
 
 <body>
@@ -30,13 +221,200 @@ fetch('/nav.html')
         document.getElementById('site-nav').innerHTML = data;
     });
 </script>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
     
 </header>
 
 <main>
 
-TRACKER
+  <section class="tracker-intro">
 
+        <h1>Where Is Fraggle?</h1>
+
+        <p>
+            Fraggle has been travelling. Have you read his story?
+            Tell the Archives where you found him.
+        </p>
+
+    </section>
+
+
+    <section class="tracker-map-card">
+
+        <div id="tracker-map"></div>
+
+        <p class="map-note">
+            Every marker represents someone who has read
+            <em>Fraggle's Village</em> and stopped by to say hello.
+        </p>
+
+    </section>
+
+
+    <section class="checkin-card">
+
+        <h2>I'm Here!</h2>
+
+        <p class="checkin-intro">
+            If you've read <em>Fraggle's Village</em>, tell us where you are.
+            Your little corner of the world becomes part of Fraggle's journey.
+        </p>
+
+
+        <form id="checkin-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="city">City / Town</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="province">Province / State</label>
+                    <input type="text" id="province" name="province" required>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="postal">Postal / ZIP Code</label>
+                    <input type="text" id="postal" name="postal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="read-date">
+                    When did you read <em>Fraggle's Village</em>?
+                </label>
+
+                <input
+                    type="month"
+                    id="read-date"
+                    name="read-date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="name">Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Leave Fraggle a message
+                    <span class="optional">(optional)</span>
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Say hi to Fraggle..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="privacy-note">
+
+                <strong>A note about your location:</strong><br>
+
+                Your postal / ZIP code is used only to approximately
+                place your check-in on the map. It will never be
+                displayed publicly.
+
+            </div>
+
+
+            <button type="submit" class="checkin-button">
+                I'M HERE!
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="visitor-section">
+
+        <h2>The Village Has Visitors</h2>
+
+        <div class="visitor-placeholder">
+
+            <p>
+                The first hellos from around the world will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+    const map = L.map('tracker-map').setView([30, 0], 2);
+
+    L.tileLayer(
+        '[https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png]https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }
+    ).addTo(map);
+
+
+    /*
+       The map is intentionally empty for now.
+
+       Once we connect the check-in system,
+       real visitor locations will appear here.
+    */
+
+
+    document
+        .getElementById('checkin-form')
+        .addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+            alert(
+                "The Tracker is ready! " +
+                "We're just connecting the Archives database."
+            );
+
+        });
+
+</script>
 
 </main>
 
