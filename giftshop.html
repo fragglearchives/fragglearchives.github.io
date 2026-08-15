@@ -24,29 +24,15 @@
          class="header-banner">
 
 
-    <nav class="site-nav">
+ <div id="site-nav"></div>
 
-        <a href="index.html">WELCOME</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="books.html">BOOKS</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="museum.html">MUSEUM</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="residents.html">RESIDENTS</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="giftshop.html">GIFT SHOP</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="support.html">SUPPORT</a>
-        <span class="nav-heart">♥</span>
-
-        <a href="contact.html">CONTACT</a>
-
-    </nav>
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
 
 </header>
 
