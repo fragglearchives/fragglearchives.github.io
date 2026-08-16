@@ -90,7 +90,7 @@ main a {
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 60px 30px 15px;
     font-size: 1.15rem;
     line-height: 1.8;
 }
@@ -441,7 +441,7 @@ footer {
     }
 
     main {
-        padding: 45px 25px;
+        padding: 45px 25px 10px;
         font-size: 1.1rem;
     }
 
