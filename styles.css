@@ -304,6 +304,10 @@ input[type="button"] {
    margin-bottom: -10px;
 }
 
+paypal-add-to-cart-button {
+   font-size: 0.8rem;
+}
+
 .product-specs {
   margin-top: 18px !important;
   margin-bottom: 18px !important;
