@@ -353,7 +353,7 @@ hr {
    ======================================== */
 
 footer {
-    padding: 40px;
+    padding: 30px;
     color: var(--archive-muted);
     text-align: center;
 }
@@ -361,17 +361,21 @@ footer {
 
 .site-footer a {
   color: inherit;
+  font-weight: 400;
   text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  opacity: 0.85;
 }
 
 .site-footer a:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .footer-motto {
   font-style: italic;
+  font-size: 0.9em;
+  opacity: 0.85;
 }
 
 /* ========================================
