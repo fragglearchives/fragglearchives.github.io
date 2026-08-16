@@ -17,7 +17,7 @@ function initCatalogue(config) {
     return;
   }
 
-  const items = originalItems.map(item => item.cloneNode(true));
+  const items = originalItems;
 
   let currentMode = "collection";
   let currentFilter = "all";
@@ -97,7 +97,7 @@ function initCatalogue(config) {
         );
 
         groupItems.forEach((item, index) => {
-          groupBox.appendChild(item.cloneNode(true));
+          groupBox.appendChild(item);
 
           if (index < groupItems.length - 1) {
             groupBox.appendChild(document.createElement("hr"));
@@ -120,7 +120,7 @@ function initCatalogue(config) {
       groupBox.className = "giftshop-card catalogue-group-box";
 
       visibleItems.forEach((item, index) => {
-        groupBox.appendChild(item.cloneNode(true));
+        groupBox.appendChild(item);
 
         if (index < visibleItems.length - 1) {
           groupBox.appendChild(document.createElement("hr"));
