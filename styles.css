@@ -296,6 +296,59 @@ hr {
    margin-bottom: -10px;
 }
 
+/* ================================
+   GIFT SHOP CATALOGUE BROWSER
+   ================================ */
+
+.catalogue-browser {
+  max-width: 900px;
+  margin: 35px auto 45px;
+}
+
+.catalogue-mode-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.catalogue-mode,
+.catalogue-filter {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border: 1px solid var(--archive-border-light);
+  border-radius: 0;
+  background: var(--archive-collection);
+  color: #3b3128;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.catalogue-mode:hover,
+.catalogue-filter:hover {
+  border-color: #3b3128;
+}
+
+.catalogue-mode.active,
+.catalogue-filter.active {
+  background: #3b3128;
+  color: #f8f3ea;
+  border-color: #3b3128;
+}
+
+.catalogue-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catalogue-status {
+  margin-top: 22px;
+  font-style: italic;
+  opacity: 0.75;
+}
+
 /* ========================================
    CONTACT
    ======================================== */
