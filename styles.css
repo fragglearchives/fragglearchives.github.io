@@ -304,6 +304,13 @@ input[type="button"] {
    margin-bottom: -10px;
 }
 
+.product-specs {
+  margin-top: 18px !important;
+  margin-bottom: 18px !important;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
 /* ================================
    GIFT SHOP CATALOGUE BROWSER
    ================================ */
