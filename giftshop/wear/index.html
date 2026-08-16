@@ -42,6 +42,41 @@ fetch('/nav.html')
 
     <p>Official wear for Archivists, whether you’re on expedition or just running errands.</p>
 
+    <div class="catalogue-browser" id="wear-browser" hidden>
+
+  <p class="catalogue-label">Browse by:</p>
+
+  <div class="catalogue-mode-switch"
+       role="group"
+       aria-label="Choose how to browse Archives wear">
+
+    <button type="button"
+            class="catalogue-mode active"
+            data-mode="collection"
+            aria-pressed="true">
+      Collection
+    </button>
+
+    <button type="button"
+            class="catalogue-mode"
+            data-mode="type"
+            aria-pressed="false">
+      Garment
+    </button>
+
+  </div>
+
+  <div id="catalogue-filters"
+       class="catalogue-filters"
+       aria-label="Catalogue filters">
+  </div>
+
+  <p id="catalogue-status"
+     class="catalogue-status"
+     aria-live="polite">
+  </p>
+
+</div>
 
     <section>
         <h2>Tees - $40—$48 plus shipping</h2>
