@@ -352,6 +352,12 @@ hr {
    FOOTER
    ======================================== */
 
+footer {
+  padding: 0 30px 20px;
+  color: var(--archive-muted);
+  text-align: center;
+}
+
 .site-footer a {
   color: inherit;
   font-weight: 400;
@@ -394,6 +400,10 @@ hr {
 
 .site-footer p:first-child {
   margin-top: 0;
+}
+
+.footer-copyright {
+ margin-top: 1.4rem;
 }
 
 
