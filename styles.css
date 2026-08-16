@@ -200,6 +200,14 @@ hr {
     top: -10px;
 }
 
+/* Rounded buttons site-wide */
+.button,
+button,
+input[type="submit"],
+input[type="button"] {
+  border-radius: 999px;
+}
+
 /* ========================================
    RESIDENTS
    ======================================== */
@@ -318,7 +326,7 @@ hr {
   font-size: 1rem;
   padding: 10px 18px;
   border: 1px solid var(--archive-border-light);
-  border-radius: 0;
+  border-radius: 999px;
   background: var(--archive-collection);
   color: #3b3128;
   cursor: pointer;
