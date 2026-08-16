@@ -352,13 +352,6 @@ hr {
    FOOTER
    ======================================== */
 
-footer {
-    padding: 30px;
-    color: var(--archive-muted);
-    text-align: center;
-}
-
-
 .site-footer a {
   color: inherit;
   font-weight: 400;
@@ -385,6 +378,24 @@ footer {
   opacity: 0.55;
   letter-spacing: 0.4rem;
 }
+
+.footer-divider {
+  text-align: center;
+  margin: 1rem 0 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.55;
+  letter-spacing: 0.4rem;
+}
+
+.site-footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.site-footer p:first-child {
+  margin-top: 0;
+}
+
 
 /* ========================================
    STEVE
