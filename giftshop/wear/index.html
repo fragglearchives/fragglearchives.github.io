@@ -487,6 +487,18 @@ fetch('/nav.html')
 
 <div id="footer-placeholder"></div>
 
+    <script src="/catalogue.js"></script>
+
+<script>
+  initCatalogue({
+    legacyId: "legacy-wear-catalogue",
+    browserId: "wear-browser",
+    resultsId: "catalogue-results",
+    filtersId: "catalogue-filters",
+    statusId: "catalogue-status"
+  });
+</script>
+
     <script>
   fetch('/footer.html')
     .then(response => response.text())
