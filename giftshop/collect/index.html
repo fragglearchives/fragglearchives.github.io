@@ -92,7 +92,22 @@ fetch('/nav.html')
 </div>
 
     </section>
-            <div id="collect-legacy">
+           
+<section id="collect-browser" hidden>
+
+  <div id="collect-filters"
+       class="catalogue-filters">
+  </div>
+
+  <div id="collect-results">
+  </div>
+
+  <p id="collect-status"
+     class="catalogue-status">
+  </p>
+
+</section>    
+    <div id="collect-legacy">
 
     <section>
         <h2>Stickers</h2>
@@ -450,7 +465,17 @@ fetch('/nav.html')
     });
 </script>
 
+<script src="/catalogue.js"></script>
 
+<script>
+  initCatalogue({
+    legacyId: "collect-legacy",
+    browserId: "collect-browser",
+    resultsId: "collect-results",
+    filtersId: "collect-filters",
+    statusId: "collect-status"
+  });
+</script>
 
 </body>
 
