@@ -595,7 +595,7 @@ footer {
 
 .partnerships-intro {
   max-width: 760px;
-  margin: 45px auto;
+  margin: 20px auto 45px;
   text-align: center;
 }
 
@@ -731,7 +731,7 @@ footer {
 @media (max-width: 700px) {
 
   .partnerships-intro {
-    margin: 35px auto;
+    margin: 20px auto 35px;
   }
 
   .funds-accountability {
