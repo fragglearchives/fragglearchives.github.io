@@ -691,6 +691,55 @@ input[type="date"] {
 }
 
 
+/* =========================================================
+   TRACKER LEGEND
+   ========================================================= */
+
+.tracker-legend {
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+.tracker-legend-title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tracker-legend-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.tracker-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tracker-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tracker-dot-fv {
+  background: #4f7d57;
+}
+
+.tracker-dot-twwl {
+  background: #75528c;
+}
+
+.tracker-dot-ssff {
+  background: #a84949;
+}
+
+
+
 
 /* ========================================
    MOBILE
