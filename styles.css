@@ -153,31 +153,10 @@ hr {
    SHARED CARDS
    ======================================== */
 
-.book-card,
 .support-card {
     background: var(--archive-card);
     border: 1px solid var(--archive-border);
     box-shadow: var(--archive-shadow);
-}
-
-.book-card {
-    display: grid;
-   grid-template-columns: 240px minmax(0, 1fr);
-   gap: 38px;
-   align-items: start;
-
-   margin: 32px auto;
-   padding: 32px;
-
-   max-width: 1000px;
-}
-}
-
-.book-card h2 {
-    margin-top: 0;
-}
-
-.support-card {
     margin: 40px 0;
     padding: 10px 40px 40px;
 }
@@ -201,148 +180,129 @@ hr {
 
 /* ========================================
    BOOKS
+   One authoritative layout for all book cards
    ======================================== */
 
 .books-page {
-   max-width: 1060px;
+    max-width: 1060px;
 }
 
-.book-subtitle {
-    font-size: 1.25rem;
-    font-style: italic;
+.book-card {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 40px 48px;
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
 }
 
 .book-cover {
     display: block;
     width: 100%;
-    max-width: 240px;
+    max-width: 760px;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 32px;
+}
+
+.book-details {
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 .book-card h2 {
-  margin: 0 0 8px;
-  font-size: 2.1rem;
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 2.2rem;
 }
 
 .book-subtitle {
-  margin: 0 0 22px;
-  font-size: 1.15rem;
-  font-style: italic;
-  line-height: 1.5;
+    margin: 0 0 26px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.5;
 }
 
-.book-details p {
-  line-height: 1.7;
+.book-details > p:not(.book-subtitle):not(.book-status) {
+    text-align: left;
+    line-height: 1.7;
 }
-
 
 .book-status {
-  display: inline-block;
-  margin: 8px 0 4px;
-
-  font-size: 0.78rem;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.65;
+    display: block;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.65;
 }
 
 .book-status i {
-  font-style: normal;
+    font-style: normal;
 }
 
+/* Status used inside future-book details */
+.book-details > .book-status {
+    margin: 22px 0 0;
+    text-align: center;
+}
+
+/* Published-book purchase area */
 .book-actions {
-  grid-column: 1 / -1;
-}
-
-.book-status {
-  display: block;
-  margin: 0 0 14px;
-}
-
-.book-actions .button {
-  margin-top: 0;
-}
-
-
-.book-actions {
-  grid-column: 1 / -1;
-
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 38px;
-  align-items: start;
-
-  margin-top: 8px;
+    width: 100%;
+    max-width: none;
+    margin: 22px 0 0;
 }
 
 .book-buy {
-  text-align: center;
+    text-align: center;
 }
 
-.book-actions .local-pickup {
-  margin-top: 0;
+.book-buy .book-status {
+    margin: 0 0 12px;
+    text-align: center;
 }
 
 .book-buy .button {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 0;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    margin-top: 0;
+    box-sizing: border-box;
 }
 
-@media (max-width: 700px) {
-
-  .archive-page-intro {
-    margin: 20px auto 35px;
-  }
-
-  .book-card {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
-  }
-
-   .book-card h2,
-   .book-subtitle,
-   .book-status {
-      text-align: center;
-   }
-
-   .book-status {
-      display: block;
-   }
-   
-  .book-cover {
-    max-width: 260px;
-  }
-
-  .book-details {
+.book-card .local-pickup {
+    margin-top: 30px;
     text-align: left;
-  }
 }
 
 .paypal-link {
     margin-bottom: 40px;
 }
 
-.book-actions {
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
+@media (max-width: 700px) {
+    .book-card {
+        margin: 30px 0;
+        padding: 24px;
+    }
 
-.book-buy {
-  text-align: center;
-}
+    .book-cover {
+        margin-bottom: 26px;
+    }
 
-.book-details > p:last-child {
-  margin-bottom: 0;
-}
+    .book-card h2 {
+        font-size: 2rem;
+    }
 
-.book-actions {
-  margin-top: 0;
-}
+    .book-buy .button {
+        width: 100%;
+    }
 
+    .book-card .local-pickup {
+        margin-top: 28px;
+    }
+}
 
 /* ========================================
    BUTTONS
@@ -640,129 +600,6 @@ input[type="button"] {
 
 .charter-text .charter-divider:last-child {
   margin-bottom: 0;
-}
-
-
-
-/* =========================================================
-   BOOKS — STACKED EDITORIAL LAYOUT
-   ========================================================= */
-
-.book-card {
-  display: block;
-  max-width: 1000px;
-  margin: 32px auto;
-  padding: 25px;
-}
-
-
-/* Book covers */
-
-.book-card .book-cover {
-  display: block;
-  width: 100%;
-  max-width: 760px;
-  height: auto;
-  margin: 0 auto 32px;
-}
-
-
-/* Main book information */
-
-.book-card .book-details {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.book-card h2 {
-  margin: 0 0 10px;
-  text-align: center;
-  font-size: 2.2rem;
-}
-
-.book-card .book-subtitle {
-  margin: 0 0 26px;
-  text-align: center;
-  font-size: 1.15rem;
-  font-style: italic;
-  line-height: 1.5;
-}
-
-.book-card .book-details > p:not(.book-subtitle):not(.book-status) {
-  text-align: left;
-  line-height: 1.7;
-}
-
-
-/* Status labels */
-
-.book-card .book-status {
-  display: block;
-  margin: 24px 0 14px;
-  text-align: center;
-}
-
-
-/* Published-book actions */
-
-.book-card .book-actions {
-  display: block;
-  max-width: 760px;
-  margin: 24px auto 0;
-}
-
-.book-card .book-buy {
-  text-align: center;
-}
-
-.book-card .book-buy .button {
-  display: inline-block;
-  width: auto;
-  max-width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-
-/* Extra book information */
-
-.book-card .local-pickup {
-  margin-top: 30px;
-  text-align: left;
-}
-
-
-/* Mobile */
-
-@media (max-width: 700px) {
-
-  .book-card {
-    padding: 24px;
-  }
-
-  .book-card .book-cover {
-    margin-bottom: 26px;
-  }
-
-  .book-card h2 {
-    font-size: 2rem;
-  }
-
-  .book-card .book-status {
-    margin-top: 22px;
-  }
-
-  .book-card .book-actions {
-    margin-top: 22px;
-  }
-
-  .book-card .book-buy .button {
-    width: 100%;
-  }
-
-  .book-card .local-pickup {
-    margin-top: 28px;
-  }
 }
 
 
@@ -1259,8 +1096,6 @@ input[type="date"] {
 }
 
 
-
-
 /* ========================================
    MOBILE
    ======================================== */
@@ -1316,11 +1151,6 @@ input[type="date"] {
 
     h2 {
         font-size: 1.9rem;
-    }
-
-    .book-card {
-        margin: 30px 0;
-        padding: 25px;
     }
 
     .collection-card img {
