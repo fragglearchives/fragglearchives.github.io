@@ -889,6 +889,10 @@ footer {
   object-fit: contain;
 }
 
+.parter-details p {
+   text-align: left;
+}
+
 
 /* ========================================
    STEVE
