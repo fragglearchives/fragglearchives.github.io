@@ -519,15 +519,30 @@ const marker = L.circleMarker(
           .filter(Boolean)
           .join(', ');
 
-      const date = document.createElement('div');
-     date.textContent =
-    visitor.readDate
-    ? 'Read Fraggle’s Village: ' +
-      new Date(visitor.readDate).toLocaleDateString('en-CA', {
-          year: 'numeric',
-          month: 'long'
-      })
-    : '';
+const date = document.createElement('div');
+
+if (visitor.readDate) {
+
+  const bookTitle = document.createElement('em');
+  bookTitle.textContent =
+    visitor.bookTitle || 'Fraggle’s Village';
+
+  const readDate =
+    new Date(visitor.readDate).toLocaleDateString('en-CA', {
+      year: 'numeric',
+      month: 'long'
+    });
+
+  date.appendChild(
+    document.createTextNode('Read ')
+  );
+
+  date.appendChild(bookTitle);
+
+  date.appendChild(
+    document.createTextNode(' ' + readDate)
+  );
+}
 
       const message = document.createElement('div');
       message.textContent =
