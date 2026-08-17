@@ -582,6 +582,179 @@ footer {
 }
 
 
+
+/* ========================================
+   PARTNERSHIPS
+   ======================================== */
+
+
+.partnerships-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.partnerships-intro {
+  max-width: 760px;
+  margin: 45px auto;
+  text-align: center;
+}
+
+.partnerships-intro h1 {
+  margin-top: 6px;
+}
+
+.partnerships-lead {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+
+/* Accountability */
+
+.funds-accountability {
+  margin: 45px 0;
+  padding: 30px 35px;
+  background: var(--archive-card);
+  border: 1px solid var(--archive-border);
+  box-shadow: var(--archive-shadow);
+  text-align: center;
+}
+
+.funds-accountability h2 {
+  margin-top: 5px;
+}
+
+.funds-total {
+  margin: 25px auto 20px;
+}
+
+.funds-total strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 2rem;
+}
+
+.funds-total span {
+  font-size: 0.9rem;
+}
+
+
+/* Partners */
+
+.partner-network {
+  margin: 55px 0;
+}
+
+.partner-network > h2,
+.partner-network > .eyebrow {
+  text-align: center;
+}
+
+.partner-card {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 30px;
+  align-items: center;
+
+  margin: 28px 0;
+  padding: 30px;
+
+  background: var(--archive-card);
+  border: 1px solid var(--archive-border);
+  box-shadow: var(--archive-shadow);
+}
+
+.partner-logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 150px;
+  padding: 20px;
+
+  border: 1px dashed var(--archive-border);
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.partner-type {
+  display: inline-block;
+  margin-bottom: 7px;
+
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.partner-details h3 {
+  margin: 0 0 12px;
+}
+
+.partner-details p {
+  line-height: 1.65;
+}
+
+.partner-impact {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+
+  margin-top: 8px;
+  padding-top: 12px;
+
+  border-top: 1px solid var(--archive-border);
+}
+
+.partner-impact span {
+  font-size: 0.85rem;
+}
+
+.partner-impact strong {
+  font-size: 1.25rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .partnerships-intro {
+    margin: 35px auto;
+  }
+
+  .funds-accountability {
+    padding: 26px 22px;
+  }
+
+  .partner-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .partner-logo-placeholder {
+    min-height: 120px;
+  }
+
+  .partner-impact {
+    justify-content: center;
+  }
+}
+
+
 /* ========================================
    STEVE
    ======================================== */
