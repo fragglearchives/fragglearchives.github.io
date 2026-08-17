@@ -1064,7 +1064,54 @@ input[type="button"] {
 
 
 
+/* ========================================
+   CONTACT
+   ======================================== */
 
+.contact-page .support-card {
+    text-align: center;
+}
+
+.contact-page .support-card h2,
+.contact-page .support-card p,
+.contact-page .support-card .archive-eyebrow {
+    text-align: center;
+}
+
+.contact-page .support-card p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-page .support-card hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-page .support-card .button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ========================================
+   CONTACT — MOBILE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .contact-page .support-card h2,
+    .contact-page .support-card p,
+    .contact-page .support-card .archive-eyebrow {
+        text-align: center;
+    }
+
+    .contact-page .support-card p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
 
 
 
