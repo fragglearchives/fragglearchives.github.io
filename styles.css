@@ -626,6 +626,32 @@ input[type="date"] {
 }
 
 
+.latest-sighting {
+ margin: 0 auto 25px;
+ padding: 22px 24px;
+ background: var(--archive-card);
+ border: 1px solid var(--archive-border);
+ box-shadow: var(--archive-shadow);
+ text-align: center;
+}
+
+.latest-sighting-label {
+ display: block;
+ margin-bottom: 10px;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ font-size: 0.85rem;
+}
+
+.latest-sighting strong {
+ display: block;
+ margin-bottom: 6px;
+ font-size: 1.35rem;
+}
+
+
+
 /* =========================================================
    ARCHIVE STATS
    ========================================================= */
