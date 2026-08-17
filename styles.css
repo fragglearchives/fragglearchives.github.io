@@ -429,6 +429,38 @@ input[type="button"] {
     }
 }
 
+/* Resident metadata */
+
+.resident-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+
+    margin: 10px 0 18px;
+    padding-top: 12px;
+
+    border-top: 1px solid var(--archive-border);
+}
+
+.resident-meta-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.resident-meta-item span {
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.resident-meta-item strong {
+    font-size: 0.86rem;
+    font-weight: normal;
+}
+
 /* Mobile */
 
 @media (max-width: 700px) {
