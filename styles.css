@@ -754,6 +754,15 @@ footer {
   }
 }
 
+.partner-logo img {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  max-height: 150px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 
 /* ========================================
    STEVE
