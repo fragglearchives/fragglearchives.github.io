@@ -16,279 +16,434 @@
         data-merchant-id="YQDNBYWJ596KA">
     </script>
 
+<style>
+    /* =========================================
+   COLLECT THE ARCHIVES
+   Institutional Gift Shop
+   ========================================= */
 
-    <style>
+.collect-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        /* =========================================
-           COLLECT THE ARCHIVES
-           Compact catalogue layout
-           ========================================= */
 
-        .collect-page {
-            max-width: 1150px;
-            margin: 0 auto;
-        }
+/* =========================================
+   EYEBROWS
+   ========================================= */
 
+.collect-page .eyebrow {
+    margin: 0 0 6px;
 
-        /* -----------------------------------------
-           INTRO
-           ----------------------------------------- */
+    font-size: 0.78rem;
+    font-weight: bold;
 
-        .collect-intro {
-            margin-bottom: 30px;
-        }
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 
+    opacity: 0.65;
+}
 
-        /* -----------------------------------------
-           FILTERS
-           ----------------------------------------- */
 
-        .collect-browser {
-            margin: 32px 0 38px;
-        }
+/* =========================================
+   INTRO
+   ========================================= */
 
-        .collect-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+.collect-intro {
+    max-width: 760px;
 
-            margin-bottom: 18px;
-        }
+    margin: 20px auto 50px;
 
-        .collect-filter {
-            font-family: inherit;
-            font-size: 1rem;
+    text-align: center;
+}
 
-            padding: 10px 18px;
+.collect-intro h1 {
+    margin: 6px 0 24px;
 
-            border: 1px solid var(--archive-border);
-            border-radius: 999px;
+    font-size: clamp(3rem, 6vw, 4.6rem);
+    line-height: 1.05;
+}
 
-            background: transparent;
-            color: inherit;
+.collect-lead {
+    max-width: 650px;
 
-            cursor: pointer;
-        }
+    margin: 0 auto;
 
-        .collect-filter:hover {
-            border-color: #3b3128;
-        }
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
 
-        .collect-filter.active {
-            background: #3b3128;
-            color: #f8f3ea;
-            border-color: #3b3128;
-        }
 
-        .collect-status {
-            margin: 0;
+/* =========================================
+   CATALOGUE CONTROLS
+   ========================================= */
 
-            font-style: italic;
-            opacity: 0.75;
-        }
+.collect-browser {
+    max-width: 760px;
 
+    margin: 45px auto 32px;
 
-        /* -----------------------------------------
-           VIEW CART
-           ----------------------------------------- */
+    padding: 25px 28px;
 
-        .collect-cart {
-            margin: 28px 0 45px;
-        }
+    background: var(--archive-card);
 
-        .collect-cart h2 {
-            margin: 0 0 10px;
-            font-size: 1.35rem;
-        }
+    border: 1px solid var(--archive-border);
 
+    box-shadow: var(--archive-shadow);
 
-        /* -----------------------------------------
-           CATEGORY SECTIONS
-           ----------------------------------------- */
+    text-align: center;
+}
 
-        .collect-category {
-            margin: 0 0 58px;
-        }
+.collect-filters {
+    display: flex;
+    flex-wrap: wrap;
 
-        .collect-category-header {
-            margin-bottom: 24px;
-        }
+    justify-content: center;
 
-        .collect-category-header h2 {
-            margin: 0 0 7px;
+    gap: 10px;
 
-            font-size: 2rem;
-        }
+    margin-bottom: 18px;
+}
 
-        .collect-category-header p {
-            margin: 0;
+.collect-filter {
+    font-family: inherit;
+    font-size: 0.95rem;
 
-            max-width: 760px;
-            line-height: 1.6;
-        }
+    padding: 10px 18px;
 
+    border: 1px solid var(--archive-border);
+    border-radius: 999px;
 
-        /* -----------------------------------------
-           PRODUCT GRID
-           ----------------------------------------- */
+    background: transparent;
+    color: inherit;
 
-        .collect-grid {
-            display: grid;
+    cursor: pointer;
+}
 
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+.collect-filter:hover {
+    border-color: #3b3128;
+}
 
-            gap: 24px;
-        }
+.collect-filter.active {
+    background: #3b3128;
+    color: #f8f3ea;
 
+    border-color: #3b3128;
+}
 
-        /* -----------------------------------------
-           PRODUCT CARDS
-           ----------------------------------------- */
+.collect-status {
+    margin: 4px 0 0;
 
-        .collect-card {
-            display: flex;
-            flex-direction: column;
+    font-size: 0.9rem;
+    font-style: italic;
 
-            min-width: 0;
+    opacity: 0.7;
+}
 
-            padding: 22px 20px 24px;
 
-            background: var(--archive-collection);
-            border: 1px solid var(--archive-border-light);
-        }
+/* =========================================
+   VIEW CART
+   ========================================= */
 
-        .collect-card h3 {
-            margin: 0 0 12px;
+.collect-cart {
+    margin: 30px auto 65px;
 
-            font-size: 1.4rem;
-            line-height: 1.25;
-        }
+    text-align: center;
+}
 
-        .collect-card img {
-            display: block;
+.collect-cart h2 {
+    margin: 0 0 12px;
 
-            width: 100%;
-            height: 190px;
+    font-size: 1.25rem;
+}
 
-            object-fit: contain;
 
-            margin: 6px auto 18px;
-        }
+/* =========================================
+   CATEGORY SECTIONS
+   ========================================= */
 
-        .collect-card-description {
-            margin: 0 0 10px;
+.collect-category {
+    margin: 70px 0;
+}
 
-            line-height: 1.55;
-        }
+.collect-category-header {
+    max-width: 760px;
 
-        .collect-card-specs {
-            margin: 0 0 18px;
+    margin: 0 auto 30px;
 
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
+    text-align: center;
+}
 
-        .collect-buy {
-            margin-top: auto;
-        }
+.collect-category-header h2 {
+    margin: 5px 0 14px;
 
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
 
-        /* -----------------------------------------
-           SHIPPING
-           ----------------------------------------- */
+.collect-category-header > p:not(.eyebrow) {
+    max-width: 650px;
 
-        .collect-shipping {
-            margin: 65px 0 55px;
-        }
+    margin: 0 auto;
 
-        .collect-shipping > h2 {
-            margin-bottom: 8px;
-        }
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
 
-        .collect-shipping-intro {
-            margin-bottom: 26px;
-        }
 
-        .shipping-grid {
-            display: grid;
+/* =========================================
+   PRODUCT GRID
+   ========================================= */
 
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+.collect-grid {
+    display: grid;
 
-            gap: 24px;
-        }
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-        .shipping-card {
-            padding: 26px;
+    gap: 28px;
+}
 
-            background: var(--archive-collection);
-            border: 1px solid var(--archive-border-light);
-        }
 
-        .shipping-card h3 {
-            margin: 0 0 12px;
-        }
+/* =========================================
+   PRODUCT CARDS
+   ========================================= */
 
-        .shipping-card p {
-            margin: 0 0 18px;
-            line-height: 1.55;
-        }
+.collect-card {
+    display: flex;
+    flex-direction: column;
 
+    min-width: 0;
 
-        /* =========================================
-           TABLET
-           ========================================= */
+    padding: 26px 24px 24px;
 
-        @media (max-width: 950px) {
+    background: var(--archive-card);
 
-            .collect-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
+    border: 1px solid var(--archive-border);
 
-            .collect-card img {
-                height: 210px;
-            }
+    box-shadow: var(--archive-shadow);
+}
 
-        }
+.collect-card h3 {
+    margin: 0 0 16px;
 
+    font-size: 1.55rem;
+    line-height: 1.2;
 
-        /* =========================================
-           MOBILE
-           ========================================= */
+    text-align: center;
+}
 
-        @media (max-width: 650px) {
+.collect-card img {
+    display: block;
 
-            .collect-grid {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
+    width: 100%;
+    height: 190px;
 
-            .collect-card {
-                padding: 20px 18px 22px;
-            }
+    margin: 0 auto 22px;
 
-            .collect-card img {
-                width: auto;
-                height: auto;
+    object-fit: contain;
+}
 
-                max-width: 85%;
-                max-height: 300px;
-            }
+.collect-card-description {
+    margin: 0 0 16px;
 
-            .shipping-grid {
-                grid-template-columns: 1fr;
-            }
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
 
-            .collect-category {
-                margin-bottom: 48px;
-            }
 
-        }
+/* SIZE becomes a small archival metadata line */
 
-    </style>
+.collect-card-specs {
+    margin: auto 0 18px;
+    padding-top: 14px;
 
+    border-top: 1px solid var(--archive-border);
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   PURCHASE AREA
+   ========================================= */
+
+.collect-buy {
+    padding-top: 4px;
+}
+
+.collect-buy paypal-add-to-cart-button {
+    display: block;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   SHIPPING
+   ========================================= */
+
+.collect-shipping {
+    margin: 85px 0 60px;
+
+    text-align: center;
+}
+
+.collect-shipping > h2 {
+    margin: 5px 0 18px;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.collect-shipping-intro {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.shipping-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+.shipping-card {
+    padding: 30px;
+
+    background: var(--archive-card);
+
+    border: 1px solid var(--archive-border);
+
+    box-shadow: var(--archive-shadow);
+
+    text-align: center;
+}
+
+.shipping-card h3 {
+    margin: 0 0 14px;
+
+    font-size: 1.55rem;
+}
+
+.shipping-card p {
+    margin: 0 0 22px;
+
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .collect-page {
+        max-width: 92%;
+    }
+
+    .collect-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .collect-card img {
+        height: 210px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .collect-page {
+        max-width: none;
+    }
+
+
+    .collect-intro {
+        margin: 20px auto 40px;
+    }
+
+    .collect-intro h1 {
+        font-size: 3rem;
+    }
+
+    .collect-lead {
+        font-size: 1.08rem;
+    }
+
+
+    .collect-browser {
+        margin: 35px 0 30px;
+
+        padding: 24px 20px;
+    }
+
+
+    .collect-category {
+        margin: 60px 0;
+    }
+
+    .collect-category-header {
+        margin-bottom: 25px;
+    }
+
+    .collect-category-header h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .collect-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    .collect-card {
+        padding: 26px 22px;
+    }
+
+    .collect-card h3 {
+        font-size: 1.65rem;
+    }
+
+    .collect-card img {
+        width: auto;
+        height: auto;
+
+        max-width: 85%;
+        max-height: 300px;
+    }
+
+
+    .shipping-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collect-shipping {
+        margin-top: 70px;
+    }
+
+}
+</style>
 </head>
 
 
