@@ -608,30 +608,201 @@ input[type="button"] {
     margin-top: 60px;
 }
 
+
+
 /* ========================================
    SUPPORT
    ======================================== */
 
-.support-options {
-    display: flex;
-    gap: 60px;
-    margin-top: 40px;
+.support-page {
+    max-width: 1000px;
 }
 
-.support-option,
-.paypal-support {
-    flex: 1;
+
+/* Overview */
+
+.support-overview {
+    margin: 45px 0;
+    padding: 30px 40px 34px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
 }
 
-.support-option h2,
-.paypal-support h2 {
-    margin-top: 0;
-}
-
-.wishlist-link {
-    padding-bottom: 50px;
+.support-overview > .archive-eyebrow,
+.support-overview > h2 {
     text-align: center;
 }
+
+.support-overview h2 {
+    margin-top: 5px;
+}
+
+.support-overview-text {
+    max-width: 760px;
+    margin: 24px auto 0;
+}
+
+.support-overview-text p {
+    line-height: 1.7;
+    text-align: left;
+}
+
+
+/* Support methods */
+
+.support-methods {
+    margin: 55px 0;
+}
+
+.support-methods > .archive-eyebrow,
+.support-methods > h2 {
+    text-align: center;
+}
+
+.support-method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+
+    margin-top: 30px;
+}
+
+.support-method-card {
+    padding: 30px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.support-method-type {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+
+    opacity: 0.65;
+}
+
+.support-method-card h3 {
+    margin: 0 0 18px;
+    text-align: center;
+}
+
+.support-method-card p {
+    line-height: 1.65;
+    text-align: left;
+}
+
+.support-method-wide {
+    max-width: 1000px;
+    margin: 28px auto 0;
+}
+
+.support-detail {
+    margin-top: 24px;
+    padding-top: 18px;
+
+    border-top: 1px solid var(--archive-border);
+
+    text-align: center;
+}
+
+.support-detail span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.support-detail a {
+    font-weight: bold;
+}
+
+.support-action {
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+/* Closing note */
+
+.support-note {
+    max-width: 760px;
+
+    margin: 50px auto 55px;
+    padding: 28px 34px;
+
+    text-align: center;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.support-note p {
+    line-height: 1.65;
+}
+
+.support-divider {
+    margin: 22px 0;
+
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+
+    opacity: 0.6;
+}
+
+.support-thanks {
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .support-overview {
+        padding: 26px 24px;
+    }
+
+    .support-method-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .support-method-card {
+        padding: 24px;
+    }
+
+    .support-method-wide {
+        margin-top: 22px;
+    }
+
+    .support-action .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .support-note {
+        padding: 26px 24px;
+    }
+}
+
+
 
 /* ========================================
    CHARTER
