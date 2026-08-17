@@ -626,6 +626,243 @@ input[type="button"] {
 
 
 
+/* ========================================
+   MUSEUM HUB
+   ======================================== */
+
+.museum-hub-page {
+    max-width: 1000px;
+}
+
+
+/* Intro */
+
+.museum-hub-page .archive-page-intro {
+    max-width: 760px;
+}
+
+.museum-hub-divider {
+    margin: 35px 0;
+    text-align: center;
+    font-size: 1.05rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   MUSEUM WING GRID
+
+   Desktop:
+   Fraggle      | Odin
+   Headquarters | AUA
+   ======================================== */
+
+.museum-wing-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-areas:
+        "fraggle odin"
+        "headquarters aua";
+
+    gap: 28px;
+
+    margin: 15px auto 50px;
+}
+
+
+/* Grid placement */
+
+.museum-wing-fraggle {
+    grid-area: fraggle;
+}
+
+.museum-wing-headquarters {
+    grid-area: headquarters;
+}
+
+.museum-wing-odin {
+    grid-area: odin;
+}
+
+.museum-wing-aua {
+    grid-area: aua;
+}
+
+
+/* ========================================
+   INDIVIDUAL MUSEUM WINGS
+   ======================================== */
+
+.museum-wing-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 38px 34px 34px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+
+    text-align: center;
+}
+
+
+/* The Life / The Institution / etc. */
+
+.museum-wing-category {
+    margin: 0 0 8px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+}
+
+
+/* Titles */
+
+.museum-wing-card h2 {
+    margin: 4px 0 20px;
+
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+
+/* Little Archives star underneath each title */
+
+.museum-wing-card h2::after {
+    content: "✦";
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 0.72rem;
+    line-height: 1;
+
+    opacity: 0.45;
+}
+
+
+/* Descriptions */
+
+.museum-wing-description {
+    max-width: 360px;
+
+    margin: 0 auto 28px;
+
+    line-height: 1.7;
+}
+
+
+/* Keeps all four buttons at the bottoms
+   of their respective cards */
+
+.museum-wing-button {
+    align-self: center;
+
+    margin-top: auto;
+}
+
+
+/* ========================================
+   MUSEUM CLOSING NOTE
+   ======================================== */
+
+.museum-hub-footer-note {
+    max-width: 620px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.museum-hub-footer-note .museum-hub-divider {
+    margin-top: 0;
+}
+
+.museum-hub-footer-note p {
+    margin: 0;
+
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.7;
+
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   MUSEUM HUB — MOBILE
+
+   Mobile reading order:
+   Fraggle
+   Headquarters
+   Odin
+   AUA
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .museum-wing-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "fraggle"
+            "headquarters"
+            "odin"
+            "aua";
+
+        gap: 24px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .museum-wing-card {
+        min-height: 0;
+
+        padding: 32px 26px;
+    }
+
+
+    .museum-wing-card h2 {
+        font-size: 1.9rem;
+    }
+
+
+    .museum-wing-description {
+        max-width: 100%;
+    }
+
+
+    .museum-wing-button {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    .museum-hub-divider {
+        margin: 30px 0;
+    }
+
+}
+
+
 /* =========================================================
    HUB PAGE INTRO SPACING
    Gives Museum + Gift Shop the same breathing room between
