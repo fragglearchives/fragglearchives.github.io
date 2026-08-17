@@ -335,6 +335,14 @@ hr {
   text-align: center;
 }
 
+.book-details > p:last-child {
+  margin-bottom: 0;
+}
+
+.book-actions {
+  margin-top: 0;
+}
+
 
 /* ========================================
    BUTTONS
