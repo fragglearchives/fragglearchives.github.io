@@ -265,6 +265,32 @@ hr {
   margin-top: 0;
 }
 
+
+.book-actions {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 38px;
+  align-items: start;
+
+  margin-top: 8px;
+}
+
+.book-buy {
+  text-align: center;
+}
+
+.book-actions .local-pickup {
+  margin-top: 0;
+}
+
+.book-buy .button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
 @media (max-width: 700px) {
 
   .archive-page-intro {
@@ -299,6 +325,16 @@ hr {
 .paypal-link {
     margin-bottom: 40px;
 }
+
+.book-actions {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.book-buy {
+  text-align: center;
+}
+
 
 /* ========================================
    BUTTONS
