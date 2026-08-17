@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <img src="/Banner.PNG"
+         alt="The Fraggle Archives"
+         class="header-banner">
+
+  <div id="site-nav"></div>
+
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
+    
+</header>
+
+<main>
+
+    <h1>The Fraggle Archives Charter</h1>
+
+    <p class="intro">
+        The founding document of the Fraggle Archives — a promise to preserve the stories, lessons, and lives that brought us here.
+      <br>
+      Every institution needs a reason to exist. This is ours. 
+    </p>
+
+    <div class="contact-card">
+
+        <h2>The Charter</h2>
+
+        <p>
+            
+<em>>A dedication to Seeing in a New Light, Recognition,
+and Meeting Them Where They’re At.</em>
+          <br>
+The Fraggle Archive exists to preserve not only the story of one remarkable little cat, but the
+way he taught people to see.
+          <br>
+<em>We believe that love begins with recognition.
+  <br>
+That courage often looks ordinary.
+  <br>
+That healing starts when we meet someone where they’re at, rather than where we wish they
+were.
+  <br>
+We believe every hiss has a history.
+  <br>
+Every scar belongs to a story.
+  <br>
+Every frightened animal deserves the chance to become known instead of merely observed.</em>
+  <br>
+The transformation is not of the cat.
+          <br>
+<strong>It is of the person looking.
+  <br><br>
+“We do not erase the journey to make it easier to look at. We help people learn to
+see farther.”</strong>
+          <br>
+Some legacies are measured by how many lives someone touched.
+          <nr></nr>
+Others are measured by how many eyes they taught to see differently.
+          <br>
+<em></em>The First Day of the Archives was never about preserving the past.
+          <br>
+It was about choosing the kind of eyes we wanted to carry into the future.</em>
+        </p>
+
+ 
+
+
+</div>
+
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="/moon-phase.js"></script>
+
+<script>
+fetch('/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+
+    if (window.initFooterMoonPhase) {
+      window.initFooterMoonPhase();
+    }
+  });
+</script>
+
+</body>
+
+</html>
