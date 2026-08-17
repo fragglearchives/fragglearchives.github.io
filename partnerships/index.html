@@ -2,1224 +2,240 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Collect The Archives | The Fraggle Archives</title>
+    <title>Partnerships | The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="/styles.css?v=2">
-
-    <script
-        src="https://www.paypalobjects.com/ncp/cart/cart.js"
-        data-merchant-id="YQDNBYWJ596KA">
-    </script>
-
-
-    <style>
-
-        /* =========================================
-           COLLECT THE ARCHIVES
-           Compact catalogue layout
-           ========================================= */
-
-        .collect-page {
-            max-width: 1150px;
-            margin: 0 auto;
-        }
-
-
-        /* -----------------------------------------
-           INTRO
-           ----------------------------------------- */
-
-        .collect-intro {
-            margin-bottom: 30px;
-        }
-
-
-        /* -----------------------------------------
-           FILTERS
-           ----------------------------------------- */
-
-        .collect-browser {
-            margin: 32px 0 38px;
-        }
-
-        .collect-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            margin-bottom: 18px;
-        }
-
-        .collect-filter {
-            font-family: inherit;
-            font-size: 1rem;
-
-            padding: 10px 18px;
-
-            border: 1px solid var(--archive-border);
-            border-radius: 999px;
-
-            background: transparent;
-            color: inherit;
-
-            cursor: pointer;
-        }
-
-        .collect-filter:hover {
-            border-color: #3b3128;
-        }
-
-        .collect-filter.active {
-            background: #3b3128;
-            color: #f8f3ea;
-            border-color: #3b3128;
-        }
-
-        .collect-status {
-            margin: 0;
-
-            font-style: italic;
-            opacity: 0.75;
-        }
-
-
-        /* -----------------------------------------
-           VIEW CART
-           ----------------------------------------- */
-
-        .collect-cart {
-            margin: 28px 0 45px;
-        }
-
-        .collect-cart h2 {
-            margin: 0 0 10px;
-            font-size: 1.35rem;
-        }
-
-
-        /* -----------------------------------------
-           CATEGORY SECTIONS
-           ----------------------------------------- */
-
-        .collect-category {
-            margin: 0 0 58px;
-        }
-
-        .collect-category-header {
-            margin-bottom: 24px;
-        }
-
-        .collect-category-header h2 {
-            margin: 0 0 7px;
-
-            font-size: 2rem;
-        }
-
-        .collect-category-header p {
-            margin: 0;
-
-            max-width: 760px;
-            line-height: 1.6;
-        }
-
-
-        /* -----------------------------------------
-           PRODUCT GRID
-           ----------------------------------------- */
-
-        .collect-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
-            gap: 24px;
-        }
-
-
-        /* -----------------------------------------
-           PRODUCT CARDS
-           ----------------------------------------- */
-
-        .collect-card {
-            display: flex;
-            flex-direction: column;
-
-            min-width: 0;
-
-            padding: 22px 20px 24px;
-
-            background: var(--archive-collection);
-            border: 1px solid var(--archive-border-light);
-        }
-
-        .collect-card h3 {
-            margin: 0 0 12px;
-
-            font-size: 1.4rem;
-            line-height: 1.25;
-        }
-
-        .collect-card img {
-            display: block;
-
-            width: 100%;
-            height: 190px;
-
-            object-fit: contain;
-
-            margin: 6px auto 18px;
-        }
-
-        .collect-card-description {
-            margin: 0 0 10px;
-
-            line-height: 1.55;
-        }
-
-        .collect-card-specs {
-            margin: 0 0 18px;
-
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
-
-        .collect-buy {
-            margin-top: auto;
-        }
-
-
-        /* -----------------------------------------
-           SHIPPING
-           ----------------------------------------- */
-
-        .collect-shipping {
-            margin: 65px 0 55px;
-        }
-
-        .collect-shipping > h2 {
-            margin-bottom: 8px;
-        }
-
-        .collect-shipping-intro {
-            margin-bottom: 26px;
-        }
-
-        .shipping-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 24px;
-        }
-
-        .shipping-card {
-            padding: 26px;
-
-            background: var(--archive-collection);
-            border: 1px solid var(--archive-border-light);
-        }
-
-        .shipping-card h3 {
-            margin: 0 0 12px;
-        }
-
-        .shipping-card p {
-            margin: 0 0 18px;
-            line-height: 1.55;
-        }
-
-
-        /* =========================================
-           TABLET
-           ========================================= */
-
-        @media (max-width: 950px) {
-
-            .collect-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
-
-            .collect-card img {
-                height: 210px;
-            }
-
-        }
-
-
-        /* =========================================
-           MOBILE
-           ========================================= */
-
-        @media (max-width: 650px) {
-
-            .collect-grid {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .collect-card {
-                padding: 20px 18px 22px;
-            }
-
-            .collect-card img {
-                width: auto;
-                height: auto;
-
-                max-width: 85%;
-                max-height: 300px;
-            }
-
-            .shipping-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .collect-category {
-                margin-bottom: 48px;
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="/styles.css">
 </head>
-
 
 <body>
 
-
 <header>
 
-    <img
-        src="/Banner.PNG"
-        alt="The Fraggle Archives"
-        class="header-banner">
+    <img src="/Banner.PNG"
+         alt="The Fraggle Archives"
+         class="header-banner">
 
+ <div id="site-nav"></div>
 
-    <div id="site-nav"></div>
-
-    <script>
-
-        fetch('/nav.html')
-            .then(response => response.text())
-            .then(data => {
-
-                document.getElementById('site-nav').innerHTML = data;
-
-            });
-
-    </script>
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
 
 </header>
 
+<main class="page-content partnerships-page">
+
+  <section class="partnerships-intro">
+    <p class="eyebrow">THE FRAGGLE ARCHIVES</p>
+    <h1>Partnerships</h1>
+
+    <p class="partnerships-lead">
+      The Fraggle Archives works with rescue organizations and community
+      partners to turn stories, fundraising, and shared effort into direct
+      support for cats.
+    </p>
+
+    <p>
+      This page records those partnerships and where the money raised through
+      the Archives has gone.
+    </p>
+  </section>
 
 
-<main class="collect-page">
+  <section class="funds-accountability">
+    <p class="eyebrow">ACCOUNTABILITY</p>
+    <h2>Where the Funds Went</h2>
+
+    <div class="funds-total">
+      <strong>$337.50</strong>
+      <span>Total Funds Directed to Cats</span>
+    </div>
+
+    <p>
+      Every dollar recorded here represents funds already directed to
+      cat rescue, veterinary care, spay/neuter work, or related support.
+    </p>
+  </section>
 
 
-    <section class="collect-intro">
+  <section class="partner-network">
+    <p class="eyebrow">THE NETWORK</p>
+    <h2>Our Partners</h2>
 
-        <h1>
-            The Fraggle Archives Gift Shop - Collect The Archives
-        </h1>
+
+    <!-- SPEAK UP FOR PAWS -->
+    <article class="partner-card">
+
+<div class="partner-logo">
+
+    <a href="https://www.facebook.com/SpeakUpForPaws/"
+        target="_blank"
+        rel="noopener noreferrer">
+    
+    <img
+    src="/images/partnerships/speak-up-for-paws.PNG"
+    alt="Speak Up For Paws logo"
+  >
+        
+    </a>
+    
+</div>
+
+      <div class="partner-details">
+        <span class="partner-type">Fundraising Partner</span>
+
+        <h3>Speak Up For Paws</h3>
 
         <p>
-            Small artifacts. Big lore. Questionable necessity.
+          The first organization supported through Fraggle Archives
+          fundraising, with funds directed toward helping cats access
+          spay and neuter care.
         </p>
 
-    </section>
-
-
-
-    <!-- =========================================
-         FILTERS
-         ========================================= -->
-
-    <section
-        class="collect-browser"
-        aria-label="Collect catalogue filters">
-
-        <div class="collect-filters">
-
-            <button
-                type="button"
-                class="collect-filter active"
-                data-filter="all">
-                All
-            </button>
-
-            <button
-                type="button"
-                class="collect-filter"
-                data-filter="stickers">
-                Stickers
-            </button>
-
-            <button
-                type="button"
-                class="collect-filter"
-                data-filter="buttons">
-                Buttons
-            </button>
-
-            <button
-                type="button"
-                class="collect-filter"
-                data-filter="magnets">
-                Magnets
-            </button>
-
-            <button
-                type="button"
-                class="collect-filter"
-                data-filter="mini-posters">
-                Mini Posters
-            </button>
-
+        <div class="partner-impact">
+          <span>Funds Directed</span>
+          <strong>$337.50</strong>
         </div>
+      </div>
+
+    </article>
 
 
-        <p
-            id="collect-status"
-            class="collect-status">
-            13 items
+    <!-- BISCUITS & PURRS -->
+    <article class="partner-card">
+
+<div class="partner-logo">
+
+        <a href="https://biscuitsandpurrscr.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+            
+  <img
+    src="/images/partnerships/biscuits-and-purrs.PNG"
+    alt="Biscuits and Purrs logo"
+  >
+        </a>
+</div>
+
+      <div class="partner-details">
+        <span class="partner-type">Future Rescue Partner</span>
+
+        <h3>Biscuits &amp; Purrs Cat Rescue</h3>
+
+        <p>
+            A future Fraggle Archives partner, with plans to use book sales
+  and community fundraising to support cats in care.
         </p>
 
-    </section>
-
-
-
-    <!-- =========================================
-         VIEW CART
-         ========================================= -->
-
-    <section class="collect-cart">
-
-        <h2>View Cart</h2>
-
-        <paypal-cart-button
-            data-id="pp-view-cart">
-        </paypal-cart-button>
-
-        <script>
-
-            cartPaypal.Cart({
-                id: "pp-view-cart"
-            });
-
-        </script>
-
-    </section>
-
-
-
-    <!-- =========================================
-         STICKERS
-         ========================================= -->
-
-    <section
-        class="collect-category"
-        data-category="stickers">
-
-        <div class="collect-category-header">
-
-            <h2>Stickers</h2>
-
-            <p>
-                Stick a little Fraggle Archives magic wherever it belongs.
-                Or wherever it absolutely does not.
-            </p>
-
+        <div class="partner-impact">
+          <span>Funds Directed</span>
+          <strong>$0.00</strong>
         </div>
+      </div>
+
+    </article>
 
 
-        <div class="collect-grid">
+    <!-- RIVERVIEW RESCUE -->
+    <article class="partner-card">
 
+<div class="partner-logo">
 
-            <!-- STAY BRAVE -->
+        <a href="https://www.riverviewrescues.ca/"
+        target="_blank"
+        rel="noopener noreferrer">
+            
+  <img
+    src="/images/partnerships/riverview-rescue.PNG"
+    alt="Riverview Rescues logo"
+  >
+        </a>
+</div>
 
-            <article class="collect-card">
+      <div class="partner-details">
+        <span class="partner-type">Future Rescue Partner</span>
 
-                <h3>Stay Brave</h3>
+        <h3>Riverview Rescues</h3>
 
-                <img
-                    src="/images/giftshop/staybravesticker.jpg"
-                    alt="Stay Brave sticker">
+        <p>
+            The Fraggle Archives are proud to partner with Riverview Rescues through fundraising initiatives that support the cats and dogs in their care. 
+        </p>
+          <p>
+              Together, we're helping turn every book sold into direct support for animals who need it. 
+          </p>
 
-                <p class="collect-card-description">
-                    A little reminder from the Archives to Stay Brave.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 2"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="ESDE59TPUNRWA">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "ESDE59TPUNRWA"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- LOVE, FRAGGLE -->
-
-            <article class="collect-card">
-
-                <h3>Love, Fraggle</h3>
-
-                <img
-                    src="/images/giftshop/lovefragglesticker.jpg"
-                    alt="Love, Fraggle sticker">
-
-                <p class="collect-card-description">
-                    A sweet reminder that love can stick around
-                    in all kinds of ways.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 2"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="WZXRKZ4KS49RE">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "WZXRKZ4KS49RE"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- FRAGGLE'S VILLAGE -->
-
-            <article class="collect-card">
-
-                <h3>Fraggle's Village</h3>
-
-                <img
-                    src="/images/giftshop/hardthingsstickernew.jpeg"
-                    alt="Fraggle's Village sticker">
-
-                <p class="collect-card-description">
-                    You can do Hard Things. Fraggle says so.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 2"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="BANJ8BJ4SXGKS">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "BANJ8BJ4SXGKS"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- LOGO STICKER -->
-
-            <article class="collect-card">
-
-                <h3>Logo Sticker</h3>
-
-                <img
-                    src="/images/giftshop/archivessticker.jpeg"
-                    alt="Fraggle Archives sticker">
-
-                <p class="collect-card-description">
-                    The Official Fraggle Archives sticker.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 2"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="ABV3HCXRDLFR2">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "ABV3HCXRDLFR2"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
+        <div class="partner-impact">
+          <span>Funds Directed</span>
+          <strong>$0.00</strong>
         </div>
+      </div>
 
-    </section>
+    </article>
 
 
 
-    <!-- =========================================
-         BUTTONS
-         ========================================= -->
+        <!-- RIVERVIEW RESCUE -->
+    <article class="partner-card">
 
-    <section
-        class="collect-category"
-        data-category="buttons">
+<div class="partner-logo">
 
-        <div class="collect-category-header">
+        <a href="https://www.riverviewrescues.ca/"
+        target="_blank"
+        rel="noopener noreferrer">
+            
+  <img
+    src="/images/partnerships/heidi-kitty-haven.JPG"
+    alt="Heidi's Kitty Haven logo"
+  >
+        </a>
+</div>
 
-            <h2>Buttons</h2>
+      <div class="partner-details">
+        <span class="partner-type">Future Rescue Partner</span>
 
-            <p>
-                Tiny circles of Highly Regulated Unhingedness.
-                Wear them with pride.
-            </p>
+        <h3>Heidi's Kitty Haven</h3>
 
+        <p>
+          Supporting Heidi's Kitty Haven through fundraising that helps provide food, supplies, veterinary care, and ongoing support for cats in need.
+        </p>
+       
+
+        <div class="partner-impact">
+          <span>Funds Directed</span>
+          <strong>$0.00</strong>
         </div>
+      </div>
 
+    </article>
+      
+      
 
-        <div class="collect-grid">
-
-
-            <article class="collect-card">
-
-                <h3>Fraggle's Village</h3>
-
-                <img
-                    src="/images/giftshop/villagebutton.jpeg"
-                    alt="Fraggle's Village button">
-
-                <p class="collect-card-description">
-                    Small, wearable declaration of Fraggle Archives allegiance.
-                    Pin responsibly.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 1.25"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="TB4FZME45YJK2">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "TB4FZME45YJK2"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         MAGNETS
-         ========================================= -->
-
-    <section
-        class="collect-category"
-        data-category="magnets">
-
-        <div class="collect-category-header">
-
-            <h2>Magnets</h2>
-
-            <p>
-                Archival nonsense, now available for attachment
-                to metal surfaces.
-            </p>
-
-        </div>
-
-
-        <div class="collect-grid">
-
-
-            <!-- LOVE, FRAGGLE -->
-
-            <article class="collect-card">
-
-                <h3>Love, Fraggle</h3>
-
-                <img
-                    src="/images/giftshop/lovefragglemagnet.jpg"
-                    alt="Love, Fraggle magnet">
-
-                <p class="collect-card-description">
-                    A little piece of Fraggle to carry with you.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 3.5"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="KV6XN5U9CQ4E4">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "KV6XN5U9CQ4E4"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- HARD THINGS -->
-
-            <article class="collect-card">
-
-                <h3>You Can Do Hard Things</h3>
-
-                <img
-                    src="/images/giftshop/hardthingsmemorial.jpg"
-                    alt="You Can Do Hard Things magnet">
-
-                <p class="collect-card-description">
-                    Let Fraggle motivate you from your fridge.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 2" x 3.5"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="E4E8XA8G8XBFN">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "E4E8XA8G8XBFN"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ORIGINAL MAGNET -->
-
-            <article class="collect-card">
-
-                <h3>Fraggle - Original Magnet</h3>
-
-                <img
-                    src="/images/giftshop/fraggleogmagnet.jpg"
-                    alt="Fraggle magnet">
-
-                <p class="collect-card-description">
-                    A colourful little piece of Fraggle.
-                    The original magnet.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 3.5" x 2"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="A587XE5HUDB8N">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "A587XE5HUDB8N"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         MINI POSTERS
-         ========================================= -->
-
-    <section
-        class="collect-category"
-        data-category="mini-posters">
-
-        <div class="collect-category-header">
-
-            <h2>Mini Posters</h2>
-
-            <p>
-                Heroic lessons from Headquarters,
-                printed professionally by Staples. Paws up.
-            </p>
-
-        </div>
-
-
-        <div class="collect-grid">
-
-
-            <!-- FRIENDSHIP -->
-
-            <article class="collect-card">
-
-                <h3>Friendship</h3>
-
-                <img
-                    src="/images/giftshop/friendshipposterclean.JPG"
-                    alt="Friendship Poster">
-
-                <p class="collect-card-description">
-                    The best Archives are built together.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 5" x 7"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="6BJ93ABBZXZNJ">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "6BJ93ABBZXZNJ"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- HYDRATION -->
-
-            <article class="collect-card">
-
-                <h3>Hydration</h3>
-
-                <img
-                    src="/images/giftshop/hydrationposterclean.PNG"
-                    alt="Hydration Poster">
-
-                <p class="collect-card-description">
-                    The Good Drinking Machine has spoken.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 5" x 7"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="MVNAPK47ZSZCY">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "MVNAPK47ZSZCY"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- EXERCISE -->
-
-            <article class="collect-card">
-
-                <h3>Exercise</h3>
-
-                <img
-                    src="/images/giftshop/exerciseposterclean.PNG"
-                    alt="Exercise Poster">
-
-                <p class="collect-card-description">
-                    Every little movement counts.
-                    Even the zoomies.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 5" x 7"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="XRHDCFKUDF8T4">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "XRHDCFKUDF8T4"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- DENTISTRY -->
-
-            <article class="collect-card">
-
-                <h3>Dentistry</h3>
-
-                <img
-                    src="/images/giftshop/dentistryposterclean.PNG"
-                    alt="Dentistry Poster">
-
-                <p class="collect-card-description">
-                    Brave checkups. Strong chompers.
-                    Heroic results.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 5" x 7"
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="ZSJYJHY7YSHTW">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "ZSJYJHY7YSHTW"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SET OF FOUR -->
-
-            <article class="collect-card">
-
-                <h3>Set of 4</h3>
-
-                <img
-                    src="/images/giftshop/4posters.jpg"
-                    alt="All 4 Poster">
-
-                <p class="collect-card-description">
-                    All four Alternate Universe Archives posters together.
-                </p>
-
-                <p class="collect-card-specs">
-                    Size: 5" x 7" each
-                </p>
-
-                <div class="collect-buy">
-
-                    <paypal-add-to-cart-button
-                        data-id="S8NSGL7MBVESW">
-                    </paypal-add-to-cart-button>
-
-                    <script>
-
-                        cartPaypal.AddToCart({
-                            id: "S8NSGL7MBVESW"
-                        });
-
-                    </script>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         SHIPPING
-         ========================================= -->
-
-    <section class="collect-shipping">
-
-        <h2>Shipping</h2>
-
-        <div class="collect-shipping-intro">
-
-            <p>
-                Local pickup is free! Contact the Archives to arrange.
-            </p>
-
-            <p>
-                Items are shipping via most basic lettermail
-                with Canada Post.
-            </p>
-
-        </div>
-
-
-        <div class="shipping-grid">
-
-
-            <!-- CANADA -->
-
-            <article class="shipping-card">
-
-                <h3>Shipping within Canada</h3>
-
-                <p>
-                    Flat rate, for as much merch as you like.
-                </p>
-
-                <paypal-add-to-cart-button
-                    data-id="ULF4ZFEF8NT5L">
-                </paypal-add-to-cart-button>
-
-                <script>
-
-                    cartPaypal.AddToCart({
-                        id: "ULF4ZFEF8NT5L"
-                    });
-
-                </script>
-
-            </article>
-
-
-
-            <!-- USA -->
-
-            <article class="shipping-card">
-
-                <h3>Shipping to the USA</h3>
-
-                <p>
-                    Flat rate, for all your goodies.
-                </p>
-
-                <paypal-add-to-cart-button
-                    data-id="RQT32WJKQZWXE">
-                </paypal-add-to-cart-button>
-
-                <script>
-
-                    cartPaypal.AddToCart({
-                        id: "RQT32WJKQZWXE"
-                    });
-
-                </script>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
+  </section>
 
 </main>
 
-
-
 <div id="footer-placeholder"></div>
-
 
 <script src="/moon-phase.js"></script>
 
-
 <script>
+fetch('/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
 
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-
-            document.getElementById('footer-placeholder').innerHTML = data;
-
-            if (window.initFooterMoonPhase) {
-                window.initFooterMoonPhase();
-            }
-
-        });
-
+    if (window.initFooterMoonPhase) {
+      window.initFooterMoonPhase();
+    }
+  });
 </script>
-
-
-
-<!-- =========================================
-     COLLECT FILTERS
-     ========================================= -->
-
-<script>
-
-    const collectFilters =
-        document.querySelectorAll('.collect-filter');
-
-    const collectCategories =
-        document.querySelectorAll('.collect-category');
-
-    const collectStatus =
-        document.getElementById('collect-status');
-
-
-    const collectCounts = {
-        all: 13,
-        stickers: 4,
-        buttons: 1,
-        magnets: 3,
-        "mini-posters": 5
-    };
-
-
-    collectFilters.forEach(button => {
-
-        button.addEventListener('click', () => {
-
-            const selected =
-                button.dataset.filter;
-
-
-            collectFilters.forEach(filterButton => {
-
-                filterButton.classList.remove('active');
-
-            });
-
-
-            button.classList.add('active');
-
-
-            collectCategories.forEach(category => {
-
-                const categoryName =
-                    category.dataset.category;
-
-
-                if (
-                    selected === 'all' ||
-                    selected === categoryName
-                ) {
-
-                    category.hidden = false;
-
-                }
-
-                else {
-
-                    category.hidden = true;
-
-                }
-
-            });
-
-
-            const count =
-                collectCounts[selected];
-
-
-            collectStatus.textContent =
-                count === 1
-                    ? '1 item'
-                    : `${count} items`;
-
-        });
-
-    });
-
-</script>
-
 
 </body>
 
