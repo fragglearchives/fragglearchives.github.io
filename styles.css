@@ -631,13 +631,12 @@ input[type="button"] {
 }
 
 
-/* ========================================
+/* =========================================
    GIFT SHOP GRID
 
    Desktop:
-   Collect | Read
-   Wear — full width
-   ======================================== */
+   Collect | Wear
+   ========================================= */
 
 .giftshop-hub-grid {
     display: grid;
@@ -645,21 +644,15 @@ input[type="button"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     grid-template-areas:
-        "collect read"
-        "wear wear";
+        "collect wear";
 
     gap: 28px;
 
     margin: 15px auto 50px;
 }
 
-
 .giftshop-hub-collect {
     grid-area: collect;
-}
-
-.giftshop-hub-read {
-    grid-area: read;
 }
 
 .giftshop-hub-wear {
@@ -727,18 +720,6 @@ input[type="button"] {
 }
 
 
-/* ========================================
-   WEAR THE ARCHIVES
-   Featured full-width department
-   ======================================== */
-
-.giftshop-hub-wear {
-    min-height: 290px;
-
-    padding: 45px 50px 42px;
-}
-
-
 .giftshop-feature-label {
     margin: 0 0 6px;
 
@@ -776,7 +757,6 @@ input[type="button"] {
 
         grid-template-areas:
             "collect"
-            "read"
             "wear";
 
         gap: 24px;
