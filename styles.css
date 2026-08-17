@@ -252,6 +252,27 @@ hr {
   font-style: normal;
 }
 
+@media (max-width: 700px) {
+
+  .archive-page-intro {
+    margin: 20px auto 35px;
+  }
+
+  .book-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .book-cover {
+    max-width: 260px;
+  }
+
+  .book-details {
+    text-align: left;
+  }
+}
+
 .paypal-link {
     margin-bottom: 40px;
 }
