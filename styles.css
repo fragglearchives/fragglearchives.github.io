@@ -161,8 +161,16 @@ hr {
 }
 
 .book-card {
-    margin: 40px 0;
-    padding: 40px;
+    display: grid;
+   grid-template-columns: 240px minmax(0, 1fr);
+   gap: 38px;
+   align-items: start;
+
+   margin: 32px auto;
+   padding: 32px;
+
+   max-width: 1000px;
+}
 }
 
 .book-card h2 {
@@ -206,10 +214,42 @@ hr {
 
 .book-cover {
     display: block;
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 240px;
     height: auto;
-    margin: 0 auto 30px;
+    margin: 0 auto;
+}
+
+.book-card h2 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+}
+
+.book-subtitle {
+  margin: 0 0 22px;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.book-details p {
+  line-height: 1.7;
+}
+
+
+.book-status {
+  display: inline-block;
+  margin: 8px 0 4px;
+
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.book-status i {
+  font-style: normal;
 }
 
 .paypal-link {
