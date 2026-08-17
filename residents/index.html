@@ -14,130 +14,232 @@
 
 <header>
 
-    <img src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner">
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
 
- <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
+    <script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('site-nav').innerHTML = data;
+        });
+    </script>
 
 </header>
 
-<main>
+
+<main class="residents-page">
+
+    <!-- PAGE INTRO -->
+
+    <section class="archive-page-intro">
+
+        <p class="archive-eyebrow">
+            THE FRAGGLE ARCHIVES
+        </p>
+
+        <h1>The Residents of the Archives</h1>
+
+        <p class="archive-page-lead">
+            Every resident has a story. Some arrived by rescue, some by chance,
+            and some simply decided that this was home.
+        </p>
+
+    </section>
 
 
-   <h1>The Residents of the Archives</h1>
+    <!-- RESIDENTS -->
 
-<p class="intro">
-    Every resident has a story. Some arrived by rescue, some by chance,
-    and some simply decided that this was home.
-</p>
+    <section class="residents-list" aria-label="Residents of the Fraggle Archives">
 
-<div class="resident-card">
 
-    <img src="/images/residents/resident-7.jpg" alt="Fraggle">
+        <!-- FRAGGLE -->
 
-    <h2>Fraggle</h2>
+        <article class="resident-card">
 
-    <p>
-        Founder, dreamer, and the reason the Archives exist.
-    </p>
+            <img
+                src="/images/residents/resident-7.jpg"
+                alt="Fraggle"
+            >
 
-</div>
+            <div class="resident-details">
 
-<div class="resident-card">
+                <h2>Fraggle</h2>
 
-    <img src="/images/residents/resident-5.jpg" alt="Muppet">
+                <p>
+                    Founder, dreamer, and the reason the Archives exist.
+                </p>
 
-    <h2>The Muppet</h2>
+            </div>
 
-    <p>
-        Resident chaos ambassador and enthusiastic participant in all
-        important Archive activities.
-    </p>
+        </article>
 
-</div>
 
-<div class="resident-card">
+        <!-- THE MUPPET -->
 
-    <img src="/images/residents/resident-2.jpg" alt="Care Bear">
+        <article class="resident-card">
 
-    <h2>Care Bear</h2>
+            <img
+                src="/images/residents/resident-5.jpg"
+                alt="Muppet"
+            >
 
-    <p>
-        Philosopher, headbonk enthusiast, and keeper of quiet wisdom.
-    </p>
+            <div class="resident-details">
 
-</div>
+                <h2>The Muppet</h2>
 
-<div class="resident-card">
+                <p>
+                    Resident chaos ambassador and enthusiastic participant in all
+                    important Archive activities.
+                </p>
 
-    <img src="/images/residents/resident-1.jpg" alt="Samson">
+            </div>
 
-    <h2>Samson</h2>
+        </article>
 
-    <p>
-        A determined resident with excellent taste in toys and absolutely
-        no tolerance for nonsense.
-    </p>
 
-</div>
+        <!-- CARE BEAR -->
 
-<div class="resident-card">
+        <article class="resident-card">
 
-    <img src="/images/residents/resident-4.jpg" alt="Tyson Apawstol">
+            <img
+                src="/images/residents/resident-2.jpg"
+                alt="Care Bear"
+            >
 
-    <h2>Tyson Apawstol</h2>
+            <div class="resident-details">
 
-    <p>
-        A distinguished member of the Archives' resident community.
-    </p>
+                <h2>Care Bear</h2>
 
-</div>
+                <p>
+                    Philosopher, headbonk enthusiast, and keeper of quiet wisdom.
+                </p>
 
-<div class="resident-card">
+            </div>
 
-    <img src="/images/residents/resident-3.jpg" alt="Zombie Meowz">
+        </article>
 
-    <h2>Zombie Meowz</h2>
 
-    <p>
-        Resident of mysterious origins and considerable personality.
-    </p>
+        <!-- SAMSON -->
 
-</div>
+        <article class="resident-card">
 
-<div class="resident-card">
+            <img
+                src="/images/residents/resident-1.jpg"
+                alt="Samson"
+            >
 
-    <img src="/images/residents/resident-6.jpg" alt="Chuck Bass">
+            <div class="resident-details">
 
-    <h2>Chuck Bass</h2>
+                <h2>Samson</h2>
 
-    <p>
-        Guardian, gentleman, and devoted resident of the Archives.
-    </p>
+                <p>
+                    A determined resident with excellent taste in toys and absolutely
+                    no tolerance for nonsense.
+                </p>
 
-</div>
+            </div>
 
-    <div class="resident-card">
+        </article>
 
-    <img src="/images/residents/resident-8.jpg" alt="Angel Odin">
 
-    <h2>Odin</h2>
+        <!-- TYSON APAWSTOL -->
 
-    <p>
-       A beloved angel of the Archives, remembered with love and forever part of the family.
-    </p>
+        <article class="resident-card">
 
-</div>
+            <img
+                src="/images/residents/resident-4.jpg"
+                alt="Tyson Apawstol"
+            >
+
+            <div class="resident-details">
+
+                <h2>Tyson Apawstol</h2>
+
+                <p>
+                    A distinguished member of the Archives' resident community.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- ZOMBIE MEOWZ -->
+
+        <article class="resident-card">
+
+            <img
+                src="/images/residents/resident-3.jpg"
+                alt="Zombie Meowz"
+            >
+
+            <div class="resident-details">
+
+                <h2>Zombie Meowz</h2>
+
+                <p>
+                    Resident of mysterious origins and considerable personality.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CHUCK BASS -->
+
+        <article class="resident-card">
+
+            <img
+                src="/images/residents/resident-6.jpg"
+                alt="Chuck Bass"
+            >
+
+            <div class="resident-details">
+
+                <h2>Chuck Bass</h2>
+
+                <p>
+                    Guardian, gentleman, and devoted resident of the Archives.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- ODIN -->
+
+        <article class="resident-card">
+
+            <img
+                src="/images/residents/resident-8.jpg"
+                alt="Angel Odin"
+            >
+
+            <div class="resident-details">
+
+                <h2>Odin</h2>
+
+                <p>
+                    A beloved angel of the Archives, remembered with love and forever
+                    part of the family.
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
 </main>
+
 
 <div id="footer-placeholder"></div>
 
@@ -145,14 +247,14 @@ fetch('/nav.html')
 
 <script>
 fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+        if (window.initFooterMoonPhase) {
+            window.initFooterMoonPhase();
+        }
+    });
 </script>
 
 </body>
