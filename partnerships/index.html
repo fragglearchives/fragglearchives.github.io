@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partnerships | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <img
+        src="Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+ <div id="site-nav"></div>
+
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
+    
+</header>
+
+<main>
+
+    <h1>Welcome to The Fraggle Archives</h1>
+
+    <p class="intro">
+        The Fraggle Archives is a place for stories worth keeping.
+    </p>
+
+    <p>
+        It began with Fraggle — a small grey cat whose life was far too
+        short, but whose impact was anything but. What started as a way
+        to preserve his memory grew into books, artwork, rescue stories,
+        strange little artifacts, and an entire archive dedicated to the
+        lives that leave a mark on us.
+    </p>
+
+    <p>
+        Here you'll find the books of the Archives, the residents who call
+        it home, the museum of objects and memories collected along the way,
+        and the projects that continue Fraggle's legacy.
+    </p>
+
+    <p>
+        Some of these stories are funny. Some are difficult. Some are
+        wonderfully ridiculous.
+    </p>
+
+    <p>
+        All of them mattered enough to be saved.
+    </p>
+
+    <p class="intro">
+        <strong>Welcome to the Archives.</strong>
+    </p>
+
+    <p class="intro">
+        <i>Preserve the Dreamer.</i>
+    </p>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="/moon-phase.js"></script>
+
+<script>
+fetch('/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+
+    if (window.initFooterMoonPhase) {
+      window.initFooterMoonPhase();
+    }
+  });
+</script>
+
+</body>
+
+</html>
