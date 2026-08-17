@@ -399,6 +399,36 @@ input[type="button"] {
 }
 
 
+.resident-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 28px;
+    margin: 0 0 18px;
+}
+
+.resident-meta-item span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.resident-meta-item strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: normal;
+}
+
+@media (max-width: 700px) {
+    .resident-meta {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 /* Mobile */
 
 @media (max-width: 700px) {
