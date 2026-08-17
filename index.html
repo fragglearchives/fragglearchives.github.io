@@ -9,89 +9,743 @@
 
     <title>The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css?v=2">
+
+
+    <style>
+
+        /* =========================================
+           HOMEPAGE
+           ========================================= */
+
+        .home-page {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           SHARED EYEBROW
+           ========================================= */
+
+        .home-page .eyebrow {
+            margin: 0 0 6px;
+
+            font-size: 0.78rem;
+            font-weight: bold;
+
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+
+            opacity: 0.65;
+        }
+
+
+        /* =========================================
+           HERO
+           ========================================= */
+
+        .home-hero {
+            max-width: 780px;
+
+            margin: 45px auto 70px;
+
+            text-align: center;
+        }
+
+        .home-hero h1 {
+            margin: 8px 0 26px;
+
+            font-size: clamp(3rem, 6vw, 4.7rem);
+            line-height: 1.05;
+        }
+
+        .home-hero-lead {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            font-size: 1.28rem;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           FOUNDING STORY
+           ========================================= */
+
+        .home-story {
+            margin: 70px 0;
+
+            padding: 38px 40px;
+
+            background: var(--archive-card);
+
+            border: 1px solid var(--archive-border);
+
+            box-shadow: var(--archive-shadow);
+        }
+
+        .home-story-header {
+            max-width: 720px;
+
+            margin: 0 auto 30px;
+
+            text-align: center;
+        }
+
+        .home-story-header h2 {
+            margin: 6px 0 0;
+
+            font-size: clamp(2.3rem, 4vw, 3.3rem);
+            line-height: 1.1;
+        }
+
+        .home-story-copy {
+            max-width: 760px;
+
+            margin: 0 auto;
+        }
+
+        .home-story-copy p {
+            margin: 0 0 24px;
+
+            font-size: 1.12rem;
+            line-height: 1.75;
+        }
+
+        .home-story-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .home-story-opening {
+            font-size: 1.35rem !important;
+            line-height: 1.6 !important;
+
+            text-align: center;
+        }
+
+
+        /* =========================================
+           EXPLORE
+           ========================================= */
+
+        .home-explore {
+            margin: 85px 0;
+        }
+
+        .home-explore-header {
+            max-width: 720px;
+
+            margin: 0 auto 34px;
+
+            text-align: center;
+        }
+
+        .home-explore-header h2 {
+            margin: 6px 0 14px;
+
+            font-size: clamp(2.4rem, 4vw, 3.4rem);
+            line-height: 1.1;
+        }
+
+        .home-explore-header p:not(.eyebrow) {
+            max-width: 620px;
+
+            margin: 0 auto;
+
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .home-explore-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 28px;
+        }
+
+        .home-door {
+            display: flex;
+            flex-direction: column;
+
+            min-height: 265px;
+
+            padding: 30px;
+
+            background: var(--archive-card);
+
+            border: 1px solid var(--archive-border);
+
+            box-shadow: var(--archive-shadow);
+
+            text-align: center;
+        }
+
+        .home-door .eyebrow {
+            margin-bottom: 8px;
+        }
+
+        .home-door h3 {
+            margin: 0 0 15px;
+
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .home-door p {
+            max-width: 420px;
+
+            margin: 0 auto 24px;
+
+            font-size: 1.03rem;
+            line-height: 1.65;
+        }
+
+        .home-door-link {
+            display: inline-block;
+
+            align-self: center;
+
+            margin-top: auto;
+
+            padding: 11px 21px;
+
+            border-radius: 999px;
+
+            background: #3b3128;
+            color: #f8f3ea;
+
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home-door-link:hover {
+            opacity: 0.88;
+        }
+
+
+        /* =========================================
+           ARCHIVE PRINCIPLE
+           ========================================= */
+
+        .home-principle {
+            max-width: 760px;
+
+            margin: 95px auto 70px;
+
+            text-align: center;
+        }
+
+        .home-principle h2 {
+            margin: 6px 0 28px;
+
+            font-size: clamp(2.4rem, 4vw, 3.4rem);
+            line-height: 1.1;
+        }
+
+        .home-principle-lines {
+            margin: 0 auto 32px;
+        }
+
+        .home-principle-lines p {
+            margin: 0 0 10px;
+
+            font-size: 1.35rem;
+            line-height: 1.65;
+        }
+
+        .home-principle-strong {
+            margin: 30px 0 34px;
+
+            font-size: 1.65rem;
+            line-height: 1.45;
+        }
+
+        .home-welcome {
+            margin: 0 0 24px;
+
+            font-size: 2rem;
+            line-height: 1.35;
+        }
+
+        .home-dreamer {
+            margin: 0;
+
+            font-size: 1.35rem;
+            font-style: italic;
+        }
+
+
+        /* =========================================
+           TABLET
+           ========================================= */
+
+        @media (max-width: 900px) {
+
+            .home-page {
+                max-width: 92%;
+            }
+
+            .home-explore-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .home-page {
+                max-width: none;
+            }
+
+            .home-hero {
+                margin: 35px auto 55px;
+            }
+
+            .home-hero h1 {
+                font-size: 3rem;
+            }
+
+            .home-hero-lead {
+                font-size: 1.12rem;
+            }
+
+            .home-story {
+                margin: 55px 0;
+
+                padding: 28px 22px;
+            }
+
+            .home-story-copy p {
+                font-size: 1.06rem;
+            }
+
+            .home-story-opening {
+                font-size: 1.22rem !important;
+            }
+
+            .home-explore {
+                margin: 65px 0;
+            }
+
+            .home-door {
+                padding: 26px 22px;
+
+                min-height: 0;
+            }
+
+            .home-door h3 {
+                font-size: 1.8rem;
+            }
+
+            .home-principle {
+                margin: 70px auto 55px;
+            }
+
+            .home-principle-lines p {
+                font-size: 1.2rem;
+            }
+
+            .home-principle-strong {
+                font-size: 1.45rem;
+            }
+
+            .home-welcome {
+                font-size: 1.8rem;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<header class="site-header">
+
+<header>
 
     <img
-        src="Banner.PNG"
+        src="/Banner.PNG"
         alt="The Fraggle Archives"
-        class="header-banner"
-    >
+        class="header-banner">
 
- <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
-    
+    <div id="site-nav"></div>
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
 </header>
 
-<main>
 
 
-    <h1>Welcome to The Fraggle Archives</h1>
+<main class="home-page">
 
-    <p class="intro">
-        The Fraggle Archives is a place for stories worth keeping.
-    </p>
 
-    <p>
-        It began with Fraggle — a small grey cat whose life was far too
-        short, but whose impact was anything but. What started as a way
-        to preserve his memory grew into books, artwork, rescue stories,
-        strange little artifacts, and an entire archive dedicated to the
-        lives that leave a mark on us.
-    </p>
+    <!-- =========================================
+         HERO
+         ========================================= -->
 
-    <p>
-        Here you'll find the books of the Archives, the residents who call
-        it home, the museum of objects and memories collected along the way,
-        and the projects that continue Fraggle's legacy.
-    </p>
+    <section class="home-hero">
 
-    <p>
-        Some of these stories are funny. Some are difficult. Some are
-        wonderfully ridiculous.
-    </p>
+        <p class="eyebrow">
+            The Fraggle Archives
+        </p>
 
-    <p>
-        All of them mattered enough to be saved.
-    </p>
+        <h1>
+            Welcome to The Fraggle Archives
+        </h1>
 
-    <p class="intro">
-        <strong>Welcome to the Archives.</strong>
-    </p>
+        <p class="home-hero-lead">
+            A place for stories worth keeping.
+        </p>
 
-    <p class="intro">
-        <i>Preserve the Dreamer.</i>
-    </p>
+    </section>
+
+
+
+    <!-- =========================================
+         FOUNDING STORY
+         ========================================= -->
+
+    <section class="home-story">
+
+        <div class="home-story-header">
+
+            <p class="eyebrow">
+                Founding Story
+            </p>
+
+            <h2>
+                It Began With Fraggle
+            </h2>
+
+        </div>
+
+
+        <div class="home-story-copy">
+
+            <p class="home-story-opening">
+                The Fraggle Archives is a place for stories worth keeping.
+            </p>
+
+            <p>
+                It began with Fraggle — a small grey cat whose life was far too short,
+                but whose impact was anything but.
+            </p>
+
+            <p>
+                What started as a way to preserve his memory grew into books,
+                artwork, rescue stories, strange little artifacts, and an entire
+                archive dedicated to the lives that leave a mark on us.
+            </p>
+
+            <p>
+                Here you'll find the books of the Archives, the residents who call
+                it home, the museum of objects and memories collected along the way,
+                and the projects that continue Fraggle's legacy.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EXPLORE THE ARCHIVES
+         ========================================= -->
+
+    <section class="home-explore">
+
+        <div class="home-explore-header">
+
+            <p class="eyebrow">
+                Come Inside
+            </p>
+
+            <h2>
+                Explore The Archives
+            </h2>
+
+            <p>
+                There are stories, residents, relics, books, partnerships,
+                and highly questionable amounts of lore waiting inside.
+            </p>
+
+        </div>
+
+
+        <div class="home-explore-grid">
+
+
+            <!-- BOOKS -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Stories
+                </p>
+
+                <h3>
+                    Books
+                </h3>
+
+                <p>
+                    Read the books born from the Archives,
+                    from Fraggle's Village to the stories still being written.
+                </p>
+
+                <a
+                    href="/books.html"
+                    class="home-door-link">
+                    Enter Books
+                </a>
+
+            </article>
+
+
+
+            <!-- MUSEUM -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Objects
+                </p>
+
+                <h3>
+                    Museum
+                </h3>
+
+                <p>
+                    Explore relics, artifacts, Headquarters history,
+                    and the physical pieces of stories that mattered enough to save.
+                </p>
+
+                <a
+                    href="/museum/"
+                    class="home-door-link">
+                    Enter Museum
+                </a>
+
+            </article>
+
+
+
+            <!-- RESIDENTS -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Lives
+                </p>
+
+                <h3>
+                    Residents
+                </h3>
+
+                <p>
+                    Meet the cats who call the Fraggle Archives home
+                    and the lessons carried by each of them.
+                </p>
+
+                <a
+                    href="/residents/"
+                    class="home-door-link">
+                    Meet The Residents
+                </a>
+
+            </article>
+
+
+
+            <!-- GIFT SHOP -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Questionable Necessities
+                </p>
+
+                <h3>
+                    Gift Shop
+                </h3>
+
+                <p>
+                    Collect tiny pieces of Archive lore,
+                    wear the institution, and support the residents while doing it.
+                </p>
+
+                <a
+                    href="/giftshop/"
+                    class="home-door-link">
+                    Visit Gift Shop
+                </a>
+
+            </article>
+
+
+
+            <!-- PARTNERSHIPS -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Network
+                </p>
+
+                <h3>
+                    Partnerships
+                </h3>
+
+                <p>
+                    See where fundraising has gone,
+                    who the Archives works with,
+                    and how stories become direct support for cats.
+                </p>
+
+                <a
+                    href="/partnerships/"
+                    class="home-door-link">
+                    View Partnerships
+                </a>
+
+            </article>
+
+
+
+            <!-- TRACKER -->
+
+            <article class="home-door">
+
+                <p class="eyebrow">
+                    The Record
+                </p>
+
+                <h3>
+                    Tracker
+                </h3>
+
+                <p>
+                    Follow the growing record of Archives activity,
+                    projects, progress, and all the things that were definitely
+                    supposed to be small.
+                </p>
+
+                <a
+                    href="/tracker/"
+                    class="home-door-link">
+                    Open Tracker
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ARCHIVE PRINCIPLE
+         ========================================= -->
+
+    <section class="home-principle">
+
+        <p class="eyebrow">
+            The Archive Principle
+        </p>
+
+        <h2>
+            Worth Keeping
+        </h2>
+
+
+        <div class="home-principle-lines">
+
+            <p>
+                Some of these stories are funny.
+            </p>
+
+            <p>
+                Some are difficult.
+            </p>
+
+            <p>
+                Some are wonderfully ridiculous.
+            </p>
+
+        </div>
+
+
+        <p class="home-principle-strong">
+            <strong>
+                All of them mattered enough to be saved.
+            </strong>
+        </p>
+
+
+        <p class="home-welcome">
+            <strong>
+                Welcome to the Archives.
+            </strong>
+        </p>
+
+
+        <p class="home-dreamer">
+            Preserve the Dreamer.
+        </p>
+
+    </section>
+
 
 </main>
 
+
+
 <div id="footer-placeholder"></div>
+
 
 <script src="/moon-phase.js"></script>
 
-<script>
-fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+                window.initFooterMoonPhase();
+            }
+
+        });
+
 </script>
+
 
 </body>
 
