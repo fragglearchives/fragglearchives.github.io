@@ -643,6 +643,130 @@ input[type="button"] {
 }
 
 
+
+/* =========================================================
+   BOOKS — STACKED EDITORIAL LAYOUT
+   ========================================================= */
+
+.book-card {
+  display: block;
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 36px;
+}
+
+
+/* Book covers */
+
+.book-card .book-cover {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 0 auto 32px;
+}
+
+
+/* Main book information */
+
+.book-card .book-details {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.book-card h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.book-card .book-subtitle {
+  margin: 0 0 26px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.book-card .book-details > p:not(.book-subtitle):not(.book-status) {
+  text-align: left;
+  line-height: 1.7;
+}
+
+
+/* Status labels */
+
+.book-card .book-status {
+  display: block;
+  margin: 24px 0 14px;
+  text-align: center;
+}
+
+
+/* Published-book actions */
+
+.book-card .book-actions {
+  display: block;
+  max-width: 760px;
+  margin: 24px auto 0;
+}
+
+.book-card .book-buy {
+  text-align: center;
+}
+
+.book-card .book-buy .button {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Extra book information */
+
+.book-card .local-pickup {
+  margin-top: 30px;
+  text-align: left;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .book-card {
+    padding: 24px;
+  }
+
+  .book-card .book-cover {
+    margin-bottom: 26px;
+  }
+
+  .book-card h2 {
+    font-size: 2rem;
+  }
+
+  .book-card .book-status {
+    margin-top: 22px;
+  }
+
+  .book-card .book-actions {
+    margin-top: 22px;
+  }
+
+  .book-card .book-buy .button {
+    width: 100%;
+  }
+
+  .book-card .local-pickup {
+    margin-top: 28px;
+  }
+}
+
+
+
 /* ========================================
    FOOTER
    ======================================== */
