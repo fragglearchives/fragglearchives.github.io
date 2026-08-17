@@ -336,35 +336,99 @@ input[type="button"] {
   border-radius: 999px;
 }
 
+
 /* ========================================
    RESIDENTS
    ======================================== */
 
-.resident-card {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 25px;
-    background: var(--archive-light-card);
-    border: 1px solid var(--archive-border-light);
-    text-align: center;
+.residents-page {
+    max-width: 1000px;
 }
+
+.residents-list {
+    margin: 45px 0 55px;
+}
+
+
+/* Resident cards */
+
+.resident-card {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 32px;
+    align-items: center;
+
+    margin: 28px 0;
+    padding: 30px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+
+/* Resident photographs */
 
 .resident-card img {
     display: block;
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 220px;
     height: auto;
-    margin: 0 auto 20px;
-}
-
-.resident-card h2 {
-    margin-bottom: 10px;
-}
-
-.resident-card p {
-    max-width: 650px;
     margin: 0 auto;
+
+    border: 1px solid var(--archive-border-light);
 }
+
+
+/* Resident information */
+
+.resident-details {
+    min-width: 0;
+}
+
+.resident-details h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+.resident-details p {
+    max-width: 650px;
+    margin: 0;
+    line-height: 1.65;
+    text-align: left;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .residents-list {
+        margin: 35px 0 45px;
+    }
+
+    .resident-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .resident-card img {
+        max-width: 260px;
+    }
+
+    .resident-details h2 {
+        text-align: center;
+    }
+
+    .resident-details p {
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: left;
+    }
+}
+
+
 
 /* ========================================
    COLLECTION
