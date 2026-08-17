@@ -264,6 +264,16 @@ hr {
     padding: 24px;
   }
 
+   .book-card h2,
+   .book-subtitle,
+   .book-status {
+      text-align: center;
+   }
+
+   .book-status {
+      display: block;
+   }
+   
   .book-cover {
     max-width: 260px;
   }
