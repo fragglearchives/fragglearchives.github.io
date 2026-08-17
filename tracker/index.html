@@ -478,68 +478,6 @@ if (archiveStatJourneys) {
     data.visitors.length;
 
 }
-      
-
-
-<script src="/archive-stats.js"></script>
-
-<script>
-function initArchiveStats() {
-
-  const stats = window.archiveStats;
-
-  if (!stats) {
-    return;
-  }
-
-
-  const rescues =
-    document.getElementById("archive-stat-rescues");
-
-  const books =
-    document.getElementById("archive-stat-books");
-
-  const funds =
-    document.getElementById("archive-stat-funds");
-
-
-  if (rescues) {
-    rescues.textContent =
-      stats.rescuePartners;
-  }
-
-
-  if (books) {
-    books.textContent =
-      stats.publishedBooks;
-  }
-
-
-  if (funds) {
-
-    funds.textContent =
-      new Intl.NumberFormat(
-        "en-CA",
-        {
-          style: "currency",
-          currency: "CAD"
-        }
-      ).format(
-        stats.fundsDirectedToCats
-      );
-
-  }
-
-}
-
-
-document.addEventListener(
-  "DOMContentLoaded",
-  initArchiveStats
-);
-</script>
-
-
 
       
 data.visitors.forEach(function(visitor) {
@@ -666,6 +604,66 @@ document
   });
 
 </script>
+
+    <script src="/archive-stats.js"></script>
+
+<script>
+function initArchiveStats() {
+
+  const stats = window.archiveStats;
+
+  if (!stats) {
+    return;
+  }
+
+
+  const rescues =
+    document.getElementById("archive-stat-rescues");
+
+  const books =
+    document.getElementById("archive-stat-books");
+
+  const funds =
+    document.getElementById("archive-stat-funds");
+
+
+  if (rescues) {
+    rescues.textContent =
+      stats.rescuePartners;
+  }
+
+
+  if (books) {
+    books.textContent =
+      stats.publishedBooks;
+  }
+
+
+  if (funds) {
+
+    funds.textContent =
+      new Intl.NumberFormat(
+        "en-CA",
+        {
+          style: "currency",
+          currency: "CAD"
+        }
+      ).format(
+        stats.fundsDirectedToCats
+      );
+
+  }
+
+}
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  initArchiveStats
+);
+</script>
+
+
 
 </main>
 
