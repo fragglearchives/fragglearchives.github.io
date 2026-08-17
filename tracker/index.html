@@ -599,6 +599,38 @@ visitorList.prepend(card);
       marker.bindPopup(popup);
     });
 
+
+
+      if (data.visitors.length && latestLocation && latestBook) {
+
+ const timestampedVisitors = data.visitors
+   .filter(visitor => visitor.submittedAt)
+   .sort((a, b) =>
+     new Date(b.submittedAt) - new Date(a.submittedAt)
+   );
+
+ const latestVisitor =
+   timestampedVisitors.length
+     ? timestampedVisitors[0]
+     : data.visitors[data.visitors.length - 1];
+
+ latestLocation.textContent =
+   [
+     latestVisitor.city,
+     latestVisitor.province,
+     latestVisitor.country
+   ]
+     .filter(Boolean)
+     .join(', ');
+
+ latestBook.innerHTML =
+   'Reading <em>' +
+   (latestVisitor.bookTitle || 'Fraggle’s Village') +
+   '</em>';
+}
+
+      
+
     delete window[callbackName];
   };
 
