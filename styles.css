@@ -627,6 +627,7 @@ input[type="date"] {
 
 
 .latest-sighting {
+ max-width: 760px;
  margin: 0 auto 25px;
  padding: 22px 24px;
  background: var(--archive-card);
