@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partnerships The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <img
+        src="Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+ <div id="site-nav"></div>
+
+<script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+    });
+</script>
+    
+</header>
+
+<main>
+
+    <h1>Welcome to The Fraggle Archives</h1>
+
+    <p class="intro">
+        The Fraggle Archives is a place for stories worth keeping.
+    </p>
+
+
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="/moon-phase.js"></script>
+
+<script>
+fetch('/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+
+    if (window.initFooterMoonPhase) {
+      window.initFooterMoonPhase();
+    }
+  });
+</script>
+
+</body>
+
+</html>
