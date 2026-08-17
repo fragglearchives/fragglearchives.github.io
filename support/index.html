@@ -2,147 +2,226 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Support | The Fraggle Archives</title>
 
     <link rel="stylesheet" href="/styles.css">
-
 </head>
 
 <body>
 
 <header>
 
-    <img src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner">
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
 
     <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
+    <script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('site-nav').innerHTML = data;
+        });
+    </script>
 
 </header>
 
-<main>
 
+<main class="support-page">
 
-    <h1>Support the Archives</h1>
+    <!-- PAGE INTRO -->
 
-    <p class="intro">
-        The Fraggle Archives exists because people choose to help
-        preserve the stories, memories, and work that matter.
-    </p>
+    <section class="archive-page-intro">
 
-    <div class="support-card">
-
-        <h2>Help Preserve the Archives</h2>
-
-<p>
-    If you would like to support the work of The Fraggle Archives,
-    contributions help make future books, projects, memorials,
-    and rescue efforts possible.
-</p>
-
-<p>
-    Support also helps provide veterinary care for the cats who are
-    part of the Archives' story. Contributions may go toward veterinary
-    bills, ongoing care, and other needs that help keep our residents
-    safe, comfortable, and well cared for.
-</p>
-
-<p>
-    Every contribution, no matter the size, helps keep the Archives
-    growing and helps care for the lives behind the stories.
-</p>
-
-      <div class="support-options">
-
-<div class="support-option">
-    <h2>E-Transfer</h2>
-
-        <p>
-            If you would like to make a contribution, you can send an
-            e-transfer through your Canadian banking app.
+        <p class="archive-eyebrow">
+            THE FRAGGLE ARCHIVES
         </p>
 
-        <p>
-            <strong>E-transfer address:</strong><br>
-             <a href="mailto:sam@fragglearchives.com">   
-            sam@fragglearchives.com
-            </a>
+        <h1>Support the Archives</h1>
+
+        <p class="archive-page-lead">
+            The Fraggle Archives exists because people choose to help
+            preserve the stories, memories, and work that matter.
         </p>
 
-</div>
-        <div class="paypal-support">
-    <h2>PayPal</h2>
+    </section>
 
-    <p>
-        If you would like to make a contribution through PayPal,
-        you can support The Fraggle Archives here:
-    </p>
 
-            
-<p class="paypal-link">
-    <a 
-        class="button paypal-button"
-        href="https://paypal.me/fragglearchives"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="paypal-button">
-        Support The Fraggle Archives via PayPal
-    </a>
-</p>
+    <!-- WHY SUPPORT -->
 
-</div>
-          
-          </div>
+    <section class="support-overview">
 
-    <div class="wishlist-support">
-        <h2>Wishlist</h2>
-
-        <p>
-            Want to support the Archives without making a monetary contribution?
-            You can help by sending an item from our Amazon wishlist.
-            Every little bit helps keep the Archives running and growing.
+        <p class="archive-eyebrow">
+            HELP PRESERVE THE ARCHIVES
         </p>
 
-<p class="wishlist-link">
-    <a
-        href="https://www.amazon.ca/hz/wishlist/ls/12YS252T2DT97?ref_=wl_share"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button"
-    >
-        View the Amazon Wishlist
-    </a>
-</p>
-        
-    </div>
+        <h2>Stories, Care &amp; the Work Ahead</h2>
+
+        <div class="support-overview-text">
+
+            <p>
+                If you would like to support the work of The Fraggle Archives,
+                contributions help make future books, projects, memorials,
+                and rescue efforts possible.
+            </p>
+
+            <p>
+                Support also helps provide veterinary care for the cats who are
+                part of the Archives' story. Contributions may go toward veterinary
+                bills, ongoing care, and other needs that help keep our residents
+                safe, comfortable, and well cared for.
+            </p>
+
+            <p>
+                Every contribution, no matter the size, helps keep the Archives
+                growing and helps care for the lives behind the stories.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WAYS TO SUPPORT -->
+
+    <section class="support-methods">
+
+        <p class="archive-eyebrow">
+            WAYS TO HELP
+        </p>
+
+        <h2>Support the Work</h2>
+
+
+        <div class="support-method-grid">
+
+            <!-- E-TRANSFER -->
+
+            <article class="support-method-card">
+
+                <span class="support-method-type">
+                    CANADA
+                </span>
+
+                <h3>E-Transfer</h3>
+
                 <p>
+                    If you would like to make a contribution, you can send an
+                    e-transfer through your Canadian banking app.
+                </p>
+
+                <div class="support-detail">
+
+                    <span>E-transfer address</span>
+
+                    <a href="mailto:sam@fragglearchives.com">
+                        sam@fragglearchives.com
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PAYPAL -->
+
+            <article class="support-method-card">
+
+                <span class="support-method-type">
+                    ONLINE
+                </span>
+
+                <h3>PayPal</h3>
+
+                <p>
+                    If you would like to make a contribution through PayPal,
+                    you can support The Fraggle Archives here.
+                </p>
+
+                <div class="support-action">
+
+                    <a
+                        class="button"
+                        href="https://paypal.me/fragglearchives"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Support via PayPal
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- WISHLIST -->
+
+        <article class="support-method-card support-method-wide">
+
+            <span class="support-method-type">
+                WISHLIST
+            </span>
+
+            <h3>Send Something Useful</h3>
+
+            <p>
+                Want to support the Archives without making a monetary contribution?
+                You can help by sending an item from our Amazon wishlist.
+                Every little bit helps keep the Archives running and growing.
+            </p>
+
+            <div class="support-action">
+
+                <a
+                    class="button"
+                    href="https://www.amazon.ca/hz/wishlist/ls/12YS252T2DT97?ref_=wl_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View the Amazon Wishlist
+                </a>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ARCHIVAL NOTE -->
+
+    <section class="support-note">
+
+        <p class="archive-eyebrow">
+            ARCHIVAL NOTE
+        </p>
+
+        <p>
             Please include your name or a note about the purpose of your
             contribution if you would like it recorded with the Archives.
         </p>
 
-        <hr>
-        
-        <p>
+        <div class="support-divider">
+            — ❖ —
+        </div>
+
+        <p class="support-thanks">
             Thank you for helping preserve the stories, memories, and
             wonderfully strange history of the Archives. ♥
         </p>
 
-    </div>
+    </section>
 
 </main>
+
 
 <div id="footer-placeholder"></div>
 
@@ -150,16 +229,17 @@ fetch('/nav.html')
 
 <script>
 fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+        if (window.initFooterMoonPhase) {
+            window.initFooterMoonPhase();
+        }
+    });
 </script>
 
 </body>
 
 </html>
+
