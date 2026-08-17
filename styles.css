@@ -625,6 +625,234 @@ input[type="button"] {
 }
 
 
+/* ========================================
+   GIFT SHOP HUB
+   ======================================== */
+
+.giftshop-hub-page {
+    max-width: 1000px;
+}
+
+
+/* Standard Archives divider */
+
+.giftshop-hub-divider {
+    margin: 35px 0;
+    text-align: center;
+
+    font-size: 1.05rem;
+    letter-spacing: 0.3rem;
+
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   GIFT SHOP GRID
+
+   Desktop:
+   Collect | Read
+   Wear — full width
+   ======================================== */
+
+.giftshop-hub-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-areas:
+        "collect read"
+        "wear wear";
+
+    gap: 28px;
+
+    margin: 15px auto 50px;
+}
+
+
+.giftshop-hub-collect {
+    grid-area: collect;
+}
+
+.giftshop-hub-read {
+    grid-area: read;
+}
+
+.giftshop-hub-wear {
+    grid-area: wear;
+}
+
+
+/* ========================================
+   STANDARD HUB CARDS
+   ======================================== */
+
+.giftshop-hub-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 38px 34px 34px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+
+    text-align: center;
+}
+
+
+.giftshop-hub-card h2 {
+    margin: 4px 0 18px;
+
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+
+/* Little Archives marker */
+
+.giftshop-hub-card h2::after {
+    content: "✦";
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 0.72rem;
+    line-height: 1;
+
+    opacity: 0.45;
+}
+
+
+/* Little trinkets / Books /
+   Clothing & accessories */
+
+.giftshop-hub-category {
+    margin: 0 auto 18px;
+
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+/* Descriptions */
+
+.giftshop-hub-description {
+    max-width: 370px;
+
+    margin: 0 auto 28px;
+
+    line-height: 1.7;
+}
+
+
+/* Buttons stay aligned at bottom */
+
+.giftshop-hub-button {
+    align-self: center;
+
+    margin-top: auto;
+}
+
+
+/* ========================================
+   WEAR THE ARCHIVES
+   Featured full-width department
+   ======================================== */
+
+.giftshop-hub-wear {
+    min-height: 290px;
+
+    padding: 45px 50px 42px;
+}
+
+
+.giftshop-feature-label {
+    margin: 0 0 6px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+}
+
+
+.giftshop-hub-wear h2 {
+    font-size: 2.4rem;
+}
+
+
+.giftshop-hub-wear .giftshop-hub-description {
+    max-width: 650px;
+}
+
+
+/* ========================================
+   GIFT SHOP HUB — MOBILE
+
+   Collect
+   Read
+   Wear
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .giftshop-hub-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "collect"
+            "read"
+            "wear";
+
+        gap: 24px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .giftshop-hub-card,
+    .giftshop-hub-wear {
+        min-height: 0;
+
+        padding: 32px 26px;
+    }
+
+
+    .giftshop-hub-card h2,
+    .giftshop-hub-wear h2 {
+        font-size: 1.9rem;
+    }
+
+
+    .giftshop-hub-description,
+    .giftshop-hub-wear .giftshop-hub-description {
+        max-width: 100%;
+    }
+
+
+    .giftshop-hub-button {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .giftshop-hub-divider {
+        margin: 30px 0;
+    }
+
+}
+
 
 /* ========================================
    MUSEUM HUB
