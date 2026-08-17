@@ -445,6 +445,23 @@ input[type="button"] {
    CHARTER
    ======================================== */
 
+.charter-card {
+  margin: 40px 0;
+  padding: 30px 40px 40px;
+  background: var(--archive-card);
+  border: 1px solid var(--archive-border);
+  box-shadow: var(--archive-shadow);
+}
+
+.charter-text {
+  text-align: center;
+}
+
+.charter-card > h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
 .charter-divider {
   text-align: center;
   margin: 1.5rem 0;
@@ -454,29 +471,9 @@ input[type="button"] {
 }
 
 .charter-text .charter-divider:last-child {
-   text-align: center;
-   margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.charter-text {
-   text-align: center;
-}
-
-.charter-text h2 {
-   text-align: center;
-}
-
-.charter-card {
-   margin: 40px 0;
-   padding: 30px 40px 40px;
-   background: var(--archive-card);
-   border: 1px solid var(--archive-border);
-   box-shadow: var(--archive-shadow);
-}
-
-.charter-card > h2 {
-   margin-top: 0;
-}
 
 /* ========================================
    FOOTER
