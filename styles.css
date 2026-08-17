@@ -370,6 +370,25 @@ input[type="button"] {
    margin-top: 2.25rem;
 }
 
+
+
+/* =========================================================
+   HUB PAGE INTRO SPACING
+   Gives Museum + Gift Shop the same breathing room between
+   the introductory subtitle and the first card as other pages.
+   ========================================================= */
+
+.hub-first-card {
+  margin-top: 3rem;
+}
+
+@media (max-width: 700px) {
+  .hub-first-card {
+    margin-top: 2.5rem;
+  }
+}
+
+
 /* ========================================
    CONTACT
    ======================================== */
