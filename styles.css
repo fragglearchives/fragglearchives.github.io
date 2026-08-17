@@ -783,18 +783,18 @@ input[type="date"] {
    }
 
    .site-nav {
-  padding: 8px 4px;
+  padding: 6px 2px;
 }
 
 .site-nav a {
   display: inline-block;
-  margin: 3px 3px;
-  font-size: 0.88rem;
+  margin: 2px 2px;
+  font-size: 0.78rem;
 }
 
 .nav-heart {
-  margin: 0 3px;
-  font-size: 0.8rem;
+  margin: 0 2px;
+  font-size: 0.72rem;
 }
 
     .header-banner {
