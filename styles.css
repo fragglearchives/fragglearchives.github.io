@@ -442,7 +442,7 @@ input[type="button"] {
 }
 
 /* ========================================
-   CHARTER DIVIDER
+   CHARTER
    ======================================== */
 
 .charter-divider {
@@ -451,6 +451,10 @@ input[type="button"] {
   font-size: 1.2rem;
   opacity: 0.6;
   letter-spacing: 0.35rem;
+}
+
+.charter-text {
+   text-align: center;
 }
 
 /* ========================================
