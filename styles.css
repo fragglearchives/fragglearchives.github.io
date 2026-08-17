@@ -195,6 +195,10 @@ hr {
    BOOKS
    ======================================== */
 
+.books-page {
+   max-width: 1060px;
+}
+
 .book-subtitle {
     font-size: 1.25rem;
     font-style: italic;
