@@ -453,8 +453,9 @@ input[type="button"] {
   letter-spacing: 0.35rem;
 }
 
-.charter-text {
+.charter-text .charter-divider:last-child {
    text-align: center;
+   margin-bottom: 0;
 }
 
 /* ========================================
