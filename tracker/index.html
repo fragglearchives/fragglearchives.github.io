@@ -494,10 +494,19 @@ if (archiveStatJourneys) {
       
 data.visitors.forEach(function(visitor) {
 
-      const marker = L.marker([
-        Number(visitor.latitude),
-        Number(visitor.longitude)
-      ]).addTo(map);
+const marker = L.circleMarker(
+  [
+    Number(visitor.latitude),
+    Number(visitor.longitude)
+  ],
+  {
+    radius: 9,
+    color: '#ffffff',
+    weight: 2,
+    fillColor: '#4f7d57',
+    fillOpacity: 1
+  }
+).addTo(map);
 
       const popup = document.createElement('div');
 
