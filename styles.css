@@ -619,6 +619,12 @@ footer {
     margin-bottom: 4px;
 }
 
+input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 
 /* ========================================
    MOBILE
