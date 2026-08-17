@@ -466,6 +466,18 @@ input[type="button"] {
    text-align: center;
 }
 
+.charter-card {
+   margin: 40px 0;
+   padding: 30px 40px 40px;
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
+}
+
+.charter-card > h2 {
+   margin-top: 0;
+}
+
 /* ========================================
    FOOTER
    ======================================== */
@@ -604,8 +616,8 @@ footer {
 
 @media (max-width: 600px) {
 
-   .charter-text {
-      padding: 30px 22px;
+   .charter-card {
+      padding: 30px 20px 40px;
    }
 
    .charter-text h2 {
