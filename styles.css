@@ -2111,3 +2111,132 @@ input[type="date"] {
         margin: 20px auto 25px;
     }
 }
+
+
+
+
+/* =========================================
+   COLLECT PAGE — COMPACT SHOP LAYOUT
+   ========================================= */
+
+/* Product cards become compact shop cards */
+#collect-browser .giftshop-card {
+    max-width: none;
+    margin: 0;
+    padding: 22px 20px 24px;
+
+    background: var(--archive-collection);
+    border: 1px solid var(--archive-border-light);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Smaller product titles */
+#collect-browser .giftshop-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+/* Compact product images */
+#collect-browser .giftshop-card img {
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    height: 190px;
+    max-height: 190px;
+
+    object-fit: contain;
+
+    margin: 10px auto 18px;
+}
+
+/* Descriptions */
+#collect-browser .giftshop-card p {
+    max-width: none;
+    margin: 0 auto 12px;
+
+    line-height: 1.55;
+}
+
+/* Product specifications */
+#collect-browser .product-specs {
+    margin-top: 8px !important;
+    margin-bottom: 16px !important;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Keep purchase controls toward the bottom
+   so cards feel visually even */
+#collect-browser .giftshop-card p:has(paypal-add-to-cart-button) {
+    margin-top: auto;
+    margin-bottom: -10px;
+}
+
+/* =========================================
+   DESKTOP PRODUCT GRID
+   ========================================= */
+
+#collect-browser {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    #collect-browser {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+    #collect-browser .giftshop-card img {
+        height: 210px;
+        max-height: 210px;
+    }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    #collect-browser {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    #collect-browser .giftshop-card {
+        padding: 20px 18px 22px;
+    }
+
+    #collect-browser .giftshop-card img {
+        height: auto;
+        max-height: 300px;
+        max-width: 85%;
+    }
+
+    #collect-browser .giftshop-card h2 {
+        font-size: 1.45rem;
+    }
+}
