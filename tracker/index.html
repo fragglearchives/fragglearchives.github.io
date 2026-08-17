@@ -248,6 +248,12 @@ fetch('/nav.html')
     </section>
 
 
+<div class="tracker-count">
+  <strong id="tracker-count-number">—</strong>
+  <span>journeys recorded</span>
+</div>
+    
+
     <section class="tracker-map-card">
 
         <div id="tracker-map"></div>
@@ -411,6 +417,14 @@ function loadVisitors() {
 const visitorList = document.getElementById('visitor-list');
 
 visitorList.innerHTML = '';
+
+
+const trackerCountNumber = document.getElementById('tracker-count-number');
+
+if (trackerCountNumber) {
+    trackerCountNumber.textContent = data.visitors.length;
+}
+      
 
 data.visitors.forEach(function(visitor) {
 
