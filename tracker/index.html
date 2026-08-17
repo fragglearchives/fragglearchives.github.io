@@ -248,13 +248,6 @@ fetch('/nav.html')
     </section>
 
 
-<div class="tracker-count">
-  <strong id="tracker-count-number">—</strong>
-  <span>journeys recorded</span>
-</div>
-
-
-
     <section class="archive-stats" aria-labelledby="archive-stats-heading">
 
   <h2 id="archive-stats-heading">
@@ -453,23 +446,10 @@ const visitorList = document.getElementById('visitor-list');
 visitorList.innerHTML = '';
 
 
-const trackerCountNumber =
-  document.getElementById(
-    'tracker-count-number'
-  );
-
 const archiveStatJourneys =
   document.getElementById(
     'archive-stat-journeys'
   );
-
-
-if (trackerCountNumber) {
-
-  trackerCountNumber.textContent =
-    data.visitors.length;
-
-}
 
 
 if (archiveStatJourneys) {
