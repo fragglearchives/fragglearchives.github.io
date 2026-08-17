@@ -453,10 +453,30 @@ const visitorList = document.getElementById('visitor-list');
 visitorList.innerHTML = '';
 
 
-const trackerCountNumber = document.getElementById('tracker-count-number');
+const trackerCountNumber =
+  document.getElementById(
+    'tracker-count-number'
+  );
+
+const archiveStatJourneys =
+  document.getElementById(
+    'archive-stat-journeys'
+  );
+
 
 if (trackerCountNumber) {
-    trackerCountNumber.textContent = data.visitors.length;
+
+  trackerCountNumber.textContent =
+    data.visitors.length;
+
+}
+
+
+if (archiveStatJourneys) {
+
+  archiveStatJourneys.textContent =
+    data.visitors.length;
+
 }
       
 
