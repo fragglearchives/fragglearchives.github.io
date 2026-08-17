@@ -604,6 +604,14 @@ footer {
 
 @media (max-width: 600px) {
 
+   .charter-text {
+      padding: 30px 22px;
+   }
+
+   .charter-text h2 {
+      margin-top: 0;
+   }
+
    .site-nav {
   padding: 8px 4px;
 }
