@@ -1007,35 +1007,231 @@ input[type="button"] {
 
 /* ========================================
    CHARTER
+   Founding document treatment
    ======================================== */
 
-.charter-card {
-  margin: 40px 0;
-  padding: 30px 40px 40px;
-  background: var(--archive-card);
-  border: 1px solid var(--archive-border);
-  box-shadow: var(--archive-shadow);
+.charter-page {
+    max-width: 900px;
 }
 
-.charter-text {
-  text-align: center;
+
+/* Slightly tighter relationship between
+   the two introductory paragraphs */
+
+.charter-intro-closing {
+    margin-top: -8px;
+    font-style: italic;
 }
 
-.charter-card > h2 {
-  margin-top: 0;
-  text-align: center;
+
+/* Main document */
+
+.charter-document {
+    position: relative;
+    max-width: 760px;
+    margin: 45px auto 55px;
+    padding: 55px 70px 60px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
 }
+
+
+/* Inner archival border */
+
+.charter-document::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid var(--archive-border-light);
+    pointer-events: none;
+}
+
+
+/* Document heading */
+
+.charter-document-header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.charter-document-label {
+    margin: 0 0 8px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.charter-document-header h2 {
+    margin: 0;
+    font-size: 2.25rem;
+}
+
+
+/* Charter's ceremonial divider.
+   ❖ belongs ONLY to the Charter. */
 
 .charter-divider {
-  text-align: center;
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-  opacity: 0.6;
-  letter-spacing: 0.35rem;
+    position: relative;
+    z-index: 1;
+
+    margin: 30px 0;
+    text-align: center;
+
+    font-size: 1.05rem;
+    letter-spacing: 0.28rem;
+    opacity: 0.55;
 }
 
-.charter-text .charter-divider:last-child {
-  margin-bottom: 0;
+
+/* Main text */
+
+.charter-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 610px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.charter-text p {
+    margin: 0 0 18px;
+}
+
+
+/* Opening dedication */
+
+.charter-dedication {
+    max-width: 540px;
+    margin: 0 auto 30px !important;
+
+    font-size: 1.12em;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+
+/* Belief section */
+
+.charter-beliefs {
+    margin: 32px auto;
+}
+
+.charter-beliefs p {
+    margin-bottom: 12px;
+}
+
+
+/* Central thesis */
+
+.charter-statement {
+    max-width: 500px;
+    margin: 38px auto 34px;
+    padding: 24px 20px;
+
+    border-top: 1px solid var(--archive-border-light);
+    border-bottom: 1px solid var(--archive-border-light);
+
+    font-size: 1.18em;
+    font-style: italic;
+}
+
+.charter-statement p {
+    margin: 0;
+}
+
+.charter-statement p + p {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+
+/* Core principle */
+
+.charter-principle {
+    max-width: 560px;
+    margin: 0 auto 36px !important;
+
+    font-size: 1.12em;
+    font-weight: bold;
+    line-height: 1.75;
+}
+
+
+/* Closing passage */
+
+.charter-closing {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.charter-closing p {
+    margin-bottom: 14px;
+}
+
+.charter-closing p:last-child {
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    font-style: italic;
+}
+
+
+/* Last ceremonial mark */
+
+.charter-divider-final {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   CHARTER — MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .charter-document {
+        margin: 35px auto 45px;
+        padding: 45px 32px 48px;
+    }
+
+    .charter-document::before {
+        inset: 10px;
+    }
+
+    .charter-document-header h2 {
+        font-size: 2rem;
+    }
+
+    .charter-document-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+    }
+
+    .charter-divider {
+        margin: 26px 0;
+    }
+
+    .charter-dedication {
+        font-size: 1.05em;
+    }
+
+    .charter-statement {
+        margin: 32px auto;
+        padding: 20px 10px;
+        font-size: 1.1em;
+    }
+
+    .charter-principle {
+        font-size: 1.06em;
+    }
 }
 
 
