@@ -711,22 +711,6 @@ input[type="button"] {
 }
 
 
-/* Little Archives marker */
-
-.giftshop-hub-card h2::after {
-    content: "✦";
-
-    display: block;
-
-    margin-top: 15px;
-
-    font-size: 0.72rem;
-    line-height: 1;
-
-    opacity: 0.45;
-}
-
-
 /* Little trinkets / Books /
    Clothing & accessories */
 
@@ -963,21 +947,6 @@ input[type="button"] {
     line-height: 1.25;
 }
 
-
-/* Little Archives star underneath each title */
-
-.museum-wing-card h2::after {
-    content: "✦";
-
-    display: block;
-
-    margin-top: 15px;
-
-    font-size: 0.72rem;
-    line-height: 1;
-
-    opacity: 0.45;
-}
 
 
 /* Descriptions */
