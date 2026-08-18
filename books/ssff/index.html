@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Super Stick Figure Fraggle | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   SSFF PLACEHOLDER
+   ========================================================= */
+
+.ssff-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ssff-hero {
+    max-width: 820px;
+
+    margin: 50px auto 75px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.ssff-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.ssff-hero h1 {
+    max-width: 760px;
+
+    margin: 8px auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 5vw, 4.25rem);
+    line-height: 1.04;
+}
+
+.ssff-subtitle {
+    margin: 0 auto 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.45rem;
+    line-height: 1.45;
+
+    font-style: italic;
+}
+
+.ssff-status {
+    margin: 0;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    opacity: 0.68;
+}
+
+
+/* =========================================================
+   TEASER ART
+   ========================================================= */
+
+.ssff-art {
+    max-width: 900px;
+
+    margin: 0 auto 80px;
+    padding: 0 24px;
+}
+
+.ssff-art-frame {
+    padding: 18px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.ssff-art img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.ssff-art-caption {
+    max-width: 680px;
+
+    margin: 18px auto 0;
+
+    text-align: center;
+
+    font-size: 0.98rem;
+    line-height: 1.65;
+
+    font-style: italic;
+
+    opacity: 0.74;
+}
+
+
+/* =========================================================
+   SERIES INTRO
+   ========================================================= */
+
+.ssff-intro {
+    max-width: 760px;
+
+    margin: 0 auto 85px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.ssff-intro h2 {
+    max-width: 700px;
+
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    line-height: 1.12;
+}
+
+.ssff-intro p:not(.ssff-eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BOOK ONE
+   ========================================================= */
+
+.ssff-book-one {
+    max-width: 820px;
+
+    margin: 0 auto 85px;
+    padding: 38px 34px;
+
+    text-align: center;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+}
+
+.ssff-book-one h2 {
+    margin: 8px 0 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.ssff-book-one-title {
+    margin: 0 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem;
+    line-height: 1.45;
+
+    font-style: italic;
+}
+
+.ssff-book-one p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.ssff-closing {
+    max-width: 760px;
+
+    margin: 90px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.ssff-closing h2 {
+    max-width: 680px;
+
+    margin: 8px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    line-height: 1.12;
+}
+
+.ssff-closing p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.06rem;
+    line-height: 1.72;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .ssff-hero {
+        margin: 38px auto 58px;
+        padding: 0 18px;
+    }
+
+    .ssff-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .ssff-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .ssff-art {
+        padding: 0 16px;
+    }
+
+    .ssff-art-frame {
+        padding: 10px;
+    }
+
+    .ssff-intro,
+    .ssff-closing {
+        padding: 0 18px;
+    }
+
+    .ssff-book-one {
+        margin: 0 16px 65px;
+        padding: 30px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+    <div id="site-nav"></div>
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
+</header>
+
+
+
+<main class="ssff-page">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="ssff-hero">
+
+        <p class="ssff-eyebrow">
+            THE MYTHOLOGY EXPANDS
+        </p>
+
+        <h1>
+            The Adventures of Super Stick Figure Fraggle
+        </h1>
+
+        <p class="ssff-subtitle">
+            Highly Regulated Unhingedness
+        </p>
+
+        <p class="ssff-status">
+            Series in development
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONCEPT ART
+         ===================================================== -->
+
+    <section class="ssff-art">
+
+        <div class="ssff-art-frame">
+
+            <img
+                src="/images/books/SSFF-lobby.PNG"
+                alt="Concept art of the Fraggle Archives Headquarters lobby from The Adventures of Super Stick Figure Fraggle"
+            >
+
+        </div>
+
+        <p class="ssff-art-caption">
+            Concept art: the lobby of Fraggle Archives Headquarters.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERIES INTRO
+         ===================================================== -->
+
+    <section class="ssff-intro">
+
+        <p class="ssff-eyebrow">
+            THE DEPARTMENT OF HEROICS
+        </p>
+
+        <h2>
+            Some emergencies require unusual procedures.
+        </h2>
+
+        <p>
+            <em>The Adventures of Super Stick Figure Fraggle</em>
+            is an illustrated series set inside the stranger,
+            more highly regulated corners of the Fraggle Archives.
+        </p>
+
+        <p>
+            Super Stick Figure Fraggle handles the emergencies
+            ordinary archival procedures cannot contain —
+            with questionable methods, considerable bravery,
+            and access to highly controlled Creamy resources.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BOOK ONE
+         ===================================================== -->
+
+    <section class="ssff-book-one">
+
+        <p class="ssff-eyebrow">
+            BOOK ONE
+        </p>
+
+        <h2>
+            The first incident is under investigation.
+        </h2>
+
+        <p class="ssff-book-one-title">
+            SSFF and the Emergency Creamy
+        </p>
+
+        <p>
+            Further details will be released by the Archives
+            when the Department of Heroics considers the situation
+            sufficiently contained.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING
+         ===================================================== -->
+
+    <section class="ssff-closing">
+
+        <p class="ssff-eyebrow">
+            ARCHIVAL STATUS
+        </p>
+
+        <h2>
+            Further incidents are under investigation.
+        </h2>
+
+        <p>
+            Please remain calm.
+            Emergency Creamies have been accounted for.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+<script src="/moon-phase.js"></script>
+
+
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
