@@ -78,8 +78,7 @@
 
 /* =========================================
    CATALOGUE CONTROLS
-
-   Intentionally open — no outer box.
+   No outer box — pills only.
    ========================================= */
 
 .collect-browser {
@@ -90,9 +89,7 @@
     padding: 0;
 
     background: transparent;
-
     border: 0;
-
     box-shadow: none;
 
     text-align: center;
@@ -147,6 +144,9 @@
 
 /* =========================================
    VIEW CART
+
+   Cart widget gets its own centering rules.
+   Do NOT use these rules for product widgets.
    ========================================= */
 
 .collect-cart {
@@ -156,9 +156,19 @@
 }
 
 .collect-cart h2 {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
 
     font-size: 1.25rem;
+}
+
+.collect-cart paypal-cart-button {
+    display: block;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -230,7 +240,10 @@
     box-shadow: var(--archive-shadow);
 }
 
-.collect-card h3 {
+
+/* Archive product title */
+
+.collect-card > h3 {
     width: 100%;
 
     margin: 0 0 16px;
@@ -240,6 +253,9 @@
 
     text-align: center;
 }
+
+
+/* Product image */
 
 .collect-card img {
     display: block;
@@ -252,6 +268,9 @@
     object-fit: contain;
 }
 
+
+/* Product description */
+
 .collect-card-description {
     margin: 0 0 16px;
 
@@ -260,7 +279,7 @@
 }
 
 
-/* SIZE becomes a small archival metadata line */
+/* SIZE = archival metadata */
 
 .collect-card-specs {
     margin: auto 0 18px;
@@ -281,28 +300,24 @@
 /* =========================================
    PURCHASE AREA
 
-   Keep the whole PayPal component centred
-   instead of stretching it across the card.
+   IMPORTANT:
+   PayPal product widgets MUST retain full width.
+   Shrink-to-fit causes the vertical-letter apocalypse.
    ========================================= */
 
 .collect-buy {
     width: 100%;
 
     padding-top: 4px;
-
-    text-align: center;
 }
 
 .collect-buy paypal-add-to-cart-button {
-    display: inline-block;
+    display: block;
 
-    width: auto;
+    width: 100%;
     max-width: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
+    margin: 0;
 }
 
 
@@ -367,16 +382,16 @@
     line-height: 1.65;
 }
 
-.shipping-card paypal-add-to-cart-button {
-    display: inline-block;
 
-    width: auto;
+/* Shipping PayPal widgets also need full width */
+
+.shipping-card paypal-add-to-cart-button {
+    display: block;
+
+    width: 100%;
     max-width: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
+    margin: 0;
 }
 
 
@@ -457,7 +472,7 @@
         padding: 26px 22px;
     }
 
-    .collect-card h3 {
+    .collect-card > h3 {
         font-size: 1.65rem;
 
         text-align: center;
@@ -483,7 +498,6 @@
 }
 
 </style>
-
 </head>
 
 
