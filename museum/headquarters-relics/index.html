@@ -7,9 +7,368 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Museum | The Fraggle Archives</title>
+    <title>Headquarters Relics | The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css?v=2">
+
+
+<style>
+
+/* =========================================================
+   HEADQUARTERS RELICS
+   The Fraggle Archives Museum
+   ========================================================= */
+
+.headquarters-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   EYEBROWS
+   ========================================================= */
+
+.headquarters-page .eyebrow {
+    margin: 0 0 6px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.headquarters-intro {
+    max-width: 780px;
+
+    margin: 45px auto 75px;
+
+    text-align: center;
+}
+
+.headquarters-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.headquarters-lead {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.18rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   COLLECTION INTRO
+   ========================================================= */
+
+.headquarters-collection-header {
+    max-width: 760px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.headquarters-collection-header h2 {
+    margin: 6px 0 15px;
+
+    font-size: clamp(2.3rem, 4vw, 3.3rem);
+    line-height: 1.1;
+}
+
+.headquarters-collection-header p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.06rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RELIC GRID
+   ========================================================= */
+
+.headquarters-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   RELIC CARDS
+   ========================================================= */
+
+.headquarters-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 32px;
+
+    background: var(--archive-card);
+
+    border: 1px solid var(--archive-border);
+
+    box-shadow: var(--archive-shadow);
+}
+
+.headquarters-card-header {
+    margin-bottom: 22px;
+
+    text-align: center;
+}
+
+.headquarters-type {
+    display: block;
+
+    margin: 0 0 7px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    opacity: 0.62;
+}
+
+.headquarters-card h3 {
+    margin: 0;
+
+    font-size: 2rem;
+    line-height: 1.18;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ARTIFACT IMAGES
+   ========================================================= */
+
+.headquarters-image {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 88%;
+    max-height: 430px;
+
+    margin: 0 auto 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   RELIC COPY
+   ========================================================= */
+
+.headquarters-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+.headquarters-description + .headquarters-description {
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   FEATURED FOUNDING DOCUMENT
+   ========================================================= */
+
+.headquarters-card-featured {
+    grid-column: 1 / -1;
+
+    max-width: 760px;
+    width: 100%;
+
+    margin: 10px auto 0;
+}
+
+.headquarters-card-featured .headquarters-image {
+    max-height: 470px;
+}
+
+
+/* =========================================================
+   STEVE
+   ========================================================= */
+
+.headquarters-card-steve {
+    position: relative;
+}
+
+.headquarters-card-steve .headquarters-image {
+    max-width: 60%;
+    max-height: 260px;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.headquarters-principle {
+    max-width: 760px;
+
+    margin: 100px auto 70px;
+
+    text-align: center;
+}
+
+.headquarters-principle h2 {
+    margin: 6px 0 28px;
+
+    font-size: clamp(2.5rem, 4.2vw, 3.5rem);
+    line-height: 1.08;
+}
+
+.headquarters-principle p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.32rem;
+    line-height: 1.7;
+}
+
+.headquarters-principle strong {
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 1.35em;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .headquarters-page {
+        max-width: 92%;
+    }
+
+    .headquarters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .headquarters-card-featured {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .headquarters-page {
+        max-width: none;
+    }
+
+
+    .headquarters-intro {
+        margin: 35px auto 60px;
+    }
+
+    .headquarters-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .headquarters-lead {
+        font-size: 1.08rem;
+    }
+
+
+    .headquarters-collection-header {
+        margin-bottom: 30px;
+    }
+
+    .headquarters-collection-header h2 {
+        font-size: 2.45rem;
+    }
+
+
+    .headquarters-grid {
+        gap: 24px;
+    }
+
+
+    .headquarters-card {
+        padding: 28px 22px;
+    }
+
+    .headquarters-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .headquarters-image {
+        max-width: 90%;
+        max-height: 340px;
+    }
+
+    .headquarters-description {
+        font-size: 1.03rem;
+    }
+
+
+    .headquarters-card-steve .headquarters-image {
+        max-width: 55%;
+        max-height: 220px;
+    }
+
+
+    .headquarters-principle {
+        margin: 75px auto 55px;
+    }
+
+    .headquarters-principle h2 {
+        font-size: 2.65rem;
+    }
+
+    .headquarters-principle p:not(.eyebrow) {
+        font-size: 1.18rem;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -19,129 +378,320 @@
 
 <header>
 
-    <img src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner">
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner">
 
 
- <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
 
 </header>
 
 
 
-<main>
-
-<h1>Headquarters Relics</h1>
-
-<p class="intro">
-    The Archives are more than the stories they preserve.
-    
-    These are the objects, documents, and artifacts that belong to the
-    institution itself — the physical evidence of how the Archives came
-    to exist and how they continue to operate.
-</p>
+<main class="headquarters-page">
 
 
-<div class="collection-card">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-    <h2>The Fraggle Archives Charter</h2>
+    <section class="headquarters-intro">
 
-    <img src="/images/museum/Charter.jpg"
-         alt="The Fraggle Archives Charter, the founding document of The Fraggle Archives">
+        <p class="eyebrow">
+            The Fraggle Archives Museum
+        </p>
 
-    <p>
-        The founding document of the Archives, establishing their purpose,
-        principles, and commitment to preserving the stories that matter.
-    </p>
+        <h1>
+            Headquarters Relics
+        </h1>
 
-</div>
+        <p class="headquarters-lead">
+            The Archives are more than the stories they preserve.
+            These are the documents, objects, and inexplicably important
+            items that belong to the institution itself.
+        </p>
 
-    <div class="collection-card">
-
-    <h2>The Curator's Note</h2>
-
-    <img src="/images/museum/curatorsnote.jpeg"
-         alt="The Curator's Note of The Fraggle Archives">
-
-    <p>
-        A statement from the Curator concerning the purpose, preservation,
-        and continued care of the Fraggle Archives.
-    </p>
-
-    <p>
-        This document records not only what the Archives preserve, but why
-        those things are worthy of preservation.
-    </p>
-
-</div>
-
-
-<div class="collection-card">
-
-    <h2>The Archives Map</h2>
-
-    <p>
-        A record of the Archives Headquarters, including the Great Hall,
-        Restricted Section, Department of Heroics, Creamy Vault, and other
-        important locations.
-    </p>
-
-</div>
-
-      <div class="collection-card">
-
-    <h2>The Whisker Jar</h2>
-
-    <img src="/images/museum/whiskerjar.jpeg"
-         alt="A ceramic jar containing whiskers and fur collected from the residents of the Fraggle Archives household">
-
-    <p>
-        Whiskers and fur clippings found and saved over time from the cats who have called the Archives home. Kept together rather than assigned to any one resident, the jar preserves tiny traces of many lives — an accidental collection slowly built one whisker at a time.
-    </p>
-
-</div>
+    </section>
 
 
 
-<div class="collection-card">
+    <!-- =====================================================
+         COLLECTION INTRO
+         ===================================================== -->
 
-    <h2>Dr. Vacuum Cleaner</h2>
+    <section class="headquarters-collection-header">
 
-    <p>
-        An object of unusual significance whose presence within the Archives
-        has yet to receive a completely satisfactory explanation.
-    </p>
+        <p class="eyebrow">
+            Institutional Collection
+        </p>
 
-</div>
+        <h2>
+            Evidence of Operations
+        </h2>
 
-<div class="collection-card">
+        <p>
+            Founding documents, maps, household relics, questionable equipment,
+            and at least one ladybug whose official duties remain classified.
+        </p>
 
-    <h2>Steve — Ladybug Friend</h2>
+    </section>
 
-    <img src="/images/museum/Steve.PNG"
-         alt="Steve, the ladybug friend of The Fraggle Archives"
-         class="steve-image">
 
-    <p>
-        A small but persistent member of Archive history.
-    </p>
 
-    <p>
-        Steve has appeared during important events and is believed to be
-        considerably more involved in Archive operations than anyone
-        officially acknowledges.
-    </p>
+    <!-- =====================================================
+         RELICS
+         ===================================================== -->
 
-</div>
+    <section class="headquarters-grid">
+
+
+        <!-- =================================================
+             CHARTER
+             ================================================= -->
+
+        <article class="headquarters-card headquarters-card-featured">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Founding Document
+                </span>
+
+                <h3>
+                    The Fraggle Archives Charter
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/Charter.jpg"
+                alt="The Fraggle Archives Charter, the founding document of The Fraggle Archives"
+                class="headquarters-image">
+
+
+            <p class="headquarters-description">
+                The founding document of the Archives, establishing their purpose,
+                principles, and commitment to preserving the stories that matter.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             CURATOR'S NOTE
+             ================================================= -->
+
+        <article class="headquarters-card">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Curatorial Record
+                </span>
+
+                <h3>
+                    The Curator's Note
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/curatorsnote.jpeg"
+                alt="The Curator's Note of The Fraggle Archives"
+                class="headquarters-image">
+
+
+            <p class="headquarters-description">
+                A statement from the Curator concerning the purpose,
+                preservation, and continued care of the Fraggle Archives.
+            </p>
+
+            <p class="headquarters-description">
+                This document records not only what the Archives preserve,
+                but why those things are worthy of preservation.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             MAP
+             ================================================= -->
+
+        <article class="headquarters-card">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Headquarters Record
+                </span>
+
+                <h3>
+                    The Archives Map
+                </h3>
+
+            </div>
+
+
+            <p class="headquarters-description">
+                A record of the Archives Headquarters, including the Great Hall,
+                Restricted Section, Department of Heroics, Creamy Vault, and other
+                important locations.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             WHISKER JAR
+             ================================================= -->
+
+        <article class="headquarters-card">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Household Archive
+                </span>
+
+                <h3>
+                    The Whisker Jar
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/whiskerjar.jpeg"
+                alt="A ceramic jar containing whiskers and fur collected from the residents of the Fraggle Archives household"
+                class="headquarters-image">
+
+
+            <p class="headquarters-description">
+                Whiskers and fur clippings found and saved over time from the cats
+                who have called the Archives home. Kept together rather than assigned
+                to any one resident, the jar preserves tiny traces of many lives —
+                an accidental collection slowly built one whisker at a time.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             VACUUM CLEANER
+             ================================================= -->
+
+        <article class="headquarters-card">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Unresolved Equipment
+                </span>
+
+                <h3>
+                    Dr. Vacuum Cleaner
+                </h3>
+
+            </div>
+
+
+            <p class="headquarters-description">
+                An object of unusual significance whose presence within the Archives
+                has yet to receive a completely satisfactory explanation.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             STEVE
+             ================================================= -->
+
+        <article class="headquarters-card headquarters-card-steve">
+
+            <div class="headquarters-card-header">
+
+                <span class="headquarters-type">
+                    Personnel, Allegedly
+                </span>
+
+                <h3>
+                    Steve — Ladybug Friend
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/Steve.PNG"
+                alt="Steve, the ladybug friend of The Fraggle Archives"
+                class="headquarters-image">
+
+
+            <p class="headquarters-description">
+                A small but persistent member of Archive history.
+            </p>
+
+            <p class="headquarters-description">
+                Steve has appeared during important events and is believed to be
+                considerably more involved in Archive operations than anyone
+                officially acknowledges.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="headquarters-principle">
+
+        <p class="eyebrow">
+            Institutional Principle
+        </p>
+
+        <h2>
+            Every Archive Leaves Evidence
+        </h2>
+
+        <p>
+            An institution is built from more than rules and records.
+
+            <strong>
+                Sometimes it is also built from maps, whiskers, old appliances,
+                and suspiciously well-connected ladybugs.
+            </strong>
+        </p>
+
+    </section>
+
 
 </main>
 
@@ -149,20 +699,25 @@ fetch('/nav.html')
 
 <div id="footer-placeholder"></div>
 
+
 <script src="/moon-phase.js"></script>
 
+
 <script>
-fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+                window.initFooterMoonPhase();
+            }
+
+        });
+
 </script>
-
 
 
 </body>
