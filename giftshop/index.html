@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Books | The Fraggle Archives</title>
+    <title>Gift Shop | The Fraggle Archives</title>
 
     <link rel="stylesheet" href="/styles.css">
 
@@ -15,12 +15,12 @@
 <style>
 
 /* =========================================================
-   BOOKS
+   GIFT SHOP HUB
    Editorial framing
    ========================================================= */
 
-.books-page {
-    max-width: 1000px;
+.giftshop-hub-page {
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -29,15 +29,16 @@
    PAGE INTRO
    ========================================================= */
 
-.books-page .archive-page-intro {
+.giftshop-hub-page .archive-page-intro {
     max-width: 800px;
-    margin: 45px auto 60px;
+
+    margin: 45px auto 65px;
     padding: 0 24px;
+
     text-align: center;
 }
 
-.books-page .archive-eyebrow,
-.books-editorial-eyebrow {
+.giftshop-hub-page .archive-eyebrow {
     margin: 0 0 7px;
 
     font-size: 0.78rem;
@@ -49,7 +50,7 @@
     opacity: 0.65;
 }
 
-.books-page .archive-page-intro h1 {
+.giftshop-hub-page .archive-page-intro h1 {
     margin: 8px 0 24px;
 
     font-size: clamp(2.8rem, 5vw, 4rem);
@@ -59,7 +60,7 @@
 
 /* New editorial thesis */
 
-.books-page .archive-page-thesis {
+.giftshop-hub-page .archive-page-thesis {
     max-width: 720px;
 
     margin: 0 auto 18px;
@@ -73,113 +74,15 @@
 }
 
 
-/* Main explanatory copy */
+/* Explanatory copy */
 
-.books-page .archive-page-lead {
-    max-width: 690px;
+.giftshop-hub-page .archive-page-lead {
+    max-width: 680px;
 
     margin: 0 auto;
 
     font-size: 1.13rem;
     line-height: 1.75;
-}
-
-
-/* Quiet closing line */
-
-.books-page .archive-page-note {
-    max-width: 650px;
-
-    margin: 22px auto 0;
-
-    font-size: 1.05rem;
-    line-height: 1.65;
-
-    font-style: italic;
-
-    opacity: 0.76;
-}
-
-
-/* =========================================================
-   EDITORIAL OPENING
-   ========================================================= */
-
-.books-opening-statement {
-    max-width: 760px;
-
-    margin: 65px auto 80px;
-
-    text-align: center;
-}
-
-.books-opening-statement h2 {
-    max-width: 700px;
-
-    margin: 7px auto 24px;
-
-    font-size: clamp(2.5rem, 4.5vw, 3.7rem);
-    line-height: 1.08;
-}
-
-.books-opening-statement p:not(.books-editorial-eyebrow) {
-    max-width: 620px;
-
-    margin: 0 auto;
-
-    font-size: 1.3rem;
-    line-height: 1.65;
-
-    font-style: italic;
-}
-
-
-/* =========================================================
-   BOOK CARDS
-   Existing structure preserved
-   ========================================================= */
-
-.book-card {
-    margin-bottom: 34px;
-}
-
-
-/* =========================================================
-   CLOSING PRINCIPLE
-   ========================================================= */
-
-.books-closing {
-    max-width: 760px;
-
-    margin: 95px auto 70px;
-
-    text-align: center;
-}
-
-.books-closing h2 {
-    max-width: 700px;
-
-    margin: 7px auto 26px;
-
-    font-size: clamp(2.6rem, 4.5vw, 3.7rem);
-    line-height: 1.08;
-}
-
-.books-closing p:not(.books-editorial-eyebrow) {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    font-size: 1.28rem;
-    line-height: 1.7;
-}
-
-.books-closing strong {
-    display: block;
-
-    margin-top: 15px;
-
-    font-size: 1.28em;
 }
 
 
@@ -189,61 +92,24 @@
 
 @media (max-width: 700px) {
 
-    .books-page {
-        max-width: none;
-    }
-
-
-    .books-page .archive-page-intro {
-        margin: 35px auto 52px;
+    .giftshop-hub-page .archive-page-intro {
+        margin: 35px auto 55px;
         padding: 0 18px;
     }
 
-    .books-page .archive-page-intro h1 {
+    .giftshop-hub-page .archive-page-intro h1 {
         font-size: 2.65rem;
     }
 
-    .books-page .archive-page-thesis {
-        font-size: 2.15rem;
+    .giftshop-hub-page .archive-page-thesis {
         margin-bottom: 17px;
+
+        font-size: 2.15rem;
     }
 
-    .books-page .archive-page-lead {
+    .giftshop-hub-page .archive-page-lead {
         font-size: 1.04rem;
         line-height: 1.68;
-    }
-
-    .books-page .archive-page-note {
-        margin-top: 19px;
-
-        font-size: 0.98rem;
-        line-height: 1.6;
-    }
-
-
-    .books-opening-statement {
-        margin: 55px auto 65px;
-    }
-
-    .books-opening-statement h2 {
-        font-size: 2.6rem;
-    }
-
-    .books-opening-statement p:not(.books-editorial-eyebrow) {
-        font-size: 1.16rem;
-    }
-
-
-    .books-closing {
-        margin: 75px auto 55px;
-    }
-
-    .books-closing h2 {
-        font-size: 2.65rem;
-    }
-
-    .books-closing p:not(.books-editorial-eyebrow) {
-        font-size: 1.16rem;
     }
 
 }
@@ -256,17 +122,16 @@
 <body>
 
 
-<header class="site-header">
+<header>
 
     <img
-        src="/Banner.PNG"
-        alt="The Fraggle Archives"
-        class="header-banner"
+         src="/Banner.PNG"
+         alt="The Fraggle Archives"
+         class="header-banner"
     >
 
 
     <div id="site-nav"></div>
-
 
     <script>
 
@@ -283,8 +148,7 @@
 </header>
 
 
-
-<main class="books-page">
+<main class="giftshop-hub-page">
 
 
     <!-- =====================================================
@@ -294,260 +158,101 @@
     <section class="archive-page-intro">
 
         <p class="archive-eyebrow">
-            THE VILLAGE GROWS
+            THE WORK CONTINUES
         </p>
 
         <h1>
-            The Books of the Archives
+            The Gift Shop
         </h1>
 
         <p class="archive-page-thesis">
-            Stories travel outward.
+            Care begins at home.
         </p>
 
         <p class="archive-page-lead">
-            The books of the Fraggle Archives carry the stories of its residents
-            beyond these walls — helping support rescue organizations and
-            veterinary care for cats beyond the Archives.
-        </p>
-
-        <p class="archive-page-note">
-            A series of love letters with ISBNs; to the cats I've met,
-            and to those I haven't yet.
+            Official souvenirs and artifacts from the Fraggle Archives.
+            Purchases from the Gift Shop help support veterinary care
+            for the residents who call the Archives home.
         </p>
 
     </section>
 
 
 
-    <!-- =====================================================
-         EDITORIAL OPENING
-         ===================================================== -->
+    <section
+        class="giftshop-hub-grid"
+        aria-label="Gift Shop departments"
+    >
 
-    <section class="books-opening-statement">
 
-        <p class="books-editorial-eyebrow">
-            The Stories
-        </p>
+        <!-- =====================================
+             COLLECT THE ARCHIVES
+             ===================================== -->
 
-        <h2>
-            Some things are preserved as objects.
-            Others become books.
-        </h2>
+        <article class="giftshop-hub-card giftshop-hub-collect">
 
-        <p>
-            The Archives carry them forward in both forms.
-        </p>
+            <h2>
+                Collect The Archives
+            </h2>
+
+            <p class="giftshop-hub-category">
+                Little trinkets
+            </p>
+
+            <p class="giftshop-hub-description">
+                Tiny pieces of lore for your walls, notebooks,
+                refrigerators, and other important archival territories.
+            </p>
+
+            <a
+                class="button giftshop-hub-button"
+                href="/giftshop/collect/index.html"
+            >
+                Collect
+            </a>
+
+        </article>
+
+
+        <!-- =====================================
+             WEAR THE ARCHIVES
+             Featured department
+             ===================================== -->
+
+        <article class="giftshop-hub-card giftshop-hub-wear">
+
+            <h2>
+                Wear The Archives
+            </h2>
+
+            <p class="giftshop-hub-category">
+                Clothing &amp; accessories
+            </p>
+
+            <p class="giftshop-hub-description">
+                For carrying the Archives, wearing the Archives,
+                and generally making the Archives everyone else’s problem.
+            </p>
+
+            <a
+                class="button giftshop-hub-button"
+                href="/giftshop/wear/index.html"
+            >
+                Wear
+            </a>
+
+        </article>
+
 
     </section>
-
-
-
-    <!-- =====================================================
-         FRAGGLE'S VILLAGE
-         ===================================================== -->
-
-    <div class="book-card">
-
-        <img
-            src="/images/books/FraggleCover.png"
-            alt="Fraggle's Village book cover"
-            class="book-cover"
-        >
-
-
-        <div class="book-details">
-
-            <h2>
-                Fraggle's Village
-            </h2>
-
-            <p class="book-subtitle">
-                A story of love, memory, and one very brave boy.
-            </p>
-
-            <p>
-                A small grey cat with a big personality,
-                a fierce little hiss,
-                and a life that mattered enormously to the person who found him.
-            </p>
-
-            <p>
-                His story became a book so that his life could continue reaching
-                people long after he was gone.
-            </p>
-
-            <p>
-                No personal profit are made from the sale of this book.
-                All profits go directly toward spay/neuter efforts for cats in need.
-            </p>
-
-
-            <div class="book-buy">
-
-                <a
-                    class="button"
-                    href="https://a.co/d/07kPW8hM"
-                    target="_blank"
-                >
-                    Buy on Amazon
-                </a>
-
-            </div>
-
-
-            <br>
-
-            <p>
-                <strong>
-                    Local pickup is available in Ottawa, ON.
-                </strong>
-            </p>
-
-            <p>
-                When purchased locally, copies can be provided as author copies,
-                which have greater profit margins than copies purchased through Amazon.
-                This allows more of each purchase to go toward spay/neuter efforts.
-            </p>
-
-            <p>
-                To arrange a local pickup, contact the Archives
-                and details can be arranged directly.
-            </p>
-
-
-            <p class="book-status">
-                <i>Published</i>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         THE WAYS WE LEARN
-         ===================================================== -->
-
-    <div class="book-card">
-
-        <img
-            src="/images/books/TWWLcoverwrap.png"
-            alt="The Ways We Learn book cover"
-            class="book-cover"
-        >
-
-
-        <div class="book-details">
-
-            <h2>
-                The Ways We Learn
-            </h2>
-
-            <p class="book-subtitle">
-                Six cats. Six stories.
-                A thousand ways to become yourself.
-            </p>
-
-            <p>
-                The Ways We Learn explores the lessons that emerge
-                when frightened, complicated, hilarious, stubborn,
-                and extraordinary cats are given the chance to become themselves.
-            </p>
-
-            <p class="book-status">
-                <i>Coming September 2026</i>
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         SSFF
-         ===================================================== -->
-
-    <div class="book-card">
-
-
-        <div class="book-details">
-
-            <h2>
-                The Adventures of Super Stick Figure Fraggle
-            </h2>
-
-            <p class="book-subtitle">
-                Highly Regulated Unhingedness
-            </p>
-
-            <p>
-                Welcome to the more highly regulated wing of the Archives.
-            </p>
-
-            <p>
-                Super Stick Figure Fraggle exists to handle
-                the emergencies that ordinary archival procedures
-                simply cannot contain.
-            </p>
-
-            <p>
-                <strong>
-                    Starting with:
-                </strong>
-            </p>
-
-            <p>
-                <strong>
-                    Book One: SSFF and the Emergency Creamy
-                </strong>
-            </p>
-
-            <p class="book-status">
-                <i>Series in progress</i>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         CLOSING PRINCIPLE
-         ===================================================== -->
-
-    <section class="books-closing">
-
-        <p class="books-editorial-eyebrow">
-            The Reading Principle
-        </p>
-
-        <h2>
-            A story changes when someone carries it home.
-        </h2>
-
-        <p>
-            The book may close.
-
-            <strong>
-                The story keeps travelling.
-            </strong>
-        </p>
-
-    </section>
-
 
 </main>
-
 
 
 <div id="footer-placeholder"></div>
 
 
 <script src="/moon-phase.js"></script>
-
 
 <script>
 
