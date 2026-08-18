@@ -12,360 +12,439 @@
     <link rel="stylesheet" href="/styles.css?v=2">
 
 
-    <style>
+   <style>
 
-        /* =========================================
-           HOMEPAGE
-           ========================================= */
+/* =========================================
+   HOMEPAGE
+   Editorial Archive Front Door
+   ========================================= */
 
-        .home-page {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+.home-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 
-        /* =========================================
-           SHARED EYEBROW
-           ========================================= */
+/* =========================================
+   SHARED EYEBROW
+   ========================================= */
 
-        .home-page .eyebrow {
-            margin: 0 0 6px;
+.home-page .eyebrow {
+    margin: 0 0 6px;
 
-            font-size: 0.78rem;
-            font-weight: bold;
+    font-size: 0.78rem;
+    font-weight: bold;
 
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 
-            opacity: 0.65;
-        }
+    opacity: 0.65;
+}
 
 
-        /* =========================================
-           HERO
-           ========================================= */
+/* =========================================
+   HERO
+   ========================================= */
 
-        .home-hero {
-            max-width: 780px;
+.home-hero {
+    max-width: 780px;
 
-            margin: 45px auto 70px;
+    margin: 45px auto 70px;
 
-            text-align: center;
-        }
+    text-align: center;
+}
 
-        .home-hero h1 {
-            margin: 8px 0 26px;
+.home-hero h1 {
+    margin: 8px 0 26px;
 
-            font-size: clamp(3rem, 6vw, 4.7rem);
-            line-height: 1.05;
-        }
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
 
-        .home-hero-lead {
-            max-width: 650px;
+.home-hero-lead {
+    max-width: 650px;
 
-            margin: 0 auto;
+    margin: 0 auto;
 
-            font-size: 1.28rem;
-            line-height: 1.7;
-        }
+    font-size: 1.22rem;
+    line-height: 1.7;
+}
 
 
-        /* =========================================
-           FOUNDING STORY
-           ========================================= */
+/* =========================================
+   FOUNDING STORY
+   ========================================= */
 
-        .home-story {
-            margin: 70px 0;
+.home-story {
+    margin: 70px 0;
 
-            padding: 38px 40px;
+    padding: 38px 40px;
 
-            background: var(--archive-card);
+    background: var(--archive-card);
 
-            border: 1px solid var(--archive-border);
+    border: 1px solid var(--archive-border);
 
-            box-shadow: var(--archive-shadow);
-        }
+    box-shadow: var(--archive-shadow);
+}
 
-        .home-story-header {
-            max-width: 720px;
+.home-story-header {
+    max-width: 720px;
 
-            margin: 0 auto 30px;
+    margin: 0 auto 30px;
 
-            text-align: center;
-        }
+    text-align: center;
+}
 
-        .home-story-header h2 {
-            margin: 6px 0 0;
+.home-story-header h2 {
+    margin: 6px 0 0;
 
-            font-size: clamp(2.3rem, 4vw, 3.3rem);
-            line-height: 1.1;
-        }
+    font-size: clamp(2.1rem, 3.6vw, 3rem);
+    line-height: 1.1;
+}
 
-        .home-story-copy {
-            max-width: 760px;
+.home-story-copy {
+    max-width: 760px;
 
-            margin: 0 auto;
-        }
+    margin: 0 auto;
+}
 
-        .home-story-copy p {
-            margin: 0 0 24px;
+.home-story-copy p {
+    margin: 0 0 24px;
 
-            font-size: 1.12rem;
-            line-height: 1.75;
-        }
+    font-size: 1.1rem;
+    line-height: 1.75;
+}
 
-        .home-story-copy p:last-child {
-            margin-bottom: 0;
-        }
+.home-story-copy p:last-child {
+    margin-bottom: 0;
+}
 
-        .home-story-opening {
-            font-size: 1.35rem !important;
-            line-height: 1.6 !important;
+.home-story-opening {
+    font-size: 1.28rem !important;
+    line-height: 1.6 !important;
 
-            text-align: center;
-        }
+    text-align: center;
+}
 
 
-        /* =========================================
-           EXPLORE
-           ========================================= */
+/* =========================================
+   EXPLORE
+   ========================================= */
 
-        .home-explore {
-            margin: 85px 0;
-        }
+.home-explore {
+    margin: 85px 0;
+}
 
-        .home-explore-header {
-            max-width: 720px;
+.home-explore-header {
+    max-width: 720px;
 
-            margin: 0 auto 34px;
+    margin: 0 auto 34px;
 
-            text-align: center;
-        }
+    text-align: center;
+}
 
-        .home-explore-header h2 {
-            margin: 6px 0 14px;
+.home-explore-header h2 {
+    margin: 6px 0 14px;
 
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            line-height: 1.1;
-        }
+    font-size: clamp(2.2rem, 3.8vw, 3.1rem);
+    line-height: 1.1;
+}
 
-        .home-explore-header p:not(.eyebrow) {
-            max-width: 620px;
+.home-explore-header p:not(.eyebrow) {
+    max-width: 620px;
 
-            margin: 0 auto;
+    margin: 0 auto;
 
-            font-size: 1.08rem;
-            line-height: 1.7;
-        }
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
 
-        .home-explore-grid {
-            display: grid;
+.home-explore-grid {
+    display: grid;
 
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-            gap: 28px;
-        }
+    gap: 28px;
+}
 
-        .home-door {
-            display: flex;
-            flex-direction: column;
 
-            min-height: 265px;
+/* =========================================
+   EXPLORE CARDS
+   ========================================= */
 
-            padding: 30px;
+.home-door {
+    display: flex;
+    flex-direction: column;
 
-            background: var(--archive-card);
+    min-height: 265px;
 
-            border: 1px solid var(--archive-border);
+    padding: 30px;
 
-            box-shadow: var(--archive-shadow);
+    background: var(--archive-card);
 
-            text-align: center;
-        }
+    border: 1px solid var(--archive-border);
 
-        .home-door .eyebrow {
-            margin-bottom: 8px;
-        }
+    box-shadow: var(--archive-shadow);
 
-        .home-door h3 {
-            margin: 0 0 15px;
+    text-align: center;
+}
 
-            font-size: 2rem;
-            line-height: 1.2;
-        }
+.home-door .eyebrow {
+    margin-bottom: 8px;
+}
 
-        .home-door p {
-            max-width: 420px;
+.home-door h3 {
+    margin: 0 0 15px;
 
-            margin: 0 auto 24px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
 
-            font-size: 1.03rem;
-            line-height: 1.65;
-        }
+.home-door p {
+    max-width: 420px;
 
-        .home-door-link {
-            display: inline-block;
+    margin: 0 auto 24px;
 
-            align-self: center;
+    font-size: 1.03rem;
+    line-height: 1.65;
+}
 
-            margin-top: auto;
 
-            padding: 11px 21px;
+/* =========================================
+   HOMEPAGE BUTTONS
+   Match Museum archival controls
+   ========================================= */
 
-            border-radius: 999px;
+.home-door-link {
+    display: inline-block;
 
-            background: #3b3128;
-            color: #f8f3ea;
+    align-self: center;
 
-            text-decoration: none;
-            font-weight: bold;
-        }
+    width: auto;
+    max-width: 100%;
 
-        .home-door-link:hover {
-            opacity: 0.88;
-        }
+    margin-top: auto;
 
+    padding: 10px 18px;
 
-        /* =========================================
-           ARCHIVE PRINCIPLE
-           ========================================= */
+    background: transparent;
+    color: var(--archive-brown);
 
-        .home-principle {
-            max-width: 760px;
+    border: 1px solid var(--archive-button-border);
+    border-radius: 2px;
 
-            margin: 95px auto 70px;
+    font-family: Georgia, serif;
+    font-size: 0.84rem;
+    font-weight: bold;
+    line-height: 1.25;
 
-            text-align: center;
-        }
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
 
-        .home-principle h2 {
-            margin: 6px 0 28px;
+    text-align: center;
+    text-decoration: none;
 
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            line-height: 1.1;
-        }
+    cursor: pointer;
 
-        .home-principle-lines {
-            margin: 0 auto 32px;
-        }
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
 
-        .home-principle-lines p {
-            margin: 0 0 10px;
+.home-door-link:hover {
+    background: var(--archive-brown);
+    color: var(--archive-cream);
 
-            font-size: 1.35rem;
-            line-height: 1.65;
-        }
+    border-color: var(--archive-brown);
 
-        .home-principle-strong {
-            margin: 30px 0 34px;
+    text-decoration: none;
 
-            font-size: 1.65rem;
-            line-height: 1.45;
-        }
+    transform: translateY(-1px);
+}
 
-        .home-welcome {
-            margin: 0 0 24px;
+.home-door-link:focus-visible {
+    outline: 2px solid var(--archive-brown);
+    outline-offset: 3px;
+}
 
-            font-size: 2rem;
-            line-height: 1.35;
-        }
 
-        .home-dreamer {
-            margin: 0;
+/* =========================================
+   ARCHIVE PRINCIPLE
+   ========================================= */
 
-            font-size: 1.35rem;
-            font-style: italic;
-        }
+.home-principle {
+    max-width: 760px;
 
+    margin: 95px auto 70px;
 
-        /* =========================================
-           TABLET
-           ========================================= */
+    text-align: center;
+}
 
-        @media (max-width: 900px) {
+.home-principle h2 {
+    margin: 6px 0 28px;
 
-            .home-page {
-                max-width: 92%;
-            }
+    font-size: clamp(2.5rem, 4.2vw, 3.6rem);
+    line-height: 1.08;
+}
 
-            .home-explore-grid {
-                grid-template-columns: 1fr;
-            }
+.home-principle-lines {
+    margin: 0 auto 32px;
+}
 
-        }
+.home-principle-lines p {
+    margin: 0 0 10px;
 
+    font-size: 1.3rem;
+    line-height: 1.65;
+}
 
-        /* =========================================
-           MOBILE
-           ========================================= */
+.home-principle-strong {
+    margin: 30px 0 34px;
 
-        @media (max-width: 700px) {
+    font-size: 1.55rem;
+    line-height: 1.45;
+}
 
-            .home-page {
-                max-width: none;
-            }
+.home-welcome {
+    margin: 0 0 24px;
 
-            .home-hero {
-                margin: 35px auto 55px;
-            }
+    font-size: 1.7rem;
+    line-height: 1.35;
+}
 
-            .home-hero h1 {
-                font-size: 3rem;
-            }
+.home-dreamer {
+    margin: 0;
 
-            .home-hero-lead {
-                font-size: 1.12rem;
-            }
+    font-size: 1.3rem;
+    font-style: italic;
+}
 
-            .home-story {
-                margin: 55px 0;
 
-                padding: 28px 22px;
-            }
+/* =========================================
+   TABLET
+   ========================================= */
 
-            .home-story-copy p {
-                font-size: 1.06rem;
-            }
+@media (max-width: 900px) {
 
-            .home-story-opening {
-                font-size: 1.22rem !important;
-            }
+    .home-page {
+        max-width: 92%;
+    }
 
-            .home-explore {
-                margin: 65px 0;
-            }
+    .home-explore-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .home-door {
-                padding: 26px 22px;
+}
 
-                min-height: 0;
-            }
 
-            .home-door h3 {
-                font-size: 1.8rem;
-            }
+/* =========================================
+   MOBILE
+   ========================================= */
 
-            .home-principle {
-                margin: 70px auto 55px;
-            }
+@media (max-width: 700px) {
 
-            .home-principle-lines p {
-                font-size: 1.2rem;
-            }
+    .home-page {
+        max-width: none;
+    }
 
-            .home-principle-strong {
-                font-size: 1.45rem;
-            }
 
-            .home-welcome {
-                font-size: 1.8rem;
-            }
+    /* HERO */
 
-        }
+    .home-hero {
+        margin: 35px auto 55px;
+    }
 
-    </style>
+    .home-hero h1 {
+        font-size: 2.7rem;
+        line-height: 1.08;
+    }
 
+    .home-hero-lead {
+        font-size: 1.1rem;
+    }
+
+
+    /* FOUNDING STORY */
+
+    .home-story {
+        margin: 55px 0;
+
+        padding: 28px 22px;
+    }
+
+    .home-story-header h2 {
+        font-size: 2.35rem;
+    }
+
+    .home-story-copy p {
+        font-size: 1.04rem;
+    }
+
+    .home-story-opening {
+        font-size: 1.18rem !important;
+    }
+
+
+    /* EXPLORE */
+
+    .home-explore {
+        margin: 65px 0;
+    }
+
+    .home-explore-header h2 {
+        font-size: 2.55rem;
+    }
+
+    .home-door {
+        padding: 26px 22px;
+
+        min-height: 0;
+    }
+
+    .home-door h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-door-link {
+        padding: 9px 15px;
+
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+    }
+
+
+    /* ARCHIVE PRINCIPLE */
+
+    .home-principle {
+        margin: 70px auto 55px;
+    }
+
+    .home-principle h2 {
+        font-size: 2.75rem;
+    }
+
+    .home-principle-lines p {
+        font-size: 1.16rem;
+    }
+
+    .home-principle-strong {
+        font-size: 1.38rem;
+    }
+
+    .home-welcome {
+        font-size: 1.5rem;
+    }
+
+    .home-dreamer {
+        font-size: 1.2rem;
+    }
+
+}
+
+</style>
 </head>
 
 
