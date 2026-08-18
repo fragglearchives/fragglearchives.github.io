@@ -30,16 +30,15 @@
    ========================================================= */
 
 .books-page .archive-page-intro {
-    max-width: 780px;
-
-    margin: 45px auto 55px;
-
+    max-width: 800px;
+    margin: 45px auto 60px;
+    padding: 0 24px;
     text-align: center;
 }
 
 .books-page .archive-eyebrow,
 .books-editorial-eyebrow {
-    margin: 0 0 6px;
+    margin: 0 0 7px;
 
     font-size: 0.78rem;
     font-weight: bold;
@@ -57,13 +56,48 @@
     line-height: 1.06;
 }
 
+
+/* New editorial thesis */
+
+.books-page .archive-page-thesis {
+    max-width: 720px;
+
+    margin: 0 auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+
+/* Main explanatory copy */
+
 .books-page .archive-page-lead {
     max-width: 690px;
 
     margin: 0 auto;
 
-    font-size: 1.16rem;
+    font-size: 1.13rem;
     line-height: 1.75;
+}
+
+
+/* Quiet closing line */
+
+.books-page .archive-page-note {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    font-size: 1.05rem;
+    line-height: 1.65;
+
+    font-style: italic;
+
+    opacity: 0.76;
 }
 
 
@@ -161,15 +195,29 @@
 
 
     .books-page .archive-page-intro {
-        margin: 35px auto 50px;
+        margin: 35px auto 52px;
+        padding: 0 18px;
     }
 
     .books-page .archive-page-intro h1 {
         font-size: 2.65rem;
     }
 
+    .books-page .archive-page-thesis {
+        font-size: 2.15rem;
+        margin-bottom: 17px;
+    }
+
     .books-page .archive-page-lead {
-        font-size: 1.06rem;
+        font-size: 1.04rem;
+        line-height: 1.68;
+    }
+
+    .books-page .archive-page-note {
+        margin-top: 19px;
+
+        font-size: 0.98rem;
+        line-height: 1.6;
     }
 
 
@@ -246,14 +294,24 @@
     <section class="archive-page-intro">
 
         <p class="archive-eyebrow">
-            THE FRAGGLE ARCHIVES
+            THE VILLAGE GROWS
         </p>
 
         <h1>
             The Books of the Archives
         </h1>
 
+        <p class="archive-page-thesis">
+            Stories travel outward.
+        </p>
+
         <p class="archive-page-lead">
+            The books of the Fraggle Archives carry the stories of its residents
+            beyond these walls — helping support rescue organizations and
+            veterinary care for cats beyond the Archives.
+        </p>
+
+        <p class="archive-page-note">
             A series of love letters with ISBNs; to the cats I've met,
             and to those I haven't yet.
         </p>
@@ -340,7 +398,6 @@
 
             <br>
 
-
             <p>
                 <strong>
                     Local pickup is available in Ottawa, ON.
@@ -406,7 +463,6 @@
         </div>
 
     </div>
-
 
 
     <!-- =====================================================
