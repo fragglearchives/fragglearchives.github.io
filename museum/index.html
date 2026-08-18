@@ -3,13 +3,265 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum | The Fraggle Archives</title>
 
-    <title>Museum | The Fraggle Archives</title>
+<link rel="stylesheet" href="/styles.css">
 
-    <link rel="stylesheet" href="/styles.css">
+<style>
+
+/* =========================================================
+   MUSEUM HUB
+   Editorial framing
+   ========================================================= */
+
+.museum-hub-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.museum-hub-page .archive-page-intro {
+    max-width: 840px;
+
+    margin: 45px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.museum-hub-page .archive-eyebrow {
+    margin: 0 0 7px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.museum-hub-page .archive-page-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.museum-hub-page .archive-page-thesis {
+    max-width: 740px;
+
+    margin: 0 auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.museum-hub-page .archive-page-lead {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.13rem;
+    line-height: 1.75;
+}
+
+.museum-hub-page .archive-page-note {
+    max-width: 670px;
+
+    margin: 22px auto 0;
+
+    font-size: 1.03rem;
+    line-height: 1.65;
+
+    font-style: italic;
+
+    opacity: 0.76;
+}
+
+
+/* =========================================================
+   MUSEUM WING GRID
+   ========================================================= */
+
+.museum-wing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    max-width: 980px;
+
+    margin: 0 auto 80px;
+    padding: 0 22px;
+}
+
+
+/* =========================================================
+   MUSEUM WING CARDS
+   ========================================================= */
+
+.museum-wing-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 310px;
+
+    padding: 34px 30px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.museum-wing-category {
+    margin: 0 0 9px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.museum-wing-card h2 {
+    margin: 0 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 3.5vw, 2.65rem);
+    line-height: 1.12;
+}
+
+.museum-wing-description {
+    margin: 0 0 28px;
+
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+
+.museum-wing-button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.museum-hub-footer-note {
+    max-width: 760px;
+
+    margin: 85px auto 70px;
+    padding: 0 22px;
+
+    text-align: center;
+}
+
+.museum-hub-footer-note .museum-closing-eyebrow {
+    margin: 0 0 7px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.museum-hub-footer-note h2 {
+    max-width: 700px;
+
+    margin: 8px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.museum-hub-footer-note p:last-child {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .museum-hub-page .archive-page-intro {
+        margin: 35px auto 55px;
+        padding: 0 18px;
+    }
+
+    .museum-hub-page .archive-page-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .museum-hub-page .archive-page-thesis {
+        font-size: 2.15rem;
+        margin-bottom: 17px;
+    }
+
+    .museum-hub-page .archive-page-lead {
+        font-size: 1.04rem;
+        line-height: 1.68;
+    }
+
+    .museum-hub-page .archive-page-note {
+        font-size: 0.98rem;
+    }
+
+    .museum-wing-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding: 0 16px;
+    }
+
+    .museum-wing-card {
+        min-height: 0;
+
+        padding: 28px 22px;
+    }
+
+    .museum-wing-card h2 {
+        font-size: 2.1rem;
+    }
+
+    .museum-hub-footer-note {
+        margin: 65px auto 55px;
+        padding: 0 18px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -19,19 +271,24 @@
 
 <header>
 
-    <img src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner">
+<img
+    src="/Banner.PNG"
+    alt="The Fraggle Archives"
+    class="header-banner"
+>
 
-
- <div id="site-nav"></div>
+<div id="site-nav"></div>
 
 <script>
+
 fetch('/nav.html')
     .then(response => response.text())
     .then(data => {
+
         document.getElementById('site-nav').innerHTML = data;
+
     });
+
 </script>
 
 </header>
@@ -40,149 +297,196 @@ fetch('/nav.html')
 
 <main class="museum-hub-page">
 
-  <section class="archive-page-intro">
-    <p class="archive-eyebrow">THE FRAGGLE ARCHIVES</p>
 
-    <h1>The Museum</h1>
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
 
-    <p class="archive-page-lead">
-      The Archives preserve more than stories.
-      They preserve the objects, records, artifacts, and strange little pieces
-      of history that made those stories possible.
-    </p>
-  </section>
+    <section class="archive-page-intro">
 
+        <p class="archive-eyebrow">
+            THE COLLECTION BEGINS HERE
+        </p>
 
-  <section
-    class="museum-wing-grid"
-    aria-label="Museum collections"
-  >
+        <h1>
+            The Museum
+        </h1>
 
+        <p class="archive-page-thesis">
+            Some stories leave objects behind.
+        </p>
 
-    <!-- =====================================
-         FRAGGLE RELICS
-         ===================================== -->
+        <p class="archive-page-lead">
+            The Archives preserve more than stories.
+            They preserve the objects, records, artifacts, and strange little pieces
+            of history that made those stories possible.
+        </p>
 
-    <article class="museum-wing-card museum-wing-fraggle">
+        <p class="archive-page-note">
+            Some are ordinary. Some are sacred.
+            Some only make sense once you know the story.
+        </p>
 
-      <p class="museum-wing-category">
-        THE LIFE
-      </p>
-
-      <h2>Fraggle Relics</h2>
-
-      <p class="museum-wing-description">
-        Objects and keepsakes connected to Fraggle's life, his journey,
-        and the story that became the Archives.
-      </p>
-
-      <a
-        class="button museum-wing-button"
-        href="/museum/fraggle-relics/index.html"
-      >
-        Enter Fraggle Relics
-      </a>
-
-    </article>
+    </section>
 
 
 
-    <!-- =====================================
-         HEADQUARTERS RELICS
-         ===================================== -->
+    <!-- =====================================================
+         MUSEUM WINGS
+         ===================================================== -->
 
-    <article class="museum-wing-card museum-wing-headquarters">
-
-      <p class="museum-wing-category">
-        THE INSTITUTION
-      </p>
-
-      <h2>Headquarters Relics</h2>
-
-      <p class="museum-wing-description">
-        Artifacts belonging to the Archives themselves — its history,
-        its records, its rules, and the peculiar machinery of the institution.
-      </p>
-
-      <a
-        class="button museum-wing-button"
-        href="/museum/headquarters-relics/index.html"
-      >
-        Enter Headquarters Relics
-      </a>
-
-    </article>
+    <section
+        class="museum-wing-grid"
+        aria-label="Museum collections"
+    >
 
 
+        <!-- =====================================
+             FRAGGLE RELICS
+             ===================================== -->
 
-    <!-- =====================================
-         ODIN RELICS
-         ===================================== -->
+        <article class="museum-wing-card museum-wing-fraggle">
 
-    <article class="museum-wing-card museum-wing-odin">
+            <p class="museum-wing-category">
+                THE LIFE
+            </p>
 
-      <p class="museum-wing-category">
-        THE MEMORY
-      </p>
+            <h2>
+                Fraggle Relics
+            </h2>
 
-      <h2>Odin Relics</h2>
+            <p class="museum-wing-description">
+                Objects and keepsakes connected to Fraggle's life, his journey,
+                and the story that became the Archives.
+            </p>
 
-      <p class="museum-wing-description">
-        Small traces of a deeply loved life. Each piece is kept not because
-        it is grand, but because it is his.
-      </p>
+            <a
+                class="button museum-wing-button"
+                href="/museum/fraggle-relics/index.html"
+            >
+                Enter Fraggle Relics
+            </a>
 
-      <a
-        class="button museum-wing-button"
-        href="/museum/odin-relics/index.html"
-      >
-        Enter Odin Relics
-      </a>
-
-    </article>
+        </article>
 
 
 
-    <!-- =====================================
-         ALTERNATE UNIVERSE ARCHIVES RELICS
-         ===================================== -->
+        <!-- =====================================
+             HEADQUARTERS RELICS
+             ===================================== -->
 
-    <article class="museum-wing-card museum-wing-aua">
+        <article class="museum-wing-card museum-wing-headquarters">
 
-      <p class="museum-wing-category">
-        THE MYTHOLOGY
-      </p>
+            <p class="museum-wing-category">
+                THE INSTITUTION
+            </p>
 
-      <h2>Alternate Universe Archives Relics</h2>
+            <h2>
+                Headquarters Relics
+            </h2>
 
-      <p class="museum-wing-description">
-        Artifacts from the stranger corners of Archives history:
-        alternate realities, unexplained events, and things that perhaps
-        should not exist.
-      </p>
+            <p class="museum-wing-description">
+                Artifacts belonging to the Archives themselves — its history,
+                its records, its rules, and the peculiar machinery of the institution.
+            </p>
 
-      <a
-        class="button museum-wing-button"
-        href="/museum/aua-relics/index.html"
-      >
-        Enter Alternate Universe Archives Relics
-      </a>
+            <a
+                class="button museum-wing-button"
+                href="/museum/headquarters-relics/index.html"
+            >
+                Enter Headquarters Relics
+            </a>
 
-    </article>
-
-
-  </section>
+        </article>
 
 
-  <div class="museum-hub-footer-note">
+
+        <!-- =====================================
+             ODIN RELICS
+             ===================================== -->
+
+        <article class="museum-wing-card museum-wing-odin">
+
+            <p class="museum-wing-category">
+                THE MEMORY
+            </p>
+
+            <h2>
+                Odin Relics
+            </h2>
+
+            <p class="museum-wing-description">
+                Small traces of a deeply loved life.
+                Each piece is kept not because it is grand,
+                but because it is his.
+            </p>
+
+            <a
+                class="button museum-wing-button"
+                href="/museum/odin-relics/index.html"
+            >
+                Enter Odin Relics
+            </a>
+
+        </article>
 
 
-    <p>
-      Every object has a history.<br>
-      Every history belongs to the story.
-    </p>
 
-  </div>
+        <!-- =====================================
+             ALTERNATE UNIVERSE ARCHIVES RELICS
+             ===================================== -->
+
+        <article class="museum-wing-card museum-wing-aua">
+
+            <p class="museum-wing-category">
+                THE MYTHOLOGY
+            </p>
+
+            <h2>
+                Alternate Universe Archives Relics
+            </h2>
+
+            <p class="museum-wing-description">
+                Artifacts from the stranger corners of Archives history:
+                alternate realities, unexplained events,
+                and things that perhaps should not exist.
+            </p>
+
+            <a
+                class="button museum-wing-button"
+                href="/museum/aua-relics/index.html"
+            >
+                Enter Alternate Universe Archives Relics
+            </a>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="museum-hub-footer-note">
+
+        <p class="museum-closing-eyebrow">
+            THE MUSEUM PRINCIPLE
+        </p>
+
+        <h2>
+            The object is never only the object.
+        </h2>
+
+        <p>
+            Every object has a history.<br>
+            Every history belongs to the story.
+        </p>
+
+    </section>
+
 
 </main>
 
@@ -193,18 +497,24 @@ fetch('/nav.html')
 
 <script src="/moon-phase.js"></script>
 
+
 <script>
+
 fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
+    .then(response => response.text())
+    .then(data => {
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+        document.getElementById('footer-placeholder').innerHTML = data;
+
+        if (window.initFooterMoonPhase) {
+
+            window.initFooterMoonPhase();
+
+        }
+
+    });
+
 </script>
-
 
 
 </body>
