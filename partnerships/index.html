@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -11,219 +10,732 @@
 
 <link rel="stylesheet" href="/styles.css">
 
+<style>
+
+/* =========================================================
+  PARTNERSHIPS
+  Editorial framing
+  ========================================================= */
+
+.partnerships-page {
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+
+/* =========================================================
+  PAGE INTRO
+  ========================================================= */
+
+.partnerships-intro {
+   max-width: 840px;
+
+   margin: 45px auto 70px;
+   padding: 0 24px;
+
+   text-align: center;
+}
+
+.partnerships-intro .eyebrow {
+   margin: 0 0 7px;
+
+   font-size: 0.78rem;
+   font-weight: bold;
+
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partnerships-intro h1 {
+   margin: 8px 0 24px;
+
+   font-size: clamp(2.8rem, 5vw, 4rem);
+   line-height: 1.06;
+}
+
+.partnerships-thesis {
+   max-width: 740px;
+
+   margin: 0 auto 18px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2rem, 4vw, 3.15rem);
+   line-height: 1.12;
+
+   font-weight: normal;
+}
+
+.partnerships-lead {
+   max-width: 700px;
+
+   margin: 0 auto;
+
+   font-size: 1.13rem;
+   line-height: 1.75;
+}
+
+.partnerships-note {
+   max-width: 680px;
+
+   margin: 22px auto 0;
+
+   font-size: 1.03rem;
+   line-height: 1.65;
+
+   font-style: italic;
+
+   opacity: 0.76;
+}
+
+
+/* =========================================================
+  ACCOUNTABILITY
+  ========================================================= */
+
+.funds-accountability {
+   max-width: 820px;
+
+   margin: 0 auto 80px;
+   padding: 42px 34px;
+
+   text-align: center;
+
+   background: var(--archive-light-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
+}
+
+.funds-accountability .eyebrow {
+   margin: 0 0 7px;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.funds-accountability h2 {
+   margin: 8px 0 28px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.2rem, 4vw, 3rem);
+   line-height: 1.1;
+}
+
+.funds-total {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   max-width: 460px;
+
+   margin: 0 auto 26px;
+   padding: 28px 24px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.funds-total strong {
+   display: block;
+
+   margin-bottom: 7px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.6rem, 5vw, 4rem);
+   line-height: 1;
+}
+
+.funds-total span {
+   font-size: 0.85rem;
+   font-weight: bold;
+
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.funds-accountability > p:last-child {
+   max-width: 660px;
+
+   margin: 0 auto;
+
+   font-size: 1.05rem;
+   line-height: 1.7;
+}
+
+
+/* =========================================================
+  PARTNER NETWORK
+  ========================================================= */
+
+.partner-network {
+   max-width: 920px;
+
+   margin: 0 auto 80px;
+   padding: 0 22px;
+}
+
+.partner-network > .eyebrow {
+   margin: 0 0 7px;
+
+   text-align: center;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-network > h2 {
+   margin: 8px 0 42px;
+
+   text-align: center;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.3rem, 4vw, 3.2rem);
+   line-height: 1.1;
+}
+
+
+/* =========================================================
+  PARTNER CARDS
+  ========================================================= */
+
+.partner-card {
+   display: grid;
+   grid-template-columns: 220px 1fr;
+
+   gap: 34px;
+
+   align-items: center;
+
+   margin-bottom: 28px;
+   padding: 32px;
+
+   background: var(--archive-light-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
+}
+
+.partner-logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   min-height: 180px;
+
+   padding: 18px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.partner-logo a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 100%;
+   height: 100%;
+}
+
+.partner-logo img {
+   display: block;
+
+   max-width: 100%;
+   max-height: 160px;
+
+   width: auto;
+   height: auto;
+
+   object-fit: contain;
+}
+
+.partner-details {
+   min-width: 0;
+}
+
+.partner-type {
+   display: inline-block;
+
+   margin-bottom: 8px;
+
+   font-size: 0.75rem;
+   font-weight: bold;
+
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-details h3 {
+   margin: 0 0 15px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(1.8rem, 3vw, 2.4rem);
+   line-height: 1.15;
+}
+
+.partner-details p {
+   margin: 0 0 20px;
+
+   line-height: 1.7;
+}
+
+.partner-impact {
+   display: inline-flex;
+   flex-direction: column;
+
+   padding: 14px 18px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.partner-impact span {
+   margin-bottom: 4px;
+
+   font-size: 0.72rem;
+   font-weight: bold;
+
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-impact strong {
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: 1.5rem;
+}
+
+
+/* =========================================================
+  CLOSING PRINCIPLE
+  ========================================================= */
+
+.partnerships-closing {
+   max-width: 720px;
+
+   margin: 80px auto 70px;
+   padding: 0 22px;
+
+   text-align: center;
+}
+
+.partnerships-closing .eyebrow {
+   margin: 0 0 7px;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partnerships-closing h2 {
+   max-width: 680px;
+
+   margin: 8px auto 20px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.2rem, 4vw, 3rem);
+   line-height: 1.12;
+}
+
+.partnerships-closing p {
+   max-width: 650px;
+
+   margin: 0 auto;
+
+   font-size: 1.05rem;
+   line-height: 1.7;
+
+   font-style: italic;
+}
+
+
+/* =========================================================
+  MOBILE
+  ========================================================= */
+
+@media (max-width: 760px) {
+
+   .partnerships-intro {
+       margin: 35px auto 55px;
+       padding: 0 18px;
+   }
+
+   .partnerships-intro h1 {
+       font-size: 2.65rem;
+   }
+
+   .partnerships-thesis {
+       font-size: 2.15rem;
+       margin-bottom: 17px;
+   }
+
+   .partnerships-lead {
+       font-size: 1.04rem;
+       line-height: 1.68;
+   }
+
+   .partnerships-note {
+       font-size: 0.98rem;
+   }
+
+   .funds-accountability {
+       margin: 0 16px 65px;
+       padding: 30px 20px;
+   }
+
+   .partner-network {
+       padding: 0 16px;
+   }
+
+   .partner-card {
+       grid-template-columns: 1fr;
+
+       gap: 24px;
+
+       padding: 24px 20px;
+   }
+
+   .partner-logo {
+       min-height: 150px;
+   }
+
+   .partner-logo img {
+       max-height: 130px;
+   }
+
+   .partner-details {
+       text-align: center;
+   }
+
+   .partner-impact {
+       align-items: center;
+   }
+
+   .partnerships-closing {
+       margin: 65px auto 55px;
+       padding: 0 18px;
+   }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-<img src="/Banner.PNG"
-alt="The Fraggle Archives"
-class="header-banner">
+<img
+   src="/Banner.PNG"
+   alt="The Fraggle Archives"
+   class="header-banner"
+>
 
 <div id="site-nav"></div>
 
 <script>
 
 fetch('/nav.html')
-.then(response => response.text())
-.then(data => {
+   .then(response => response.text())
+   .then(data => {
 
-document.getElementById('site-nav').innerHTML = data;
+       document.getElementById('site-nav').innerHTML = data;
 
-});
+   });
 
 </script>
 
 </header>
 
 
+
 <main class="page-content partnerships-page">
 
 
-<section class="partnerships-intro">
+   <!-- =====================================================
+        PAGE INTRO
+        ===================================================== -->
 
-<p class="eyebrow">THE FRAGGLE ARCHIVES</p>
+   <section class="partnerships-intro">
 
-<h1>Partnerships</h1>
+       <p class="eyebrow">
+           THE VILLAGE, IN PRACTICE
+       </p>
 
-<p class="partnerships-lead">
+       <h1>
+           Partnerships
+       </h1>
 
-The Fraggle Archives works with rescue organizations and community
-partners to turn stories, fundraising, and shared effort into direct
-support for cats.
+       <p class="partnerships-thesis">
+           Care travels farther when it travels together.
+       </p>
 
-</p>
+       <p class="partnerships-lead">
+           The Fraggle Archives works with rescue organizations
+           and community partners to turn stories, fundraising,
+           and shared effort into direct support for cats.
+       </p>
 
-<p>
+       <p class="partnerships-note">
+           This page records the organizations that have stood beside the work,
+           and where funds raised through the Archives have gone.
+       </p>
 
-This page records those partnerships and where the money raised through
-the Archives has gone.
+   </section>
 
-</p>
 
-</section>
 
+   <!-- =====================================================
+        ACCOUNTABILITY
+        ===================================================== -->
 
-<section class="funds-accountability">
+   <section class="funds-accountability">
 
-<p class="eyebrow">ACCOUNTABILITY</p>
+       <p class="eyebrow">
+           ACCOUNTABILITY
+       </p>
 
-<h2>Where the Funds Went</h2>
+       <h2>
+           Where the Funds Went
+       </h2>
 
-<div class="funds-total">
+       <div class="funds-total">
 
-<strong>$337.50</strong>
+           <strong>
+               $337.50
+           </strong>
 
-<span>Total Funds Directed to Cats</span>
+           <span>
+               Total Funds Directed to Cats
+           </span>
 
-</div>
+       </div>
 
-<p>
+       <p>
+           Every dollar recorded here represents funds already directed
+           to cat rescue, veterinary care, spay/neuter work,
+           or related support.
+       </p>
 
-Every dollar recorded here represents funds already directed to
-cat rescue, veterinary care, spay/neuter work, or related support.
+   </section>
 
-</p>
 
-</section>
 
+   <!-- =====================================================
+        PARTNER NETWORK
+        ===================================================== -->
 
-<section class="partner-network">
+   <section class="partner-network">
 
-<p class="eyebrow">THE NETWORK</p>
+       <p class="eyebrow">
+           THE NETWORK
+       </p>
 
-<h2>Our Partners</h2>
+       <h2>
+           Our Partners
+       </h2>
 
 
-<!-- SPEAK UP FOR PAWS -->
 
-<article class="partner-card">
+       <!-- =================================================
+            SPEAK UP FOR PAWS
+            ================================================= -->
 
-<div class="partner-logo">
+       <article class="partner-card">
 
-<a href="https://www.facebook.com/SpeakUpForPaws/"
-target="_blank"
-rel="noopener noreferrer">
+           <div class="partner-logo">
 
-<img
-src="/images/partnerships/speak-up-for-paws.PNG"
-alt="Speak Up For Paws logo"
->
+               <a
+                   href="https://www.facebook.com/SpeakUpForPaws/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+               >
 
-</a>
+                   <img
+                       src="/images/partnerships/speak-up-for-paws.PNG"
+                       alt="Speak Up For Paws logo"
+                   >
 
-</div>
+               </a>
 
+           </div>
 
-<div class="partner-details">
 
-<span class="partner-type">Fundraising Partner</span>
+           <div class="partner-details">
 
-<h3>Speak Up For Paws</h3>
+               <span class="partner-type">
+                   Fundraising Partner
+               </span>
 
-<p>
+               <h3>
+                   Speak Up For Paws
+               </h3>
 
-The first organization supported through Fraggle Archives
-fundraising, with funds directed toward helping cats access
-spay and neuter care.
+               <p>
+                   The first organization supported through Fraggle Archives
+                   fundraising, with funds directed toward helping cats access
+                   spay and neuter care.
+               </p>
 
-</p>
+               <div class="partner-impact">
 
-<div class="partner-impact">
+                   <span>
+                       Funds Directed
+                   </span>
 
-<span>Funds Directed</span>
+                   <strong>
+                       $337.50
+                   </strong>
 
-<strong>$337.50</strong>
+               </div>
 
-</div>
+           </div>
 
-</div>
+       </article>
 
-</article>
 
 
-<!-- RIVERVIEW RESCUES -->
+       <!-- =================================================
+            RIVERVIEW RESCUES
+            ================================================= -->
 
-<article class="partner-card">
+       <article class="partner-card">
 
-<div class="partner-logo">
+           <div class="partner-logo">
 
-<a href="https://www.riverviewrescues.ca/"
-target="_blank"
-rel="noopener noreferrer">
+               <a
+                   href="https://www.riverviewrescues.ca"
+                   target="_blank"
+                   rel="noopener noreferrer"
+               >
 
-<img
-src="/images/partnerships/riverview-rescue.PNG"
-alt="Riverview Rescues logo"
->
+                   <img
+                       src="/images/partnerships/riverview-rescue.PNG"
+                       alt="Riverview Rescues logo"
+                   >
 
-</a>
+               </a>
 
-</div>
+           </div>
 
 
-<div class="partner-details">
+           <div class="partner-details">
 
-<span class="partner-type">Official Rescue Partner</span>
+               <span class="partner-type">
+                   Official Rescue Partner
+               </span>
 
-<h3>Riverview Rescues</h3>
+               <h3>
+                   Riverview Rescues
+               </h3>
 
-<p>
+               <p>
+                   An official Fraggle Archives rescue partner,
+                   working with the Archives through book fundraising
+                   to turn Fraggle's story into direct support
+                   for animals in their care.
+               </p>
 
-The Fraggle Archives are proud to partner with Riverview Rescues
-through fundraising initiatives that support the cats and dogs
-in their care.
+               <div class="partner-impact">
 
-</p>
+                   <span>
+                       Funds Directed
+                   </span>
 
-<p>
+                   <strong>
+                       $0.00
+                   </strong>
 
-Together, we're helping turn every book sold into direct support
-for animals who need it.
+               </div>
 
-</p>
+           </div>
 
-<div class="partner-impact">
+       </article>
 
-<span>Funds Directed</span>
 
-<strong>$0.00</strong>
+   </section>
 
-</div>
 
-</div>
 
-</article>
+   <!-- =====================================================
+        CLOSING PRINCIPLE
+        ===================================================== -->
 
+   <section class="partnerships-closing">
 
-</section>
+       <p class="eyebrow">
+           THE VILLAGE PRINCIPLE
+       </p>
+
+       <h2>
+           No story travels alone.
+       </h2>
+
+       <p>
+           Every partnership extends the distance a story can travel,
+           and the number of cats that story can help along the way.
+       </p>
+
+   </section>
 
 
 </main>
 
 
+
 <div id="footer-placeholder"></div>
 
+
 <script src="/moon-phase.js"></script>
+
 
 <script>
 
 fetch('/footer.html')
-.then(response => response.text())
-.then(data => {
+   .then(response => response.text())
+   .then(data => {
 
-document.getElementById('footer-placeholder').innerHTML = data;
+       document.getElementById('footer-placeholder').innerHTML = data;
 
-if (window.initFooterMoonPhase) {
+       if (window.initFooterMoonPhase) {
 
-window.initFooterMoonPhase();
+           window.initFooterMoonPhase();
 
-}
+       }
 
-});
+   });
 
 </script>
+
 
 </body>
 
