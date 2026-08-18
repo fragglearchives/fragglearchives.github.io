@@ -1,36 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alternate Universe Archives Relics | The Fraggle Archives</title>
+<title>Alternate Universe Archives Relics | The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="/styles.css?v=2">
-
+<link rel="stylesheet" href="/styles.css">
 
 <style>
 
 /* =========================================================
    ALTERNATE UNIVERSE ARCHIVES RELICS
-   The Fraggle Archives Museum
+   Museum wing editorial framing
    ========================================================= */
 
-.aua-page {
+.aua-relics-page {
     max-width: 1000px;
     margin: 0 auto;
 }
 
 
 /* =========================================================
-   EYEBROWS
+   PAGE INTRO
    ========================================================= */
 
-.aua-page .eyebrow {
-    margin: 0 0 6px;
+.aua-relics-intro {
+    max-width: 840px;
+
+    margin: 45px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.aua-relics-eyebrow {
+    margin: 0 0 7px;
 
     font-size: 0.78rem;
     font-weight: bold;
@@ -41,197 +46,58 @@
     opacity: 0.65;
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.aua-intro {
+.aua-relics-intro h1 {
     max-width: 780px;
 
-    margin: 45px auto 75px;
-
-    text-align: center;
-}
-
-.aua-intro h1 {
-    margin: 8px 0 24px;
+    margin: 8px auto 24px;
 
     font-size: clamp(2.8rem, 5vw, 4rem);
     line-height: 1.06;
 }
 
-.aua-lead {
-    max-width: 700px;
+.aua-relics-thesis {
+    max-width: 720px;
+
+    margin: 0 auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.aua-relics-lead {
+    max-width: 690px;
 
     margin: 0 auto;
 
-    font-size: 1.18rem;
+    font-size: 1.13rem;
     line-height: 1.75;
 }
 
-
-/* =========================================================
-   COLLECTION INTRO
-   ========================================================= */
-
-.aua-collection-header {
-    max-width: 760px;
-
-    margin: 0 auto 40px;
-
-    text-align: center;
-}
-
-.aua-collection-header h2 {
-    margin: 6px 0 15px;
-
-    font-size: clamp(2.3rem, 4vw, 3.3rem);
-    line-height: 1.1;
-}
-
-.aua-collection-header p:not(.eyebrow) {
+.aua-relics-note {
     max-width: 650px;
 
-    margin: 0 auto;
+    margin: 22px auto 0;
 
-    font-size: 1.06rem;
-    line-height: 1.7;
-}
+    font-size: 1.03rem;
+    line-height: 1.65;
 
+    font-style: italic;
 
-/* =========================================================
-   RELIC GRID
-   ========================================================= */
-
-.aua-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 30px;
+    opacity: 0.76;
 }
 
 
 /* =========================================================
    RELIC CARDS
+   Existing exhibits preserved
    ========================================================= */
 
-.aua-card {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 0;
-
-    padding: 32px;
-
-    background: var(--archive-card);
-
-    border: 1px solid var(--archive-border);
-
-    box-shadow: var(--archive-shadow);
-}
-
-.aua-card-header {
-    margin-bottom: 22px;
-
-    text-align: center;
-}
-
-.aua-type {
-    display: block;
-
-    margin: 0 0 7px;
-
-    font-size: 0.76rem;
-    font-weight: bold;
-
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
-
-    opacity: 0.62;
-}
-
-.aua-card h3 {
-    margin: 0;
-
-    font-size: 2rem;
-    line-height: 1.18;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   ARTIFACT IMAGES
-   ========================================================= */
-
-.aua-image {
-    display: block;
-
-    width: auto;
-    height: auto;
-
-    max-width: 88%;
-    max-height: 450px;
-
-    margin: 0 auto 24px;
-
-    object-fit: contain;
-}
-
-
-/* =========================================================
-   RELIC COPY
-   ========================================================= */
-
-.aua-description {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    font-size: 1.05rem;
-    line-height: 1.7;
-
-    text-align: left;
-}
-
-
-/* =========================================================
-   CROSS-DIMENSIONAL NOTICE
-   ========================================================= */
-
-.aua-notice {
-    max-width: 760px;
-
-    margin: 80px auto 0;
-
-    padding: 30px 32px;
-
-    background: var(--archive-card);
-
-    border: 1px solid var(--archive-border);
-
-    box-shadow: var(--archive-shadow);
-
-    text-align: center;
-}
-
-.aua-notice h2 {
-    margin: 6px 0 16px;
-
-    font-size: 2rem;
-    line-height: 1.15;
-}
-
-.aua-notice p:not(.eyebrow) {
-    max-width: 620px;
-
-    margin: 0 auto;
-
-    font-size: 1.08rem;
-    line-height: 1.7;
+.aua-relics-page .collection-card {
+    margin-bottom: 34px;
 }
 
 
@@ -239,53 +105,47 @@
    CLOSING PRINCIPLE
    ========================================================= */
 
-.aua-principle {
+.aua-relics-closing {
     max-width: 760px;
 
-    margin: 100px auto 70px;
+    margin: 85px auto 70px;
+    padding: 0 22px;
 
     text-align: center;
 }
 
-.aua-principle h2 {
-    margin: 6px 0 28px;
+.aua-relics-closing-eyebrow {
+    margin: 0 0 7px;
 
-    font-size: clamp(2.5rem, 4.2vw, 3.5rem);
-    line-height: 1.08;
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
 }
 
-.aua-principle p:not(.eyebrow) {
-    max-width: 650px;
+.aua-relics-closing h2 {
+    max-width: 700px;
+
+    margin: 8px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.aua-relics-closing p:last-child {
+    max-width: 640px;
 
     margin: 0 auto;
 
-    font-size: 1.32rem;
+    font-size: 1.05rem;
     line-height: 1.7;
-}
 
-.aua-principle strong {
-    display: block;
-
-    margin-top: 12px;
-
-    font-size: 1.35em;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .aua-page {
-        max-width: 92%;
-    }
-
-    .aua-grid {
-        grid-template-columns: 1fr;
-    }
-
+    font-style: italic;
 }
 
 
@@ -295,77 +155,32 @@
 
 @media (max-width: 700px) {
 
-    .aua-page {
-        max-width: none;
+    .aua-relics-intro {
+        margin: 35px auto 55px;
+        padding: 0 18px;
     }
 
-
-    .aua-intro {
-        margin: 35px auto 60px;
+    .aua-relics-intro h1 {
+        font-size: 2.55rem;
     }
 
-    .aua-intro h1 {
-        font-size: 2.65rem;
+    .aua-relics-thesis {
+        font-size: 2.15rem;
+        margin-bottom: 17px;
     }
 
-    .aua-lead {
-        font-size: 1.08rem;
+    .aua-relics-lead {
+        font-size: 1.04rem;
+        line-height: 1.68;
     }
 
-
-    .aua-collection-header {
-        margin-bottom: 30px;
+    .aua-relics-note {
+        font-size: 0.98rem;
     }
 
-    .aua-collection-header h2 {
-        font-size: 2.45rem;
-    }
-
-
-    .aua-grid {
-        gap: 24px;
-    }
-
-
-    .aua-card {
-        padding: 28px 22px;
-    }
-
-    .aua-card h3 {
-        font-size: 1.8rem;
-    }
-
-    .aua-image {
-        max-width: 90%;
-        max-height: 340px;
-    }
-
-    .aua-description {
-        font-size: 1.03rem;
-    }
-
-
-    .aua-notice {
-        margin-top: 60px;
-
-        padding: 26px 22px;
-    }
-
-    .aua-notice h2 {
-        font-size: 1.8rem;
-    }
-
-
-    .aua-principle {
-        margin: 75px auto 55px;
-    }
-
-    .aua-principle h2 {
-        font-size: 2.65rem;
-    }
-
-    .aua-principle p:not(.eyebrow) {
-        font-size: 1.18rem;
+    .aua-relics-closing {
+        margin: 65px auto 55px;
+        padding: 0 18px;
     }
 
 }
@@ -380,250 +195,160 @@
 
 <header>
 
-    <img
-        src="/Banner.PNG"
-        alt="The Fraggle Archives"
-        class="header-banner">
+<img
+    src="/Banner.PNG"
+    alt="The Fraggle Archives"
+    class="header-banner"
+>
 
+<div id="site-nav"></div>
 
-    <div id="site-nav"></div>
+<script>
 
-    <script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
 
-        fetch('/nav.html')
-            .then(response => response.text())
-            .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
 
-                document.getElementById('site-nav').innerHTML = data;
+    });
 
-            });
-
-    </script>
+</script>
 
 </header>
 
 
 
-<main class="aua-page">
+<main class="aua-relics-page">
 
 
     <!-- =====================================================
-         HERO
+         PAGE INTRO
          ===================================================== -->
 
-    <section class="aua-intro">
+    <section class="aua-relics-intro">
 
-        <p class="eyebrow">
-            The Fraggle Archives Museum
+        <p class="aua-relics-eyebrow">
+            THE MYTHOLOGY
         </p>
 
         <h1>
             Alternate Universe Archives Relics
         </h1>
 
-        <p class="aua-lead">
+        <p class="aua-relics-thesis">
             Not every history belongs to this world.
+        </p>
+
+        <p class="aua-relics-lead">
             The Alternate Universe Archives preserve artifacts and records
             from realities that exist alongside — or perhaps beyond —
             the Archives we know.
         </p>
 
+        <p class="aua-relics-note">
+            Their provenance is occasionally questionable.
+            Their archival status is not.
+        </p>
+
     </section>
 
 
 
     <!-- =====================================================
-         COLLECTION INTRO
+         HYDRATION POSTER
          ===================================================== -->
 
-    <section class="aua-collection-header">
-
-        <p class="eyebrow">
-            Cross-Dimensional Collection
-        </p>
+    <div class="collection-card">
 
         <h2>
-            Documents From Elsewhere
+            The Hydration Poster
         </h2>
 
+        <img
+            src="/images/museum/GoodWaterMachine.jpeg"
+            alt="The Good Water Machine poster from the Alternate Universe Archives"
+        >
+
         <p>
-            Evidence recovered from alternate Archives realities,
-            where familiar principles appear in unfamiliar institutional forms.
+            A document from an alternate reality in which the importance of
+            properly regulated hydration infrastructure was apparently recognized
+            at an institutional level.
         </p>
 
-    </section>
+    </div>
 
 
 
     <!-- =====================================================
-         RELICS
+         DENTISTRY POSTER
          ===================================================== -->
 
-    <section class="aua-grid">
-
-
-        <!-- =================================================
-             HYDRATION
-             ================================================= -->
-
-        <article class="aua-card">
-
-            <div class="aua-card-header">
-
-                <span class="aua-type">
-                    Alternate Policy Document
-                </span>
-
-                <h3>
-                    The Hydration Poster
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/GoodWaterMachine.jpeg"
-                alt="The Good Water Machine poster from the Alternate Universe Archives"
-                class="aua-image">
-
-
-            <p class="aua-description">
-                A document from an alternate reality in which the importance
-                of properly regulated hydration infrastructure was apparently
-                recognized at an institutional level.
-            </p>
-
-        </article>
-
-
-
-        <!-- =================================================
-             DENTISTRY
-             ================================================= -->
-
-        <article class="aua-card">
-
-            <div class="aua-card-header">
-
-                <span class="aua-type">
-                    Alternate Health Directive
-                </span>
-
-                <h3>
-                    The Dentistry Poster
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/Dentistry.jpeg"
-                alt="The Dentistry poster from the Alternate Universe Archives"
-                class="aua-image">
-
-
-            <p class="aua-description">
-                A preserved artifact documenting dental policy from
-                an alternate Archives reality.
-            </p>
-
-        </article>
-
-
-
-        <!-- =================================================
-             EXERCISE
-             ================================================= -->
-
-        <article class="aua-card">
-
-            <div class="aua-card-header">
-
-                <span class="aua-type">
-                    Alternate Activity Directive
-                </span>
-
-                <h3>
-                    The Exercise Poster
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/Exercise.jpeg"
-                alt="The Exercise poster from the Alternate Universe Archives"
-                class="aua-image">
-
-
-            <p class="aua-description">
-                An archival document concerning physical activity
-                in an alternate reality.
-            </p>
-
-        </article>
-
-
-
-        <!-- =================================================
-             FRIENDSHIP
-             ================================================= -->
-
-        <article class="aua-card">
-
-            <div class="aua-card-header">
-
-                <span class="aua-type">
-                    Alternate Social Doctrine
-                </span>
-
-                <h3>
-                    The Friendship Poster
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/friendship.jpeg"
-                alt="The Friendship poster from the Alternate Universe Archives"
-                class="aua-image">
-
-
-            <p class="aua-description">
-                An archival document celebrating friendship and companionship
-                in an alternate Archives reality.
-            </p>
-
-        </article>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CROSS-DIMENSIONAL NOTICE
-         ===================================================== -->
-
-    <section class="aua-notice">
-
-        <p class="eyebrow">
-            Curatorial Notice
-        </p>
+    <div class="collection-card">
 
         <h2>
-            Reality Status: Unconfirmed
+            The Dentistry Poster
         </h2>
 
-        <p>
-            The Archives make no official claim regarding the exact mechanisms
-            by which these materials crossed dimensional boundaries.
+        <img
+            src="/images/museum/Dentistry.jpeg"
+            alt="The Dentistry poster from the Alternate Universe Archives"
+        >
 
-            Their preservation remains mandatory regardless.
+        <p>
+            A preserved artifact documenting dental policy from an alternate
+            Archives reality.
         </p>
 
-    </section>
+    </div>
+
+
+
+    <!-- =====================================================
+         EXERCISE POSTER
+         ===================================================== -->
+
+    <div class="collection-card">
+
+        <h2>
+            The Exercise Poster
+        </h2>
+
+        <img
+            src="/images/museum/Exercise.jpeg"
+            alt="The Exercise poster from the Alternate Universe Archives"
+        >
+
+        <p>
+            An archival document concerning physical activity in an alternate
+            reality.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FRIENDSHIP POSTER
+         ===================================================== -->
+
+    <div class="collection-card">
+
+        <h2>
+            The Friendship Poster
+        </h2>
+
+        <img
+            src="/images/museum/friendship.jpeg"
+            alt="The Friendship poster from the Alternate Universe Archives"
+        >
+
+        <p>
+            An archival document celebrating friendship and companionship
+            in an alternate Archives reality.
+        </p>
+
+    </div>
 
 
 
@@ -631,22 +356,19 @@
          CLOSING PRINCIPLE
          ===================================================== -->
 
-    <section class="aua-principle">
+    <section class="aua-relics-closing">
 
-        <p class="eyebrow">
-            Cross-Dimensional Principle
+        <p class="aua-relics-closing-eyebrow">
+            THE INTERDIMENSIONAL PRINCIPLE
         </p>
 
         <h2>
-            Some Lessons Travel
+            Documentation does not require explanation.
         </h2>
 
         <p>
-            The setting may change. The paperwork may become more complicated.
-
-            <strong>
-                The important things have a way of surviving the journey.
-            </strong>
+            The Archives record what they find.
+            Reality may file an appeal.
         </p>
 
     </section>
@@ -664,17 +386,19 @@
 
 <script>
 
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
+fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
 
-            document.getElementById('footer-placeholder').innerHTML = data;
+        document.getElementById('footer-placeholder').innerHTML = data;
 
-            if (window.initFooterMoonPhase) {
-                window.initFooterMoonPhase();
-            }
+        if (window.initFooterMoonPhase) {
 
-        });
+            window.initFooterMoonPhase();
+
+        }
+
+    });
 
 </script>
 
