@@ -4,17 +4,18 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Support | The Fraggle Archives</title>
 
 <link rel="stylesheet" href="/styles.css">
 
+
 <style>
 
 /* =========================================================
-   SUPPORT
-   Editorial framing
+   SUPPORT PAGE — LOCAL EDITORIAL OVERRIDES
    ========================================================= */
 
 .support-page {
@@ -24,18 +25,20 @@
 
 
 /* =========================================================
-   PAGE INTRO
+   INTRO
    ========================================================= */
 
 .support-page .archive-page-intro {
     max-width: 820px;
-    margin: 45px auto 65px;
+
+    margin: 45px auto 70px;
     padding: 0 24px;
+
     text-align: center;
 }
 
 .support-page .archive-eyebrow {
-    margin: 0 0 7px;
+    margin: 0 0 8px;
 
     font-size: 0.78rem;
     font-weight: bold;
@@ -47,7 +50,7 @@
 }
 
 .support-page .archive-page-intro h1 {
-    margin: 8px 0 24px;
+    margin: 8px 0 26px;
 
     font-size: clamp(2.8rem, 5vw, 4rem);
     line-height: 1.06;
@@ -56,7 +59,7 @@
 .support-page .archive-page-thesis {
     max-width: 720px;
 
-    margin: 0 auto 18px;
+    margin: 0 auto 20px;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -77,111 +80,250 @@
 
 
 /* =========================================================
-   SUPPORT CARD
+   WHY SUPPORT
    ========================================================= */
 
-.support-page .support-card {
-    max-width: 820px;
+.support-overview {
+    max-width: 760px;
 
-    margin: 0 auto 75px;
-    padding: 42px;
-
-    background: var(--archive-light-card);
-    border: 1px solid var(--archive-border);
-    box-shadow: var(--archive-shadow);
-}
-
-.support-page .support-card > h2 {
-    margin-top: 0;
-    margin-bottom: 22px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
 
     text-align: center;
+}
+
+.support-overview h2 {
+    max-width: 700px;
+
+    margin: 8px auto 28px;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
     line-height: 1.12;
 }
 
-.support-page .support-card > p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.support-overview-text {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.support-overview-text p {
+    margin: 0 0 20px;
+
+    font-size: 1.08rem;
     line-height: 1.75;
 }
 
 
 /* =========================================================
-   SUPPORT OPTIONS
+   WAYS TO SUPPORT
    ========================================================= */
 
-.support-page .support-options {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.support-methods {
+    max-width: 900px;
 
-    gap: 22px;
-
-    margin: 38px 0 28px;
-}
-
-.support-page .support-option,
-.support-page .paypal-support,
-.support-page .wishlist-support {
-    padding: 26px;
-
-    background: var(--archive-card);
-    border: 1px solid var(--archive-border);
-}
-
-.support-page .support-option h2,
-.support-page .paypal-support h2,
-.support-page .wishlist-support h2 {
-    margin-top: 0;
-    margin-bottom: 14px;
-
-    font-size: 1.55rem;
-}
-
-.support-page .wishlist-support {
-    margin-top: 22px;
-}
-
-.support-page .paypal-link,
-.support-page .wishlist-link {
-    margin-top: 20px;
-}
-
-
-/* =========================================================
-   CLOSING PRINCIPLE
-   ========================================================= */
-
-.support-closing {
-    max-width: 700px;
-
-    margin: 45px auto 0;
+    margin: 0 auto 55px;
+    padding: 0 24px;
 
     text-align: center;
 }
 
-.support-closing .support-closing-eyebrow {
-    margin: 0 0 7px;
+.support-methods > h2 {
+    margin: 8px 0 38px;
 
-    font-size: 0.76rem;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.support-method-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   SUPPORT METHOD CARDS
+   ========================================================= */
+
+.support-method-card {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 34px 30px;
+
+    text-align: left;
+
+    background: var(--archive-light-card, #fbf8f2);
+
+    border: 1px solid var(--archive-border, #cfc3b2);
+
+    box-shadow: none;
+}
+
+.support-method-wide {
+    max-width: none;
+
+    margin: 24px 0 0;
+
+    text-align: left;
+}
+
+.support-method-type {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.74rem;
     font-weight: bold;
 
     letter-spacing: 0.13em;
     text-transform: uppercase;
 
-    opacity: 0.65;
+    opacity: 0.62;
 }
 
-.support-closing p:last-child {
-    margin-bottom: 0;
+.support-method-card h3 {
+    margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    line-height: 1.12;
+}
+
+.support-method-card > p {
+    margin: 0 0 24px;
+
+    font-size: 1.03rem;
+    line-height: 1.72;
+}
+
+.support-detail {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.support-detail span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    opacity: 0.66;
+}
+
+.support-detail a {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.12rem;
+    font-weight: bold;
+
+    overflow-wrap: anywhere;
+}
+
+.support-action {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.support-action .button {
+    box-sizing: border-box;
+
+    max-width: 100%;
+
+    white-space: normal;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ARCHIVAL NOTE
+   ========================================================= */
+
+.support-note {
+    max-width: 690px;
+
+    margin: 60px auto 0;
+    padding: 0 24px;
+
+    text-align: center;
+
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.support-note > p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
 
     font-size: 1.05rem;
     line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRESERVATION PRINCIPLE
+   standalone editorial ending
+   ========================================================= */
+
+.support-preservation-principle {
+    max-width: 780px;
+
+    margin: 95px auto 80px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.support-preservation-principle .archive-eyebrow {
+    margin-bottom: 10px;
+}
+
+.support-preservation-principle h2 {
+    max-width: 720px;
+
+    margin: 10px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    line-height: 1.14;
+
+    font-weight: normal;
+}
+
+.support-preservation-principle p:last-child {
+    max-width: 640px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.72;
 
     font-style: italic;
+
+    opacity: 0.78;
 }
 
 
@@ -192,7 +334,7 @@
 @media (max-width: 700px) {
 
     .support-page .archive-page-intro {
-        margin: 35px auto 55px;
+        margin: 35px auto 58px;
         padding: 0 18px;
     }
 
@@ -202,7 +344,6 @@
 
     .support-page .archive-page-thesis {
         font-size: 2.15rem;
-        margin-bottom: 17px;
     }
 
     .support-page .archive-page-lead {
@@ -210,17 +351,59 @@
         line-height: 1.68;
     }
 
-    .support-page .support-card {
-        margin: 0 16px 60px;
-        padding: 28px 20px;
+
+    .support-overview {
+        margin-bottom: 65px;
+        padding: 0 18px;
     }
 
-    .support-page .support-options {
+    .support-overview-text p {
+        font-size: 1.02rem;
+    }
+
+
+    .support-methods {
+        padding: 0 16px;
+    }
+
+    .support-method-grid {
         grid-template-columns: 1fr;
+
+        gap: 20px;
     }
 
-    .support-page .wishlist-support {
-        margin-top: 18px;
+    .support-method-wide {
+        margin-top: 20px;
+    }
+
+    .support-method-card {
+        padding: 30px 24px;
+    }
+
+    .support-method-card h3 {
+        font-size: 2rem;
+    }
+
+    .support-action .button {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .support-note {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+
+    .support-preservation-principle {
+        margin: 85px auto 65px;
+        padding: 0 20px;
+    }
+
+    .support-preservation-principle h2 {
+        font-size: 2.2rem;
     }
 
 }
@@ -291,96 +474,150 @@ fetch('/nav.html')
 
 
     <!-- =====================================================
-         SUPPORT CARD
+         WHY SUPPORT
          ===================================================== -->
 
-    <div class="support-card">
+    <section class="support-overview">
+
+        <p class="archive-eyebrow">
+            HELP PRESERVE THE ARCHIVES
+        </p>
 
         <h2>
-            Help Keep the Archives Growing
+            Stories, Care &amp; the Work Ahead
         </h2>
 
-        <p>
-            Contributions help make future books, projects, memorials,
-            and rescue efforts possible.
+        <div class="support-overview-text">
+
+            <p>
+                If you would like to support the work of The Fraggle Archives,
+                contributions help make future books, projects, memorials,
+                and rescue efforts possible.
+            </p>
+
+            <p>
+                Support also helps provide veterinary care for the cats who are
+                part of the Archives' story. Contributions may go toward veterinary
+                bills, ongoing care, and other needs that help keep our residents
+                safe, comfortable, and well cared for.
+            </p>
+
+            <p>
+                Every contribution, no matter the size, helps keep the Archives
+                growing and helps care for the lives behind the stories.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WAYS TO SUPPORT
+         ===================================================== -->
+
+    <section class="support-methods">
+
+        <p class="archive-eyebrow">
+            WAYS TO HELP
         </p>
 
-        <p>
-            Support also helps provide veterinary care for the cats who are
-            part of the Archives' story. Contributions may go toward veterinary
-            bills, ongoing care, and other needs that help keep our residents
-            safe, comfortable, and well cared for.
-        </p>
-
-        <p>
-            Every contribution, no matter the size, helps care for the lives
-            behind the stories and keeps the work moving forward.
-        </p>
+        <h2>
+            Support the Work
+        </h2>
 
 
+        <div class="support-method-grid">
 
-        <div class="support-options">
 
+            <!-- =============================================
+                 E-TRANSFER
+                 ============================================= -->
 
-            <div class="support-option">
+            <article class="support-method-card">
 
-                <h2>
+                <span class="support-method-type">
+                    CANADA
+                </span>
+
+                <h3>
                     E-Transfer
-                </h2>
+                </h3>
 
                 <p>
                     If you would like to make a contribution,
                     you can send an e-transfer through your Canadian banking app.
                 </p>
 
-                <p>
-                    <strong>E-transfer address:</strong><br>
+                <div class="support-detail">
+
+                    <span>
+                        E-transfer address
+                    </span>
 
                     <a href="mailto:sam@fragglearchives.com">
                         sam@fragglearchives.com
                     </a>
-                </p>
 
-            </div>
+                </div>
+
+            </article>
 
 
 
-            <div class="paypal-support">
+            <!-- =============================================
+                 PAYPAL
+                 ============================================= -->
 
-                <h2>
+            <article class="support-method-card">
+
+                <span class="support-method-type">
+                    ONLINE
+                </span>
+
+                <h3>
                     PayPal
-                </h2>
+                </h3>
 
                 <p>
                     If you would like to make a contribution through PayPal,
-                    you can support The Fraggle Archives here:
+                    you can support The Fraggle Archives here.
                 </p>
 
-                <p class="paypal-link">
+                <div class="support-action">
 
                     <a
-                        class="button paypal-button"
+                        class="button"
                         href="https://paypal.me/fragglearchives"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Support The Fraggle Archives via PayPal
+                        Support via PayPal
                     </a>
 
-                </p>
+                </div>
 
-            </div>
+            </article>
 
 
         </div>
 
 
 
-        <div class="wishlist-support">
+        <!-- =============================================
+             WISHLIST
+             ============================================= -->
 
-            <h2>
-                Wishlist
-            </h2>
+        <article class="support-method-card support-method-wide">
+
+            <span class="support-method-type">
+                WISHLIST
+            </span>
+
+            <h3>
+                Send a Gift
+            </h3>
 
             <p>
                 Want to support the Archives without making a monetary contribution?
@@ -388,48 +625,65 @@ fetch('/nav.html')
                 Every little bit helps keep the Archives running and growing.
             </p>
 
-            <p class="wishlist-link">
+            <div class="support-action">
 
                 <a
+                    class="button"
                     href="https://www.amazon.ca/hz/wishlist/ls/12YS252T2DT97?ref_=wl_share"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="button"
                 >
                     View the Amazon Wishlist
                 </a>
 
-            </p>
+            </div>
 
-        </div>
+        </article>
 
 
+    </section>
+
+
+
+    <!-- =====================================================
+         ARCHIVAL NOTE
+         ===================================================== -->
+
+    <section class="support-note">
+
+        <p class="archive-eyebrow">
+            ARCHIVAL NOTE
+        </p>
 
         <p>
             Please include your name or a note about the purpose of your
             contribution if you would like it recorded with the Archives.
         </p>
 
-
-
-        <hr>
+    </section>
 
 
 
-        <section class="support-closing">
+    <!-- =====================================================
+         PRESERVATION PRINCIPLE
+         ===================================================== -->
 
-            <p class="support-closing-eyebrow">
-                THE PRESERVATION PRINCIPLE
-            </p>
+    <section class="support-preservation-principle">
 
-            <p>
-                Thank you for helping preserve the stories, memories,
-                and wonderfully strange history of the Archives. ♥
-            </p>
+        <p class="archive-eyebrow">
+            THE PRESERVATION PRINCIPLE
+        </p>
 
-        </section>
+        <h2>
+            Some histories continue because someone chooses to care.
+        </h2>
 
-    </div>
+        <p>
+            Thank you for helping preserve the stories, memories,
+            and wonderfully strange history of the Archives. ♥
+        </p>
+
+    </section>
 
 
 </main>
