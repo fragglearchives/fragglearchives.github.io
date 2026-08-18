@@ -738,7 +738,7 @@
     <section class="visitor-section">
 
         <h2>
-            The Village Has Visitors
+            The Archives Have Visitors
         </h2>
 
         <div
@@ -768,12 +768,25 @@
 
 
     L.tileLayer(
-        '[https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png]https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
             maxZoom: 19,
             attribution: '&copy; OpenStreetMap contributors'
         }
     ).addTo(map);
+
+
+    setTimeout(function() {
+        map.invalidateSize();
+    }, 250);
+
+
+    window.addEventListener(
+        'resize',
+        function() {
+            map.invalidateSize();
+        }
+    );
 
 
 
@@ -1081,6 +1094,11 @@
                     '</em>';
 
             }
+
+
+            setTimeout(function() {
+                map.invalidateSize();
+            }, 100);
 
 
             delete window[callbackName];
