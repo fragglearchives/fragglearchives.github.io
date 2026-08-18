@@ -7,9 +7,400 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Museum | The Fraggle Archives</title>
+    <title>Fraggle Relics | The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css?v=2">
+
+
+<style>
+
+/* =========================================================
+   FRAGGLE RELICS
+   The Fraggle Archives Museum
+   ========================================================= */
+
+.fraggle-relics-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   EYEBROWS
+   ========================================================= */
+
+.fraggle-relics-page .eyebrow {
+    margin: 0 0 6px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.relics-intro {
+    max-width: 780px;
+
+    margin: 45px auto 75px;
+
+    text-align: center;
+}
+
+.relics-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.relics-lead {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.18rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   COLLECTION INTRO
+   ========================================================= */
+
+.relics-collection-header {
+    max-width: 760px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.relics-collection-header h2 {
+    margin: 6px 0 15px;
+
+    font-size: clamp(2.3rem, 4vw, 3.3rem);
+    line-height: 1.1;
+}
+
+.relics-collection-header p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.06rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RELIC GRID
+   ========================================================= */
+
+.relics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   RELIC CARDS
+   ========================================================= */
+
+.relic-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 32px;
+
+    background: var(--archive-card);
+
+    border: 1px solid var(--archive-border);
+
+    box-shadow: var(--archive-shadow);
+}
+
+.relic-card-header {
+    margin-bottom: 22px;
+
+    text-align: center;
+}
+
+.relic-type {
+    display: block;
+
+    margin: 0 0 7px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    opacity: 0.62;
+}
+
+.relic-card h3 {
+    margin: 0;
+
+    font-size: 2rem;
+    line-height: 1.18;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ARTIFACT IMAGES
+   ========================================================= */
+
+.relic-image {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 88%;
+    max-height: 420px;
+
+    margin: 0 auto 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   RELIC COPY
+   ========================================================= */
+
+.relic-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   IN-USE / CONTEXT IMAGE
+   ========================================================= */
+
+.relic-context {
+    margin-top: 28px;
+    padding-top: 24px;
+
+    border-top: 1px solid var(--archive-border);
+}
+
+.relic-context-label {
+    margin: 0 0 14px;
+
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    opacity: 0.6;
+}
+
+.relic-context img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 88%;
+    max-height: 420px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   FEATURED MEMORIAL CARD
+   Ashes get a little more breathing room
+   ========================================================= */
+
+.relic-card-memorial {
+    grid-column: 1 / -1;
+
+    max-width: 760px;
+    width: 100%;
+
+    margin: 10px auto 0;
+}
+
+.relic-card-memorial .relic-image {
+    max-height: 460px;
+}
+
+.relic-memorial-note {
+    max-width: 620px;
+
+    margin: 26px auto 0;
+    padding-top: 22px;
+
+    border-top: 1px solid var(--archive-border);
+
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.relics-principle {
+    max-width: 760px;
+
+    margin: 100px auto 70px;
+
+    text-align: center;
+}
+
+.relics-principle h2 {
+    margin: 6px 0 28px;
+
+    font-size: clamp(2.5rem, 4.2vw, 3.5rem);
+    line-height: 1.08;
+}
+
+.relics-principle p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.35rem;
+    line-height: 1.7;
+}
+
+.relics-principle strong {
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 1.35em;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .fraggle-relics-page {
+        max-width: 92%;
+    }
+
+    .relics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .relic-card-memorial {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .fraggle-relics-page {
+        max-width: none;
+    }
+
+
+    .relics-intro {
+        margin: 35px auto 60px;
+    }
+
+    .relics-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .relics-lead {
+        font-size: 1.08rem;
+    }
+
+
+    .relics-collection-header {
+        margin-bottom: 30px;
+    }
+
+    .relics-collection-header h2 {
+        font-size: 2.45rem;
+    }
+
+
+    .relics-grid {
+        gap: 24px;
+    }
+
+
+    .relic-card {
+        padding: 28px 22px;
+    }
+
+    .relic-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .relic-image,
+    .relic-context img {
+        max-width: 90%;
+        max-height: 330px;
+    }
+
+    .relic-description {
+        font-size: 1.03rem;
+    }
+
+
+    .relics-principle {
+        margin: 75px auto 55px;
+    }
+
+    .relics-principle h2 {
+        font-size: 2.65rem;
+    }
+
+    .relics-principle p:not(.eyebrow) {
+        font-size: 1.18rem;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -19,167 +410,429 @@
 
 <header>
 
-    <img src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner">
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner">
 
 
-  <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
-    
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
 </header>
 
 
 
-<main>
-
-  <h1>Fraggle Relics</h1>
-
-<p class="intro">
-    The objects preserved here belong to Fraggle's story.
-    
-    Some were part of his life. Others became part of the journey that
-    followed. Each one carries a piece of the history that made the Archives possible.
-</p>
+<main class="fraggle-relics-page">
 
 
-<div class="collection-card">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-    <h2>The Cone</h2>
+    <section class="relics-intro">
 
-    <img src="/images/museum/Cone.png"
-         alt="Fraggle's protective cone, preserved as an artifact of his recovery">
+        <p class="eyebrow">
+            The Fraggle Archives Museum
+        </p>
 
-    <p>
-        The indignity. The bravery. The unmistakable symbol of a tiny cat
-        who was trying very hard to heal.
-    </p>
-    <img src="/images/museum/fragglecone.jpeg"
-         alt="Fraggle's protective cone, in use">
+        <h1>
+            Fraggle Relics
+        </h1>
 
-</div>
+        <p class="relics-lead">
+            The objects preserved here belong to Fraggle's story.
+            Some were part of his life. Others became part of the
+            journey that followed. Each one carries a piece of the
+            history that made the Archives possible.
+        </p>
 
-
-<div class="collection-card">
-
-    <h2>The Gloves</h2>
-
-    <img src="/images/museum/Gloves.png"
-         alt="The gloves used while caring for Fraggle">
-
-    <p>
-        The gloves used while caring for Fraggle — preserved because
-        sometimes the physical objects connected to a life matter just as
-        much as the photographs and stories.
-    </p>
-
-    <img src="/images/museum/fragglegloves.jpeg"
-         alt="The gloves used while caring for Fraggle, in use">
-
-</div>
+    </section>
 
 
-<div class="collection-card">
 
-    <h2>Emergency Creamy</h2>
+    <!-- =====================================================
+         COLLECTION INTRO
+         ===================================================== -->
 
-    <img src="/images/museum/Creamy.png"
-         alt="Emergency Creamy, a highly regulated archival emergency resource">
+    <section class="relics-collection-header">
 
-    <p>
-        A highly regulated emergency resource, maintained according to
-        Archive protocol and deployed only when circumstances become
-        sufficiently creamy.
-    </p>
+        <p class="eyebrow">
+            The Collection
+        </p>
 
-</div>
+        <h2>
+            Objects That Remain
+        </h2>
 
-    
+        <p>
+            Ordinary things can become extraordinary when they carry
+            the history of someone who mattered.
+        </p>
 
-<div class="collection-card">
+    </section>
 
-    <h2>The Sacred Yellow Plate</h2>
 
-    <img src="/images/museum/YellowPlate.png"
-         alt="The Sacred Yellow Plate, an important artifact preserved by The Fraggle Archives">
 
-    <p>
-        An artifact of considerable importance and questionable explanation.
-        Its history is carefully preserved within the Archives.
-    </p>
+    <!-- =====================================================
+         RELICS
+         ===================================================== -->
 
-</div>
+    <section class="relics-grid">
 
-    <div class="collection-card">
 
-    <h2>The Fur Clipping</h2>
+        <!-- =================================================
+             THE CONE
+             ================================================= -->
 
-    <img src="/images/museum/FraggleFur.jpeg"
-         alt="Fur clipping from one very loved little grey cat">
+        <article class="relic-card">
 
-    <p>
-    A small clipping of Fraggle's fur, preserved as a physical reminder of the little grey cat at the heart of the Archives.
-    </p>
+            <div class="relic-card-header">
 
-</div>
+                <span class="relic-type">
+                    Recovery Artifact
+                </span>
 
-<div class="collection-card">
+                <h3>
+                    The Cone
+                </h3>
 
-    <h2>Sacred Ashes</h2>
+            </div>
 
-    <img src="/images/museum/SacredAshes.png"
-         alt="Sacred Ashes, a memorial artifact preserved with care and reverence">
 
-    <p>
-        A memorial artifact preserved with care and reverence.
-    </p>
+            <img
+                src="/images/museum/Cone.png"
+                alt="Fraggle's protective cone, preserved as an artifact of his recovery"
+                class="relic-image">
 
-    <p>
-        Some things are kept because they are historically important.
-        Others are kept because someone mattered.
-    </p>
 
-</div>
+            <p class="relic-description">
+                The indignity. The bravery. The unmistakable symbol
+                of a tiny cat who was trying very hard to heal.
+            </p>
 
-        <div class="collection-card">
 
-    <h2>The Lucky Blanket</h2>
+            <div class="relic-context">
 
-    <img src="/images/museum/blanket.jpeg"
-         alt="Fraggle's Lucky Blanket">
+                <p class="relic-context-label">
+                    In Use
+                </p>
 
-    <p>
-    ﻿The blanket used during Fraggle’s twice-daily care routines, preserved as a reminder of the care and love that surrounded him.
-    </p>
-                <img src="/images/museum/fraggleblanket.jpeg"
-         alt="Fraggle's Lucky Blanket, in use">
+                <img
+                    src="/images/museum/fragglecone.jpeg"
+                    alt="Fraggle's protective cone, in use">
 
-</div>
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             THE GLOVES
+             ================================================= -->
+
+        <article class="relic-card">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Care Artifact
+                </span>
+
+                <h3>
+                    The Gloves
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/Gloves.png"
+                alt="The gloves used while caring for Fraggle"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                The gloves used while caring for Fraggle — preserved
+                because sometimes the physical objects connected to
+                a life matter just as much as the photographs and stories.
+            </p>
+
+
+            <div class="relic-context">
+
+                <p class="relic-context-label">
+                    In Use
+                </p>
+
+                <img
+                    src="/images/museum/fragglegloves.jpeg"
+                    alt="The gloves used while caring for Fraggle, in use">
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             EMERGENCY CREAMY
+             ================================================= -->
+
+        <article class="relic-card">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Emergency Resource
+                </span>
+
+                <h3>
+                    Emergency Creamy
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/Creamy.png"
+                alt="Emergency Creamy, a highly regulated archival emergency resource"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                A highly regulated emergency resource, maintained
+                according to Archive protocol and deployed only when
+                circumstances become sufficiently creamy.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SACRED YELLOW PLATE
+             ================================================= -->
+
+        <article class="relic-card">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Archive Relic
+                </span>
+
+                <h3>
+                    The Sacred Yellow Plate
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/YellowPlate.png"
+                alt="The Sacred Yellow Plate, an important artifact preserved by The Fraggle Archives"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                An artifact of considerable importance and questionable
+                explanation. Its history is carefully preserved within
+                the Archives.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             FUR CLIPPING
+             ================================================= -->
+
+        <article class="relic-card">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Memorial Relic
+                </span>
+
+                <h3>
+                    The Fur Clipping
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/FraggleFur.jpeg"
+                alt="Fur clipping from one very loved little grey cat"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                A small clipping of Fraggle's fur, preserved as a
+                physical reminder of the little grey cat at the heart
+                of the Archives.
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             LUCKY BLANKET
+             ================================================= -->
+
+        <article class="relic-card">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Care Artifact
+                </span>
+
+                <h3>
+                    The Lucky Blanket
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/blanket.jpeg"
+                alt="Fraggle's Lucky Blanket"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                The blanket used during Fraggle’s twice-daily care
+                routines, preserved as a reminder of the care and love
+                that surrounded him.
+            </p>
+
+
+            <div class="relic-context">
+
+                <p class="relic-context-label">
+                    In Use
+                </p>
+
+                <img
+                    src="/images/museum/fraggleblanket.jpeg"
+                    alt="Fraggle's Lucky Blanket, in use">
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SACRED ASHES
+             ================================================= -->
+
+        <article class="relic-card relic-card-memorial">
+
+            <div class="relic-card-header">
+
+                <span class="relic-type">
+                    Memorial Relic
+                </span>
+
+                <h3>
+                    Sacred Ashes
+                </h3>
+
+            </div>
+
+
+            <img
+                src="/images/museum/SacredAshes.png"
+                alt="Sacred Ashes, a memorial artifact preserved with care and reverence"
+                class="relic-image">
+
+
+            <p class="relic-description">
+                A memorial artifact preserved with care and reverence.
+            </p>
+
+
+            <p class="relic-memorial-note">
+                Some things are kept because they are historically important.
+                Others are kept because someone mattered.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="relics-principle">
+
+        <p class="eyebrow">
+            The Archive Principle
+        </p>
+
+        <h2>
+            Why We Keep Things
+        </h2>
+
+        <p>
+            Some things are kept because they are historically important.
+
+            <strong>
+                Others are kept because someone mattered.
+            </strong>
+        </p>
+
+    </section>
+
 
 </main>
 
+
+
 <div id="footer-placeholder"></div>
+
 
 <script src="/moon-phase.js"></script>
 
-<script>
-fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+                window.initFooterMoonPhase();
+            }
+
+        });
+
 </script>
+
 
 </body>
 
