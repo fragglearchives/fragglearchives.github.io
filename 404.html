@@ -1,19 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fraggle Archives</title>
 
-    <script>
-        if (window.location.pathname === "/tracker") {
-            window.location.replace("/tracker/");
-        }
-    </script>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   404 — DISPOSAL PRINCIPLE
+   ========================================================= */
+
+.error-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MAIN 404 PANEL
+   ========================================================= */
+
+.error-hero {
+    max-width: 780px;
+
+    margin: 70px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.error-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.error-code {
+    margin: 0 0 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(4.5rem, 10vw, 8rem);
+    line-height: 0.95;
+
+    font-weight: normal;
+}
+
+.error-title {
+    max-width: 700px;
+
+    margin: 0 auto 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.error-lead {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   DISPOSAL PRINCIPLE
+   ========================================================= */
+
+.disposal-principle {
+    max-width: 760px;
+
+    margin: 90px auto 80px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.disposal-principle h2 {
+    max-width: 700px;
+
+    margin: 8px auto 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.disposal-principle p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.72;
+
+    font-style: italic;
+
+    opacity: 0.78;
+}
+
+
+/* =========================================================
+   RETURN BUTTON
+   ========================================================= */
+
+.error-return {
+    margin: 42px 0 0;
+}
+
+.error-return .button {
+    display: inline-block;
+}
+
+
+/* =========================================================
+   ARCHIVAL NOTE
+   ========================================================= */
+
+.error-note {
+    max-width: 680px;
+
+    margin: 75px auto 70px;
+    padding: 28px 24px;
+
+    text-align: center;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+}
+
+.error-note p {
+    margin: 0;
+
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.error-note strong {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .error-hero {
+        margin: 50px auto 55px;
+        padding: 0 18px;
+    }
+
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .error-title {
+        font-size: 2.4rem;
+    }
+
+    .error-lead {
+        font-size: 1.02rem;
+    }
+
+    .disposal-principle {
+        margin: 70px auto 60px;
+        padding: 0 18px;
+    }
+
+    .disposal-principle h2 {
+        font-size: 2.45rem;
+    }
+
+    .error-note {
+        margin: 60px 16px 55px;
+        padding: 24px 20px;
+    }
+
+}
+
+</style>
+
 </head>
 
+
 <body>
-    <h1>Page not found</h1>
-    <p>The Archives could not find this page.</p>
+
+
+<header>
+
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+    <div id="site-nav"></div>
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
+</header>
+
+
+
+<main class="error-page">
+
+
+    <!-- =====================================================
+         404
+         ===================================================== -->
+
+    <section class="error-hero">
+
+        <p class="error-eyebrow">
+            ARCHIVAL NOTICE
+        </p>
+
+        <div class="error-code">
+            404
+        </div>
+
+        <h1 class="error-title">
+            This record could not be found.
+        </h1>
+
+        <p class="error-lead">
+            The page you were looking for may have moved,
+            been renamed, or completed its work within the Archives.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DISPOSAL PRINCIPLE
+         ===================================================== -->
+
+    <section class="disposal-principle">
+
+        <p class="error-eyebrow">
+            THE DISPOSAL PRINCIPLE
+        </p>
+
+        <h2>
+            Some things have completed their work.
+        </h2>
+
+        <p>
+            Their history may be remembered without preserving the object itself.
+        </p>
+
+        <div class="error-return">
+
+            <a
+                href="/"
+                class="button"
+            >
+                Return to the Archives
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ARCHIVAL NOTE
+         ===================================================== -->
+
+    <section class="error-note">
+
+        <p>
+            <strong>Archival note:</strong>
+            not every missing page represents a loss.
+            Some records are simply no longer part of the active collection.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+<script src="/moon-phase.js"></script>
+
+
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
+</script>
+
+
 </body>
+
 </html>
