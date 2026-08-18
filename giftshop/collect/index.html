@@ -16,8 +16,10 @@
         data-merchant-id="YQDNBYWJ596KA">
     </script>
 
+
 <style>
-    /* =========================================
+
+/* =========================================
    COLLECT THE ARCHIVES
    Institutional Gift Shop
    ========================================= */
@@ -60,8 +62,8 @@
 .collect-intro h1 {
     margin: 6px 0 24px;
 
-    font-size: clamp(3rem, 6vw, 4.6rem);
-    line-height: 1.05;
+    font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+    line-height: 1.08;
 }
 
 .collect-lead {
@@ -76,6 +78,8 @@
 
 /* =========================================
    CATALOGUE CONTROLS
+
+   Intentionally open — no outer box.
    ========================================= */
 
 .collect-browser {
@@ -83,13 +87,13 @@
 
     margin: 45px auto 32px;
 
-    padding: 25px 28px;
+    padding: 0;
 
-    background: var(--archive-card);
+    background: transparent;
 
-    border: 1px solid var(--archive-border);
+    border: 0;
 
-    box-shadow: var(--archive-shadow);
+    box-shadow: none;
 
     text-align: center;
 }
@@ -179,6 +183,8 @@
 
     font-size: clamp(2.2rem, 4vw, 3.2rem);
     line-height: 1.1;
+
+    text-align: center;
 }
 
 .collect-category-header > p:not(.eyebrow) {
@@ -225,6 +231,8 @@
 }
 
 .collect-card h3 {
+    width: 100%;
+
     margin: 0 0 16px;
 
     font-size: 1.55rem;
@@ -272,16 +280,29 @@
 
 /* =========================================
    PURCHASE AREA
+
+   Keep the whole PayPal component centred
+   instead of stretching it across the card.
    ========================================= */
 
 .collect-buy {
+    width: 100%;
+
     padding-top: 4px;
+
+    text-align: center;
 }
 
 .collect-buy paypal-add-to-cart-button {
-    display: block;
+    display: inline-block;
 
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
 }
 
 
@@ -335,6 +356,8 @@
     margin: 0 0 14px;
 
     font-size: 1.55rem;
+
+    text-align: center;
 }
 
 .shipping-card p {
@@ -342,6 +365,18 @@
 
     font-size: 1.02rem;
     line-height: 1.65;
+}
+
+.shipping-card paypal-add-to-cart-button {
+    display: inline-block;
+
+    width: auto;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
 }
 
 
@@ -383,7 +418,8 @@
     }
 
     .collect-intro h1 {
-        font-size: 3rem;
+        font-size: 2.45rem;
+        line-height: 1.08;
     }
 
     .collect-lead {
@@ -392,9 +428,9 @@
 
 
     .collect-browser {
-        margin: 35px 0 30px;
+        margin: 35px auto 30px;
 
-        padding: 24px 20px;
+        padding: 0;
     }
 
 
@@ -423,6 +459,8 @@
 
     .collect-card h3 {
         font-size: 1.65rem;
+
+        text-align: center;
     }
 
     .collect-card img {
@@ -443,7 +481,9 @@
     }
 
 }
+
 </style>
+
 </head>
 
 
@@ -479,19 +519,25 @@
 <main class="collect-page">
 
 
-<section class="collect-intro">
+    <!-- =========================================
+         INTRO
+         ========================================= -->
 
-    <p class="eyebrow">The Fraggle Archives Gift Shop</p>
+    <section class="collect-intro">
 
-    <h1>
-        Collect The Archives
-    </h1>
+        <p class="eyebrow">
+            The Fraggle Archives Gift Shop
+        </p>
 
-    <p class="collect-lead">
-        Small artifacts. Big lore. Questionable necessity.
-    </p>
+        <h1>
+            Collect The Archives
+        </h1>
 
-</section>
+        <p class="collect-lead">
+            Small artifacts. Big lore. Questionable necessity.
+        </p>
+
+    </section>
 
 
 
@@ -587,9 +633,13 @@
 
         <div class="collect-category-header">
 
-        <p class="eyebrow">Department</p>
-            
-            <h2>Stickers</h2>
+            <p class="eyebrow">
+                Department
+            </p>
+
+            <h2>
+                Stickers
+            </h2>
 
             <p>
                 Stick a little Fraggle Archives magic wherever it belongs.
@@ -606,7 +656,9 @@
 
             <article class="collect-card">
 
-                <h3>Stay Brave</h3>
+                <h3>
+                    Stay Brave
+                </h3>
 
                 <img
                     src="/images/giftshop/staybravesticker.jpg"
@@ -644,7 +696,9 @@
 
             <article class="collect-card">
 
-                <h3>Love, Fraggle</h3>
+                <h3>
+                    Love, Fraggle
+                </h3>
 
                 <img
                     src="/images/giftshop/lovefragglesticker.jpg"
@@ -683,7 +737,9 @@
 
             <article class="collect-card">
 
-                <h3>Fraggle's Village</h3>
+                <h3>
+                    Fraggle's Village
+                </h3>
 
                 <img
                     src="/images/giftshop/hardthingsstickernew.jpeg"
@@ -721,7 +777,9 @@
 
             <article class="collect-card">
 
-                <h3>Logo Sticker</h3>
+                <h3>
+                    Logo Sticker
+                </h3>
 
                 <img
                     src="/images/giftshop/archivessticker.jpeg"
@@ -770,9 +828,13 @@
 
         <div class="collect-category-header">
 
-        <p class="eyebrow">Department</p>
-            
-            <h2>Buttons</h2>
+            <p class="eyebrow">
+                Department
+            </p>
+
+            <h2>
+                Buttons
+            </h2>
 
             <p>
                 Tiny circles of Highly Regulated Unhingedness.
@@ -787,7 +849,9 @@
 
             <article class="collect-card">
 
-                <h3>Fraggle's Village</h3>
+                <h3>
+                    Fraggle's Village
+                </h3>
 
                 <img
                     src="/images/giftshop/villagebutton.jpeg"
@@ -837,9 +901,13 @@
 
         <div class="collect-category-header">
 
-        <p class="eyebrow">Department</p>
-            
-            <h2>Magnets</h2>
+            <p class="eyebrow">
+                Department
+            </p>
+
+            <h2>
+                Magnets
+            </h2>
 
             <p>
                 Archival nonsense, now available for attachment
@@ -856,7 +924,9 @@
 
             <article class="collect-card">
 
-                <h3>Love, Fraggle</h3>
+                <h3>
+                    Love, Fraggle
+                </h3>
 
                 <img
                     src="/images/giftshop/lovefragglemagnet.jpg"
@@ -894,7 +964,9 @@
 
             <article class="collect-card">
 
-                <h3>You Can Do Hard Things</h3>
+                <h3>
+                    You Can Do Hard Things
+                </h3>
 
                 <img
                     src="/images/giftshop/hardthingsmemorial.jpg"
@@ -932,7 +1004,9 @@
 
             <article class="collect-card">
 
-                <h3>Fraggle - Original Magnet</h3>
+                <h3>
+                    Fraggle - Original Magnet
+                </h3>
 
                 <img
                     src="/images/giftshop/fraggleogmagnet.jpg"
@@ -982,9 +1056,13 @@
 
         <div class="collect-category-header">
 
-            <p class="eyebrow">Department</p>
+            <p class="eyebrow">
+                Department
+            </p>
 
-            <h2>Mini Posters</h2>
+            <h2>
+                Mini Posters
+            </h2>
 
             <p>
                 Heroic lessons from Headquarters,
@@ -1001,7 +1079,9 @@
 
             <article class="collect-card">
 
-                <h3>Friendship</h3>
+                <h3>
+                    Friendship
+                </h3>
 
                 <img
                     src="/images/giftshop/friendshipposterclean.JPG"
@@ -1039,7 +1119,9 @@
 
             <article class="collect-card">
 
-                <h3>Hydration</h3>
+                <h3>
+                    Hydration
+                </h3>
 
                 <img
                     src="/images/giftshop/hydrationposterclean.PNG"
@@ -1077,7 +1159,9 @@
 
             <article class="collect-card">
 
-                <h3>Exercise</h3>
+                <h3>
+                    Exercise
+                </h3>
 
                 <img
                     src="/images/giftshop/exerciseposterclean.PNG"
@@ -1116,7 +1200,9 @@
 
             <article class="collect-card">
 
-                <h3>Dentistry</h3>
+                <h3>
+                    Dentistry
+                </h3>
 
                 <img
                     src="/images/giftshop/dentistryposterclean.PNG"
@@ -1155,7 +1241,9 @@
 
             <article class="collect-card">
 
-                <h3>Set of 4</h3>
+                <h3>
+                    Set of 4
+                </h3>
 
                 <img
                     src="/images/giftshop/4posters.jpg"
@@ -1200,9 +1288,13 @@
 
     <section class="collect-shipping">
 
-        <p class="eyebrow">Dispatch Department</p>
+        <p class="eyebrow">
+            Dispatch Department
+        </p>
 
-        <h2>Shipping</h2>
+        <h2>
+            Shipping
+        </h2>
 
         <div class="collect-shipping-intro">
 
@@ -1225,7 +1317,9 @@
 
             <article class="shipping-card">
 
-                <h3>Shipping within Canada</h3>
+                <h3>
+                    Shipping within Canada
+                </h3>
 
                 <p>
                     Flat rate, for as much merch as you like.
@@ -1251,7 +1345,9 @@
 
             <article class="shipping-card">
 
-                <h3>Shipping to the USA</h3>
+                <h3>
+                    Shipping to the USA
+                </h3>
 
                 <p>
                     Flat rate, for all your goodies.
