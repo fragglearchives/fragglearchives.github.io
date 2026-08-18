@@ -1,15 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Books | The Fraggle Archives</title>
 
     <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   BOOKS
+   Editorial framing
+   ========================================================= */
+
+.books-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.books-page .archive-page-intro {
+    max-width: 780px;
+
+    margin: 45px auto 55px;
+
+    text-align: center;
+}
+
+.books-page .archive-eyebrow,
+.books-editorial-eyebrow {
+    margin: 0 0 6px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.books-page .archive-page-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.books-page .archive-page-lead {
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    font-size: 1.16rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDITORIAL OPENING
+   ========================================================= */
+
+.books-opening-statement {
+    max-width: 760px;
+
+    margin: 65px auto 80px;
+
+    text-align: center;
+}
+
+.books-opening-statement h2 {
+    max-width: 700px;
+
+    margin: 7px auto 24px;
+
+    font-size: clamp(2.5rem, 4.5vw, 3.7rem);
+    line-height: 1.08;
+}
+
+.books-opening-statement p:not(.books-editorial-eyebrow) {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.3rem;
+    line-height: 1.65;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   BOOK CARDS
+   Existing structure preserved
+   ========================================================= */
+
+.book-card {
+    margin-bottom: 34px;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.books-closing {
+    max-width: 760px;
+
+    margin: 95px auto 70px;
+
+    text-align: center;
+}
+
+.books-closing h2 {
+    max-width: 700px;
+
+    margin: 7px auto 26px;
+
+    font-size: clamp(2.6rem, 4.5vw, 3.7rem);
+    line-height: 1.08;
+}
+
+.books-closing p:not(.books-editorial-eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.28rem;
+    line-height: 1.7;
+}
+
+.books-closing strong {
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 1.28em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .books-page {
+        max-width: none;
+    }
+
+
+    .books-page .archive-page-intro {
+        margin: 35px auto 50px;
+    }
+
+    .books-page .archive-page-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .books-page .archive-page-lead {
+        font-size: 1.06rem;
+    }
+
+
+    .books-opening-statement {
+        margin: 55px auto 65px;
+    }
+
+    .books-opening-statement h2 {
+        font-size: 2.6rem;
+    }
+
+    .books-opening-statement p:not(.books-editorial-eyebrow) {
+        font-size: 1.16rem;
+    }
+
+
+    .books-closing {
+        margin: 75px auto 55px;
+    }
+
+    .books-closing h2 {
+        font-size: 2.65rem;
+    }
+
+    .books-closing p:not(.books-editorial-eyebrow) {
+        font-size: 1.16rem;
+    }
+
+}
+
+</style>
+
 </head>
 
+
 <body>
+
 
 <header class="site-header">
 
@@ -19,168 +216,302 @@
         class="header-banner"
     >
 
-   <div id="site-nav"></div>
 
-<script>
-fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('site-nav').innerHTML = data;
-    });
-</script>
-    
+    <div id="site-nav"></div>
+
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
 </header>
+
+
 
 <main class="books-page">
 
-<section class="archive-page-intro">
 
-  <p class="archive-eyebrow">
-    THE FRAGGLE ARCHIVES
-  </p>
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
 
-  <h1>The Books of the Archives</h1>
+    <section class="archive-page-intro">
 
-  <p class="archive-page-lead">
-      A series of love letters with ISBNs; to the cats I've met, and to those I haven't yet.
-  </p>
+        <p class="archive-eyebrow">
+            THE FRAGGLE ARCHIVES
+        </p>
 
-</section>
+        <h1>
+            The Books of the Archives
+        </h1>
 
+        <p class="archive-page-lead">
+            A series of love letters with ISBNs; to the cats I've met,
+            and to those I haven't yet.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EDITORIAL OPENING
+         ===================================================== -->
+
+    <section class="books-opening-statement">
+
+        <p class="books-editorial-eyebrow">
+            The Stories
+        </p>
+
+        <h2>
+            Some things are preserved as objects.
+            Others become books.
+        </h2>
+
+        <p>
+            The Archives carry them forward in both forms.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FRAGGLE'S VILLAGE
+         ===================================================== -->
 
     <div class="book-card">
 
-<img src="/images/books/FraggleCover.png"
-     alt="Fraggle's Village book cover"
-     class="book-cover">
-
-       <div class="book-details"> 
-        <h2>Fraggle's Village</h2>
-
-        <p class="book-subtitle">
-            A story of love, memory, and one very brave boy.
-        </p>
-
-        <p>
-            A small grey cat with a big personality, a fierce little hiss,
-            and a life that mattered enormously to the person who found him.
-        </p>
-
-        <p>
-            His story became a book so that his life could continue reaching
-            people long after he was gone.
-        </p>
-
-        <p>
-            No personal profit are made from the sale of this book. All profits go directly toward spay/neuter efforts for cats in need.
-        </p>
-
-<div class="book-buy">
-        <a
-            class="button"
-            href="https://a.co/d/07kPW8hM"
-            target="_blank"
+        <img
+            src="/images/books/FraggleCover.png"
+            alt="Fraggle's Village book cover"
+            class="book-cover"
         >
-            Buy on Amazon
-        </a>
-</div>
-        <br> 
-       <p>
-        <strong>Local pickup is available in Ottawa, ON.</strong>
-    </p>
 
-    <p>
-      When purchased locally, copies can be provided as author copies, which have greater profit margins than copies purchased through Amazon. This allows more of each purchase to go toward spay/neuter efforts.
-    </p>
 
-    <p>
-        To arrange a local pickup, contact the Archives and details can be arranged directly.
-    </p>
-                         <p class="book-status">
-           <i> Published</i>
-        </p>
+        <div class="book-details">
 
-                     
+            <h2>
+                Fraggle's Village
+            </h2>
+
+            <p class="book-subtitle">
+                A story of love, memory, and one very brave boy.
+            </p>
+
+            <p>
+                A small grey cat with a big personality,
+                a fierce little hiss,
+                and a life that mattered enormously to the person who found him.
+            </p>
+
+            <p>
+                His story became a book so that his life could continue reaching
+                people long after he was gone.
+            </p>
+
+            <p>
+                No personal profit are made from the sale of this book.
+                All profits go directly toward spay/neuter efforts for cats in need.
+            </p>
+
+
+            <div class="book-buy">
+
+                <a
+                    class="button"
+                    href="https://a.co/d/07kPW8hM"
+                    target="_blank"
+                >
+                    Buy on Amazon
+                </a>
+
+            </div>
+
+
+            <br>
+
+
+            <p>
+                <strong>
+                    Local pickup is available in Ottawa, ON.
+                </strong>
+            </p>
+
+            <p>
+                When purchased locally, copies can be provided as author copies,
+                which have greater profit margins than copies purchased through Amazon.
+                This allows more of each purchase to go toward spay/neuter efforts.
+            </p>
+
+            <p>
+                To arrange a local pickup, contact the Archives
+                and details can be arranged directly.
+            </p>
+
+
+            <p class="book-status">
+                <i>Published</i>
+            </p>
+
+        </div>
+
     </div>
-    </div>
+
+
+
+    <!-- =====================================================
+         THE WAYS WE LEARN
+         ===================================================== -->
 
     <div class="book-card">
 
-<img src="/images/books/TWWLcoverwrap.png"
-     alt="The Ways We Learn book cover"
-     class="book-cover">
+        <img
+            src="/images/books/TWWLcoverwrap.png"
+            alt="The Ways We Learn book cover"
+            class="book-cover"
+        >
 
 
-             <div class="book-details"> 
-        <h2>The Ways We Learn</h2>
+        <div class="book-details">
 
-        <p class="book-subtitle">
-            Six cats. Six stories. A thousand ways to become yourself.
-        </p>
+            <h2>
+                The Ways We Learn
+            </h2>
 
-        <p>
-            The Ways We Learn explores the lessons that emerge when frightened,
-            complicated, hilarious, stubborn, and extraordinary cats are given
-            the chance to become themselves.
-        </p>
+            <p class="book-subtitle">
+                Six cats. Six stories.
+                A thousand ways to become yourself.
+            </p>
 
-        <p class="book-status">
-          <i>  Coming September 2026</i>
-        </p>
+            <p>
+                The Ways We Learn explores the lessons that emerge
+                when frightened, complicated, hilarious, stubborn,
+                and extraordinary cats are given the chance to become themselves.
+            </p>
+
+            <p class="book-status">
+                <i>Coming September 2026</i>
+            </p>
+
+        </div>
 
     </div>
-    </div>
 
+
+
+    <!-- =====================================================
+         SSFF
+         ===================================================== -->
 
     <div class="book-card">
-    <div class="book-details"> 
-        <h2>The Adventures of Super Stick Figure Fraggle</h2>
 
-        <p class="book-subtitle">
-            Highly Regulated Unhingedness
-        </p>
 
-        <p>
-            Welcome to the more highly regulated wing of the Archives.
-        </p>
+        <div class="book-details">
 
-        <p>
-            Super Stick Figure Fraggle exists to handle the emergencies that
-            ordinary archival procedures simply cannot contain.
-        </p>
+            <h2>
+                The Adventures of Super Stick Figure Fraggle
+            </h2>
 
-        <p>
-            <strong>Starting with:</strong>
-        </p>
+            <p class="book-subtitle">
+                Highly Regulated Unhingedness
+            </p>
 
-        <p>
-            <strong>Book One: SSFF and the Emergency Creamy</strong>
-        </p>
+            <p>
+                Welcome to the more highly regulated wing of the Archives.
+            </p>
 
-        <p class="book-status">
-          <i>  Series in progress</i>
-        </p>
+            <p>
+                Super Stick Figure Fraggle exists to handle
+                the emergencies that ordinary archival procedures
+                simply cannot contain.
+            </p>
+
+            <p>
+                <strong>
+                    Starting with:
+                </strong>
+            </p>
+
+            <p>
+                <strong>
+                    Book One: SSFF and the Emergency Creamy
+                </strong>
+            </p>
+
+            <p class="book-status">
+                <i>Series in progress</i>
+            </p>
+
+        </div>
 
     </div>
-    </div>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="books-closing">
+
+        <p class="books-editorial-eyebrow">
+            The Reading Principle
+        </p>
+
+        <h2>
+            A story changes when someone carries it home.
+        </h2>
+
+        <p>
+            The book may close.
+
+            <strong>
+                The story keeps travelling.
+            </strong>
+        </p>
+
+    </section>
+
 
 </main>
 
+
+
 <div id="footer-placeholder"></div>
+
 
 <script src="/moon-phase.js"></script>
 
-<script>
-fetch('/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
 
-    if (window.initFooterMoonPhase) {
-      window.initFooterMoonPhase();
-    }
-  });
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
 </script>
 
+
 </body>
+
 </html>
