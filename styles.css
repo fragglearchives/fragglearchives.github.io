@@ -2111,3 +2111,296 @@ input[type="date"] {
         margin: 20px auto 25px;
     }
 }
+
+
+
+/* =========================================================
+   THE FRAGGLE ARCHIVES
+   GLOBAL EDITORIAL BUTTON SYSTEM
+   =========================================================
+
+   The Archives has outgrown the Giant Brown Pills.
+
+   Buttons now behave like quiet institutional controls:
+   restrained, archival, clearly clickable, and secondary
+   to the stories, objects, and typography around them.
+
+   PayPal custom elements are intentionally NOT targeted.
+   Navigation links are intentionally NOT targeted.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STANDARD ARCHIVE ACTION
+   --------------------------------------------------------- */
+
+.button,
+.home-door-link {
+    display: inline-block;
+
+    width: auto;
+    max-width: 100%;
+
+    margin-top: 20px;
+    padding: 11px 20px;
+
+    background: transparent;
+    color: var(--archive-brown);
+
+    border: 1px solid var(--archive-button-border);
+    border-radius: 2px;
+
+    font-family: Georgia, serif;
+    font-size: 0.92rem;
+    font-weight: bold;
+    line-height: 1.25;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* ---------------------------------------------------------
+   STANDARD BUTTON HOVER
+   --------------------------------------------------------- */
+
+.button:hover,
+.home-door-link:hover {
+    background: var(--archive-brown);
+    color: var(--archive-cream);
+
+    border-color: var(--archive-brown);
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   KEYBOARD ACCESSIBILITY
+   --------------------------------------------------------- */
+
+.button:focus-visible,
+.home-door-link:focus-visible {
+    outline: 2px solid var(--archive-brown);
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   ORDINARY HTML BUTTONS
+
+   These include catalogue/filter controls.
+
+   They keep their own active-state colours where those
+   already exist, but lose the giant capsule shape.
+   --------------------------------------------------------- */
+
+button:not(paypal-button),
+input[type="submit"],
+input[type="button"] {
+    border-radius: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   CATALOGUE / FILTER CONTROLS
+
+   Smaller than major navigation actions because these
+   control a page rather than lead somewhere new.
+   --------------------------------------------------------- */
+
+.catalogue-mode,
+.catalogue-filter,
+.collect-filter {
+    padding: 9px 15px;
+
+    border-radius: 2px;
+
+    font-family: Georgia, serif;
+    font-size: 0.82rem;
+    font-weight: bold;
+
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+
+    background: transparent;
+    color: var(--archive-brown);
+
+    border: 1px solid var(--archive-border);
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease;
+}
+
+
+/* Filter hover */
+
+.catalogue-mode:hover,
+.catalogue-filter:hover,
+.collect-filter:hover {
+    background: rgba(58, 48, 40, 0.05);
+
+    color: var(--archive-brown);
+
+    border-color: var(--archive-brown);
+}
+
+
+/* Active filter */
+
+.catalogue-mode.active,
+.catalogue-filter.active,
+.collect-filter.active {
+    background: var(--archive-brown);
+    color: var(--archive-cream);
+
+    border-color: var(--archive-brown);
+}
+
+
+/* ---------------------------------------------------------
+   CARD / HUB BUTTONS
+
+   Gift Shop, Museum and similar institutional cards.
+
+   Existing layout rules still control their position;
+   this block controls only their visual language.
+   --------------------------------------------------------- */
+
+.giftshop-hub-button,
+.museum-wing-button {
+    padding: 10px 18px;
+
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+}
+
+
+/* ---------------------------------------------------------
+   HOMEPAGE DOOR LINKS
+
+   These used to be especially large dark pills.
+   Now they behave like little museum navigation labels.
+   --------------------------------------------------------- */
+
+.home-door-link {
+    align-self: center;
+
+    margin-top: auto;
+
+    padding: 10px 18px;
+
+    background: transparent;
+    color: var(--archive-brown);
+
+    border: 1px solid var(--archive-button-border);
+    border-radius: 2px;
+
+    font-size: 0.84rem;
+    letter-spacing: 0.07em;
+}
+
+
+/* ---------------------------------------------------------
+   BOOK PURCHASE LINKS
+
+   Preserve their centred purchase layout without making
+   them visually louder than the book itself.
+   --------------------------------------------------------- */
+
+.book-buy .button {
+    padding: 11px 20px;
+
+    font-size: 0.88rem;
+}
+
+
+/* ---------------------------------------------------------
+   SUPPORT / CONTACT ACTIONS
+   --------------------------------------------------------- */
+
+.support-action .button,
+.contact-page .button {
+    padding: 11px 20px;
+}
+
+
+/* ---------------------------------------------------------
+   OPTIONAL PRIMARY ACTION
+
+   Available anywhere we deliberately WANT one stronger
+   action in the future.
+
+   Usage:
+   class="button button-primary"
+
+   We do not automatically make everything primary.
+   --------------------------------------------------------- */
+
+.button.button-primary {
+    background: var(--archive-brown);
+    color: var(--archive-cream);
+
+    border-color: var(--archive-brown);
+}
+
+.button.button-primary:hover {
+    background: var(--archive-brown-hover);
+    color: var(--archive-cream);
+
+    border-color: var(--archive-brown-hover);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+
+   Do NOT automatically turn every button into a giant
+   full-width bar.
+
+   Some existing page-specific rules request full width;
+   those can remain where useful.
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .button,
+    .home-door-link {
+        padding: 10px 17px;
+
+        font-size: 0.84rem;
+        letter-spacing: 0.05em;
+    }
+
+
+    .catalogue-mode,
+    .catalogue-filter,
+    .collect-filter {
+        padding: 8px 12px;
+
+        font-size: 0.76rem;
+        letter-spacing: 0.045em;
+    }
+
+
+    .giftshop-hub-button,
+    .museum-wing-button {
+        font-size: 0.82rem;
+    }
+
+}
