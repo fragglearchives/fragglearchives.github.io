@@ -3,20 +3,19 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Odin Relics | The Fraggle Archives</title>
+<title>Odin Relics | The Fraggle Archives</title>
 
-    <link rel="stylesheet" href="/styles.css?v=2">
-
+<link rel="stylesheet" href="/styles.css">
 
 <style>
 
 /* =========================================================
    ODIN RELICS
-   The Fraggle Archives Museum
+   Museum wing editorial framing
    ========================================================= */
 
 .odin-relics-page {
@@ -26,11 +25,20 @@
 
 
 /* =========================================================
-   EYEBROWS
+   PAGE INTRO
    ========================================================= */
 
-.odin-relics-page .eyebrow {
-    margin: 0 0 6px;
+.odin-relics-intro {
+    max-width: 820px;
+
+    margin: 45px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.odin-relics-eyebrow {
+    margin: 0 0 7px;
 
     font-size: 0.78rem;
     font-weight: bold;
@@ -41,192 +49,56 @@
     opacity: 0.65;
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.odin-intro {
-    max-width: 780px;
-
-    margin: 45px auto 75px;
-
-    text-align: center;
-}
-
-.odin-intro h1 {
+.odin-relics-intro h1 {
     margin: 8px 0 24px;
 
     font-size: clamp(2.8rem, 5vw, 4rem);
     line-height: 1.06;
 }
 
-.odin-lead {
-    max-width: 700px;
+.odin-relics-thesis {
+    max-width: 720px;
+
+    margin: 0 auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.odin-relics-lead {
+    max-width: 690px;
 
     margin: 0 auto;
 
-    font-size: 1.18rem;
+    font-size: 1.13rem;
     line-height: 1.75;
 }
 
-
-/* =========================================================
-   COLLECTION INTRO
-   ========================================================= */
-
-.odin-collection-header {
-    max-width: 760px;
-
-    margin: 0 auto 40px;
-
-    text-align: center;
-}
-
-.odin-collection-header h2 {
-    margin: 6px 0 15px;
-
-    font-size: clamp(2.3rem, 4vw, 3.3rem);
-    line-height: 1.1;
-}
-
-.odin-collection-header p:not(.eyebrow) {
+.odin-relics-note {
     max-width: 650px;
 
-    margin: 0 auto;
+    margin: 22px auto 0;
 
-    font-size: 1.06rem;
-    line-height: 1.7;
-}
+    font-size: 1.03rem;
+    line-height: 1.65;
 
+    font-style: italic;
 
-/* =========================================================
-   RELIC GRID
-   ========================================================= */
-
-.odin-relics-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 30px;
+    opacity: 0.76;
 }
 
 
 /* =========================================================
    RELIC CARDS
+   Existing structure preserved
    ========================================================= */
 
-.odin-relic-card {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 0;
-
-    padding: 32px;
-
-    background: var(--archive-card);
-
-    border: 1px solid var(--archive-border);
-
-    box-shadow: var(--archive-shadow);
-}
-
-.odin-relic-card-header {
-    margin-bottom: 22px;
-
-    text-align: center;
-}
-
-.odin-relic-type {
-    display: block;
-
-    margin: 0 0 7px;
-
-    font-size: 0.76rem;
-    font-weight: bold;
-
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
-
-    opacity: 0.62;
-}
-
-.odin-relic-card h3 {
-    margin: 0;
-
-    font-size: 2rem;
-    line-height: 1.18;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   ARTIFACT IMAGES
-   ========================================================= */
-
-.odin-relic-image {
-    display: block;
-
-    width: auto;
-    height: auto;
-
-    max-width: 88%;
-    max-height: 430px;
-
-    margin: 0 auto 24px;
-
-    object-fit: contain;
-}
-
-
-/* =========================================================
-   RELIC COPY
-   ========================================================= */
-
-.odin-relic-description {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    font-size: 1.05rem;
-    line-height: 1.7;
-
-    text-align: left;
-}
-
-
-/* =========================================================
-   FEATURED MEMORIAL CARD
-   ========================================================= */
-
-.odin-relic-card-featured {
-    grid-column: 1 / -1;
-
-    max-width: 760px;
-    width: 100%;
-
-    margin: 10px auto 0;
-}
-
-.odin-relic-card-featured .odin-relic-image {
-    max-height: 470px;
-}
-
-.odin-memorial-note {
-    max-width: 620px;
-
-    margin: 28px auto 0;
-    padding-top: 24px;
-
-    border-top: 1px solid var(--archive-border);
-
-    font-size: 1.2rem;
-    line-height: 1.7;
-
-    text-align: center;
+.odin-relics-page .collection-card {
+    margin-bottom: 34px;
 }
 
 
@@ -234,57 +106,47 @@
    CLOSING PRINCIPLE
    ========================================================= */
 
-.odin-principle {
-    max-width: 760px;
+.odin-relics-closing {
+    max-width: 740px;
 
-    margin: 100px auto 70px;
+    margin: 85px auto 70px;
+    padding: 0 22px;
 
     text-align: center;
 }
 
-.odin-principle h2 {
-    margin: 6px 0 28px;
+.odin-relics-closing-eyebrow {
+    margin: 0 0 7px;
 
-    font-size: clamp(2.5rem, 4.2vw, 3.5rem);
-    line-height: 1.08;
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
 }
 
-.odin-principle p:not(.eyebrow) {
-    max-width: 650px;
+.odin-relics-closing h2 {
+    max-width: 680px;
+
+    margin: 8px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.odin-relics-closing p:last-child {
+    max-width: 620px;
 
     margin: 0 auto;
 
-    font-size: 1.32rem;
+    font-size: 1.05rem;
     line-height: 1.7;
-}
 
-.odin-principle strong {
-    display: block;
-
-    margin-top: 12px;
-
-    font-size: 1.35em;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .odin-relics-page {
-        max-width: 92%;
-    }
-
-    .odin-relics-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .odin-relic-card-featured {
-        grid-column: auto;
-    }
-
+    font-style: italic;
 }
 
 
@@ -294,66 +156,32 @@
 
 @media (max-width: 700px) {
 
-    .odin-relics-page {
-        max-width: none;
+    .odin-relics-intro {
+        margin: 35px auto 55px;
+        padding: 0 18px;
     }
 
-
-    .odin-intro {
-        margin: 35px auto 60px;
-    }
-
-    .odin-intro h1 {
+    .odin-relics-intro h1 {
         font-size: 2.65rem;
     }
 
-    .odin-lead {
-        font-size: 1.08rem;
+    .odin-relics-thesis {
+        font-size: 2.15rem;
+        margin-bottom: 17px;
     }
 
-
-    .odin-collection-header {
-        margin-bottom: 30px;
+    .odin-relics-lead {
+        font-size: 1.04rem;
+        line-height: 1.68;
     }
 
-    .odin-collection-header h2 {
-        font-size: 2.45rem;
+    .odin-relics-note {
+        font-size: 0.98rem;
     }
 
-
-    .odin-relics-grid {
-        gap: 24px;
-    }
-
-
-    .odin-relic-card {
-        padding: 28px 22px;
-    }
-
-    .odin-relic-card h3 {
-        font-size: 1.8rem;
-    }
-
-    .odin-relic-image {
-        max-width: 90%;
-        max-height: 340px;
-    }
-
-    .odin-relic-description {
-        font-size: 1.03rem;
-    }
-
-
-    .odin-principle {
-        margin: 75px auto 55px;
-    }
-
-    .odin-principle h2 {
-        font-size: 2.65rem;
-    }
-
-    .odin-principle p:not(.eyebrow) {
-        font-size: 1.18rem;
+    .odin-relics-closing {
+        margin: 65px auto 55px;
+        padding: 0 18px;
     }
 
 }
@@ -368,25 +196,25 @@
 
 <header>
 
-    <img
-        src="/Banner.PNG"
-        alt="The Fraggle Archives"
-        class="header-banner">
+<img
+    src="/Banner.PNG"
+    alt="The Fraggle Archives"
+    class="header-banner"
+>
 
+<div id="site-nav"></div>
 
-    <div id="site-nav"></div>
+<script>
 
-    <script>
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
 
-        fetch('/nav.html')
-            .then(response => response.text())
-            .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
 
-                document.getElementById('site-nav').innerHTML = data;
+    });
 
-            });
-
-    </script>
+</script>
 
 </header>
 
@@ -396,173 +224,117 @@
 
 
     <!-- =====================================================
-         HERO
+         PAGE INTRO
          ===================================================== -->
 
-    <section class="odin-intro">
+    <section class="odin-relics-intro">
 
-        <p class="eyebrow">
-            The Fraggle Archives Museum
+        <p class="odin-relics-eyebrow">
+            THE MEMORY
         </p>
 
         <h1>
             Odin Relics
         </h1>
 
-        <p class="odin-lead">
+        <p class="odin-relics-thesis">
+            Love leaves evidence.
+        </p>
+
+        <p class="odin-relics-lead">
             Some of the smallest objects carry the deepest memories.
             These pieces belonged to Odin's life, and remain part of his story.
         </p>
 
+        <p class="odin-relics-note">
+            What remains may be small. What it carries is not.
+        </p>
+
     </section>
 
 
 
     <!-- =====================================================
-         COLLECTION INTRO
+         THE NOSE PRINT
          ===================================================== -->
 
-    <section class="odin-collection-header">
-
-        <p class="eyebrow">
-            The Collection
-        </p>
+    <div class="collection-card">
 
         <h2>
-            Small Things, Kept Close
+            The Nose Print
         </h2>
 
+        <img
+            src="/images/museum/odinnoseprint.jpeg"
+            alt="Odin's nose print, preserved as part of the Fraggle Archives memorial collection"
+        >
+
         <p>
-            A nose print. A tuft of fur. Physical fragments of a life.
-            Each one preserves something that memory alone cannot quite hold.
+            A small impression of something unmistakably his.
+            Odin's nose print preserves one of the tiny physical details
+            that made him who he was — a quiet reminder that even
+            the smallest marks can hold an entire life.
         </p>
 
-    </section>
+    </div>
 
 
 
     <!-- =====================================================
-         RELICS
+         THE FUR CLIPPING
          ===================================================== -->
 
-    <section class="odin-relics-grid">
+    <div class="collection-card">
 
+        <h2>
+            The Fur Clipping
+        </h2>
 
-        <!-- =================================================
-             NOSE PRINT
-             ================================================= -->
+        <img
+            src="/images/museum/odinfur.jpeg"
+            alt="Odin's preserved fur clippings, kept as part of his memorial collection"
+        >
 
-        <article class="odin-relic-card">
+        <p>
+            A small tuft of Odin's fur, preserved so that something soft
+            and familiar remains close. It holds the texture and colour of him —
+            a simple, physical reminder of the cat who once filled the Archives
+            with his presence.
+        </p>
 
-            <div class="odin-relic-card-header">
-
-                <span class="odin-relic-type">
-                    Memorial Impression
-                </span>
-
-                <h3>
-                    The Nose Print
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/odinnoseprint.jpeg"
-                alt="Odin's nose print, preserved as part of the Fraggle Archives memorial collection"
-                class="odin-relic-image">
-
-
-            <p class="odin-relic-description">
-                A small impression of something unmistakably his.
-                Odin's nose print preserves one of the tiny physical details
-                that made him who he was — a quiet reminder that even the
-                smallest marks can hold an entire life.
-            </p>
-
-        </article>
+    </div>
 
 
 
-        <!-- =================================================
-             FUR CLIPPING
-             ================================================= -->
+    <!-- =====================================================
+         SACRED BONE FRAGMENTS
+         ===================================================== -->
 
-        <article class="odin-relic-card">
+    <div class="collection-card">
 
-            <div class="odin-relic-card-header">
+        <h2>
+            Sacred Bone Fragments
+        </h2>
 
-                <span class="odin-relic-type">
-                    Memorial Relic
-                </span>
+        <img
+            src="/images/museum/odinsacredashes.jpeg"
+            alt="Odin's preserved bone fragments, kept as part of his memorial collection"
+        >
 
-                <h3>
-                    The Fur Clipping
-                </h3>
+        <p>
+            Small fragments of Odin's cremated remains, preserved as a tangible
+            connection to the body that carried him through his life.
+            They are quiet, physical pieces of someone deeply loved —
+            kept because sometimes even the smallest part of a life
+            can feel immeasurably precious.
+        </p>
 
-            </div>
+        <p>
+            Some things are kept because they are historically important.
+            Others are kept because someone mattered.
+        </p>
 
-
-            <img
-                src="/images/museum/odinfur.jpeg"
-                alt="Odin's preserved fur clippings, kept as part of his memorial collection"
-                class="odin-relic-image">
-
-
-            <p class="odin-relic-description">
-                A small tuft of Odin's fur, preserved so that something
-                soft and familiar remains close. It holds the texture and
-                colour of him — a simple, physical reminder of the cat who
-                once filled the Archives with his presence.
-            </p>
-
-        </article>
-
-
-
-        <!-- =================================================
-             BONE FRAGMENTS
-             ================================================= -->
-
-        <article class="odin-relic-card odin-relic-card-featured">
-
-            <div class="odin-relic-card-header">
-
-                <span class="odin-relic-type">
-                    Sacred Memorial Relic
-                </span>
-
-                <h3>
-                    Sacred Bone Fragments
-                </h3>
-
-            </div>
-
-
-            <img
-                src="/images/museum/odinsacredashes.jpeg"
-                alt="Odin's preserved bone fragments, kept as part of his memorial collection"
-                class="odin-relic-image">
-
-
-            <p class="odin-relic-description">
-                Small fragments of Odin's cremated remains, preserved as
-                a tangible connection to the body that carried him through
-                his life. They are quiet, physical pieces of someone deeply
-                loved — kept because sometimes even the smallest part of a
-                life can feel immeasurably precious.
-            </p>
-
-
-            <p class="odin-memorial-note">
-                Some things are kept because they are historically important.
-                Others are kept because someone mattered.
-            </p>
-
-        </article>
-
-
-    </section>
+    </div>
 
 
 
@@ -570,23 +342,19 @@
          CLOSING PRINCIPLE
          ===================================================== -->
 
-    <section class="odin-principle">
+    <section class="odin-relics-closing">
 
-        <p class="eyebrow">
-            The Archive Principle
+        <p class="odin-relics-closing-eyebrow">
+            THE MEMORY PRINCIPLE
         </p>
 
         <h2>
-            What Remains
+            Small things can hold an entire life.
         </h2>
 
         <p>
-            Memory lives in stories, photographs, and the tiny physical
-            things that refuse to become ordinary again.
-
-            <strong>
-                Some pieces stay small. Their meaning does not.
-            </strong>
+            Memory does not ask an object to be grand.
+            It only asks that it be his.
         </p>
 
     </section>
@@ -604,17 +372,19 @@
 
 <script>
 
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
+fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
 
-            document.getElementById('footer-placeholder').innerHTML = data;
+        document.getElementById('footer-placeholder').innerHTML = data;
 
-            if (window.initFooterMoonPhase) {
-                window.initFooterMoonPhase();
-            }
+        if (window.initFooterMoonPhase) {
 
-        });
+            window.initFooterMoonPhase();
+
+        }
+
+    });
 
 </script>
 
