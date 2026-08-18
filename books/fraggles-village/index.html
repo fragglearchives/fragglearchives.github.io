@@ -1,1 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fraggle's Village | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   FRAGGLE'S VILLAGE
+   ========================================================= */
+
+.fv-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.fv-hero {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    margin: 55px auto 85px;
+    padding: 0 24px;
+}
+
+.fv-cover-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.fv-cover {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+    box-shadow: var(--archive-shadow);
+}
+
+.fv-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.fv-hero h1 {
+    margin: 8px 0 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 5vw, 4.25rem);
+    line-height: 1.03;
+}
+
+.fv-subtitle {
+    margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.4rem;
+    line-height: 1.45;
+
+    font-style: italic;
+}
+
+.fv-status {
+    margin: 0 0 22px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    opacity: 0.68;
+}
+
+.fv-hero-copy {
+    max-width: 610px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   STORY SECTION
+   ========================================================= */
+
+.fv-story {
+    max-width: 760px;
+
+    margin: 0 auto 85px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.fv-story h2 {
+    max-width: 700px;
+
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.25rem);
+    line-height: 1.12;
+}
+
+.fv-story p:not(.fv-eyebrow) {
+    max-width: 680px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUY / PICKUP
+   ========================================================= */
+
+.fv-buy-section {
+    max-width: 840px;
+
+    margin: 0 auto 85px;
+    padding: 42px 38px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.fv-buy-section > .fv-eyebrow {
+    text-align: center;
+}
+
+.fv-buy-section > h2 {
+    margin: 8px 0 32px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    line-height: 1.1;
+}
+
+.fv-buy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.fv-buy-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 26px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.fv-buy-card h3 {
+    margin: 0 0 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.fv-buy-card p {
+    margin: 0 0 20px;
+
+    line-height: 1.7;
+}
+
+.fv-buy-card .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   FUNDRAISING
+   ========================================================= */
+
+.fv-fundraising {
+    max-width: 780px;
+
+    margin: 0 auto 85px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.fv-fundraising h2 {
+    max-width: 700px;
+
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.25rem);
+    line-height: 1.12;
+}
+
+.fv-fundraising p:not(.fv-eyebrow) {
+    max-width: 680px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.fv-fundraising-strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem !important;
+}
+
+
+/* =========================================================
+   EXTRAS
+   ========================================================= */
+
+.fv-extras {
+    max-width: 820px;
+
+    margin: 0 auto 85px;
+    padding: 36px 34px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+
+    text-align: center;
+}
+
+.fv-extras h2 {
+    margin: 8px 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.1rem, 3.8vw, 2.8rem);
+}
+
+.fv-extras p:not(.fv-eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   FIELD RECORDS
+   ========================================================= */
+
+.fv-tracker {
+    max-width: 760px;
+
+    margin: 0 auto 85px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.fv-tracker h2 {
+    margin: 8px 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    line-height: 1.12;
+}
+
+.fv-tracker p:not(.fv-eyebrow) {
+    max-width: 620px;
+
+    margin: 0 auto 24px;
+
+    font-size: 1.06rem;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.fv-closing {
+    max-width: 760px;
+
+    margin: 95px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.fv-closing h2 {
+    max-width: 680px;
+
+    margin: 8px auto 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4.2vw, 3.3rem);
+    line-height: 1.12;
+}
+
+.fv-closing p:last-child {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.72;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .fv-hero {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        margin: 40px auto 65px;
+        padding: 0 18px;
+
+        text-align: center;
+    }
+
+    .fv-cover {
+        max-width: 260px;
+    }
+
+    .fv-hero h1 {
+        font-size: 3rem;
+    }
+
+    .fv-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .fv-hero-copy {
+        margin: 0 auto;
+
+        font-size: 1.03rem;
+    }
+
+
+    .fv-buy-section {
+        margin: 0 16px 65px;
+        padding: 30px 20px;
+    }
+
+    .fv-buy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fv-buy-card .button {
+        align-self: stretch;
+        text-align: center;
+    }
+
+
+    .fv-story,
+    .fv-fundraising,
+    .fv-tracker,
+    .fv-closing {
+        padding: 0 18px;
+    }
+
+
+    .fv-extras {
+        margin: 0 16px 65px;
+        padding: 30px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+    <div id="site-nav"></div>
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
+</header>
+
+
+
+<main class="fv-page">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="fv-hero">
+
+        <div class="fv-cover-wrap">
+
+            <img
+                src="/images/books/FraggleCover.png"
+                alt="Fraggle's Village book cover"
+                class="fv-cover"
+            >
+
+        </div>
+
+
+        <div>
+
+            <p class="fv-eyebrow">
+                THE FIRST BOOK
+            </p>
+
+            <h1>
+                Fraggle's Village
+            </h1>
+
+            <p class="fv-subtitle">
+                A story of love, memory, and one very brave boy.
+            </p>
+
+            <p class="fv-status">
+                Published
+            </p>
+
+            <p class="fv-hero-copy">
+                The true story of Fraggle — a brave former stray,
+                the people who came together around him,
+                and the small grey cat whose life became
+                the beginning of the Fraggle Archives.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         THE STORY
+         ===================================================== -->
+
+    <section class="fv-story">
+
+        <p class="fv-eyebrow">
+            THE STORY
+        </p>
+
+        <h2>
+            One little cat. One enormous village.
+        </h2>
+
+        <p>
+            Fraggle arrived carrying a difficult history,
+            a fierce little hiss, and no reason to trust that the world
+            had suddenly become safe.
+        </p>
+
+        <p>
+            Over the months that followed, people showed up for him —
+            with veterinary care, patience, food, kindness,
+            practical help, and the willingness to meet him where he was.
+        </p>
+
+        <p>
+            <em>Fraggle's Village</em> is the story of that life,
+            the people who helped carry it,
+            and what can happen when someone is truly seen.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GET THE BOOK
+         ===================================================== -->
+
+    <section class="fv-buy-section">
+
+        <p class="fv-eyebrow">
+            GET THE BOOK
+        </p>
+
+        <h2>
+            Carry Fraggle's Story Home
+        </h2>
+
+
+        <div class="fv-buy-grid">
+
+
+            <article class="fv-buy-card">
+
+                <h3>
+                    Amazon
+                </h3>
+
+                <p>
+                    Order a copy online through Amazon.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://a.co/d/07kPW8hM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Buy on Amazon
+                </a>
+
+            </article>
+
+
+
+            <article class="fv-buy-card">
+
+                <h3>
+                    Ottawa Pickup
+                </h3>
+
+                <p>
+                    Local copies are available for pickup at
+                    Healthy Pets HQ, 420 Bank Street in Centretown Ottawa,
+                    during store hours.
+                </p>
+
+                <a
+                    class="button"
+                    href="/contact/"
+                >
+                    Arrange Pickup
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUNDRAISING
+         ===================================================== -->
+
+    <section class="fv-fundraising">
+
+        <p class="fv-eyebrow">
+            THE VILLAGE CONTINUES
+        </p>
+
+        <h2>
+            The story helps other cats.
+        </h2>
+
+        <p>
+            Fraggle's Village was created to carry one cat's story forward —
+            and to turn that story into practical help for cats still waiting
+            for care of their own.
+        </p>
+
+        <p class="fv-fundraising-strong">
+            Personal and rescue fundraiser sales support
+            cat rescue and veterinary-care efforts.
+        </p>
+
+        <p>
+            Different fundraising campaigns may support different rescue
+            organizations or cats in care, allowing Fraggle's story
+            to keep travelling where help is needed.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FREE STICKER
+         ===================================================== -->
+
+    <section class="fv-extras">
+
+        <p class="fv-eyebrow">
+            AN ARCHIVAL EXTRA
+        </p>
+
+        <h2>
+            Every personal-sale copy includes a sticker.
+        </h2>
+
+        <p>
+            Copies purchased directly through the Archives include
+            a complimentary Fraggle Archives sticker —
+            a small piece of the Village to carry with the book.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FIELD RECORDS
+         ===================================================== -->
+
+    <section class="fv-tracker">
+
+        <p class="fv-eyebrow">
+            FIELD RECORDS
+        </p>
+
+        <h2>
+            Where did Fraggle travel?
+        </h2>
+
+        <p>
+            If <em>Fraggle's Village</em> has made its way to you,
+            add your corner of the world to the Archives' Field Records
+            and help trace the places his story has travelled.
+        </p>
+
+        <a
+            class="button"
+            href="/tracker/"
+        >
+            Visit Field Records
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="fv-closing">
+
+        <p class="fv-eyebrow">
+            THE VILLAGE PRINCIPLE
+        </p>
+
+        <h2>
+            A life does not have to be long to travel far.
+        </h2>
+
+        <p>
+            Fraggle's story continues every time someone carries it home.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+<script src="/moon-phase.js"></script>
+
+
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
