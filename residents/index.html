@@ -2,15 +2,214 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Residents | The Fraggle Archives</title>
 
     <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   RESIDENTS
+   Editorial framing
+   ========================================================= */
+
+.residents-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.residents-page .archive-page-intro {
+    max-width: 780px;
+
+    margin: 45px auto 60px;
+
+    text-align: center;
+}
+
+.residents-page .archive-eyebrow,
+.residents-editorial-eyebrow {
+    margin: 0 0 6px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.residents-page .archive-page-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.residents-page .archive-page-lead {
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    font-size: 1.16rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDITORIAL OPENING STATEMENT
+   ========================================================= */
+
+.residents-opening-statement {
+    max-width: 760px;
+
+    margin: 65px auto 80px;
+
+    text-align: center;
+}
+
+.residents-opening-statement h2 {
+    max-width: 680px;
+
+    margin: 7px auto 22px;
+
+    font-size: clamp(2.5rem, 4.5vw, 3.7rem);
+    line-height: 1.08;
+}
+
+.residents-opening-statement .residents-statement-line {
+    margin: 0;
+
+    font-size: 1.35rem;
+    line-height: 1.6;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   EXISTING RESIDENT LIST
+   ========================================================= */
+
+.residents-list {
+    margin-top: 0;
+}
+
+
+/* Preserve existing resident cards;
+   only regulate title rhythm very lightly. */
+
+.resident-details h2 {
+    line-height: 1.15;
+}
+
+
+/* =========================================================
+   CLOSING EDITORIAL STATEMENT
+   ========================================================= */
+
+.residents-closing {
+    max-width: 760px;
+
+    margin: 95px auto 70px;
+
+    text-align: center;
+}
+
+.residents-closing h2 {
+    max-width: 700px;
+
+    margin: 7px auto 24px;
+
+    font-size: clamp(2.6rem, 4.5vw, 3.7rem);
+    line-height: 1.08;
+}
+
+.residents-closing-lead {
+    margin: 0;
+
+    font-size: 1.35rem;
+    line-height: 1.65;
+}
+
+.residents-closing-strong {
+    display: block;
+
+    margin-top: 14px;
+
+    font-size: 1.25em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .residents-page {
+        max-width: none;
+    }
+
+
+    .residents-page .archive-page-intro {
+        margin: 35px auto 50px;
+    }
+
+    .residents-page .archive-page-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .residents-page .archive-page-lead {
+        font-size: 1.06rem;
+    }
+
+
+    .residents-opening-statement {
+        margin: 55px auto 65px;
+    }
+
+    .residents-opening-statement h2 {
+        font-size: 2.6rem;
+    }
+
+    .residents-opening-statement .residents-statement-line {
+        font-size: 1.18rem;
+    }
+
+
+    .residents-closing {
+        margin: 75px auto 55px;
+    }
+
+    .residents-closing h2 {
+        font-size: 2.65rem;
+    }
+
+    .residents-closing-lead {
+        font-size: 1.18rem;
+    }
+
+}
+
+</style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -20,22 +219,32 @@
         class="header-banner"
     >
 
+
     <div id="site-nav"></div>
 
+
     <script>
-    fetch('/nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('site-nav').innerHTML = data;
-        });
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
     </script>
 
 </header>
 
 
+
 <main class="residents-page">
 
-    <!-- PAGE INTRO -->
+
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
 
     <section class="archive-page-intro">
 
@@ -43,23 +252,57 @@
             THE FRAGGLE ARCHIVES
         </p>
 
-        <h1>The Residents of the Archives</h1>
-        
+        <h1>
+            The Residents of the Archives
+        </h1>
 
         <p class="archive-page-lead">
-            Every resident has a story. Some arrived by rescue, some by chance,
+
+            Every resident has a story.
+            Some arrived by rescue,
+            some by chance,
             and some simply decided that this was home.
+
         </p>
 
     </section>
 
 
-    <!-- RESIDENTS -->
 
-    <section class="residents-list" aria-label="Residents of the Fraggle Archives">
+    <!-- =====================================================
+         EDITORIAL OPENING
+         ===================================================== -->
+
+    <section class="residents-opening-statement">
+
+        <p class="residents-editorial-eyebrow">
+            The Resident Principle
+        </p>
+
+        <h2>
+            Every cat arrives with a history.
+        </h2>
+
+        <p class="residents-statement-line">
+            The Archives begin by listening.
+        </p>
+
+    </section>
 
 
-        <!-- FRAGGLE -->
+
+    <!-- =====================================================
+         RESIDENTS
+         ===================================================== -->
+
+    <section
+        class="residents-list"
+        aria-label="Residents of the Fraggle Archives">
+
+
+        <!-- =================================================
+             FRAGGLE
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -68,23 +311,45 @@
                 alt="Fraggle"
             >
 
+
             <div class="resident-details">
 
-                <h2>Fraggle</h2>
+                <h2>
+                    Fraggle
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>April 3, 2026</strong>
-    </div>
 
-    <div class="resident-meta-item">
-        <span>Date of Passing</span>
-        <strong>July 30, 2026</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            April 3, 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resident-meta-item">
+
+                        <span>
+                            Date of Passing
+                        </span>
+
+                        <strong>
+                            July 30, 2026
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
 
                 <p>
                     Founder, dreamer, and the reason the Archives exist.
@@ -95,7 +360,10 @@
         </article>
 
 
-        <!-- THE MUPPET -->
+
+        <!-- =================================================
+             THE MUPPET
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -104,27 +372,49 @@
                 alt="Muppet"
             >
 
+
             <div class="resident-details">
 
-                <h2>The Muppet</h2>
+                <h2>
+                    The Muppet
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>September 25, 2023</strong>
-    </div>
 
-    <div class="resident-meta-item">
-        <span>Date of Birth</span>
-        <strong>May 4, 2023</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            September 25, 2023
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resident-meta-item">
+
+                        <span>
+                            Date of Birth
+                        </span>
+
+                        <strong>
+                            May 4, 2023
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
 
                 <p>
-                    Resident chaos ambassador and enthusiastic participant in all
-                    important Archive activities.
+                    Resident chaos ambassador and enthusiastic participant
+                    in all important Archive activities.
                 </p>
 
             </div>
@@ -132,7 +422,10 @@
         </article>
 
 
-        <!-- CARE BEAR -->
+
+        <!-- =================================================
+             CARE BEAR
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -141,22 +434,34 @@
                 alt="Care Bear"
             >
 
+
             <div class="resident-details">
 
-                <h2>Care Bear</h2>
+                <h2>
+                    Care Bear
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>February 6, 2026</strong>
-    </div>
+                    <div class="resident-meta-item">
 
+                        <span>
+                            Joined the Archives
+                        </span>
 
-</div>
+                        <strong>
+                            February 6, 2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
 
                 <p>
-                    Philosopher, headbonk enthusiast, and keeper of quiet wisdom.
+                    Philosopher, headbonk enthusiast,
+                    and keeper of quiet wisdom.
                 </p>
 
             </div>
@@ -164,7 +469,10 @@
         </article>
 
 
-        <!-- SAMSON -->
+
+        <!-- =================================================
+             SAMSON
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -173,22 +481,34 @@
                 alt="Samson"
             >
 
+
             <div class="resident-details">
 
-                <h2>Samson</h2>
+                <h2>
+                    Samson
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>May 30, 2018</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            May 30, 2018
+                        </strong>
+
+                    </div>
+
+                </div>
+
 
                 <p>
-                    A determined resident with excellent taste in toys and absolutely
-                    no tolerance for nonsense.
+                    A determined resident with excellent taste in toys
+                    and absolutely no tolerance for nonsense.
                 </p>
 
             </div>
@@ -196,7 +516,10 @@
         </article>
 
 
-        <!-- TYSON APAWSTOL -->
+
+        <!-- =================================================
+             TYSON APAWSTOL
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -205,26 +528,49 @@
                 alt="Tyson Apawstol"
             >
 
+
             <div class="resident-details">
 
-                <h2>Tyson Apawstol</h2>
+                <h2>
+                    Tyson Apawstol
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>August 7, 2017</strong>
-    </div>
 
-    <div class="resident-meta-item">
-        <span>Date of Birth</span>
-        <strong>May 6, 2017</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            August 7, 2017
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resident-meta-item">
+
+                        <span>
+                            Date of Birth
+                        </span>
+
+                        <strong>
+                            May 6, 2017
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
 
                 <p>
-                    A distinguished member of the Archives' resident community.
+                    A distinguished member of the Archives'
+                    resident community.
                 </p>
 
             </div>
@@ -232,7 +578,10 @@
         </article>
 
 
-        <!-- ZOMBIE MEOWZ -->
+
+        <!-- =================================================
+             ZOMBIE MEOWZ
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -241,26 +590,49 @@
                 alt="Zombie Meowz"
             >
 
+
             <div class="resident-details">
 
-                <h2>Zombie Meowz</h2>
+                <h2>
+                    Zombie Meowz
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>July 29, 2015</strong>
-    </div>
 
-    <div class="resident-meta-item">
-        <span>Date of Birth</span>
-        <strong>February 13, 2015</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            July 29, 2015
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resident-meta-item">
+
+                        <span>
+                            Date of Birth
+                        </span>
+
+                        <strong>
+                            February 13, 2015
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
 
                 <p>
-                    Resident of mysterious origins and considerable personality.
+                    Resident of mysterious origins
+                    and considerable personality.
                 </p>
 
             </div>
@@ -268,7 +640,10 @@
         </article>
 
 
-        <!-- CHUCK BASS -->
+
+        <!-- =================================================
+             CHUCK BASS
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -277,21 +652,34 @@
                 alt="Chuck Bass"
             >
 
+
             <div class="resident-details">
 
-                <h2>Chuck Bass</h2>
+                <h2>
+                    Chuck Bass
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>August 14, 2022</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            August 14, 2022
+                        </strong>
+
+                    </div>
+
+                </div>
+
 
                 <p>
-                    Guardian, gentleman, and devoted resident of the Archives.
+                    Guardian, gentleman,
+                    and devoted resident of the Archives.
                 </p>
 
             </div>
@@ -299,7 +687,10 @@
         </article>
 
 
-        <!-- ODIN -->
+
+        <!-- =================================================
+             ODIN
+             ================================================= -->
 
         <article class="resident-card">
 
@@ -308,53 +699,117 @@
                 alt="Angel Odin"
             >
 
+
             <div class="resident-details">
 
-                <h2>Odin</h2>
+                <h2>
+                    Odin
+                </h2>
+
 
                 <div class="resident-meta">
 
-    <div class="resident-meta-item">
-        <span>Joined the Archives</span>
-        <strong>May 16, 2018</strong>
-    </div>
 
-    <div class="resident-meta-item">
-        <span>Date of Passing</span>
-        <strong>August 25, 2023</strong>
-    </div>
+                    <div class="resident-meta-item">
 
-</div>
+                        <span>
+                            Joined the Archives
+                        </span>
+
+                        <strong>
+                            May 16, 2018
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resident-meta-item">
+
+                        <span>
+                            Date of Passing
+                        </span>
+
+                        <strong>
+                            August 25, 2023
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
 
                 <p>
-                    A beloved angel of the Archives, remembered with love and forever
-                    part of the family.
+                    A beloved angel of the Archives,
+                    remembered with love and forever part of the family.
                 </p>
 
             </div>
 
         </article>
 
+
     </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="residents-closing">
+
+        <p class="residents-editorial-eyebrow">
+            Belonging
+        </p>
+
+        <h2>
+            Home is something we build.
+        </h2>
+
+        <p class="residents-closing-lead">
+
+            One life.
+            One story.
+
+            <strong class="residents-closing-strong">
+                One safe place at a time.
+            </strong>
+
+        </p>
+
+    </section>
+
 
 </main>
 
 
+
 <div id="footer-placeholder"></div>
+
 
 <script src="/moon-phase.js"></script>
 
-<script>
-fetch('/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
 
-        if (window.initFooterMoonPhase) {
-            window.initFooterMoonPhase();
-        }
-    });
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
 </script>
+
 
 </body>
 
