@@ -1,1 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Ways We Learn | The Fraggle Archives</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   THE WAYS WE LEARN
+   ========================================================= */
+
+.twwl-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.twwl-hero {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    margin: 55px auto 85px;
+    padding: 0 24px;
+}
+
+.twwl-cover-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.twwl-cover {
+    display: block;
+
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
+    box-shadow: var(--archive-shadow);
+}
+
+.twwl-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.twwl-hero h1 {
+    margin: 8px 0 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 5vw, 4.25rem);
+    line-height: 1.03;
+}
+
+.twwl-subtitle {
+    margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.42rem;
+    line-height: 1.45;
+
+    font-style: italic;
+}
+
+.twwl-status {
+    margin: 0 0 22px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    opacity: 0.68;
+}
+
+.twwl-hero-copy {
+    max-width: 620px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   PREMISE
+   ========================================================= */
+
+.twwl-premise {
+    max-width: 780px;
+
+    margin: 0 auto 90px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.twwl-premise h2 {
+    max-width: 720px;
+
+    margin: 8px auto 26px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.25rem);
+    line-height: 1.12;
+}
+
+.twwl-premise p:not(.twwl-eyebrow) {
+    max-width: 690px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SIX TEACHERS
+   ========================================================= */
+
+.twwl-teachers {
+    max-width: 860px;
+
+    margin: 0 auto 90px;
+    padding: 42px 38px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+
+    text-align: center;
+}
+
+.twwl-teachers h2 {
+    margin: 8px 0 34px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    line-height: 1.12;
+}
+
+.twwl-teacher-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.twwl-teacher {
+    padding: 24px 20px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.twwl-teacher h3 {
+    margin: 0 0 9px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+.twwl-teacher p {
+    margin: 0;
+
+    font-size: 0.96rem;
+    line-height: 1.6;
+
+    opacity: 0.78;
+}
+
+
+/* =========================================================
+   FUNDRAISING
+   ========================================================= */
+
+.twwl-fundraising {
+    max-width: 780px;
+
+    margin: 0 auto 90px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.twwl-fundraising h2 {
+    max-width: 700px;
+
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.25rem);
+    line-height: 1.12;
+}
+
+.twwl-fundraising p:not(.twwl-eyebrow) {
+    max-width: 680px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.twwl-fundraising-strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.36rem !important;
+    line-height: 1.55 !important;
+}
+
+
+/* =========================================================
+   LAUNCH STATUS
+   ========================================================= */
+
+.twwl-launch {
+    max-width: 840px;
+
+    margin: 0 auto 90px;
+    padding: 42px 38px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+
+    text-align: center;
+}
+
+.twwl-launch h2 {
+    margin: 8px 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    line-height: 1.12;
+}
+
+.twwl-launch p:not(.twwl-eyebrow) {
+    max-width: 650px;
+
+    margin: 0 auto 18px;
+
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+.twwl-launch-date {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.3rem !important;
+}
+
+
+/* =========================================================
+   FIELD RECORDS
+   ========================================================= */
+
+.twwl-tracker {
+    max-width: 760px;
+
+    margin: 0 auto 90px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.twwl-tracker h2 {
+    margin: 8px 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    line-height: 1.12;
+}
+
+.twwl-tracker p:not(.twwl-eyebrow) {
+    max-width: 630px;
+
+    margin: 0 auto 24px;
+
+    font-size: 1.06rem;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.twwl-closing {
+    max-width: 780px;
+
+    margin: 95px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.twwl-closing h2 {
+    max-width: 700px;
+
+    margin: 8px auto 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4.2vw, 3.3rem);
+    line-height: 1.12;
+}
+
+.twwl-closing p:last-child {
+    max-width: 630px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.72;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .twwl-hero {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        margin: 40px auto 65px;
+        padding: 0 18px;
+
+        text-align: center;
+    }
+
+    .twwl-cover {
+        max-width: 280px;
+    }
+
+    .twwl-hero h1 {
+        font-size: 3rem;
+    }
+
+    .twwl-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .twwl-hero-copy {
+        margin: 0 auto;
+
+        font-size: 1.03rem;
+    }
+
+
+    .twwl-premise,
+    .twwl-fundraising,
+    .twwl-tracker,
+    .twwl-closing {
+        padding: 0 18px;
+    }
+
+
+    .twwl-teachers {
+        margin: 0 16px 65px;
+        padding: 30px 20px;
+    }
+
+    .twwl-teacher-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .twwl-launch {
+        margin: 0 16px 65px;
+        padding: 30px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <img
+        src="/Banner.PNG"
+        alt="The Fraggle Archives"
+        class="header-banner"
+    >
+
+    <div id="site-nav"></div>
+
+    <script>
+
+        fetch('/nav.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('site-nav').innerHTML = data;
+
+            });
+
+    </script>
+
+</header>
+
+
+
+<main class="twwl-page">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="twwl-hero">
+
+        <div class="twwl-cover-wrap">
+
+            <img
+                src="/images/books/TWWLcoverwrap.png"
+                alt="The Ways We Learn book cover"
+                class="twwl-cover"
+            >
+
+        </div>
+
+
+        <div>
+
+            <p class="twwl-eyebrow">
+                THE NEXT BOOK
+            </p>
+
+            <h1>
+                The Ways We Learn
+            </h1>
+
+            <p class="twwl-subtitle">
+                Six cats. Six stories.
+                A thousand ways to become yourself.
+            </p>
+
+            <p class="twwl-status">
+                Coming September 2026
+            </p>
+
+            <p class="twwl-hero-copy">
+                A collection of true stories about six very different cats,
+                the lives they carried with them,
+                and the lessons that emerged when they were given
+                the chance to become fully themselves.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PREMISE
+         ===================================================== -->
+
+    <section class="twwl-premise">
+
+        <p class="twwl-eyebrow">
+            THE LESSON
+        </p>
+
+        <h2>
+            Sometimes the teacher has whiskers.
+        </h2>
+
+        <p>
+            <em>The Ways We Learn</em> is about recognition —
+            the moment we stop asking an animal to fit the story
+            we expected and begin paying attention to the one
+            already standing in front of us.
+        </p>
+
+        <p>
+            Across six chapters, six cats become six teachers,
+            each carrying a different history and offering
+            a different way of understanding trust, belonging,
+            commitment, courage, ritual, and the work of seeing clearly.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         THE TEACHERS
+         ===================================================== -->
+
+    <section class="twwl-teachers">
+
+        <p class="twwl-eyebrow">
+            THE TEACHERS
+        </p>
+
+        <h2>
+            Six lives. Six ways of learning.
+        </h2>
+
+
+        <div class="twwl-teacher-grid">
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Care Bear
+                </h3>
+
+                <p>
+                    The Little Philosopher
+                </p>
+
+            </article>
+
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Muppet
+                </h3>
+
+                <p>
+                    The Ambassador of Belonging
+                </p>
+
+            </article>
+
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Samson
+                </h3>
+
+                <p>
+                    A lesson in commitment
+                </p>
+
+            </article>
+
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Chuck Bass
+                </h3>
+
+                <p>
+                    A life that asked to be recognized
+                </p>
+
+            </article>
+
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Tyson Apawstol
+                </h3>
+
+                <p>
+                    The rituals that care creates
+                </p>
+
+            </article>
+
+
+
+            <article class="twwl-teacher">
+
+                <h3>
+                    Zombie Meowz
+                </h3>
+
+                <p>
+                    The Face That Launched a Thousand Rescues
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUNDRAISING
+         ===================================================== -->
+
+    <section class="twwl-fundraising">
+
+        <p class="twwl-eyebrow">
+            THE STORIES TRAVEL OUTWARD
+        </p>
+
+        <h2>
+            The lessons keep moving.
+        </h2>
+
+        <p>
+            The books of the Fraggle Archives are built to do more
+            than preserve stories. Personal sales are used as fundraising
+            opportunities for rescue organizations and cats in need.
+        </p>
+
+        <p class="twwl-fundraising-strong">
+            The first personal-sale fundraising campaign for
+            <em>The Ways We Learn</em> is planned to support Furry Tales Cat Rescue.
+        </p>
+
+        <p>
+            Furry Tales is part of the history carried by the book itself —
+            an organization connected to the journeys of cats whose stories
+            now continue through these pages.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LAUNCH STATUS
+         ===================================================== -->
+
+    <section class="twwl-launch">
+
+        <p class="twwl-eyebrow">
+            PUBLICATION STATUS
+        </p>
+
+        <h2>
+            The book is on its way.
+        </h2>
+
+        <p class="twwl-launch-date">
+            Planned for September 2026.
+        </p>
+
+        <p>
+            Final publication details, pricing, purchase links,
+            local pickup information, and fundraising amounts
+            will be added here as the launch approaches.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FIELD RECORDS
+         ===================================================== -->
+
+    <section class="twwl-tracker">
+
+        <p class="twwl-eyebrow">
+            FIELD RECORDS
+        </p>
+
+        <h2>
+            Tell the Archives where the story found you.
+        </h2>
+
+        <p>
+            When <em>The Ways We Learn</em> begins travelling,
+            readers will be able to record where they found the book
+            and help trace its journey through the Archives' Field Records.
+        </p>
+
+        <a
+            class="button"
+            href="/tracker/"
+        >
+            Visit Field Records
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="twwl-closing">
+
+        <p class="twwl-eyebrow">
+            THE RECOGNITION PRINCIPLE
+        </p>
+
+        <h2>
+            The lesson begins when we learn to see who is already there.
+        </h2>
+
+        <p>
+            Six cats carried the stories.
+            The rest belongs to what we choose to learn from them.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+<script src="/moon-phase.js"></script>
+
+
+<script>
+
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('footer-placeholder').innerHTML = data;
+
+            if (window.initFooterMoonPhase) {
+
+                window.initFooterMoonPhase();
+
+            }
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
