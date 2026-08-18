@@ -3,114 +3,511 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partnerships | The Fraggle Archives</title>
 
-    <title>Gift Shop | The Fraggle Archives</title>
-
-    <link rel="stylesheet" href="/styles.css">
-
+<link rel="stylesheet" href="/styles.css">
 
 <style>
 
 /* =========================================================
-   GIFT SHOP HUB
-   Editorial framing
-   ========================================================= */
+  PARTNERSHIPS
+  Editorial framing
+  ========================================================= */
 
-.giftshop-hub-page {
-    max-width: 1100px;
-    margin: 0 auto;
+.partnerships-page {
+   max-width: 1100px;
+   margin: 0 auto;
 }
 
 
 /* =========================================================
-   PAGE INTRO
-   ========================================================= */
+  PAGE INTRO
+  ========================================================= */
 
-.giftshop-hub-page .archive-page-intro {
-    max-width: 800px;
+.partnerships-intro {
+   max-width: 840px;
 
-    margin: 45px auto 65px;
-    padding: 0 24px;
+   margin: 45px auto 70px;
+   padding: 0 24px;
 
-    text-align: center;
+   text-align: center;
 }
 
-.giftshop-hub-page .archive-eyebrow {
-    margin: 0 0 7px;
+.partnerships-intro .eyebrow {
+   margin: 0 0 7px;
 
-    font-size: 0.78rem;
-    font-weight: bold;
+   font-size: 0.78rem;
+   font-weight: bold;
 
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
 
-    opacity: 0.65;
+   opacity: 0.65;
 }
 
-.giftshop-hub-page .archive-page-intro h1 {
-    margin: 8px 0 24px;
+.partnerships-intro h1 {
+   margin: 8px 0 24px;
 
-    font-size: clamp(2.8rem, 5vw, 4rem);
-    line-height: 1.06;
+   font-size: clamp(2.8rem, 5vw, 4rem);
+   line-height: 1.06;
 }
 
+.partnerships-thesis {
+   max-width: 740px;
 
-/* New editorial thesis */
+   margin: 0 auto 18px;
 
-.giftshop-hub-page .archive-page-thesis {
-    max-width: 720px;
+   font-family: Georgia, "Times New Roman", serif;
 
-    margin: 0 auto 18px;
+   font-size: clamp(2rem, 4vw, 3.15rem);
+   line-height: 1.12;
 
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2rem, 4vw, 3.15rem);
-    line-height: 1.12;
-
-    font-weight: normal;
+   font-weight: normal;
 }
 
+.partnerships-lead {
+   max-width: 700px;
 
-/* Explanatory copy */
+   margin: 0 auto;
 
-.giftshop-hub-page .archive-page-lead {
-    max-width: 680px;
+   font-size: 1.13rem;
+   line-height: 1.75;
+}
 
-    margin: 0 auto;
+.partnerships-note {
+   max-width: 680px;
 
-    font-size: 1.13rem;
-    line-height: 1.75;
+   margin: 22px auto 0;
+
+   font-size: 1.03rem;
+   line-height: 1.65;
+
+   font-style: italic;
+
+   opacity: 0.76;
 }
 
 
 /* =========================================================
-   MOBILE
-   ========================================================= */
+  ACCOUNTABILITY
+  ========================================================= */
 
-@media (max-width: 700px) {
+.funds-accountability {
+   max-width: 820px;
 
-    .giftshop-hub-page .archive-page-intro {
-        margin: 35px auto 55px;
-        padding: 0 18px;
-    }
+   margin: 0 auto 80px;
+   padding: 42px 34px;
 
-    .giftshop-hub-page .archive-page-intro h1 {
-        font-size: 2.65rem;
-    }
+   text-align: center;
 
-    .giftshop-hub-page .archive-page-thesis {
-        margin-bottom: 17px;
+   background: var(--archive-light-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
+}
 
-        font-size: 2.15rem;
-    }
+.funds-accountability .eyebrow {
+   margin: 0 0 7px;
 
-    .giftshop-hub-page .archive-page-lead {
-        font-size: 1.04rem;
-        line-height: 1.68;
-    }
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.funds-accountability h2 {
+   margin: 8px 0 28px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.2rem, 4vw, 3rem);
+   line-height: 1.1;
+}
+
+.funds-total {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   max-width: 460px;
+
+   margin: 0 auto 26px;
+   padding: 28px 24px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.funds-total strong {
+   display: block;
+
+   margin-bottom: 7px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.6rem, 5vw, 4rem);
+   line-height: 1;
+}
+
+.funds-total span {
+   font-size: 0.85rem;
+   font-weight: bold;
+
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.funds-accountability > p:last-child {
+   max-width: 660px;
+
+   margin: 0 auto;
+
+   font-size: 1.05rem;
+   line-height: 1.7;
+}
+
+
+/* =========================================================
+  EDITORIAL TRANSITION
+  ========================================================= */
+
+.partnerships-editorial {
+   max-width: 760px;
+
+   margin: 90px auto 85px;
+   padding: 0 24px;
+
+   text-align: center;
+}
+
+.partnerships-editorial .eyebrow {
+   margin: 0 0 7px;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partnerships-editorial h2 {
+   max-width: 700px;
+
+   margin: 8px auto 22px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.4rem, 4.4vw, 3.35rem);
+   line-height: 1.1;
+
+   font-weight: normal;
+}
+
+.partnerships-editorial p:last-child {
+   max-width: 650px;
+
+   margin: 0 auto;
+
+   font-size: 1.08rem;
+   line-height: 1.72;
+
+   font-style: italic;
+
+   opacity: 0.78;
+}
+
+
+/* =========================================================
+  PARTNER NETWORK
+  ========================================================= */
+
+.partner-network {
+   max-width: 920px;
+
+   margin: 0 auto 80px;
+   padding: 0 22px;
+}
+
+.partner-network > .eyebrow {
+   margin: 0 0 7px;
+
+   text-align: center;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-network > h2 {
+   margin: 8px 0 42px;
+
+   text-align: center;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.3rem, 4vw, 3.2rem);
+   line-height: 1.1;
+}
+
+
+/* =========================================================
+  PARTNER CARDS
+  ========================================================= */
+
+.partner-card {
+   display: grid;
+   grid-template-columns: 220px 1fr;
+
+   gap: 34px;
+
+   align-items: center;
+
+   margin-bottom: 28px;
+   padding: 32px;
+
+   background: var(--archive-light-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
+}
+
+.partner-logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   min-height: 180px;
+
+   padding: 18px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.partner-logo a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 100%;
+   height: 100%;
+}
+
+.partner-logo img {
+   display: block;
+
+   max-width: 100%;
+   max-height: 160px;
+
+   width: auto;
+   height: auto;
+
+   object-fit: contain;
+}
+
+.partner-details {
+   min-width: 0;
+}
+
+.partner-type {
+   display: inline-block;
+
+   margin-bottom: 8px;
+
+   font-size: 0.75rem;
+   font-weight: bold;
+
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-details h3 {
+   margin: 0 0 15px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(1.8rem, 3vw, 2.4rem);
+   line-height: 1.15;
+}
+
+.partner-details p {
+   margin: 0 0 20px;
+
+   line-height: 1.7;
+}
+
+.partner-impact {
+   display: inline-flex;
+   flex-direction: column;
+
+   padding: 14px 18px;
+
+   background: var(--archive-card);
+   border: 1px solid var(--archive-border);
+}
+
+.partner-impact span {
+   margin-bottom: 4px;
+
+   font-size: 0.72rem;
+   font-weight: bold;
+
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partner-impact strong {
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: 1.5rem;
+}
+
+
+/* =========================================================
+  CLOSING PRINCIPLE
+  ========================================================= */
+
+.partnerships-closing {
+   max-width: 760px;
+
+   margin: 95px auto 70px;
+   padding: 0 22px;
+
+   text-align: center;
+}
+
+.partnerships-closing .eyebrow {
+   margin: 0 0 7px;
+
+   font-size: 0.76rem;
+   font-weight: bold;
+
+   letter-spacing: 0.13em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
+}
+
+.partnerships-closing h2 {
+   max-width: 700px;
+
+   margin: 8px auto 22px;
+
+   font-family: Georgia, "Times New Roman", serif;
+
+   font-size: clamp(2.4rem, 4.4vw, 3.4rem);
+   line-height: 1.1;
+
+   font-weight: normal;
+}
+
+.partnerships-closing p {
+   max-width: 650px;
+
+   margin: 0 auto;
+
+   font-size: 1.08rem;
+   line-height: 1.72;
+
+   font-style: italic;
+}
+
+
+/* =========================================================
+  MOBILE
+  ========================================================= */
+
+@media (max-width: 760px) {
+
+   .partnerships-intro {
+       margin: 35px auto 55px;
+       padding: 0 18px;
+   }
+
+   .partnerships-intro h1 {
+       font-size: 2.65rem;
+   }
+
+   .partnerships-thesis {
+       font-size: 2.15rem;
+       margin-bottom: 17px;
+   }
+
+   .partnerships-lead {
+       font-size: 1.04rem;
+       line-height: 1.68;
+   }
+
+   .partnerships-note {
+       font-size: 0.98rem;
+   }
+
+   .funds-accountability {
+       margin: 0 16px 65px;
+       padding: 30px 20px;
+   }
+
+   .partnerships-editorial {
+       margin: 70px auto 65px;
+       padding: 0 18px;
+   }
+
+   .partnerships-editorial h2 {
+       font-size: 2.45rem;
+   }
+
+   .partner-network {
+       padding: 0 16px;
+   }
+
+   .partner-card {
+       grid-template-columns: 1fr;
+
+       gap: 24px;
+
+       padding: 24px 20px;
+   }
+
+   .partner-logo {
+       min-height: 150px;
+   }
+
+   .partner-logo img {
+       max-height: 130px;
+   }
+
+   .partner-details {
+       text-align: center;
+   }
+
+   .partner-impact {
+       align-items: center;
+   }
+
+   .partnerships-closing {
+       margin: 75px auto 55px;
+       padding: 0 18px;
+   }
+
+   .partnerships-closing h2 {
+       font-size: 2.55rem;
+   }
 
 }
 
@@ -124,157 +521,285 @@
 
 <header>
 
-    <img
-         src="/Banner.PNG"
-         alt="The Fraggle Archives"
-         class="header-banner"
-    >
+<img
+   src="/Banner.PNG"
+   alt="The Fraggle Archives"
+   class="header-banner"
+>
 
+<div id="site-nav"></div>
 
-    <div id="site-nav"></div>
+<script>
 
-    <script>
+fetch('/nav.html')
+   .then(response => response.text())
+   .then(data => {
 
-        fetch('/nav.html')
-            .then(response => response.text())
-            .then(data => {
+       document.getElementById('site-nav').innerHTML = data;
 
-                document.getElementById('site-nav').innerHTML = data;
+   });
 
-            });
-
-    </script>
+</script>
 
 </header>
 
 
-<main class="giftshop-hub-page">
+
+<main class="page-content partnerships-page">
 
 
-    <!-- =====================================================
-         PAGE INTRO
-         ===================================================== -->
+   <!-- =====================================================
+        PAGE INTRO
+        ===================================================== -->
 
-    <section class="archive-page-intro">
+   <section class="partnerships-intro">
 
-        <p class="archive-eyebrow">
-            THE WORK CONTINUES
-        </p>
+       <p class="eyebrow">
+           THE VILLAGE, IN PRACTICE
+       </p>
 
-        <h1>
-            The Gift Shop
-        </h1>
+       <h1>
+           Partnerships
+       </h1>
 
-        <p class="archive-page-thesis">
-            Care begins at home.
-        </p>
+       <p class="partnerships-thesis">
+           Care travels farther when it travels together.
+       </p>
 
-        <p class="archive-page-lead">
-            Official souvenirs and artifacts from the Fraggle Archives.
-            Purchases from the Gift Shop help support veterinary care
-            for the residents who call the Archives home.
-        </p>
+       <p class="partnerships-lead">
+           The Fraggle Archives works with rescue organizations
+           and community partners to turn stories, fundraising,
+           and shared effort into direct support for cats.
+       </p>
 
-    </section>
+       <p class="partnerships-note">
+           This page records the organizations that have stood beside the work,
+           and where funds raised through the Archives have gone.
+       </p>
 
-
-
-    <section
-        class="giftshop-hub-grid"
-        aria-label="Gift Shop departments"
-    >
+   </section>
 
 
-        <!-- =====================================
-             COLLECT THE ARCHIVES
-             ===================================== -->
 
-        <article class="giftshop-hub-card giftshop-hub-collect">
+   <!-- =====================================================
+        ACCOUNTABILITY
+        ===================================================== -->
 
-            <h2>
-                Collect The Archives
-            </h2>
+   <section class="funds-accountability">
 
-            <p class="giftshop-hub-category">
-                Little trinkets
-            </p>
+       <p class="eyebrow">
+           ACCOUNTABILITY
+       </p>
 
-            <p class="giftshop-hub-description">
-                Tiny pieces of lore for your walls, notebooks,
-                refrigerators, and other important archival territories.
-            </p>
+       <h2>
+           Where the Funds Went
+       </h2>
 
-            <a
-                class="button giftshop-hub-button"
-                href="/giftshop/collect/index.html"
-            >
-                Collect
-            </a>
+       <div class="funds-total">
 
-        </article>
+           <strong>
+               $337.50
+           </strong>
 
+           <span>
+               Total Funds Directed to Cats
+           </span>
 
-        <!-- =====================================
-             WEAR THE ARCHIVES
-             Featured department
-             ===================================== -->
+       </div>
 
-        <article class="giftshop-hub-card giftshop-hub-wear">
+       <p>
+           Every dollar recorded here represents funds already directed
+           to cat rescue, veterinary care, spay/neuter work,
+           or related support.
+       </p>
 
-            <h2>
-                Wear The Archives
-            </h2>
-
-            <p class="giftshop-hub-category">
-                Clothing &amp; accessories
-            </p>
-
-            <p class="giftshop-hub-description">
-                For carrying the Archives, wearing the Archives,
-                and generally making the Archives everyone else’s problem.
-            </p>
-
-            <a
-                class="button giftshop-hub-button"
-                href="/giftshop/wear/index.html"
-            >
-                Wear
-            </a>
-
-        </article>
+   </section>
 
 
-    </section>
-   
-   <!-- last Gift Shop content ends here -->
+
+   <!-- =====================================================
+        EDITORIAL TRANSITION
+        ===================================================== -->
+
+   <section class="partnerships-editorial">
+
+       <p class="eyebrow">
+           THE WORK BETWEEN US
+       </p>
+
+       <h2>
+           A partnership is more than a logo on a page.
+       </h2>
+
+       <p>
+           It is a promise that a story will keep moving
+           until it becomes help.
+       </p>
+
+   </section>
 
 
-<!-- GIFT SHOP PRINCIPLE -->
 
-<section class="giftshop-closing">
+   <!-- =====================================================
+        PARTNER NETWORK
+        ===================================================== -->
 
-    <p class="archive-eyebrow">
-        THE GIFT SHOP PRINCIPLE
-    </p>
+   <section class="partner-network">
 
-    <h2>
-        Take a little piece of the Archives with you.
-    </h2>
+       <p class="eyebrow">
+           THE NETWORK
+       </p>
 
-    <p>
-        Every purchase helps keep the stories moving.
-    </p>
-
-</section>
+       <h2>
+           Our Partners
+       </h2>
 
 
-<!-- footer starts here -->
 
-<div id="footer-placeholder"></div>
+       <!-- =================================================
+            SPEAK UP FOR PAWS
+            ================================================= -->
 
+       <article class="partner-card">
+
+           <div class="partner-logo">
+
+               <a
+                   href="https://www.facebook.com/SpeakUpForPaws/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+               >
+
+                   <img
+                       src="/images/partnerships/speak-up-for-paws.PNG"
+                       alt="Speak Up For Paws logo"
+                   >
+
+               </a>
+
+           </div>
+
+
+           <div class="partner-details">
+
+               <span class="partner-type">
+                   Fundraising Partner
+               </span>
+
+               <h3>
+                   Speak Up For Paws
+               </h3>
+
+               <p>
+                   The first organization supported through Fraggle Archives
+                   fundraising, with funds directed toward helping cats access
+                   spay and neuter care.
+               </p>
+
+               <div class="partner-impact">
+
+                   <span>
+                       Funds Directed
+                   </span>
+
+                   <strong>
+                       $337.50
+                   </strong>
+
+               </div>
+
+           </div>
+
+       </article>
+
+
+
+       <!-- =================================================
+            RIVERVIEW RESCUES
+            ================================================= -->
+
+       <article class="partner-card">
+
+           <div class="partner-logo">
+
+               <a
+                   href="https://www.riverviewrescues.ca"
+                   target="_blank"
+                   rel="noopener noreferrer"
+               >
+
+                   <img
+                       src="/images/partnerships/riverview-rescue.PNG"
+                       alt="Riverview Rescues logo"
+                   >
+
+               </a>
+
+           </div>
+
+
+           <div class="partner-details">
+
+               <span class="partner-type">
+                   Official Rescue Partner
+               </span>
+
+               <h3>
+                   Riverview Rescues
+               </h3>
+
+               <p>
+                   An official Fraggle Archives rescue partner,
+                   working with the Archives through book fundraising
+                   to turn Fraggle's story into direct support
+                   for animals in their care.
+               </p>
+
+               <div class="partner-impact">
+
+                   <span>
+                       Funds Directed
+                   </span>
+
+                   <strong>
+                       $0.00
+                   </strong>
+
+               </div>
+
+           </div>
+
+       </article>
+
+
+   </section>
+
+
+
+   <!-- =====================================================
+        CLOSING PRINCIPLE
+        ===================================================== -->
+
+   <section class="partnerships-closing">
+
+       <p class="eyebrow">
+           THE VILLAGE PRINCIPLE
+       </p>
+
+       <h2>
+           No story travels alone.
+       </h2>
+
+       <p>
+           Every partnership extends the distance a story can travel —
+           and the number of lives it can reach.
+       </p>
+
+   </section>
 
 
 </main>
+
 
 
 <div id="footer-placeholder"></div>
@@ -282,21 +807,22 @@
 
 <script src="/moon-phase.js"></script>
 
+
 <script>
 
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
+fetch('/footer.html')
+   .then(response => response.text())
+   .then(data => {
 
-            document.getElementById('footer-placeholder').innerHTML = data;
+       document.getElementById('footer-placeholder').innerHTML = data;
 
-            if (window.initFooterMoonPhase) {
+       if (window.initFooterMoonPhase) {
 
-                window.initFooterMoonPhase();
+           window.initFooterMoonPhase();
 
-            }
+       }
 
-        });
+   });
 
 </script>
 
