@@ -63,16 +63,20 @@ body {
    ======================================== */
 
 .site-nav {
-    padding: 18px 10px;
+    padding: 14px 8px;
     background: var(--archive-brown);
     color: var(--archive-cream);
     text-align: center;
+    white-space: nowrap;
 }
 
 .site-nav a {
-    margin: 0 10px;
+    margin: 0 7px;
     color: var(--archive-cream);
-    font-size: 1.1rem;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
