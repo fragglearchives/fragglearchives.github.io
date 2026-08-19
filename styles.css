@@ -139,7 +139,7 @@ main a {
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px 30px 15px;
+    padding: 0px 30px 15px;
     font-size: 1.15rem;
     line-height: 1.8;
 }
@@ -2070,7 +2070,7 @@ input[type="date"] {
     }
 
     main {
-        padding: 45px 25px 15px;
+        padding: 0px 25px 15px;
         font-size: 1.1rem;
     }
 
