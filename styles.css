@@ -532,7 +532,7 @@ input[type="button"] {
    GIFT SHOP
    ======================================== */
 
-     .giftshop-card {
+.giftshop-card {
     max-width: 900px;
     margin: 0 auto 50px;
     padding: 15px 30px 30px;
@@ -549,14 +549,14 @@ input[type="button"] {
     margin: 0 auto;
 }
 
-       .giftshop-card img {
-        display: block;
-        width: auto;
-        max-width: 85%;
-        max-height: 400px;
-        height: auto;
-        margin: 20px auto 25px;
-    }
+.giftshop-card img {
+    display: block;
+    width: auto;
+    max-width: 85%;
+    max-height: 400px;
+    height: auto;
+    margin: 20px auto 25px;
+}
 
 .giftshop-card p:has(paypal-add-to-cart-button) {
    display: block;
@@ -2069,16 +2069,6 @@ input[type="date"] {
         height: auto;
     }
 
-    .site-nav {
-        padding: 14px 8px;
-    }
-
-    .site-nav a {
-        display: inline-block;
-        margin: 5px 6px;
-        font-size: 1rem;
-    }
-
     main {
         padding: 45px 25px 15px;
         font-size: 1.1rem;
@@ -2124,7 +2114,7 @@ input[type="date"] {
         padding-bottom: 0 !important;
     }
 
-       .giftshop-card img {
+    .giftshop-card img {
         display: block;
         width: auto;
         max-width: 85%;
