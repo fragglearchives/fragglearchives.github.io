@@ -207,26 +207,36 @@
    line-height: 1.12;
 }
 
-.wear-page .catalogue-group-box {
-   padding: 34px;
+/*
+   IMPORTANT:
+   The catalogue group itself is no longer one giant card.
+   Each PRODUCT becomes its own card below.
+*/
 
-   background: var(--archive-light-card);
-   border: 1px solid var(--archive-border);
-   box-shadow: var(--archive-shadow);
+.wear-page .catalogue-group-box {
+   padding: 0;
+
+   background: transparent;
+   border: 0;
+   box-shadow: none;
 }
 
 
 /* =========================================================
-  PRODUCT ITEMS
+  PRODUCT ITEMS — INDIVIDUAL CARDS
   ========================================================= */
 
 .wear-page .catalogue-item {
    max-width: 760px;
 
-   margin: 0 auto;
-   padding: 8px 0 12px;
+   margin: 0 auto 34px;
+   padding: 34px;
 
    text-align: center;
+
+   background: var(--archive-light-card);
+   border: 1px solid var(--archive-border);
+   box-shadow: var(--archive-shadow);
 }
 
 .wear-page .catalogue-item h2 {
@@ -279,13 +289,14 @@
    margin-top: 8px;
 }
 
+/*
+   catalogue.js preserves the old HR separators when it moves
+   the products. We don't need them anymore because the cards
+   themselves provide the separation.
+*/
+
 .wear-page .catalogue-group-box hr {
-   max-width: 680px;
-
-   margin: 42px auto;
-
-   border: 0;
-   border-top: 1px solid var(--archive-border);
+   display: none;
 }
 
 
@@ -354,12 +365,10 @@
        font-size: 0.98rem;
    }
 
-
    .wear-care {
        margin-bottom: 60px;
        padding: 0 18px;
    }
-
 
    .wear-page .catalogue-browser {
        margin: 0 16px 45px;
@@ -374,7 +383,6 @@
        width: 100%;
    }
 
-
    #catalogue-results {
        padding: 0 16px;
    }
@@ -384,6 +392,11 @@
    }
 
    .wear-page .catalogue-group-box {
+       padding: 0;
+   }
+
+   .wear-page .catalogue-item {
+       margin-bottom: 24px;
        padding: 26px 18px;
    }
 
@@ -395,7 +408,6 @@
        max-width: 100%;
        max-height: 500px;
    }
-
 
    .wear-closing {
        margin: 75px auto 55px;
@@ -872,10 +884,8 @@
 
 
            </div>
-
-
-
-           <!-- =================================================
+          
+                     <!-- =================================================
                 HOODIES
                 ================================================= -->
 
@@ -1458,10 +1468,9 @@
 
 
            </div>
-
-
-
-           <!-- =================================================
+          
+          
+                     <!-- =================================================
                 OUTERWEAR
                 ================================================= -->
 
@@ -1848,3 +1857,4 @@
 </body>
 
 </html>
+          
