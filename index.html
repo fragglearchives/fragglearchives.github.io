@@ -508,11 +508,20 @@
 
 <header>
 
-    <img
-        src="/Banner.PNG"
-        alt="The Fraggle Archives"
-        class="header-banner"
-    >
+<a href="/" class="header-banner-link" aria-label="Return to The Fraggle Archives home page">
+   <picture>
+       <source
+           media="(max-width: 700px)"
+           srcset="/Banner-Mobile.PNG">
+
+
+       <img
+           src="/banner.PNG"
+           alt="The Fraggle Archives"
+           class="header-banner">
+
+   </picture>
+</a>
 
 
     <div id="site-nav"></div>
