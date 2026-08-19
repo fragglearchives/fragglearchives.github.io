@@ -2048,14 +2048,15 @@ input[type="date"] {
       margin-top: 0;
    }
 
-   .site-nav {
-  padding: 6px 2px;
+.site-nav {
+    padding: 6px 2px;
+    white-space: normal;
 }
 
 .site-nav a {
-  display: inline-block;
-  margin: 2px 2px;
-  font-size: 0.78rem;
+    display: inline-block;
+    margin: 2px 1px;
+    font-size: 0.68rem;
 }
 
 .nav-heart {
