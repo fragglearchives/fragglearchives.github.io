@@ -49,6 +49,14 @@ body {
     margin: 0 auto;
 }
 
+.header-banner-link {
+    display: block;
+}
+
+.header-banner-link picture {
+    display: block;
+}
+
 /* ========================================
    NAVIGATION
    ======================================== */
