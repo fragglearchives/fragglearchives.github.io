@@ -1866,7 +1866,7 @@ footer {
    TRACKER 
    ======================================== */
 .footer-breathing-room {
-  padding-bottom: 0;
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 700px) {
