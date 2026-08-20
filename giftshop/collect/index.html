@@ -273,12 +273,12 @@
 
 /* =========================================
    PRODUCT TITLE
-   Reserve two lines so every row begins evenly.
+   Fixed two-line track for desktop alignment.
    ========================================= */
 
 .collect-card > h3 {
     width: 100%;
-    min-height: 3.72rem;
+    height: 3.72rem;
 
     margin: 0 0 16px;
 
@@ -308,11 +308,11 @@
 
 /* =========================================
    PRODUCT DESCRIPTION
-   Reserve three lines for consistent metadata.
+   Fixed track keeps SIZE dividers aligned.
    ========================================= */
 
 .collect-card-description {
-    min-height: 5.1rem;
+    height: 5.1rem;
 
     margin: 0 0 16px;
 
@@ -323,7 +323,6 @@
 
 /* =========================================
    SIZE = ARCHIVAL METADATA
-   No automatic spacer here.
    ========================================= */
 
 .collect-card-specs {
@@ -346,9 +345,6 @@
    PURCHASE AREA
 
    PayPal product widgets MUST retain full width.
-
-   The purchase area receives the flexible remaining
-   space so all widgets settle at the bottoms of cards.
    ========================================= */
 
 .collect-buy {
@@ -566,8 +562,7 @@
 
 /* =========================================
    MOBILE
-   Single-column cards do not need reserved
-   title/description heights.
+   Single-column cards return to natural height.
    ========================================= */
 
 @media (max-width: 700px) {
@@ -622,7 +617,7 @@
     }
 
     .collect-card > h3 {
-        min-height: 0;
+        height: auto;
 
         font-size: 1.65rem;
 
@@ -638,7 +633,7 @@
     }
 
     .collect-card-description {
-        min-height: 0;
+        height: auto;
     }
 
     .collect-buy {
