@@ -78,7 +78,6 @@
 
 /* =========================================
    CATALOGUE CONTROLS
-   No outer box — pills only.
    ========================================= */
 
 .collect-browser {
@@ -93,6 +92,7 @@
 
     text-align: center;
 }
+
 
 /* =========================================
    COLLECT FILTER CONTROLS
@@ -271,10 +271,14 @@
 }
 
 
-/* Archive product title */
+/* =========================================
+   PRODUCT TITLE
+   Reserve two lines so every row begins evenly.
+   ========================================= */
 
 .collect-card > h3 {
     width: 100%;
+    min-height: 3.72rem;
 
     margin: 0 0 16px;
 
@@ -285,7 +289,10 @@
 }
 
 
-/* Product image */
+/* =========================================
+   PRODUCT IMAGE
+   Fixed display field keeps images aligned.
+   ========================================= */
 
 .collect-card img {
     display: block;
@@ -299,9 +306,14 @@
 }
 
 
-/* Product description */
+/* =========================================
+   PRODUCT DESCRIPTION
+   Reserve three lines for consistent metadata.
+   ========================================= */
 
 .collect-card-description {
+    min-height: 5.1rem;
+
     margin: 0 0 16px;
 
     font-size: 1.02rem;
@@ -309,10 +321,13 @@
 }
 
 
-/* SIZE = archival metadata */
+/* =========================================
+   SIZE = ARCHIVAL METADATA
+   No automatic spacer here.
+   ========================================= */
 
 .collect-card-specs {
-    margin: auto 0 18px;
+    margin: 0 0 18px;
     padding-top: 14px;
 
     border-top: 1px solid var(--archive-border);
@@ -330,14 +345,16 @@
 /* =========================================
    PURCHASE AREA
 
-   IMPORTANT:
    PayPal product widgets MUST retain full width.
-   Shrink-to-fit causes the vertical-letter apocalypse.
+
+   The purchase area receives the flexible remaining
+   space so all widgets settle at the bottoms of cards.
    ========================================= */
 
 .collect-buy {
     width: 100%;
 
+    margin-top: auto;
     padding-top: 4px;
 }
 
@@ -447,8 +464,7 @@
 }
 
 
-
-    /* =========================================
+/* =========================================
    COLLECT — EDITORIAL MAGIC
    ========================================= */
 
@@ -550,6 +566,8 @@
 
 /* =========================================
    MOBILE
+   Single-column cards do not need reserved
+   title/description heights.
    ========================================= */
 
 @media (max-width: 700px) {
@@ -604,6 +622,8 @@
     }
 
     .collect-card > h3 {
+        min-height: 0;
+
         font-size: 1.65rem;
 
         text-align: center;
@@ -615,6 +635,14 @@
 
         max-width: 85%;
         max-height: 300px;
+    }
+
+    .collect-card-description {
+        min-height: 0;
+    }
+
+    .collect-buy {
+        margin-top: 0;
     }
 
 
@@ -1073,12 +1101,21 @@
                     Size: 1.5"
                 </p>
 
- <div class="collect-buy">
-                <paypal-add-to-cart-button data-id="HJ75KEVVH7TH8"></paypal-add-to-cart-button>
-<script>
-  cartPaypal.AddToCart({ id: "HJ75KEVVH7TH8" })
-</script>
-</div>
+                <div class="collect-buy">
+
+                    <paypal-add-to-cart-button
+                        data-id="HJ75KEVVH7TH8">
+                    </paypal-add-to-cart-button>
+
+                    <script>
+
+                        cartPaypal.AddToCart({
+                            id: "HJ75KEVVH7TH8"
+                        });
+
+                    </script>
+
+                </div>
 
             </article>
 
@@ -1105,13 +1142,21 @@
                     Size: 1.75"
                 </p>
 
+                <div class="collect-buy">
 
-<div class="collect-buy">
-                <paypal-add-to-cart-button data-id="3RY2DEGXR74VU"></paypal-add-to-cart-button>
-<script>
-  cartPaypal.AddToCart({ id: "3RY2DEGXR74VU" })
-</script>
-</div>
+                    <paypal-add-to-cart-button
+                        data-id="3RY2DEGXR74VU">
+                    </paypal-add-to-cart-button>
+
+                    <script>
+
+                        cartPaypal.AddToCart({
+                            id: "3RY2DEGXR74VU"
+                        });
+
+                    </script>
+
+                </div>
 
             </article>
 
@@ -1292,13 +1337,21 @@
                     Size: 3" x 3"
                 </p>
 
+                <div class="collect-buy">
 
- <div class="collect-buy">
-                <paypal-add-to-cart-button data-id="NNQWEMVAVR32Y"></paypal-add-to-cart-button>
-<script>
-  cartPaypal.AddToCart({ id: "NNQWEMVAVR32Y" })
-</script>
-</div>
+                    <paypal-add-to-cart-button
+                        data-id="NNQWEMVAVR32Y">
+                    </paypal-add-to-cart-button>
+
+                    <script>
+
+                        cartPaypal.AddToCart({
+                            id: "NNQWEMVAVR32Y"
+                        });
+
+                    </script>
+
+                </div>
 
             </article>
 
@@ -1635,25 +1688,25 @@
     </section>
 
 
-        <!-- =========================================
-     CLOSING PRINCIPLE
-     ========================================= -->
+    <!-- =========================================
+         CLOSING PRINCIPLE
+         ========================================= -->
 
-<section class="collect-closing">
+    <section class="collect-closing">
 
-    <p class="eyebrow">
-        THE ACQUISITION PRINCIPLE
-    </p>
+        <p class="eyebrow">
+            THE ACQUISITION PRINCIPLE
+        </p>
 
-    <h2>
-        Take a little piece of the Archives with you.
-    </h2>
+        <h2>
+            Take a little piece of the Archives with you.
+        </h2>
 
-    <p>
-        Questionable necessity. Excellent provenance.
-    </p>
+        <p>
+            Questionable necessity. Excellent provenance.
+        </p>
 
-</section>
+    </section>
 
 
 </main>
