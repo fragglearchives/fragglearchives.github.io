@@ -775,6 +775,13 @@
                 Mini Posters
             </button>
 
+            <button
+                type="button"
+                class="collect-filter"
+                data-filter="shipping">
+                Shipping
+            </button>
+
         </div>
 
 
@@ -1596,7 +1603,9 @@
          SHIPPING
          ========================================= -->
 
-    <section class="collect-shipping">
+    <section
+        class="collect-shipping"
+        data-category="shipping">
 
         <p class="eyebrow">
             Dispatch Department
@@ -1613,8 +1622,14 @@
             </p>
 
             <p>
-                Items are shipping via most basic lettermail
-                with Canada Post.
+                <strong>
+                    If you would like your order mailed, please add the
+                    appropriate shipping option below to your cart before checkout.
+                </strong>
+            </p>
+
+            <p>
+                Orders are shipped via basic Canada Post lettermail.
             </p>
 
         </div>
@@ -1741,19 +1756,20 @@
     const collectFilters =
         document.querySelectorAll('.collect-filter');
 
-    const collectCategories =
-        document.querySelectorAll('.collect-category');
+    const collectSections =
+        document.querySelectorAll('[data-category]');
 
     const collectStatus =
         document.getElementById('collect-status');
 
 
-    const collectCounts = {
-        all: 16,
-        stickers: 4,
-        buttons: 3,
-        magnets: 4,
-        "mini-posters": 5
+    const collectStatusText = {
+        all: '16 items',
+        stickers: '4 items',
+        buttons: '3 items',
+        magnets: '4 items',
+        "mini-posters": '5 items',
+        shipping: 'Shipping options'
     };
 
 
@@ -1775,10 +1791,10 @@
             button.classList.add('active');
 
 
-            collectCategories.forEach(category => {
+            collectSections.forEach(section => {
 
                 const categoryName =
-                    category.dataset.category;
+                    section.dataset.category;
 
 
                 if (
@@ -1786,27 +1802,21 @@
                     selected === categoryName
                 ) {
 
-                    category.hidden = false;
+                    section.hidden = false;
 
                 }
 
                 else {
 
-                    category.hidden = true;
+                    section.hidden = true;
 
                 }
 
             });
 
 
-            const count =
-                collectCounts[selected];
-
-
             collectStatus.textContent =
-                count === 1
-                    ? '1 item'
-                    : `${count} items`;
+                collectStatusText[selected];
 
         });
 
