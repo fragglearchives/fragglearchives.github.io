@@ -292,8 +292,6 @@
         min-width: 0;
         box-sizing: border-box;
         display: block;
-        -webkit-appearance: none;
-        appearance: none;
     }
 
 
@@ -403,12 +401,20 @@
             grid-template-columns: 1fr;
             gap: 0;
         }
+
+        input[type="month"] {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
         
         
         .tracker-closing {
-    margin: 70px auto 0;
-    padding: 0 18px;
-}
+            margin: 70px auto 0;
+            padding: 0 18px;
+        }
 
     }
 
