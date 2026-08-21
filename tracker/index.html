@@ -839,6 +839,19 @@
       "https://script.google.com/macros/s/AKfycby8JQSOPxY8MMQKpftpC8wdyr4wvK5QQlEVKGUxJZdjSLwdtUc7wxqRgv5iLHQqujIa/exec";
 
 
+    let trackerVisitors = [];
+
+
+    function normalizeTrackerText(value) {
+
+        return String(value || '')
+            .trim()
+            .replace(/\s+/g, ' ')
+            .toLowerCase();
+
+    }
+
+
     const map =
         L.map('tracker-map')
         .setView([30, 0], 2);
@@ -895,6 +908,12 @@
                 return;
 
             }
+
+
+            trackerVisitors =
+                Array.isArray(data.visitors)
+                    ? data.visitors.slice()
+                    : [];
 
 
             const visitorList =
@@ -1239,6 +1258,61 @@
                     );
 
 
+                const submittedName =
+                    normalizeTrackerText(
+                        data.name
+                    );
+
+
+                const submittedBook =
+                    normalizeTrackerText(
+                        data.bookTitle
+                    );
+
+
+                const duplicateCheckIn =
+                    trackerVisitors.some(
+                        function(visitor) {
+
+
+                            const existingName =
+                                normalizeTrackerText(
+                                    visitor.name
+                                );
+
+
+                            const existingBook =
+                                normalizeTrackerText(
+                                    visitor.bookTitle ||
+                                    'Fraggle’s Village'
+                                );
+
+
+                            return (
+                                existingName ===
+                                    submittedName &&
+                                existingBook ===
+                                    submittedBook
+                            );
+
+                        }
+                    );
+
+
+                if (duplicateCheckIn) {
+
+
+                    alert(
+                        "You're already in the Field Records for this book! 🐾\n\n" +
+                        "You can still check in when another Archives book finds you."
+                    );
+
+
+                    return;
+
+                }
+
+
                 try {
 
 
@@ -1255,6 +1329,13 @@
                                 JSON.stringify(data)
                         }
                     );
+
+
+                    trackerVisitors.push({
+                        ...data,
+                        submittedAt:
+                            new Date().toISOString()
+                    });
 
 
                     alert(
