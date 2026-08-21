@@ -402,12 +402,19 @@
             gap: 0;
         }
 
-        input[type="month"] {
+        .month-form-group {
             width: 100%;
             max-width: 100%;
             min-width: 0;
-            box-sizing: border-box;
             overflow: hidden;
+        }
+
+        .month-form-group input[type="month"] {
+            width: -webkit-fill-available;
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            display: block;
         }
         
         
@@ -733,7 +740,7 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group month-form-group">
 
                 <label for="read-date">
                     When did you read it?
