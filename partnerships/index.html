@@ -539,8 +539,8 @@ fetch('/nav.html')
 
        <div class="funds-total">
 
-           <strong>
-               $337.50
+           <strong id="funds-directed-total">
+               $0.00
            </strong>
 
            <span>
@@ -722,6 +722,27 @@ fetch('/nav.html')
 
 
 <div id="footer-placeholder"></div>
+
+
+<script src="/archive-stats.js"></script>
+
+<script>
+
+const fundsDirectedTotal =
+   document.getElementById('funds-directed-total');
+
+if (
+   fundsDirectedTotal &&
+   window.archiveStats &&
+   typeof window.archiveStats.fundsDirectedToCats === 'number'
+) {
+
+   fundsDirectedTotal.textContent =
+       '$' + window.archiveStats.fundsDirectedToCats.toFixed(2);
+
+}
+
+</script>
 
 
 <script src="/moon-phase.js"></script>
