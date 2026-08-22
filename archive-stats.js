@@ -18,7 +18,7 @@ const archiveStats = {
 
   /* Total funds actually directed to cats/rescue work.
      Update this manually when the official total changes. */
-  fundsDirectedToCats: 337.50
+  fundsDirectedToCats: 362.50
 
 };
 
