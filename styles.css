@@ -96,6 +96,62 @@ main a {
     color: var(--archive-cream);
 }
 
+/* ========================================
+   NAVIGATION — TABLET
+   Two deliberate rows so the full navigation
+   remains visible and identical on every page.
+   ======================================== */
+
+@media (min-width: 601px) and (max-width: 1200px) {
+
+    header .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px 8px;
+
+        white-space: normal;
+    }
+
+    header .site-nav a {
+        flex: 0 0 auto;
+
+        margin: 2px 5px;
+
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+
+    header .site-nav .nav-heart {
+        flex: 0 0 auto;
+
+        margin: 0 4px;
+
+        font-size: 0.76rem;
+        line-height: 1.35;
+    }
+
+    /* The fifth separator comes immediately after TRACKER.
+       On tablet it becomes an invisible line break. */
+
+    header .site-nav .nav-heart:nth-of-type(5) {
+        flex-basis: 100%;
+
+        width: 0;
+        height: 0;
+
+        margin: 0;
+
+        overflow: hidden;
+
+        font-size: 0;
+        line-height: 0;
+    }
+
+}
+
 
 /* =========================================================
    ARCHIVE PAGE INTRO
