@@ -102,7 +102,8 @@ main a {
    remains visible and identical on every page.
    ======================================== */
 
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 601px) and (max-width: 1200px),
+       (min-width: 1201px) and (max-width: 1400px) and (hover: none) and (pointer: coarse) {
 
     header .site-nav {
         display: flex;
