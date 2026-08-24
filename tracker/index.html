@@ -533,8 +533,8 @@
             </div>
 
             <div class="archive-stat">
-                <strong id="archive-stat-rescues">—</strong>
-                <span>Official Rescue Partners</span>
+                <strong id="archive-stat-fundraising-partners">—</strong>
+                <span>Fundraising Partners</span>
             </div>
 
             <div class="archive-stat">
@@ -1401,9 +1401,9 @@
         }
 
 
-        const rescues =
+        const fundraisingPartners =
             document.getElementById(
-                "archive-stat-rescues"
+                "archive-stat-fundraising-partners"
             );
 
 
@@ -1419,10 +1419,10 @@
             );
 
 
-        if (rescues) {
+        if (fundraisingPartners) {
 
-            rescues.textContent =
-                stats.rescuePartners;
+            fundraisingPartners.textContent =
+                stats.fundraisingPartners;
 
         }
 
