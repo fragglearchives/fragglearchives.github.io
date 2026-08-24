@@ -19,8 +19,34 @@
    ========================================================= */
 
 .twwl-page {
-    max-width: 1000px;
+    max-width: 1080px;
     margin: 0 auto;
+}
+
+
+/* =========================================================
+   SHARED EDITORIAL TYPE
+   ========================================================= */
+
+.twwl-eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    opacity: 0.62;
+}
+
+.twwl-section-title {
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.35rem);
+    line-height: 1.1;
 }
 
 
@@ -30,13 +56,13 @@
 
 .twwl-hero {
     display: grid;
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 350px 1fr;
 
-    gap: 50px;
+    gap: 58px;
 
     align-items: center;
 
-    margin: 70px auto 85px;
+    margin: 70px auto 100px;
     padding: 0 24px;
 }
 
@@ -49,61 +75,57 @@
     display: block;
 
     width: 100%;
-    max-width: 320px;
+    max-width: 330px;
     height: auto;
 
     box-shadow: var(--archive-shadow);
 }
 
-.twwl-eyebrow {
-    margin: 0 0 8px;
-
-    font-size: 0.78rem;
-    font-weight: bold;
-
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-
-    opacity: 0.65;
+.twwl-hero-content {
+    max-width: 650px;
 }
 
 .twwl-hero h1 {
-    margin: 8px 0 16px;
+    margin: 8px 0 18px;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(3rem, 5vw, 4.25rem);
-    line-height: 1.03;
+    font-size: clamp(3rem, 5.5vw, 4.65rem);
+    line-height: 1.01;
 }
 
 .twwl-subtitle {
-    margin: 0 0 22px;
+    max-width: 600px;
+
+    margin: 0 0 24px;
 
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 1.42rem;
-    line-height: 1.45;
+    line-height: 1.5;
 
     font-style: italic;
 }
 
 .twwl-status {
-    margin: 0 0 22px;
+    margin: 0 0 25px;
 
     font-size: 0.8rem;
     font-weight: bold;
 
-    letter-spacing: 0.11em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
 
-    opacity: 0.68;
+    opacity: 0.66;
 }
 
 .twwl-hero-copy {
     max-width: 620px;
 
+    margin: 0;
+
     font-size: 1.08rem;
-    line-height: 1.75;
+    line-height: 1.78;
 }
 
 
@@ -112,9 +134,9 @@
    ========================================================= */
 
 .twwl-premise {
-    max-width: 780px;
+    max-width: 800px;
 
-    margin: 0 auto 90px;
+    margin: 0 auto 105px;
     padding: 0 24px;
 
     text-align: center;
@@ -122,22 +144,15 @@
 
 .twwl-premise h2 {
     max-width: 720px;
-
-    margin: 8px auto 26px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2.4rem, 4vw, 3.25rem);
-    line-height: 1.12;
 }
 
 .twwl-premise p:not(.twwl-eyebrow) {
     max-width: 690px;
 
-    margin: 0 auto 20px;
+    margin: 0 auto 22px;
 
     font-size: 1.08rem;
-    line-height: 1.75;
+    line-height: 1.78;
 }
 
 
@@ -146,25 +161,21 @@
    ========================================================= */
 
 .twwl-teachers {
-    max-width: 860px;
+    max-width: 900px;
 
-    margin: 0 auto 90px;
-    padding: 42px 38px;
+    margin: 0 auto 105px;
+    padding: 48px 42px;
 
     background: var(--archive-light-card);
     border: 1px solid var(--archive-border);
-    box-shadow: var(--archive-shadow);
 
     text-align: center;
 }
 
 .twwl-teachers h2 {
-    margin: 8px 0 34px;
+    max-width: 720px;
 
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2.3rem, 4vw, 3.1rem);
-    line-height: 1.12;
+    margin-bottom: 38px;
 }
 
 .twwl-teacher-grid {
@@ -176,7 +187,7 @@
 }
 
 .twwl-teacher {
-    padding: 24px 20px;
+    padding: 27px 22px;
 
     background: var(--archive-card);
     border: 1px solid var(--archive-border);
@@ -187,17 +198,116 @@
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 1.55rem;
+    font-size: 1.58rem;
     line-height: 1.2;
 }
 
 .twwl-teacher p {
     margin: 0;
 
-    font-size: 0.96rem;
+    font-size: 0.97rem;
     line-height: 1.6;
 
-    opacity: 0.78;
+    opacity: 0.76;
+}
+
+
+/* =========================================================
+   GET THE BOOK
+   ========================================================= */
+
+.twwl-buy {
+    max-width: 900px;
+
+    margin: 0 auto 105px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.twwl-buy-intro {
+    max-width: 680px;
+
+    margin: 0 auto 38px;
+
+    font-size: 1.07rem;
+    line-height: 1.75;
+}
+
+.twwl-buy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    text-align: left;
+}
+
+.twwl-buy-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 34px 30px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+}
+
+.twwl-buy-card h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.twwl-price {
+    margin: 0 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.42rem;
+    line-height: 1.3;
+
+    font-weight: bold;
+}
+
+.twwl-buy-card p:not(.twwl-price):not(.twwl-impact) {
+    margin: 0 0 18px;
+
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.twwl-impact {
+    margin: 4px 0 26px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--archive-border);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.08rem;
+    line-height: 1.62;
+}
+
+.twwl-buy-card .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.twwl-buy-note {
+    max-width: 710px;
+
+    margin: 28px auto 0;
+
+    font-size: 0.94rem;
+    line-height: 1.65;
+
+    opacity: 0.72;
 }
 
 
@@ -206,80 +316,36 @@
    ========================================================= */
 
 .twwl-fundraising {
-    max-width: 780px;
+    max-width: 800px;
 
-    margin: 0 auto 90px;
+    margin: 0 auto 105px;
     padding: 0 24px;
 
     text-align: center;
 }
 
 .twwl-fundraising h2 {
-    max-width: 700px;
-
-    margin: 8px auto 24px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2.4rem, 4vw, 3.25rem);
-    line-height: 1.12;
+    max-width: 720px;
 }
 
 .twwl-fundraising p:not(.twwl-eyebrow) {
-    max-width: 680px;
+    max-width: 690px;
 
-    margin: 0 auto 20px;
+    margin: 0 auto 22px;
 
     font-size: 1.08rem;
-    line-height: 1.75;
+    line-height: 1.78;
 }
 
 .twwl-fundraising-strong {
-    font-family: Georgia, "Times New Roman", serif;
+    max-width: 670px !important;
 
-    font-size: 1.36rem !important;
-    line-height: 1.55 !important;
-}
-
-
-/* =========================================================
-   LAUNCH STATUS
-   ========================================================= */
-
-.twwl-launch {
-    max-width: 840px;
-
-    margin: 0 auto 90px;
-    padding: 42px 38px;
-
-    background: var(--archive-light-card);
-    border: 1px solid var(--archive-border);
-
-    text-align: center;
-}
-
-.twwl-launch h2 {
-    margin: 8px 0 22px;
+    margin-top: 30px !important;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(2.3rem, 4vw, 3.1rem);
-    line-height: 1.12;
-}
-
-.twwl-launch p:not(.twwl-eyebrow) {
-    max-width: 650px;
-
-    margin: 0 auto 18px;
-
-    font-size: 1.05rem;
-    line-height: 1.72;
-}
-
-.twwl-launch-date {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 1.3rem !important;
+    font-size: 1.35rem !important;
+    line-height: 1.58 !important;
 }
 
 
@@ -288,30 +354,25 @@
    ========================================================= */
 
 .twwl-tracker {
-    max-width: 760px;
+    max-width: 780px;
 
-    margin: 0 auto 90px;
+    margin: 0 auto 110px;
     padding: 0 24px;
 
     text-align: center;
 }
 
 .twwl-tracker h2 {
-    margin: 8px 0 20px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2.3rem, 4vw, 3.1rem);
-    line-height: 1.12;
+    max-width: 700px;
 }
 
 .twwl-tracker p:not(.twwl-eyebrow) {
-    max-width: 630px;
+    max-width: 650px;
 
-    margin: 0 auto 24px;
+    margin: 0 auto 28px;
 
     font-size: 1.06rem;
-    line-height: 1.72;
+    line-height: 1.75;
 }
 
 
@@ -320,31 +381,28 @@
    ========================================================= */
 
 .twwl-closing {
-    max-width: 780px;
+    max-width: 800px;
 
-    margin: 95px auto 60px;
+    margin: 110px auto 65px;
     padding: 0 24px;
 
     text-align: center;
 }
 
 .twwl-closing h2 {
-    max-width: 700px;
+    max-width: 720px;
 
-    margin: 8px auto 22px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(2.4rem, 4.2vw, 3.3rem);
-    line-height: 1.12;
+    margin-bottom: 24px;
 }
 
 .twwl-closing p:last-child {
-    max-width: 630px;
+    max-width: 640px;
 
     margin: 0 auto;
 
-    font-size: 1.08rem;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.13rem;
     line-height: 1.72;
 
     font-style: italic;
@@ -360,24 +418,31 @@
     .twwl-hero {
         grid-template-columns: 1fr;
 
-        gap: 34px;
+        gap: 38px;
 
-        margin: 48px auto 65px;
+        margin: 48px auto 80px;
         padding: 0 18px;
 
         text-align: center;
     }
 
     .twwl-cover {
-        max-width: 280px;
+        max-width: 285px;
+    }
+
+    .twwl-hero-content {
+        margin: 0 auto;
     }
 
     .twwl-hero h1 {
-        font-size: 3rem;
+        font-size: 3.15rem;
     }
 
     .twwl-subtitle {
-        font-size: 1.2rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 1.22rem;
     }
 
     .twwl-hero-copy {
@@ -388,20 +453,29 @@
 
 
     .twwl-premise,
+    .twwl-buy,
     .twwl-fundraising,
     .twwl-tracker,
     .twwl-closing {
-        padding: 0 18px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-    .twwl-closing {
-        margin-bottom: 55px;
+
+    .twwl-premise,
+    .twwl-teachers,
+    .twwl-buy,
+    .twwl-fundraising,
+    .twwl-tracker {
+        margin-bottom: 78px;
     }
 
 
     .twwl-teachers {
-        margin: 0 16px 65px;
-        padding: 30px 20px;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding: 34px 20px;
     }
 
     .twwl-teacher-grid {
@@ -409,9 +483,20 @@
     }
 
 
-    .twwl-launch {
-        margin: 0 16px 65px;
-        padding: 30px 22px;
+    .twwl-buy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .twwl-buy-card {
+        padding: 30px 24px;
+
+        text-align: left;
+    }
+
+
+    .twwl-closing {
+        margin-top: 90px;
+        margin-bottom: 55px;
     }
 
 }
@@ -427,33 +512,39 @@
 <header>
 
 <a href="/" class="header-banner-link" aria-label="Return to The Fraggle Archives home page">
-   <picture>
-       <source
-           media="(max-width: 700px)"
-           srcset="/Banner-Mobile.PNG">
 
+    <picture>
 
-       <img
-           src="/banner.PNG"
-           alt="The Fraggle Archives"
-           class="header-banner">
+        <source
+            media="(max-width: 700px)"
+            srcset="/Banner-Mobile.PNG"
+        >
 
-   </picture>
+        <img
+            src="/banner.PNG"
+            alt="The Fraggle Archives"
+            class="header-banner"
+        >
+
+    </picture>
+
 </a>
 
-    <div id="site-nav"></div>
 
-    <script>
+<div id="site-nav"></div>
 
-        fetch('/nav.html')
-            .then(response => response.text())
-            .then(data => {
 
-                document.getElementById('site-nav').innerHTML = data;
+<script>
 
-            });
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
 
-    </script>
+            document.getElementById('site-nav').innerHTML = data;
+
+        });
+
+</script>
 
 </header>
 
@@ -479,7 +570,7 @@
         </div>
 
 
-        <div>
+        <div class="twwl-hero-content">
 
             <p class="twwl-eyebrow">
                 THE ARCHIVES CONTINUE
@@ -495,7 +586,7 @@
             </p>
 
             <p class="twwl-status">
-                Coming September 2026
+                PUBLISHED
             </p>
 
             <p class="twwl-hero-copy">
@@ -521,7 +612,7 @@
             THE LESSON
         </p>
 
-        <h2>
+        <h2 class="twwl-section-title">
             Sometimes the teacher has whiskers.
         </h2>
 
@@ -553,7 +644,7 @@
             THE TEACHERS
         </p>
 
-        <h2>
+        <h2 class="twwl-section-title">
             Six lives. Six ways of learning.
         </h2>
 
@@ -651,6 +742,113 @@
 
 
     <!-- =====================================================
+         GET THE BOOK
+         ===================================================== -->
+
+    <section class="twwl-buy">
+
+        <p class="twwl-eyebrow">
+            GET THE BOOK
+        </p>
+
+        <h2 class="twwl-section-title">
+            Carry the lessons home.
+        </h2>
+
+        <p class="twwl-buy-intro">
+            <em>The Ways We Learn</em> is available through Amazon
+            or by local pickup in Ottawa.
+            Every purchase helps carry support outward
+            to cat rescue and veterinary-care efforts.
+        </p>
+
+
+        <div class="twwl-buy-grid">
+
+
+            <!-- AMAZON -->
+
+            <article class="twwl-buy-card">
+
+                <h3>
+                    Amazon
+                </h3>
+
+                <p class="twwl-price">
+                    $39.95 CAD
+                </p>
+
+                <p>
+                    Order a copy online through Amazon
+                    and have the book delivered directly to you.
+                </p>
+
+                <p class="twwl-impact">
+                    <strong>$4.61 from each Amazon sale</strong>
+                    is directed to rescue efforts.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://a.co/d/09o3qvYy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Buy on Amazon
+                </a>
+
+            </article>
+
+
+
+            <!-- LOCAL PICKUP -->
+
+            <article class="twwl-buy-card">
+
+                <h3>
+                    Ottawa Pickup
+                </h3>
+
+                <p class="twwl-price">
+                    $34.95 CAD
+                </p>
+
+                <p>
+                    Local copies are available for pickup
+                    at Healthy Pets HQ,
+                    420 Bank Street in Centretown Ottawa,
+                    during store hours.
+                </p>
+
+                <p class="twwl-impact">
+                    <strong>$9.39 from each local pickup sale</strong>
+                    is directed to rescue efforts.
+                </p>
+
+                <a
+                    class="button"
+                    href="/contact/"
+                >
+                    Arrange Pickup
+                </a>
+
+            </article>
+
+
+        </div>
+
+
+        <p class="twwl-buy-note">
+            Rescue contributions differ by purchase method because
+            Amazon retail royalties and locally sold author copies
+            are calculated differently.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
          FUNDRAISING
          ===================================================== -->
 
@@ -660,53 +858,26 @@
             THE STORIES TRAVEL OUTWARD
         </p>
 
-        <h2>
+        <h2 class="twwl-section-title">
             The lessons keep moving.
         </h2>
 
         <p>
             The books of the Fraggle Archives are built to do more
-            than preserve stories. Personal sales are used as fundraising
-            opportunities for rescue organizations and cats in need.
+            than preserve stories.
+            Sales of <em>The Ways We Learn</em> help direct money
+            back toward cats who still need care.
         </p>
 
         <p class="twwl-fundraising-strong">
-            The first personal-sale fundraising campaign for
-            <em>The Ways We Learn</em> is planned to support Furry Tales Cat Rescue.
+            Funds raised through the book support
+            cat rescue and veterinary-care efforts.
         </p>
 
         <p>
-            Furry Tales is part of the history carried by the book itself —
-            an organization connected to the journeys of cats whose stories
-            now continue through these pages.
-        </p>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         LAUNCH STATUS
-         ===================================================== -->
-
-    <section class="twwl-launch">
-
-        <p class="twwl-eyebrow">
-            PUBLICATION STATUS
-        </p>
-
-        <h2>
-            The book is on its way.
-        </h2>
-
-        <p class="twwl-launch-date">
-            Planned for September 2026.
-        </p>
-
-        <p>
-            Final publication details, pricing, purchase links,
-            local pickup information, and fundraising amounts
-            will be added here as the launch approaches.
+            The organizations, cats, and campaigns supported may change
+            over time, allowing the Archives to direct help
+            where it is needed while the stories continue travelling.
         </p>
 
     </section>
@@ -723,14 +894,14 @@
             FIELD RECORDS
         </p>
 
-        <h2>
-            Tell the Archives where the story found you.
+        <h2 class="twwl-section-title">
+            Where did the lessons travel?
         </h2>
 
         <p>
-            When <em>The Ways We Learn</em> begins travelling,
-            readers will be able to record where they found the book
-            and help trace its journey through the Archives' Field Records.
+            If <em>The Ways We Learn</em> has made its way to you,
+            add your corner of the world to the Archives' Field Records
+            and help trace the places these six stories have travelled.
         </p>
 
         <a
@@ -754,7 +925,7 @@
             THE RECOGNITION PRINCIPLE
         </p>
 
-        <h2>
+        <h2 class="twwl-section-title">
             The lesson begins when we learn to see who is already there.
         </h2>
 
