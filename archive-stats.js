@@ -9,9 +9,9 @@
 
 const archiveStats = {
 
-  /* Confirmed rescue organizations formally working
-     with the Fraggle Archives */
-  rescuePartners: 1,
+  /* Organizations formally working with the Fraggle Archives
+     through fundraising partnerships */
+  fundraisingPartners: 3,
 
   /* Books officially published by the Archives */
   publishedBooks: 2,
