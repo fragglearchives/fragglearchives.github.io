@@ -11,7 +11,7 @@ const archiveStats = {
 
   /* Organizations formally working with the Fraggle Archives
      through fundraising partnerships */
-  fundraisingPartners: 3,
+  fundraisingPartners: 2,
 
   /* Books officially published by the Archives */
   publishedBooks: 1,
