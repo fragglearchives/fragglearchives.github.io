@@ -14,7 +14,7 @@ const archiveStats = {
   fundraisingPartners: 3,
 
   /* Books officially published by the Archives */
-  publishedBooks: 2,
+  publishedBooks: 1,
 
   /* Total funds actually directed to cats/rescue work.
      Update this manually when the official total changes. */
