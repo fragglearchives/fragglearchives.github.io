@@ -461,11 +461,11 @@
 
 
 /* =========================================
-   TABLET — PAYPAL WIDTH FIX
-   701px–1024px ONLY
+   TABLET — PORTRAIT / NARROW
+   701px–850px
    ========================================= */
 
-@media (min-width: 701px) and (max-width: 1024px) {
+@media (min-width: 701px) and (max-width: 850px) {
 
     .collect-grid,
     .shipping-grid {
@@ -477,10 +477,42 @@
         box-sizing: border-box;
 
         width: 100%;
-        max-width: 760px;
+        max-width: 560px;
 
         margin-left: auto;
         margin-right: auto;
+    }
+
+}
+
+
+/* =========================================
+   TABLET — WIDE / LANDSCAPE
+   851px–1024px
+   ========================================= */
+
+@media (min-width: 851px) and (max-width: 1024px) {
+
+    .collect-page {
+        max-width: 96%;
+    }
+
+    .collect-grid,
+    .shipping-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .collect-card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .shipping-card {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
 }
