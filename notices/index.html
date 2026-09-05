@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notices | The Fraggle Archives</title>
+
+<link rel="stylesheet" href="/styles.css">
+
+
+<style>
+
+/* =========================================================
+   NOTICES
+   Currently on the Archive's Desk
+   ========================================================= */
+
+.notices-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.notices-page .archive-page-intro {
+    max-width: 840px;
+
+    margin: 70px auto 70px;
+    padding: 0 24px;
+
+    text-align: center;
+}
+
+.notices-page .archive-eyebrow {
+    margin: 0 0 7px;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.notices-page .archive-page-intro h1 {
+    margin: 8px 0 24px;
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.06;
+}
+
+.notices-page .archive-page-thesis {
+    max-width: 740px;
+
+    margin: 0 auto 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.12;
+
+    font-weight: normal;
+}
+
+.notices-page .archive-page-lead {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.13rem;
+    line-height: 1.75;
+}
+
+.notices-page .archive-page-note {
+    max-width: 670px;
+
+    margin: 22px auto 0;
+
+    font-size: 1.03rem;
+    line-height: 1.65;
+
+    font-style: italic;
+
+    opacity: 0.76;
+}
+
+
+/* =========================================================
+   NOTICE LABELS
+   ========================================================= */
+
+.notice-category {
+    margin: 0 0 8px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.notice-date {
+    margin: 0 0 20px;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    font-style: italic;
+
+    opacity: 0.72;
+}
+
+
+/* =========================================================
+   FEATURED NOTICE
+   ========================================================= */
+
+.notice-featured {
+    max-width: 980px;
+
+    margin: 0 auto 46px;
+    padding: 38px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.notice-featured-header {
+    max-width: 760px;
+
+    margin: 0 auto 32px;
+
+    text-align: center;
+}
+
+.notice-featured h2 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.35rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
+
+.notice-featured-image {
+    display: block;
+
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+
+    margin: 0 auto 34px;
+
+    border: 1px solid var(--archive-border);
+}
+
+.notice-featured-copy {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+.notice-featured-copy p {
+    margin: 0 0 20px;
+}
+
+.notice-featured-copy p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RAFFLE DETAILS
+   ========================================================= */
+
+.raffle-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    max-width: 760px;
+
+    margin: 30px auto;
+}
+
+.raffle-detail {
+    padding: 20px 18px;
+
+    text-align: center;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.raffle-detail span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.raffle-detail strong {
+    display: block;
+
+    font-size: 1.12rem;
+    line-height: 1.4;
+}
+
+.raffle-entry {
+    max-width: 700px;
+
+    margin: 30px auto 0;
+    padding: 26px 28px;
+
+    text-align: center;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.raffle-entry h3 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.55rem;
+}
+
+.raffle-entry p {
+    margin: 0;
+
+    line-height: 1.7;
+}
+
+.raffle-entry a {
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   STANDARD NOTICE GRID
+   ========================================================= */
+
+.notice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    max-width: 980px;
+
+    margin: 0 auto 80px;
+}
+
+.notice-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 30px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+}
+
+.notice-card h2 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 3.5vw, 2.65rem);
+    line-height: 1.12;
+}
+
+.notice-card-copy {
+    margin: 0 0 24px;
+
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+
+.notice-card-copy p {
+    margin: 0 0 18px;
+}
+
+.notice-card-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.notice-card-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto 26px;
+
+    border: 1px solid var(--archive-border);
+}
+
+.notice-card .button {
+    margin-top: auto;
+    align-self: center;
+}
+
+
+/* =========================================================
+   POSTCARD DISPLAY
+   ========================================================= */
+
+.postcard-images {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 26px;
+}
+
+.postcard-images img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--archive-border);
+}
+
+.postcard-price {
+    margin: 22px 0;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.postcard-price strong {
+    font-size: 1.12em;
+}
+
+
+/* =========================================================
+   FIELD EVENT DETAILS
+   ========================================================= */
+
+.field-event-details {
+    margin: 22px 0;
+    padding: 20px 22px;
+
+    text-align: center;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.field-event-details strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 1.12rem;
+}
+
+.field-event-details span {
+    display: block;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CLOSING PRINCIPLE
+   ========================================================= */
+
+.notices-closing {
+    max-width: 760px;
+
+    margin: 85px auto 60px;
+    padding: 0 22px;
+
+    text-align: center;
+}
+
+.notices-closing .notices-closing-eyebrow {
+    margin: 0 0 7px;
+
+    font-size: 0.76rem;
+    font-weight: bold;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.notices-closing h2 {
+    max-width: 700px;
+
+    margin: 8px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+.notices-closing p:last-child {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .notices-page .archive-page-intro {
+        margin: 48px auto 55px;
+        padding: 0 18px;
+    }
+
+    .notices-page .archive-page-intro h1 {
+        font-size: 2.65rem;
+    }
+
+    .notices-page .archive-page-thesis {
+        font-size: 2.15rem;
+        margin-bottom: 17px;
+    }
+
+    .notices-page .archive-page-lead {
+        font-size: 1.04rem;
+        line-height: 1.68;
+    }
+
+    .notices-page .archive-page-note {
+        font-size: 0.98rem;
+    }
+
+
+    .notice-featured {
+        margin: 0 16px 34px;
+        padding: 28px 20px;
+    }
+
+    .notice-featured h2 {
+        font-size: 2.25rem;
+    }
+
+    .notice-featured-copy {
+        font-size: 1rem;
+    }
+
+
+    .raffle-details {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .raffle-entry {
+        padding: 22px 18px;
+    }
+
+
+    .notice-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding: 0 16px;
+    }
+
+    .notice-card {
+        padding: 28px 22px;
+    }
+
+    .notice-card h2 {
+        font-size: 2.1rem;
+    }
+
+
+    .notices-closing {
+        margin: 65px auto 55px;
+        padding: 0 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<a href="/" class="header-banner-link" aria-label="Return to The Fraggle Archives home page">
+
+    <picture>
+
+        <source
+            media="(max-width: 700px)"
+            srcset="/Banner-Mobile.PNG">
+
+        <img
+            src="/banner.PNG"
+            alt="The Fraggle Archives"
+            class="header-banner">
+
+    </picture>
+
+</a>
+
+
+<div id="site-nav"></div>
+
+
+<script>
+
+fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('site-nav').innerHTML = data;
+
+    });
+
+</script>
+
+</header>
+
+
+
+<main class="notices-page">
+
+
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
+
+    <section class="archive-page-intro">
+
+        <p class="archive-eyebrow">
+            FROM HEADQUARTERS
+        </p>
+
+        <h1>
+            Currently on the Archive's Desk
+        </h1>
+
+        <p class="archive-page-thesis">
+            There is, as usual, rather a lot going on.
+        </p>
+
+        <p class="archive-page-lead">
+            Events, fundraisers, correspondence,
+            and assorted business currently occupying Headquarters.
+        </p>
+
+        <p class="archive-page-note">
+            If it is happening now, approaching rapidly,
+            or has somehow ended up on the Curator's desk,
+            it belongs here.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FEATURED NOTICE — RAFFLE
+         ===================================================== -->
+
+    <article class="notice-featured">
+
+        <div class="notice-featured-header">
+
+            <p class="notice-category">
+                FUNDRAISER
+            </p>
+
+            <h2>
+                Raffle for Two Great Causes
+            </h2>
+
+            <p class="notice-date">
+                Draw date: September 17, 2026
+            </p>
+
+        </div>
+
+
+        <img
+            src="/images/notices/raffle-september-2026.jpg"
+            alt="Raffle supporting Samson's rehabilitation and Toe Beans Cat Rescue"
+            class="notice-featured-image"
+        >
+
+
+        <div class="notice-featured-copy">
+
+            <p>
+                One raffle.
+                One prize package worth more than <strong>$450</strong>.
+                Two very good reasons to enter.
+            </p>
+
+            <p>
+                Half of every ticket sold supports
+                <strong>Samson's recovery and rehabilitation following spinal surgery</strong>.
+                The other half goes directly to
+                <strong>Toe Beans Cat Rescue</strong>
+                to help cats in need of veterinary care,
+                rescue, and second chances.
+            </p>
+
+
+            <div class="raffle-details">
+
+                <div class="raffle-detail">
+
+                    <span>
+                        1 Ticket
+                    </span>
+
+                    <strong>
+                        $5
+                    </strong>
+
+                </div>
+
+
+                <div class="raffle-detail">
+
+                    <span>
+                        3 Tickets
+                    </span>
+
+                    <strong>
+                        $12
+                    </strong>
+
+                </div>
+
+
+                <div class="raffle-detail">
+
+                    <span>
+                        6 Tickets
+                    </span>
+
+                    <strong>
+                        $20
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                The prize package includes a SureFeed Microchip Pet Feeder,
+                cozy cat cave bed, cat food and treats,
+                cat socks, a cat-themed pouch,
+                and a signed copy of <em>Fraggle's Village</em>.
+            </p>
+
+
+            <div class="raffle-entry">
+
+                <h3>
+                    How to Get Tickets
+                </h3>
+
+                <p>
+                    Send an e-transfer to
+                    <strong>
+                        <a href="mailto:sam@fragglearchives.com">
+                            sam@fragglearchives.com
+                        </a>
+                    </strong>.
+                    Please include your
+                    <strong>name and contact information</strong>
+                    in the e-transfer notes so Headquarters can reach you
+                    if you win.
+                </p>
+
+            </div>
+
+
+            <p style="margin-top: 28px; text-align: center;">
+                Winner will be contacted after the live draw.
+                Prize pickup is in Ottawa (Centretown).
+            </p>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         CURRENT NOTICES
+         ===================================================== -->
+
+    <section
+        class="notice-grid"
+        aria-label="Current Fraggle Archives notices"
+    >
+
+
+
+        <!-- =================================================
+             OCTOBER 4 — FIELD EVENT
+             ================================================= -->
+
+        <article class="notice-card">
+
+            <p class="notice-category">
+                FIELD EVENT
+            </p>
+
+            <h2>
+                The Archives Are Going to Almonte
+            </h2>
+
+            <p class="notice-date">
+                Sunday, October 4, 2026
+            </p>
+
+
+            <img
+                src="/images/notices/hollibell-october-2026.jpg"
+                alt="8th Annual Hollibell Foundation Walkathon event poster"
+                class="notice-card-image"
+            >
+
+
+            <div class="field-event-details">
+
+                <strong>
+                    8th Annual Hollibell Foundation Walkathon
+                </strong>
+
+                <span>
+                    12 PM–3 PM
+                </span>
+
+                <span>
+                    Gemmill Park · Almonte, Ontario
+                </span>
+
+            </div>
+
+
+            <div class="notice-card-copy">
+
+                <p>
+                    The Fraggle Archives will be joining
+                    <strong>Riverview Rescues</strong>
+                    for an afternoon at the Hollibell Foundation Walkathon.
+                </p>
+
+                <p>
+                    Come find us, say hello,
+                    browse what Headquarters has brought along,
+                    and help support the rescue work being done
+                    by Riverview Rescues.
+                </p>
+
+                <p>
+                    The event also includes local vendors,
+                    a guided trail walk, nail trims, food,
+                    prizes, photos, a trick contest,
+                    dog agility, and a rabies and microchip clinic.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             CREAMIES POSTCARD
+             ================================================= -->
+
+        <article class="notice-card">
+
+            <p class="notice-category">
+                NEW CORRESPONDENCE
+            </p>
+
+            <h2>
+                Come Sit With Us. We Have Creamies.
+            </h2>
+
+            <p class="notice-date">
+                Available now from Headquarters
+            </p>
+
+
+            <div class="postcard-images">
+
+                <img
+                    src="/images/notices/creamy-postcard-front.jpg"
+                    alt="Front of the Come Sit With Us. We Have Creamies postcard"
+                >
+
+                <img
+                    src="/images/notices/creamy-postcard-back.jpg"
+                    alt="Back of the Come Sit With Us. We Have Creamies postcard"
+                >
+
+            </div>
+
+
+            <div class="notice-card-copy">
+
+                <p>
+                    Official Fraggle Archives correspondence
+                    for friends, difficult days,
+                    small victories,
+                    and situations requiring ceremonial emergency Creamies.
+                </p>
+
+                <p class="postcard-price">
+                    <strong>1 for $3</strong><br>
+                    <strong>2 for $5</strong><br>
+                    Shipping included.
+                </p>
+
+                <p>
+                    The front contains the important institutional reminder:
+                    <em>all emergencies are Creamy emergencies.</em>
+                </p>
+
+                <p>
+                    The back leaves room for a message,
+                    an address,
+                    and the increasingly endangered art of actually sending someone mail.
+                </p>
+
+            </div>
+
+
+            <a
+                class="button"
+                href="/giftshop/collect"
+            >
+                Go to the Gift Shop
+            </a>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLOSING PRINCIPLE
+         ===================================================== -->
+
+    <section class="notices-closing">
+
+        <p class="notices-closing-eyebrow">
+            THE NOTICEBOARD PRINCIPLE
+        </p>
+
+        <h2>
+            Headquarters rarely stays quiet for long.
+        </h2>
+
+        <p>
+            Check back whenever you're curious
+            what the Archives have gotten themselves into now.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+<script src="/moon-phase.js"></script>
+
+
+<script>
+
+fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('footer-placeholder').innerHTML = data;
+
+
+        if (window.initFooterMoonPhase) {
+
+            window.initFooterMoonPhase();
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
