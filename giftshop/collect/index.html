@@ -307,6 +307,36 @@
 
 
 /* =========================================
+   POSTCARD FRONT + BACK DISPLAY
+   ========================================= */
+
+.collect-card-image-pair {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    height: 190px;
+
+    margin: 0 auto 22px;
+
+    align-items: center;
+}
+
+.collect-card-image-pair img {
+    width: 100%;
+    height: 180px;
+
+    margin: 0;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
    PRODUCT DESCRIPTION
    Fixed track keeps SIZE dividers aligned.
    ========================================= */
@@ -455,6 +485,14 @@
 
     .collect-card img {
         height: 210px;
+    }
+
+    .collect-card-image-pair {
+        height: 210px;
+    }
+
+    .collect-card-image-pair img {
+        height: 200px;
     }
 
 }
@@ -690,6 +728,20 @@
         max-height: 300px;
     }
 
+    .collect-card-image-pair {
+        height: auto;
+
+        gap: 12px;
+    }
+
+    .collect-card-image-pair img {
+        width: 100%;
+        height: auto;
+
+        max-width: 100%;
+        max-height: 260px;
+    }
+
     .collect-card-description {
         height: auto;
     }
@@ -829,6 +881,13 @@
             <button
                 type="button"
                 class="collect-filter"
+                data-filter="postcards">
+                Postcards
+            </button>
+
+            <button
+                type="button"
+                class="collect-filter"
                 data-filter="mini-posters">
                 Mini Posters
             </button>
@@ -846,7 +905,7 @@
         <p
             id="collect-status"
             class="collect-status">
-            16 items
+            17 items
         </p>
 
     </section>
@@ -1423,6 +1482,103 @@
 
 
     <!-- =========================================
+         POSTCARDS
+         ========================================= -->
+
+    <section
+        class="collect-category"
+        data-category="postcards">
+
+        <div class="collect-category-header">
+
+            <p class="eyebrow">
+                Department
+            </p>
+
+            <h2>
+                Postcards
+            </h2>
+
+            <p>
+                Official correspondence from Headquarters.
+                For messages important enough to require postage.
+            </p>
+
+        </div>
+
+
+        <div class="collect-grid">
+
+
+            <!-- EMERGENCY CREAMIES POSTCARD -->
+
+            <article class="collect-card">
+
+                <h3>
+                    Emergency Creamies Postcard
+                </h3>
+
+                <div
+                    class="collect-card-image-pair"
+                    aria-label="Front and back of the Emergency Creamies postcard">
+
+                    <img
+                        src="/images/giftshop/creamy-front.jpeg"
+                        alt="Front of Emergency Creamies postcard">
+
+                    <img
+                        src="/images/giftshop/creamy-postcard-back.jpeg"
+                        alt="Back of Emergency Creamies postcard">
+
+                </div>
+
+                <p class="collect-card-description">
+                    All emergencies are Creamy emergencies.
+                    Open. Hiss. Enjoy.
+                </p>
+
+                <p class="collect-card-specs">
+                    Double-sided postcard
+                </p>
+
+                <!--
+                =========================================
+                PAYPAL BUTTON
+
+                Add the Creamy postcard PayPal product ID
+                here once created.
+
+                Example:
+
+                <div class="collect-buy">
+
+                    <paypal-add-to-cart-button
+                        data-id="YOUR_PAYPAL_PRODUCT_ID">
+                    </paypal-add-to-cart-button>
+
+                    <script>
+
+                        cartPaypal.AddToCart({
+                            id: "YOUR_PAYPAL_PRODUCT_ID"
+                        });
+
+                    </script>
+
+                </div>
+
+                =========================================
+                -->
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
          MINI POSTERS
          ========================================= -->
 
@@ -1822,10 +1978,11 @@
 
 
     const collectStatusText = {
-        all: '16 items',
+        all: '17 items',
         stickers: '4 items',
         buttons: '3 items',
         magnets: '4 items',
+        postcards: '1 item',
         "mini-posters": '5 items',
         shipping: 'Shipping options'
     };
