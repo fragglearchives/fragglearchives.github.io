@@ -1541,33 +1541,42 @@
                     Double-sided postcard
                 </p>
 
-                <!--
-                =========================================
-                PAYPAL BUTTON
+<div class="collect-buy">
 
-                Add the Creamy postcard PayPal product ID
-                here once created.
+    <p style="margin: 0 0 8px; text-align: center; font-weight: bold;">
+        1 Postcard — $3
+    </p>
 
-                Example:
+    <paypal-add-to-cart-button
+        data-id="KEHDKQKGUY39S">
+    </paypal-add-to-cart-button>
 
-                <div class="collect-buy">
+    <script>
 
-                    <paypal-add-to-cart-button
-                        data-id="YOUR_PAYPAL_PRODUCT_ID">
-                    </paypal-add-to-cart-button>
+        cartPaypal.AddToCart({
+            id: "KEHDKQKGUY39S"
+        });
 
-                    <script>
+    </script>
 
-                        cartPaypal.AddToCart({
-                            id: "YOUR_PAYPAL_PRODUCT_ID"
-                        });
 
-                    </script>
+    <p style="margin: 20px 0 8px; text-align: center; font-weight: bold;">
+        2 Postcards — $5
+    </p>
 
-                </div>
+    <paypal-add-to-cart-button
+        data-id="TMS898TTRSGZJ">
+    </paypal-add-to-cart-button>
 
-                =========================================
-                -->
+    <script>
+
+        cartPaypal.AddToCart({
+            id: "TMS898TTRSGZJ"
+        });
+
+    </script>
+
+</div>
 
             </article>
 
