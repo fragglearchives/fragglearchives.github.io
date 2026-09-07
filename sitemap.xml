@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- HOME -->
+
   <url>
     <loc>https://fragglearchives.com/</loc>
   </url>
+
+
+  <!-- BOOKS -->
 
   <url>
     <loc>https://fragglearchives.com/books/</loc>
@@ -17,24 +22,49 @@
     <loc>https://fragglearchives.com/books/ssff/</loc>
   </url>
 
-  <url>
-    <loc>https://fragglearchives.com/charter/</loc>
-  </url>
 
-  <url>
-    <loc>https://fragglearchives.com/contact/</loc>
-  </url>
-
-  <url>
-    <loc>https://fragglearchives.com/giftshop/</loc>
-  </url>
+  <!-- MUSEUM -->
 
   <url>
     <loc>https://fragglearchives.com/museum/</loc>
   </url>
 
   <url>
-    <loc>https://fragglearchives.com/notices/</loc>
+    <loc>https://fragglearchives.com/museum/fraggle-relics/</loc>
+  </url>
+
+  <url>
+    <loc>https://fragglearchives.com/museum/headquarters-relics/</loc>
+  </url>
+
+  <url>
+    <loc>https://fragglearchives.com/museum/odin-relics/</loc>
+  </url>
+
+  <url>
+    <loc>https://fragglearchives.com/museum/aua-relics/</loc>
+  </url>
+
+
+  <!-- GIFT SHOP -->
+
+  <url>
+    <loc>https://fragglearchives.com/giftshop/</loc>
+  </url>
+
+  <url>
+    <loc>https://fragglearchives.com/giftshop/collect/</loc>
+  </url>
+
+  <url>
+    <loc>https://fragglearchives.com/giftshop/wear/</loc>
+  </url>
+
+
+  <!-- ARCHIVE / COMMUNITY -->
+
+  <url>
+    <loc>https://fragglearchives.com/charter/</loc>
   </url>
 
   <url>
@@ -42,7 +72,14 @@
   </url>
 
   <url>
-    <loc>https://fragglearchives.com/residents/</loc>
+    <loc>https://fragglearchives.com/tracker/</loc>
+  </url>
+
+
+  <!-- INFORMATION -->
+
+  <url>
+    <loc>https://fragglearchives.com/contact/</loc>
   </url>
 
   <url>
@@ -50,7 +87,7 @@
   </url>
 
   <url>
-    <loc>https://fragglearchives.com/tracker/</loc>
+    <loc>https://fragglearchives.com/notices/</loc>
   </url>
 
 </urlset>
