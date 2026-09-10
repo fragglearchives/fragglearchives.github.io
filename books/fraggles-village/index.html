@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="Fraggle's Village is the true story of a brave former stray, the people who came together around him, and the small grey cat whose life became the beginning of The Fraggle Archives.">
+        content="Fraggle's Village is the true story of a brave former stray, the people who came together around him, and the small grey cat whose life became the beginning of The Fraggle Archives. Book sales support cat rescue and donated copies help carry Fraggle's story into schools, libraries, and communities.">
 
     <meta name="robots" content="index, follow">
 
@@ -119,6 +119,10 @@
             {
                 "@type": "Thing",
                 "name": "Memory and legacy"
+            },
+            {
+                "@type": "Thing",
+                "name": "Community book outreach"
             }
         ]
     }
@@ -367,6 +371,91 @@
 
 
 /* =========================================================
+   OUTREACH PROJECT
+   ========================================================= */
+
+.fv-outreach {
+    max-width: 840px;
+
+    margin: 0 auto 85px;
+    padding: 42px 38px;
+
+    background: var(--archive-light-card);
+    border: 1px solid var(--archive-border);
+    box-shadow: var(--archive-shadow);
+
+    text-align: center;
+}
+
+.fv-outreach h2 {
+    max-width: 700px;
+
+    margin: 8px auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 3.25rem);
+    line-height: 1.12;
+}
+
+.fv-outreach p:not(.fv-eyebrow):not(.fv-outreach-number) {
+    max-width: 680px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.fv-outreach-count {
+    max-width: 420px;
+
+    margin: 32px auto;
+
+    padding: 28px 24px;
+
+    background: var(--archive-card);
+    border: 1px solid var(--archive-border);
+}
+
+.fv-outreach-number {
+    margin: 0 0 4px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3.4rem, 7vw, 5rem);
+    line-height: 1;
+
+    font-weight: bold;
+}
+
+.fv-outreach-label {
+    margin: 10px 0 0 !important;
+
+    font-size: 0.8rem !important;
+    font-weight: bold;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+.fv-outreach-principle {
+    max-width: 650px;
+
+    margin: 28px auto 0 !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem !important;
+    line-height: 1.55 !important;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
    EXTRAS
    ========================================================= */
 
@@ -504,7 +593,8 @@
     }
 
 
-    .fv-buy-section {
+    .fv-buy-section,
+    .fv-outreach {
         margin: 0 16px 65px;
         padding: 30px 20px;
     }
@@ -534,6 +624,10 @@
     .fv-extras {
         margin: 0 16px 65px;
         padding: 30px 22px;
+    }
+
+    .fv-outreach-count {
+        padding: 24px 18px;
     }
 
 }
@@ -753,7 +847,7 @@
         </h2>
 
         <p>
-            Fraggle's Village was created to carry one cat's story forward —
+            <em>Fraggle's Village</em> was created to carry one cat's story forward —
             and to turn that story into practical help for cats still waiting
             for care of their own.
         </p>
@@ -767,6 +861,64 @@
             Different fundraising campaigns may support different rescue
             organizations or cats in care, allowing Fraggle's story
             to keep travelling where help is needed.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OUTREACH PROJECT
+         ===================================================== -->
+
+    <section class="fv-outreach">
+
+        <p class="fv-eyebrow">
+            THE OUTREACH PROJECT
+        </p>
+
+        <h2>
+            Putting Fraggle's story into little hands.
+        </h2>
+
+        <p>
+            The Village has grown beyond fundraising.
+            Copies of <em>Fraggle's Village</em> are also being donated
+            to schools, libraries, Little Free Libraries,
+            and other community spaces where children can find them.
+        </p>
+
+        <p>
+            The goal is simple: to make Fraggle's story available
+            to the child who might need a brave little cat,
+            a story about being seen,
+            or a reminder that even a short life can leave something enormous behind.
+        </p>
+
+
+        <div class="fv-outreach-count">
+
+            <p class="fv-outreach-number">
+                13
+            </p>
+
+            <p class="fv-outreach-label">
+                Outreach Copies Sent
+            </p>
+
+        </div>
+
+
+        <p>
+            This record counts donated copies once they have actually been
+            mailed or handed over to their new school, library,
+            Little Free Library, or community home.
+        </p>
+
+        <p class="fv-outreach-principle">
+            Every purchased copy helps support cats.
+            Every donated copy helps carry Fraggle's story
+            into another community.
         </p>
 
     </section>
