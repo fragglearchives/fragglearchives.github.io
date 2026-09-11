@@ -94,18 +94,33 @@
 
 /* =========================================================
   RELIC CARDS
-  Existing structure preserved
   ========================================================= */
 
 .odin-relics-page .collection-card {
    margin-bottom: 34px;
 }
 
-
-/* Center all relic titles */
-
 .odin-relics-page .collection-card h2 {
    text-align: center;
+}
+
+
+/* =========================================================
+  VESSEL LABELS
+  ========================================================= */
+
+.odin-relics-page .relic-label {
+   margin: 6px 0 28px;
+
+   text-align: center;
+
+   font-size: 0.78rem;
+   font-weight: bold;
+
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+
+   opacity: 0.65;
 }
 
 
@@ -186,6 +201,10 @@
        font-size: 0.98rem;
    }
 
+   .odin-relics-page .relic-label {
+       margin-bottom: 22px;
+   }
+
    .odin-relics-closing {
        margin: 65px auto 55px;
        padding: 0 18px;
@@ -204,11 +223,12 @@
 <header>
 
 <a href="/" class="header-banner-link" aria-label="Return to The Fraggle Archives home page">
+
    <picture>
+
        <source
            media="(max-width: 700px)"
            srcset="/Banner-Mobile.PNG">
-
 
        <img
            src="/banner.PNG"
@@ -216,6 +236,7 @@
            class="header-banner">
 
    </picture>
+
 </a>
 
 
@@ -286,7 +307,6 @@ fetch('/nav.html')
            alt="Odin's nose print, preserved as part of the Fraggle Archives memorial collection"
        >
 
-
        <p>
            A small impression of something unmistakably his.
            Odin's nose print preserves one of the tiny physical details
@@ -323,6 +343,7 @@ fetch('/nav.html')
    </div>
 
 
+
    <!-- =====================================================
         SACRED BONE FRAGMENTS
         ===================================================== -->
@@ -349,6 +370,67 @@ fetch('/nav.html')
        <p>
            Some things are kept because they are historically important.
            Others are kept because someone mattered.
+       </p>
+
+   </div>
+
+
+
+   <!-- =====================================================
+        ORIGINAL VESSEL
+        ===================================================== -->
+
+   <div class="collection-card">
+
+       <p class="relic-label">
+           — ORIGINAL VESSEL —
+       </p>
+
+       <img
+           src="/images/museum/odin-original-vessel.jpeg"
+           alt="The original vessel that held Odin's cremated remains before his permanent urn was chosen"
+       >
+
+       <p>
+           Before his permanent urn was chosen, Odin's remains were kept
+           in their original vessel — a simple home that protected what
+           remained of him until something more permanent could be found.
+       </p>
+
+       <p>
+           It was never meant to be the final piece of his memorial,
+           but it remains part of the history of how he came home.
+       </p>
+
+   </div>
+
+
+
+   <!-- =====================================================
+        PERMANENT URN
+        ===================================================== -->
+
+   <div class="collection-card">
+
+       <p class="relic-label">
+           — PERMANENT URN —
+       </p>
+
+       <img
+           src="/images/museum/odin-urn.jpeg"
+           alt="Odin's permanent ceramic urn, personalized with his name and a small heart"
+       >
+
+       <p>
+           Odin's bone fragments now rest in his permanent ceramic urn,
+           together with the preserved baggie of his fur.
+           Simple and quiet, it bears only his name and a small heart.
+       </p>
+
+       <p>
+           The urn became the final piece planned for Odin's memorial shelf —
+           a permanent home for the physical pieces of him that remain,
+           gathered together at last.
        </p>
 
    </div>
