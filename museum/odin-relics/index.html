@@ -110,7 +110,7 @@
   ========================================================= */
 
 .odin-relics-page .relic-label {
-   margin: 6px 0 28px;
+   margin: 10px 0 26px;
 
    text-align: center;
 
@@ -121,6 +121,14 @@
    text-transform: uppercase;
 
    opacity: 0.65;
+}
+
+.odin-relics-page .vessel-divider {
+   max-width: 160px;
+   margin: 42px auto;
+
+   border: 0;
+   border-top: 1px solid var(--archive-border);
 }
 
 
@@ -203,6 +211,10 @@
 
    .odin-relics-page .relic-label {
        margin-bottom: 22px;
+   }
+
+   .odin-relics-page .vessel-divider {
+       margin: 34px auto;
    }
 
    .odin-relics-closing {
@@ -354,66 +366,33 @@ fetch('/nav.html')
            Sacred Bone Fragments
        </h2>
 
-       <img
-           src="/images/museum/odinsacredashes.jpeg"
-           alt="Odin's preserved bone fragments, kept as part of his memorial collection"
-       >
 
-       <p>
-           Small fragments of Odin's cremated remains, preserved as a tangible
-           connection to the body that carried him through his life.
-           They are quiet, physical pieces of someone deeply loved —
-           kept because sometimes even the smallest part of a life
-           can feel immeasurably precious.
-       </p>
-
-       <p>
-           Some things are kept because they are historically important.
-           Others are kept because someone mattered.
-       </p>
-
-   </div>
-
-
-
-   <!-- =====================================================
-        ORIGINAL VESSEL
-        ===================================================== -->
-
-   <div class="collection-card">
+       <!-- ORIGINAL VESSEL -->
 
        <p class="relic-label">
            — ORIGINAL VESSEL —
        </p>
 
        <img
-           src="/images/museum/odin-original-vessel.jpeg"
-           alt="The original vessel that held Odin's cremated remains before his permanent urn was chosen"
+           src="/images/museum/odinsacredashes.jpeg"
+           alt="Odin's bone fragments in their original vessel before his permanent urn was chosen"
        >
 
        <p>
-           Before his permanent urn was chosen, Odin's remains were kept
-           in their original vessel — a simple home that protected what
-           remained of him until something more permanent could be found.
+           Small fragments of Odin's cremated remains, preserved as a tangible
+           connection to the body that carried him through his life.
+           For years, they remained in their original vessel —
+           protected and kept close while waiting for a permanent home.
        </p>
 
-       <p>
-           It was never meant to be the final piece of his memorial,
-           but it remains part of the history of how he came home.
-       </p>
 
-   </div>
+       <hr class="vessel-divider">
 
 
-
-   <!-- =====================================================
-        PERMANENT URN
-        ===================================================== -->
-
-   <div class="collection-card">
+       <!-- PERMANENT VESSEL -->
 
        <p class="relic-label">
-           — PERMANENT URN —
+           — PERMANENT VESSEL —
        </p>
 
        <img
@@ -428,9 +407,14 @@ fetch('/nav.html')
        </p>
 
        <p>
-           The urn became the final piece planned for Odin's memorial shelf —
-           a permanent home for the physical pieces of him that remain,
-           gathered together at last.
+           It became the final piece planned for Odin's memorial shelf —
+           a permanent home where the physical pieces of him could finally
+           be gathered together.
+       </p>
+
+       <p>
+           Some things are kept because they are historically important.
+           Others are kept because someone mattered.
        </p>
 
    </div>
