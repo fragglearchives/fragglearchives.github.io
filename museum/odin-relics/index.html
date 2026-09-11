@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Odin Relics | The Fraggle Archives</title>
@@ -30,10 +29,8 @@
 
 .odin-relics-intro {
    max-width: 820px;
-
    margin: 70px auto 70px;
    padding: 0 24px;
-
    text-align: center;
 }
 
@@ -42,7 +39,6 @@
 
    font-size: 0.78rem;
    font-weight: bold;
-
    letter-spacing: 0.14em;
    text-transform: uppercase;
 
@@ -58,20 +54,16 @@
 
 .odin-relics-thesis {
    max-width: 720px;
-
    margin: 0 auto 18px;
 
    font-family: Georgia, "Times New Roman", serif;
-
    font-size: clamp(2rem, 4vw, 3.15rem);
    line-height: 1.12;
-
    font-weight: normal;
 }
 
 .odin-relics-lead {
    max-width: 690px;
-
    margin: 0 auto;
 
    font-size: 1.13rem;
@@ -80,12 +72,10 @@
 
 .odin-relics-note {
    max-width: 650px;
-
    margin: 22px auto 0;
 
    font-size: 1.03rem;
    line-height: 1.65;
-
    font-style: italic;
 
    opacity: 0.76;
@@ -110,25 +100,19 @@
   ========================================================= */
 
 .odin-relics-page .relic-label {
-   margin: 10px 0 26px;
+   display: block;
+   width: 100%;
+
+   margin: 34px auto 22px;
 
    text-align: center;
 
    font-size: 0.78rem;
    font-weight: bold;
-
    letter-spacing: 0.14em;
    text-transform: uppercase;
 
    opacity: 0.65;
-}
-
-.odin-relics-page .vessel-divider {
-   max-width: 160px;
-   margin: 42px auto;
-
-   border: 0;
-   border-top: 1px solid var(--archive-border);
 }
 
 
@@ -138,7 +122,6 @@
 
 .odin-relics-closing {
    max-width: 740px;
-
    margin: 85px auto 60px;
    padding: 0 22px;
 
@@ -150,7 +133,6 @@
 
    font-size: 0.76rem;
    font-weight: bold;
-
    letter-spacing: 0.13em;
    text-transform: uppercase;
 
@@ -159,23 +141,19 @@
 
 .odin-relics-closing h2 {
    max-width: 680px;
-
    margin: 8px auto 20px;
 
    font-family: Georgia, "Times New Roman", serif;
-
    font-size: clamp(2.2rem, 4vw, 3rem);
    line-height: 1.12;
 }
 
 .odin-relics-closing p:last-child {
    max-width: 620px;
-
    margin: 0 auto;
 
    font-size: 1.05rem;
    line-height: 1.7;
-
    font-style: italic;
 }
 
@@ -210,11 +188,7 @@
    }
 
    .odin-relics-page .relic-label {
-       margin-bottom: 22px;
-   }
-
-   .odin-relics-page .vessel-divider {
-       margin: 34px auto;
+       margin: 28px auto 18px;
    }
 
    .odin-relics-closing {
@@ -235,9 +209,7 @@
 <header>
 
 <a href="/" class="header-banner-link" aria-label="Return to The Fraggle Archives home page">
-
    <picture>
-
        <source
            media="(max-width: 700px)"
            srcset="/Banner-Mobile.PNG">
@@ -246,11 +218,8 @@
            src="/banner.PNG"
            alt="The Fraggle Archives"
            class="header-banner">
-
    </picture>
-
 </a>
-
 
 <div id="site-nav"></div>
 
@@ -366,34 +335,14 @@ fetch('/nav.html')
            Sacred Bone Fragments
        </h2>
 
-
-       <!-- ORIGINAL VESSEL -->
-
-       <p class="relic-label">
-           — ORIGINAL VESSEL —
-       </p>
-
-       <img
-           src="/images/museum/odinsacredashes.jpeg"
-           alt="Odin's bone fragments in their original vessel before his permanent urn was chosen"
-       >
-
        <p>
            Small fragments of Odin's cremated remains, preserved as a tangible
            connection to the body that carried him through his life.
-           For years, they remained in their original vessel —
-           protected and kept close while waiting for a permanent home.
+           They are quiet, physical pieces of someone deeply loved —
+           kept because sometimes even the smallest part of a life
+           can feel immeasurably precious.
        </p>
 
-
-       <hr class="vessel-divider">
-
-
-       <!-- PERMANENT VESSEL -->
-
-       <p class="relic-label">
-           — PERMANENT VESSEL —
-       </p>
 
        <img
            src="/images/museum/odin-urn.jpeg"
@@ -406,10 +355,20 @@ fetch('/nav.html')
            Simple and quiet, it bears only his name and a small heart.
        </p>
 
+
+       <p class="relic-label">
+           — Original Vessel —
+       </p>
+
+       <img
+           src="/images/museum/odinsacredashes.jpeg"
+           alt="Odin's original vessel, which held his bone fragments before his permanent urn was chosen"
+       >
+
        <p>
-           It became the final piece planned for Odin's memorial shelf —
-           a permanent home where the physical pieces of him could finally
-           be gathered together.
+           Before the permanent urn was chosen, Odin's remains were kept
+           in their original vessel — protected and kept close while waiting
+           for a more lasting home.
        </p>
 
        <p>
@@ -449,9 +408,7 @@ fetch('/nav.html')
 
 <div id="footer-placeholder"></div>
 
-
 <script src="/moon-phase.js"></script>
-
 
 <script>
 
