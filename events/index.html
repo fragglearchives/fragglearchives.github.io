@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Markets & Events | The Fraggle Archives</title>
+
+  <meta name="description"
+        content="Find The Fraggle Archives out in the world at markets, book fairs, cat events, community gatherings, and other archival fieldwork.">
+
+  <link rel="canonical" href="https://fragglearchives.com/events/">
+
+  <meta property="og:title" content="Markets & Events | The Fraggle Archives">
+  <meta property="og:description"
+        content="Find The Fraggle Archives out in the world at markets, book fairs, cat events, community gatherings, and other archival fieldwork.">
+  <meta property="og:url" content="https://fragglearchives.com/events/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Markets & Events | The Fraggle Archives">
+  <meta name="twitter:description"
+        content="Find The Fraggle Archives out in the world at markets, book fairs, cat events, community gatherings, and other archival fieldwork.">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .events-page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* INTRO */
+
+    .events-intro {
+      max-width: 840px;
+      margin: 70px auto 70px;
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    .events-intro .archive-eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .events-intro h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      line-height: 1.05;
+    }
+
+    .events-thesis {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4.5vw, 3.15rem);
+      line-height: 1.15;
+    }
+
+    .events-lead {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.13rem;
+      line-height: 1.75;
+    }
+
+    /* SECTION INTRO */
+
+    .events-opening {
+      max-width: 760px;
+      margin: 70px auto 65px;
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    .events-opening h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 5vw, 3.25rem);
+      line-height: 1.12;
+    }
+
+    .events-opening p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* EVENT GRID */
+
+    .events-grid {
+      max-width: 1000px;
+      margin: 0 auto 90px;
+      padding: 0 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .event-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--archive-light-card);
+      border: 1px solid var(--archive-border);
+      box-shadow: var(--archive-shadow);
+    }
+
+    .event-poster {
+      width: 100%;
+      display: block;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .event-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 32px 30px 34px;
+      text-align: center;
+    }
+
+    .event-category {
+      margin-bottom: 10px;
+      font-size: 0.75rem;
+      line-height: 1.3;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .event-content h2 {
+      margin: 0 0 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.65rem);
+      line-height: 1.12;
+    }
+
+    .event-date {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      line-height: 1.5;
+    }
+
+    .event-details {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .event-details strong {
+      font-weight: 700;
+    }
+
+    .event-note {
+      margin: 22px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--archive-border);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    /* FUTURE FIELDWORK PHOTOS */
+
+    .event-fieldwork {
+      max-width: 1000px;
+      margin: -45px auto 90px;
+      padding: 0 22px;
+    }
+
+    .event-fieldwork-inner {
+      padding: 34px 32px;
+      border: 1px dashed var(--archive-border);
+      text-align: center;
+    }
+
+    .event-fieldwork-inner p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      line-height: 1.7;
+    }
+
+    /* CLOSING */
+
+    .events-closing {
+      max-width: 760px;
+      margin: 95px auto 60px;
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    .events-closing h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.12;
+    }
+
+    .events-closing p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 850px) {
+      .events-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .events-intro {
+        margin: 48px auto 55px;
+      }
+
+      .events-intro h1 {
+        font-size: 2.65rem;
+      }
+
+      .events-thesis {
+        font-size: 2.15rem;
+      }
+
+      .events-lead {
+        font-size: 1.04rem;
+        line-height: 1.68;
+      }
+
+      .events-opening {
+        margin: 55px auto 50px;
+      }
+
+      .events-opening h2 {
+        font-size: 2.2rem;
+      }
+
+      .events-grid {
+        padding: 0 14px;
+        gap: 22px;
+      }
+
+      .event-content {
+        padding: 26px 20px 28px;
+      }
+
+      .event-content h2 {
+        font-size: 2rem;
+      }
+
+      .event-fieldwork {
+        padding: 0 14px;
+        margin-top: -25px;
+      }
+
+      .event-fieldwork-inner {
+        padding: 28px 20px;
+      }
+
+      .events-closing {
+        margin: 70px auto 50px;
+      }
+    }
+  </style>
+
+  <!-- Shared header -->
+  <script>
+    fetch('/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-nav').innerHTML = data;
+      });
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <picture>
+      <source media="(max-width: 700px)" srcset="/Banner-Mobile.PNG">
+      <img src="/banner.PNG" alt="The Fraggle Archives">
+    </picture>
+
+    <div id="site-nav"></div>
+  </header>
+
+
+  <main class="events-page">
+
+    <!-- INTRO -->
+
+    <section class="events-intro">
+
+      <div class="archive-eyebrow">
+        THE ARCHIVES LEAVES THE BUILDING
+      </div>
+
+      <h1>Markets &amp; Events</h1>
+
+      <p class="events-thesis">
+        The Archives is going out into the world.
+      </p>
+
+      <p class="events-lead">
+        Fraggle's Village and the wider Fraggle Archives are no longer
+        confined to the shelves. From cat shows and harvest festivals
+        to book markets and community events, the Archives is taking
+        its stories, objects, and general institutional nonsense out
+        into the field.
+      </p>
+
+    </section>
+
+
+    <!-- OPENING -->
+
+    <section class="events-opening">
+
+      <div class="archive-eyebrow">
+        UPCOMING APPEARANCES
+      </div>
+
+      <h2>
+        Come find the Archives in the wild.
+      </h2>
+
+      <p>
+        Bring your curiosity. We will bring the books, the cats,
+        the merchandise, and whatever else has somehow made it
+        into the field kit.
+      </p>
+
+    </section>
+
+
+    <!-- EVENTS -->
+
+    <section class="events-grid">
+
+
+      <!-- OTTAWA CAT SHOW -->
+
+      <article class="event-card">
+
+        <img
+          class="event-poster"
+          src="/events/images/ottawa-cat-show-2026.png"
+          alt="Poster for the Ottawa Cat Show on September 26 and 27, 2026"
+          loading="lazy"
+        >
+
+        <div class="event-content">
+
+          <div class="event-category">
+            THE FIRST DEPLOYMENT
+          </div>
+
+          <h2>Ottawa Cat Show</h2>
+
+          <p class="event-date">
+            September 26–27, 2026
+          </p>
+
+          <p class="event-details">
+            <strong>Nepean Sportsplex Curling Rink</strong><br>
+            9:00 AM–4:30 PM
+          </p>
+
+          <p class="event-note">
+            Come meet the Archives at its first big market appearance.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- KIWAN FARMS -->
+
+      <article class="event-card">
+
+        <img
+          class="event-poster"
+          src="/events/images/kiwan-farms-fall-harvest-2026.jpeg"
+          alt="Poster for the 8th Annual Kiwan Farms Fall Harvest Festival"
+          loading="lazy"
+        >
+
+        <div class="event-content">
+
+          <div class="event-category">
+            FALL FIELDWORK
+          </div>
+
+          <h2>Kiwan Farms Fall Harvest Festival</h2>
+
+          <p class="event-date">
+            Saturday, October 3, 2026
+          </p>
+
+          <p class="event-details">
+            <strong>Kiwan Farms &amp; Garden Centre</strong><br>
+            3485 Hawthorne Rd, Ottawa<br>
+            10:00 AM–3:00 PM
+          </p>
+
+          <p class="event-note">
+            The 8th annual Fall Harvest Festival — rain or shine.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOLLIBELL -->
+
+      <article class="event-card">
+
+        <img
+          class="event-poster"
+          src="/events/images/hollibell-foundation-walkathon-2026.png"
+          alt="Poster for the 8th Annual Hollibell Foundation Walkathon"
+          loading="lazy"
+        >
+
+        <div class="event-content">
+
+          <div class="event-category">
+            COMMUNITY FIELDWORK
+          </div>
+
+          <h2>Hollibell Foundation Walkathon</h2>
+
+          <p class="event-date">
+            Sunday, October 4, 2026
+          </p>
+
+          <p class="event-details">
+            <strong>Gemmill Park</strong><br>
+            Almonte, Ontario<br>
+            12:00–3:00 PM
+          </p>
+
+          <p class="event-note">
+            A day supporting the Hollibell Foundation and Riverview Rescues, with local
+            vendors and community activities.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- BOOK LOVERS -->
+
+      <article class="event-card">
+
+        <img
+          class="event-poster"
+          src="/events/images/ottawa-book-lovers-christmas-market-2026.png"
+          alt="Poster for the first annual Ottawa Book Lovers Christmas Market"
+          loading="lazy"
+        >
+
+        <div class="event-content">
+
+          <div class="event-category">
+            STORIES IN THE WILD
+          </div>
+
+          <h2>Ottawa Book Lovers Christmas Market</h2>
+
+          <p class="event-date">
+            Saturday, December 12, 2026
+          </p>
+
+          <p class="event-details">
+            <strong>Rideauview Community Centre</strong><br>
+            4310 Shoreline Drive, Ottawa<br>
+            10:00 AM–3:00 PM
+          </p>
+
+          <p class="event-note">
+            Books, authors, gifts, and holiday shopping —
+            a particularly appropriate place for Fraggle to be.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- FUTURE PHOTO SECTION -->
+
+    <section class="event-fieldwork">
+
+      <div class="event-fieldwork-inner">
+
+        <div class="archive-eyebrow">
+          THE ARCHIVES IN THE WILD
+        </div>
+
+        <p>
+          Field photographs will appear here as the Archives begins
+          documenting its travels, tables, displays, and the strange
+          things that happen when a fictional village meets the real world.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="events-closing">
+
+      <div class="archive-eyebrow">
+        THE FIELDWORK PRINCIPLE
+      </div>
+
+      <h2>
+        A story has to leave the shelf eventually.
+      </h2>
+
+      <p>
+        Every market gives the Archives another place to go,
+        another person to meet, and another story to carry home.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- Shared footer -->
+
+  <footer id="site-footer"></footer>
+
+  <script>
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-footer').innerHTML = data;
+      });
+  </script>
+
+
+  <!-- Moon phase -->
+
+  <script>
+    // Existing moon phase script can remain here
+    // if this is also present on the other Archive pages.
+  </script>
+
+</body>
+</html>
