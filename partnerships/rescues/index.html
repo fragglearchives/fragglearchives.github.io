@@ -145,25 +145,26 @@
         color: #514940;
     }
 
-    .impact {
-        margin-top: 20px;
-        padding: 15px 16px;
-        background: #f2ece3;
-        border-left: 3px solid #9b8775;
+    .partner-impact {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 14px 18px;
+        background: var(--archive-card, #fffdf8);
+        border: 1px solid var(--archive-border, #d9d0c4);
     }
 
-    .impact-label {
-        display: block;
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
+    .partner-impact span {
+        margin-bottom: 4px;
+        font-size: .72rem;
+        font-weight: bold;
+        letter-spacing: .1em;
         text-transform: uppercase;
-        color: #75685d;
-        margin-bottom: 3px;
+        opacity: .65;
     }
 
-    .impact-amount {
-        font-size: 1.25rem;
-        color: #342d28;
+    .partner-impact strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.5rem;
     }
 
     .accountability {
@@ -215,7 +216,7 @@
         font-size: 0.85rem;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 760px) {
         main {
             padding: 45px 18px 60px;
         }
@@ -230,6 +231,10 @@
 
         .partner-card {
             padding: 22px;
+        }
+
+        .partner-impact {
+            align-items: center;
         }
     }
 </style>
@@ -294,7 +299,7 @@
 <main>
 
     <section class="intro">
-        <div class="eyebrow">The Archives & Community</div>
+        <div class="eyebrow">The Archives &amp; Community</div>
 
         <h1>Rescue &amp; Community Partners</h1>
 
@@ -331,9 +336,9 @@
                 spay and neuter care.
             </p>
 
-            <div class="impact">
-                <span class="impact-label">Funds Directed</span>
-                <span class="impact-amount">$362.50</span>
+            <div class="partner-impact">
+                <span>Funds Directed</span>
+                <strong>$362.50</strong>
             </div>
 
         </article>
@@ -362,9 +367,9 @@
                 into direct support for animals in their care.
             </p>
 
-            <div class="impact">
-                <span class="impact-label">Funds Directed</span>
-                <span class="impact-amount">$12.50</span>
+            <div class="partner-impact">
+                <span>Funds Directed</span>
+                <strong>$12.50</strong>
             </div>
 
         </article>
@@ -393,6 +398,11 @@
                 helps carry Toe Beans' work into the community through
                 market appearances, promotion, and direct support.
             </p>
+
+            <div class="partner-impact">
+                <span>Funds Directed</span>
+                <strong>$0.00</strong>
+            </div>
 
         </article>
 
