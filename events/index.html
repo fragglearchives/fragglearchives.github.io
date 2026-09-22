@@ -25,12 +25,43 @@
   <link rel="stylesheet" href="/styles.css">
 
   <style>
+
+    /* =========================================
+       EVENTS PAGE
+       ========================================= */
+
     .events-page {
       max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* INTRO */
+
+    /* =========================================
+       HEADER / ARCHIVE BANNER
+       ========================================= */
+
+    header {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    header picture {
+      display: block;
+      width: 100%;
+      line-height: 0;
+    }
+
+    header picture img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    /* =========================================
+       INTRO
+       ========================================= */
 
     .events-intro {
       max-width: 840px;
@@ -64,7 +95,10 @@
       line-height: 1.75;
     }
 
-    /* OPENING */
+
+    /* =========================================
+       OPENING
+       ========================================= */
 
     .events-opening {
       max-width: 760px;
@@ -88,7 +122,10 @@
       font-style: italic;
     }
 
-    /* EVENT GRID */
+
+    /* =========================================
+       EVENT GRID
+       ========================================= */
 
     .events-grid {
       max-width: 1000px;
@@ -166,7 +203,10 @@
       font-style: italic;
     }
 
-    /* FIELDWORK */
+
+    /* =========================================
+       FIELDWORK
+       ========================================= */
 
     .event-fieldwork {
       max-width: 1000px;
@@ -186,7 +226,10 @@
       line-height: 1.7;
     }
 
-    /* CLOSING */
+
+    /* =========================================
+       CLOSING
+       ========================================= */
 
     .events-closing {
       max-width: 760px;
@@ -210,18 +253,27 @@
       font-style: italic;
     }
 
-    /* TABLET */
+
+    /* =========================================
+       TABLET
+       ========================================= */
 
     @media (max-width: 850px) {
+
       .events-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
       }
+
     }
 
-    /* MOBILE */
+
+    /* =========================================
+       MOBILE
+       ========================================= */
 
     @media (max-width: 700px) {
+
       .events-intro {
         margin: 48px auto 55px;
       }
@@ -272,8 +324,13 @@
       .events-closing {
         margin: 70px auto 50px;
       }
+
     }
+
   </style>
+
+
+  <!-- Shared navigation -->
 
   <script>
     fetch('/nav.html')
@@ -282,21 +339,42 @@
         document.getElementById('site-nav').innerHTML = data;
       });
   </script>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================================
+       ARCHIVE HEADER
+       ========================================= -->
+
   <header>
+
     <picture>
-      <source media="(max-width: 700px)" srcset="/Banner-Mobile.PNG">
-      <img src="/banner.PNG" alt="The Fraggle Archives">
+      <source
+        media="(max-width: 700px)"
+        srcset="/Banner-Mobile.PNG"
+      >
+
+      <img
+        src="/banner.PNG"
+        alt="The Fraggle Archives"
+      >
     </picture>
 
     <div id="site-nav"></div>
+
   </header>
 
 
+  <!-- =========================================
+       MAIN CONTENT
+       ========================================= -->
+
   <main class="events-page">
+
 
     <!-- INTRO -->
 
@@ -306,7 +384,9 @@
         THE ARCHIVES LEAVES THE BUILDING
       </div>
 
-      <h1>Markets &amp; Events</h1>
+      <h1>
+        Markets &amp; Events
+      </h1>
 
       <p class="events-thesis">
         The Archives is going out into the world.
@@ -344,7 +424,9 @@
     </section>
 
 
-    <!-- EVENTS -->
+    <!-- =========================================
+         EVENT CARDS
+         ========================================= -->
 
     <section class="events-grid">
 
@@ -366,7 +448,9 @@
             THE FIRST DEPLOYMENT
           </div>
 
-          <h2>Ottawa Cat Show</h2>
+          <h2>
+            Ottawa Cat Show
+          </h2>
 
           <p class="event-date">
             September 26–27, 2026
@@ -403,7 +487,9 @@
             FALL FIELDWORK
           </div>
 
-          <h2>Kiwan Farms Fall Harvest Festival</h2>
+          <h2>
+            Kiwan Farms Fall Harvest Festival
+          </h2>
 
           <p class="event-date">
             Saturday, October 3, 2026
@@ -441,7 +527,9 @@
             COMMUNITY FIELDWORK
           </div>
 
-          <h2>Hollibell Foundation Walkathon</h2>
+          <h2>
+            Hollibell Foundation Walkathon
+          </h2>
 
           <p class="event-date">
             Sunday, October 4, 2026
@@ -463,7 +551,7 @@
       </article>
 
 
-      <!-- OTTAWA BOOK LOVERS -->
+      <!-- OTTAWA BOOK LOVERS CHRISTMAS MARKET -->
 
       <article class="event-card">
 
@@ -480,7 +568,9 @@
             STORIES IN THE WILD
           </div>
 
-          <h2>Ottawa Book Lovers Christmas Market</h2>
+          <h2>
+            Ottawa Book Lovers Christmas Market
+          </h2>
 
           <p class="event-date">
             Saturday, December 12, 2026
@@ -505,7 +595,9 @@
     </section>
 
 
-    <!-- FIELDWORK PHOTO SECTION -->
+    <!-- =========================================
+         FIELDWORK PHOTO SECTION
+         ========================================= -->
 
     <section class="event-fieldwork">
 
@@ -526,7 +618,9 @@
     </section>
 
 
-    <!-- CLOSING -->
+    <!-- =========================================
+         CLOSING
+         ========================================= -->
 
     <section class="events-closing">
 
@@ -545,8 +639,13 @@
 
     </section>
 
+
   </main>
 
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
 
   <footer id="site-footer"></footer>
 
@@ -559,9 +658,15 @@
   </script>
 
 
+  <!-- =========================================
+       MOON PHASE
+       ========================================= -->
+
   <script>
-    // Existing moon phase script can remain here.
+    // Keep the existing moon phase script here
+    // if your other Archive pages use one.
   </script>
+
 
 </body>
 </html>
