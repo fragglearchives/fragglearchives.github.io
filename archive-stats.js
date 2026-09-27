@@ -11,14 +11,14 @@ const archiveStats = {
 
   /* Organizations formally working with the Fraggle Archives
      through fundraising partnerships */
-  fundraisingPartners: 2,
+  fundraisingPartners: 3,
 
   /* Books officially published by the Archives */
   publishedBooks: 1,
 
   /* Total funds actually directed to cats/rescue work.
      Update this manually when the official total changes. */
-  fundsDirectedToCats: 375.00
+  fundsDirectedToCats: 425.00
 
 };
 
