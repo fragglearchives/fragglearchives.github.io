@@ -205,7 +205,75 @@
 
 
     /* =========================================
-       FIELDWORK
+       FIELDWORK PHOTO GALLERY
+       ========================================= */
+
+    .fieldwork-gallery {
+      max-width: 1000px;
+      margin: 0 auto 90px;
+      padding: 0 22px;
+    }
+
+    .fieldwork-gallery-header {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .fieldwork-gallery-header h2 {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      line-height: 1.12;
+    }
+
+    .fieldwork-gallery-header p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .fieldwork-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .fieldwork-photo {
+      margin: 0;
+    }
+
+    .fieldwork-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border: 1px solid var(--archive-border);
+      box-shadow: var(--archive-shadow);
+    }
+
+    .fieldwork-photo-wide {
+      grid-column: 1 / -1;
+    }
+
+    .fieldwork-photo-wide img {
+      aspect-ratio: 16 / 9;
+    }
+
+    .fieldwork-photo figcaption {
+      margin-top: 12px;
+      padding: 0 6px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+
+    /* =========================================
+       FIELDWORK REPORT
        ========================================= */
 
     .event-fieldwork {
@@ -310,6 +378,25 @@
 
       .event-content h2 {
         font-size: 2rem;
+      }
+
+      .fieldwork-gallery {
+        padding: 0 14px;
+        margin-bottom: 65px;
+      }
+
+      .fieldwork-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .fieldwork-photo-wide {
+        grid-column: auto;
+      }
+
+      .fieldwork-photo img,
+      .fieldwork-photo-wide img {
+        aspect-ratio: 4 / 3;
       }
 
       .event-fieldwork {
@@ -596,7 +683,92 @@
 
 
     <!-- =========================================
-         FIELDWORK PHOTO SECTION
+         FIELDWORK PHOTO GALLERY
+         ========================================= -->
+
+    <section class="fieldwork-gallery">
+
+      <div class="fieldwork-gallery-header">
+
+        <div class="archive-eyebrow">
+          THE ARCHIVES IN THE WILD
+        </div>
+
+        <h2>
+          Ottawa Cat Show — Field Notes
+        </h2>
+
+        <p>
+          The Archives' first big field deployment.
+          Two days of books, merchandise, cats, conversations,
+          rescue work, and a whole lot of archival nonsense.
+        </p>
+
+      </div>
+
+
+      <div class="fieldwork-gallery-grid">
+
+
+        <!-- BOOTH — WIDE -->
+
+        <figure class="fieldwork-photo fieldwork-photo-wide">
+
+          <img
+            src="/images/events/ottawa-cat-show-booth-1.jpg"
+            alt="The Fraggle Archives booth at the Ottawa Cat Show, featuring books, merchandise, framed archival displays, and Fraggle Archives signage"
+            loading="lazy"
+          >
+
+          <figcaption>
+            The Fraggle Archives field station, fully deployed.
+          </figcaption>
+
+        </figure>
+
+
+        <!-- BOOTH — SECOND ANGLE -->
+
+        <figure class="fieldwork-photo">
+
+          <img
+            src="/images/events/ottawa-cat-show-booth-2.jpg"
+            alt="Second view of The Fraggle Archives booth at the Ottawa Cat Show"
+            loading="lazy"
+          >
+
+          <figcaption>
+            Books, buttons, stickers, and the increasingly ambitious
+            clothing department.
+          </figcaption>
+
+        </figure>
+
+
+        <!-- SPEAK UP / CAT -->
+
+        <figure class="fieldwork-photo">
+
+          <img
+            src="/images/events/ottawa-cat-show-speak-up.jpg"
+            alt="The Fraggle Archives and Speak Up For Paws representatives with a cat at the Ottawa Cat Show"
+            loading="lazy"
+          >
+
+          <figcaption>
+            Rescue work belongs in the Archives.
+          </figcaption>
+
+        </figure>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FIELDWORK REPORT
          ========================================= -->
 
     <section class="event-fieldwork">
@@ -604,13 +776,15 @@
       <div class="event-fieldwork-inner">
 
         <div class="archive-eyebrow">
-          THE ARCHIVES IN THE WILD
+          FIELD REPORT
         </div>
 
         <p>
-          Field photographs will appear here as the Archives begins
-          documenting its travels, tables, displays, and the strange
-          things that happen when a fictional village meets the real world.
+          The Ottawa Cat Show marked the first major public deployment
+          of The Fraggle Archives. What began as a book written after
+          Fraggle's passing has grown into a travelling archive —
+          bringing his story into the world while raising money and
+          awareness for rescue cats who need veterinary care and homes.
         </p>
 
       </div>
